@@ -20,7 +20,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a href={phoneUrl} className="inline-flex h-11 items-center gap-2 rounded-full border border-border bg-card px-4 text-sm font-semibold transition hover:-translate-y-0.5 hover:shadow-md"><Phone className="h-4 w-4" /> Anrufen</a>
-          <a href="https://autoreignigung.base44.app" target="_blank" rel="noreferrer" className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">Termin buchen <ArrowRight className="h-4 w-4" /></a>
+          <a href="https://api.leadconnectorhq.com/widget/group/aje8KbWpM7A4cqBJtAPU" target="_blank" rel="noreferrer" className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">Termin buchen <ArrowRight className="h-4 w-4" /></a>
         </div>
 
         <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menü öffnen">{open ? <X /> : <Menu />}</button>
