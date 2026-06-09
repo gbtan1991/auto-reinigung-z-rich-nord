@@ -10,12 +10,8 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/78 backdrop-blur-2xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-        <Link to="/" className="group flex items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-sm transition group-hover:scale-105">AZ</div>
-          <div>
-            <p className="font-heading text-sm font-extrabold leading-none tracking-tight">Autoreinigung</p>
-            <p className="text-xs font-medium text-muted-foreground">Zürich-Nord</p>
-          </div>
+        <Link to="/" className="group flex items-center">
+          <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="h-14 w-auto transition group-hover:scale-105" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
