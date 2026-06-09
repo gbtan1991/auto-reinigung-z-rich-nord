@@ -8,8 +8,10 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.15fr_0.85fr_0.85fr] lg:px-8">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-bold text-primary"><Star className="h-4 w-4 fill-primary" /> Google Bewertungs Widget</div>
-          <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="h-20 w-auto" />
-          <p className="mt-4 max-w-xl text-muted-foreground">Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung und Politur in Zürich Nord – sorgfältig, materialschonend und werterhaltend.</p>
+          <div className="flex items-center gap-4">
+            <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="h-20 w-auto shrink-0" />
+            <p className="max-w-xs text-muted-foreground">Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung und Politur in Zürich Nord – sorgfältig, materialschonend und werterhaltend.</p>
+          </div>
           <a href={googleReviewUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground">4.9 Sterne auf Google ansehen</a>
         </div>
         <div>
