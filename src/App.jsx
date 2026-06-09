@@ -1,11 +1,27 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import ForgotPassword from '@/pages/ForgotPassword';
+import ResetPassword from '@/pages/ResetPassword';
+import SiteLayout from '@/components/site/SiteLayout';
+import Home from '@/pages/Home';
+import Services from '@/pages/Services';
+import ServiceDetail from '@/pages/ServiceDetail';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
+import Review from '@/pages/Review';
+import Jobs from '@/pages/Jobs';
+import Impressum from '@/pages/Impressum';
+import Datenschutz from '@/pages/Datenschutz';
+import TestimonialPage from '@/pages/TestimonialPage';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -34,7 +50,24 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
+        <Route element={<SiteLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/dienstleistungen" element={<Services />} />
+          <Route path="/service/:slug" element={<ServiceDetail />} />
+          <Route path="/ueber-uns" element={<About />} />
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/bewertung" element={<Review />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/testimonial/:slug" element={<TestimonialPage />} />
+        </Route>
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

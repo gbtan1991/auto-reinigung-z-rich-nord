@@ -1,0 +1,13 @@
+import SEO from "@/components/site/SEO";
+import SectionHeader from "@/components/site/SectionHeader";
+import { images } from "@/data/siteContent";
+
+export default function About() {
+  return (
+    <>
+      <SEO title="Über uns | Autoreinigung Zürich-Nord" description="Seit 2020 reinigt das 5-köpfige Team von Autoreinigung Zürich-Nord Fahrzeuge mit Herz, Hand und professioneller Fahrzeugpflege." path="/ueber-uns" image={images.about} />
+      <section className="px-5 py-20 lg:px-8"><div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2"><div><p className="mb-5 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">Über uns</p><h1 className="font-heading text-5xl font-extrabold tracking-tight md:text-7xl">Wir machen Ihr Auto frisch</h1><p className="mt-7 text-lg leading-8 text-muted-foreground">Wie reinigt man ein Auto professionell? Indem man es zu Autoreinigung Zürich-Nord bringt. So lautet seit 2020 die einfache Antwort in Zürich-Schwamendingen, wo sich unser 5-köpfiges Team mit Herz und Hand für die perfekte Fahrzeugpflege ins Zeug legt. Als Unit der erfolgreichen Kfz-Werkstatt turicum-automobile.ch leben wir die Liebe zum gepflegten Automobil quasi mit jedem Handgriff.</p></div><img src={images.about} alt="Eingangsbereich Zürich Nord Autoreinigung" className="rounded-[2.5rem] shadow-2xl" /></div></section>
+      <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-4xl"><SectionHeader eyebrow="Fahrzeugwert" title="Ihr Auto ist es wert. Denn es ist anschliessend mehr Wert." /><div className="mt-8 space-y-5 text-lg leading-8 text-muted-foreground"><p>Eine Autoaufbereitung lohnt sich für Sie und Ihr Fahrzeug. Denn Sie verschwenden keine unnötige Energie und vermeiden falsche Mittel und Geräte. Dafür erfreuen Sie sich an einem glänzend sauberen, frischen und hygienisch einwandfreien Fahrzeug.</p><p>Und das kann sich zum Beispiel beim Autoverkauf spürbar auszahlen. Ein professionell gereinigtes Auto steigert den Fahrzeugwert erfahrungsgemäss um mehrere hundert Franken. Der optische Bestzustand vermittelt eine Hochwertigkeit, die ein Interessent auf die weiteren Fahrzeugbereiche überträgt.</p><p>Oder andersherum: Sie haben eine Occasion mit sichtlichen Gebrauchsspuren gekauft und werten den Wagen nun günstig auf. Übrigens, auch für ein Classic Car bzw. einen Oldtimer ist eine qualifizierte Aufbereitung wichtig, damit das gute Stück authentisch bleibt und Sie möglichst lange die Freude daran zu haben.</p><p>Fragen Sie uns, was Sie rund um die Autoaufbereitung und Fahrzeugreinigung wissen möchten. Wir freuen uns, unser Wissen und Können unter Beweis zu stellen.</p></div></div></section>
+    </>
+  );
+}
