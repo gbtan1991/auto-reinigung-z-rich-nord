@@ -54,19 +54,17 @@ const AuthenticatedApp = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
-      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
-        <Route element={<SiteLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/dienstleistungen" element={<Services />} />
-          <Route path="/service/:slug" element={<ServiceDetail />} />
-          <Route path="/ueber-uns" element={<About />} />
-          <Route path="/kontakt" element={<Contact />} />
-          <Route path="/bewertung" element={<Review />} />
-          <Route path="/jobs" element={<Jobs />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          <Route path="/testimonial/:slug" element={<TestimonialPage />} />
-        </Route>
+      <Route element={<SiteLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/dienstleistungen" element={<Services />} />
+        <Route path="/service/:slug" element={<ServiceDetail />} />
+        <Route path="/ueber-uns" element={<About />} />
+        <Route path="/kontakt" element={<Contact />} />
+        <Route path="/bewertung" element={<Review />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/testimonial/:slug" element={<TestimonialPage />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
