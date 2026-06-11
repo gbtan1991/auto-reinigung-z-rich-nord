@@ -35,8 +35,8 @@ export const services = [
   {
     slug: "innenreinigung",
     eyebrow: "Innenreinigung",
-    title: "Die reinste Freude: Auto-Innenreinigung Zürich-Nord",
-    summary: "Eine gründliche Auto-Innenreinigung wirkt für Ihren vierrädrigen Freund wie ein Jungbrunnen. Wir päppeln den Innenraum des Fahrzeugs mehr als nur optisch auf: Schlechte Gerüche, abgenutzte Materialien? Freuen Sie sich auf das Refresh!",
+    title: "Professionelle Innenreinigung: Frisch, hygienisch, wie neu",
+    summary: "Eine gründliche Innenreinigung bringt Ihren Fahrzeuginnenraum wieder auf Vordermann. Wir entfernen Staub, Flecken, Gerüche und Tierhaare – sorgfältig per Hand, materialschonend und mit sichtbarem Ergebnis.",
     image: images.interiorHero,
     cardImage: images.serviceInterior,
     content: [
@@ -44,18 +44,18 @@ export const services = [
       "Auf Wunsch desinfizieren wir Ihr Fahrzeug zusätzlich und sorgen für einen hygienisch sauberen Innenraum. Unsere Innenreinigung eignet sich ideal für Privatfahrzeuge, Familienautos, Firmenfahrzeuge, Leasingrückgaben, Occasionen sowie Fahrzeuge vor der MFK. Dank professioneller Reinigungsmittel und schonender Verfahren bleibt Ihr Auto gepflegt, sauber und werterhaltend."
     ],
     packages: [
-      { name: "Basic", price: "CHF 80.-", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen"] },
-      { name: "Advanced", price: "CHF 150.-", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
-      { name: "Premium", price: "CHF 350.-", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shamponieren/Stoffreinigung", "Lederreinigung, -pflege und -konservierung"] }
+      { name: "Basic", price: "CHF 80.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen"] },
+      { name: "Advanced", price: "CHF 150.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
+      { name: "Premium", price: "CHF 350.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shampoonieren / Stoff reinigen", "Lederreinigung, -pflege und -konservierung"] }
     ],
-    extras: ["Tierhaarentfernung: nach Aufwand, ab CHF 100.-", "Komplett Desinfektion mit Anokath inkl. Geruchsentfernung: CHF 140.-"],
+    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 140.–"],
     testimonials: ["Andreas Stofer", "Ivasto Heizungen GmbH", "Sandra Stierli"]
   },
   {
     slug: "aussenreinigung",
     eyebrow: "Aussenreinigung",
-    title: "Saubere Arbeit: Aussenreinigung Zürich-Nord",
-    summary: "Ihr Auto wie aus dem Beauty-Salon: Bei der Aussenreinigung waschen und pflegen wir jedes Fahrzeug gründlich und gekonnt von Hand. Auf Wunsch kümmern wir uns um alles, worauf Profis besonders achten, z. B. Motor, Fahrwerk, Bremssättel.",
+    title: "Handwäsche Aussenreinigung Zürich-Nord – kratzerlos, gründlich",
+    summary: "Wir waschen jedes Fahrzeug von Hand – gründlich, schonend und ohne Kratzer. Auf Wunsch reinigen wir auch Motorraum, Fahrwerk und Bremssättel. Das Ergebnis spricht für sich.",
     image: images.exteriorHero,
     cardImage: images.serviceExterior,
     content: [
@@ -64,9 +64,9 @@ export const services = [
       "Für zusätzlichen Schutz bieten wir eine hochwertige Nanoversiegelung und Lackkonservierung an. Diese schützt den Lack langfristig vor Umwelteinflüssen, Schmutz und Wasser und sorgt für einen langanhaltenden Glanz. Unsere Aussenreinigung eignet sich ideal für Privatfahrzeuge, Firmenwagen, Leasingfahrzeuge, Occasionen und gepflegte Alltagsautos in Zürich, Oerlikon, Seebach, Opfikon, Wallisellen und Umgebung."
     ],
     packages: [
-      { name: "Basic", price: "ab CHF 70.-", features: ["Handwäsche", "Felgenwäsche"] },
-      { name: "Advanced", price: "ab CHF 100.-", features: ["Handwäsche", "Felgenwäsche", "Motorraumwäsche und konservierung", "Für MFK Reinigung Motor-/ Chassis Reinigung"] },
-      { name: "Premium", price: "ab CHF 200.-", features: ["Handwäsche", "Felgenwäsche", "Motorraumwäsche und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel Federbein Radhausschalenabdeckung etc.)", "Lackversiegelung und -konservierung"] }
+      { name: "Basic", price: "ab CHF 70.–", features: ["Handwäsche", "Felgenreinigung"] },
+      { name: "Advanced", price: "ab CHF 100.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung (MFK-gerecht)"] },
+      { name: "Premium", price: "ab CHF 200.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel, Federbein, Radhausabdeckung)", "Lackversiegelung und -konservierung"] }
     ],
     extras: [],
     testimonials: ["Grazia Sclaverano", "Ivasto Heizungen GmbH"]
@@ -74,8 +74,8 @@ export const services = [
   {
     slug: "politur",
     eyebrow: "Politur und kleine Ausbesserungen",
-    title: "Perfekt ausgebügelt: Autopolituren in Zürich-Nord",
-    summary: "Lassen Sie nichts auf Ihre Liebe kommen. Kleinere Kratzer in Lack, Leder und Stoff bessern wir fachmännisch aus. Und damit das Blech mehr abhaben kann, spendieren wir ihm auf Wunsch eine Wachsversiegelung. Von Hand, versteht sich.",
+    title: "Lackpolitur & Kratzerentfernung Zürich-Nord – sichtbarer Unterschied",
+    summary: "Feine Kratzer, Hologramme und matten Lack bringen wir maschinell und per Hand wieder zum Glänzen. Auf Wunsch versiegeln wir den Lack anschliessend dauerhaft – mit Wachs oder Nano.",
     image: images.polishHero,
     cardImage: images.servicePolish,
     content: [
@@ -84,11 +84,11 @@ export const services = [
       "Für einen dauerhaften Schutz bieten wir hochwertige Lackkonservierungen, Wachsbehandlungen und Nanoversiegelungen an. Diese schützen den Lack vor Witterungseinflüssen, UV-Strahlung, Schmutz und Wasser und sorgen für einen langanhaltenden Tiefenglanz. Unsere Lackpflege eignet sich ideal für Privatfahrzeuge, Firmenwagen, Leasingfahrzeuge, Sportwagen und gepflegte Occasionen in Zürich, Oerlikon, Seebach, Opfikon, Wallisellen und Umgebung."
     ],
     packages: [
-      { name: "Basic", price: "ab CHF 350.-", features: ["Glanzpolitur"] },
-      { name: "Advanced", price: "ab CHF 500.-", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
-      { name: "Premium", price: "ab CHF 750.-", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax Wachsversiegelung rein per Hand", "Nano-Versiegelung je nach Wunsch"] }
+      { name: "Basic", price: "ab CHF 350.–", features: ["Glanzpolitur"] },
+      { name: "Advanced", price: "ab CHF 500.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
+      { name: "Premium", price: "ab CHF 750.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
     ],
-    extras: ["Spotreparatur (Polieren+Lackieren von kleineren kosmetischen Makeln): nach Aufwand, ab CHF 100.-", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.-", "Stoffreparatur: nach Aufwand, ab CHF 50.-", "Lederreparatur: nach Aufwand, ab CHF 50.-", "Felgenreparaturen (Kosmetik): nach Aufwand, ab CHF 50.-", "Matte-Scheinwerfer polieren bzw schleifen und neu lackieren: nach Aufwand, ab CHF 50.-"],
+    extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"],
     testimonials: ["Sandra Stierli", "Andreas Stofer"]
   }
 ];
@@ -104,13 +104,13 @@ export const testimonials = [
 ];
 
 export const faqs = [
-  { q: "Für welche Fahrzeuge eignet sich die Autoreinigung?", a: "Unsere professionelle Autoreinigung in Zürich Nord eignet sich für alle Fahrzeugtypen: Privatfahrzeuge, Familienautos, Firmenwagen, SUVs, Sportwagen, Leasingfahrzeuge, Occasionen sowie Fahrzeuge vor der MFK oder dem Verkauf. Auch Firmenflotten reinigen wir regelmässig." },
+  { q: "Für welche Fahrzeuge bieten Sie die Autoreinigung an?", a: "Für alle: Privatfahrzeuge, Familienautos, Firmenwagen, SUVs, Sportwagen, Leasingfahrzeuge, Occasionen, Fahrzeuge vor der MFK oder dem Verkauf. Auch Firmenflotten reinigen wir regelmässig – auf Wunsch mit Flottenvertrag." },
   { q: "Was kostet eine professionelle Autoreinigung in Zürich?", a: "Die Innenreinigung beginnt ab CHF 80.–, die Aussenreinigung ab CHF 70.– und die Lackpolitur ab CHF 350.–. Die genauen Kosten hängen vom Fahrzeugtyp, der Grösse und dem Verschmutzungsgrad ab. Mit unserem Online-Kalkulator erhalten Sie in Sekunden eine erste Preiseinschätzung." },
-  { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Eine einfache Innenreinigung dauert 2–3 Stunden, eine vollständige Aussenreinigung mit Motorraum ca. 2–4 Stunden. Eine komplette Aufbereitung inkl. Politur kann 4–8 Stunden in Anspruch nehmen. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
+  { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Eine einfache Innenreinigung dauert 2–3 Stunden, eine Aussenreinigung mit Motorraum ca. 2–4 Stunden. Eine komplette Aufbereitung mit Politur kann 4–8 Stunden dauern. Die genaue Dauer besprechen wir bei der Buchung mit Ihnen." },
   { q: "Kann ich online einen Termin buchen?", a: "Ja. Über unsere Online-Buchung sichern Sie sich sekundenschnell Ihren Wunschtermin – für Innenreinigung, Aussenreinigung, Politur, Leasingrückgabe oder MFK-Vorbereitung. Die Buchung dauert weniger als 60 Sekunden." },
   { q: "Wo befindet sich Autoreinigung Zürich-Nord und wie komme ich hin?", a: "Unser Betrieb befindet sich an der Heerenwiesen 18, 8051 Zürich-Schwamendingen. Erreichbar mit dem Auto über die Schaffhauserstrasse oder die Zürichbergstrasse. Mit dem ÖV: Tram 10 oder 14 bis Schaffhauserplatz, dann Bus 63. Gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und der ganzen Region Zürich Nord." },
-  { q: "Ist eine Leasingrückgabe-Reinigung bei Ihnen möglich?", a: "Ja. Die Leasingrückgabe-Reinigung ist eine unserer Spezialitäten. Wir bereiten Ihr Fahrzeug professionell auf, um kostspielige Nachforderungen des Leasinggebers zu vermeiden – innen und aussen, auf Wunsch auch mit Kratzerentfernung und Geruchsbeseitigung." },
-  { q: "Wie kann ich eine Autoaufbereitung in Zürich Nord anfragen?", a: "Am einfachsten buchen Sie direkt online. Alternativ erreichen Sie uns telefonisch unter +41 44 511 94 90 oder per WhatsApp unter +41 79 741 56 58. Auf Wunsch erstellen wir Ihnen auch ein individuelles Angebot für Firmenflotten oder spezielle Aufbereitungen." }
+  { q: "Ist eine Leasingrückgabe-Reinigung bei Ihnen möglich?", a: "Ja – die Leasingrückgabe ist eine unserer Spezialitäten. Wir bereiten Ihr Fahrzeug innen und aussen auf, um teure Nachforderungen zu vermeiden. Auf Wunsch entfernen wir zusätzlich leichte Kratzer und Gerüche." },
+  { q: "Wie kann ich eine Autoaufbereitung in Zürich Nord anfragen?", a: "Am einfachsten über unsere Online-Buchung. Sie können uns auch anrufen: +41 44 511 94 90 oder per WhatsApp: +41 79 741 56 58. Für Firmenflotten und spezielle Aufbereitungen erstellen wir Ihnen gerne ein individuelles Angebot." }
 ];
 
 export const contact = {
@@ -119,7 +119,7 @@ export const contact = {
   email: "info@autoreinigung-zuerich-nord.ch",
   phone: "+41 44 511 94 90",
   mobile: "+41 79 741 56 58",
-  hours: "Mo – Fr: 08.00 – 12.00 Uhr und 13.30 – 18.00 Uhr · Sa: 09.00 Uhr – 14.00 Uhr"
+  hours: "Mo–Fr: 08.00–12.00 Uhr / 13.30–18.00 Uhr · Sa: 09.00–14.00 Uhr"
 };
 
 export const localBusinessSchema = {

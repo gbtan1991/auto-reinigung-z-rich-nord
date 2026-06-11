@@ -64,10 +64,10 @@ export default function Standort() {
                 title={`Fahrzeugaufbereitung für Kunden aus ${standort.name}`}
               />
               <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-                Autoreinigung Zürich-Nord an der Heerenwiesen 18 ist die erste Adresse für Fahrzeugpflege in der Region. Kunden aus {standort.name} vertrauen uns für Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugaufbereitung.
+                Autoreinigung Zürich-Nord an der Heerenwiesen 18 ist die erste Anlaufstelle für Fahrzeugpflege in der Region. Kunden aus {standort.name} kommen regelmässig zu uns für Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugaufbereitung.
               </p>
               <p className="mt-3 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-                Ob Privatfahrzeug, Firmenwagen oder Leasingfahrzeug – wir reinigen materialschonend und mit Fokus auf dauerhaften Werterhalt.
+                Privatfahrzeug, Firmenwagen oder Leasingfahrzeug – wir reinigen jedes Fahrzeug sorgfältig per Hand und mit dem richtigen Material.
               </p>
             </Reveal>
             <Reveal delay={100}>
@@ -175,7 +175,7 @@ export default function Standort() {
               { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
               { title: "Lokale Bedürfnisse", text: standort.typischAnliegen },
               { title: "Alle Quartiere, ein Ziel", text: `Kunden aus ${standort.quartiere} vertrauen uns regelmässig ihre Fahrzeuge an.` },
-              { title: "Werterhalt & Leasingrückgabe", text: "Wir kennen die Anforderungen von Leasinggebern und bereiten Ihr Fahrzeug vor." },
+              { title: "Leasingrückgabe & Werterhalt", text: "Wir kennen die Anforderungen der Leasinggeber und bereiten Ihr Fahrzeug gezielt vor." },
               { title: "Online buchbar – 24/7", text: "Termin in 60 Sekunden online sichern – flexibel, ohne Wartezeit." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
@@ -246,7 +246,7 @@ export default function Standort() {
               Bereit für ein sauberes Auto?
             </h2>
             <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-              Buchen Sie jetzt online oder rufen Sie uns an. Wir freuen uns auf Kunden aus {standort.name}.
+              Buchen Sie online oder rufen Sie uns an – wir sind für Kunden aus {standort.name} da.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">

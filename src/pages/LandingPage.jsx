@@ -229,7 +229,7 @@ export default function LandingPage() {
             {[
               { step: "1", title: "Termin buchen", text: "Online in 60 Sekunden – flexibel, ohne Wartezeit." },
               { step: "2", title: "Fahrzeug bringen", text: `Heerenwiesen 18, 8051 Zürich – schnell erreichbar aus ${ortData.name}.` },
-              { step: "3", title: "Gepflegtes Auto abholen", text: "Professionell gereinigt, in einwandfreiem Zustand." },
+              { step: "3", title: "Sauberes Auto abholen", text: "Ihr Fahrzeug wartet gereinigt und gepflegt auf Sie." },
             ].map((item) => (
               <Reveal key={item.step} delay={parseInt(item.step) * 80}>
                 <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm text-center">
@@ -289,7 +289,7 @@ export default function LandingPage() {
               { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
               { title: "Flexibel buchbar", text: "Termin online sichern – 24/7, in weniger als 60 Sekunden." },
               { title: "Alle Fahrzeugtypen", text: "Von Kleinwagen bis Transporter, Privatfahrzeug bis Flotte." },
-              { title: "Werterhalt garantiert", text: "Professionelle Pflege erhält den Wert dauerhaft." },
+              { title: "Werterhalt durch regelmässige Pflege", text: "Professionell gereinigte Fahrzeuge erzielen beim Verkauf und bei der Leasingrückgabe deutlich bessere Resultate." },
               { title: `Kurze Anfahrt aus ${ortData.name}`, text: "Schnell erreichbar per Auto oder ÖV." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
@@ -311,7 +311,7 @@ export default function LandingPage() {
           <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {[
               { q: `Bieten Sie ${lp.serviceName} für Kunden aus ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} – schnell und bequem erreichbar.` },
-              { q: `Was kostet eine ${lp.serviceName}?`, a: `Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie online.` },
+              { q: `Was kostet eine ${lp.serviceName} bei Ihnen?`, a: `Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab – buchen Sie online oder rufen Sie uns kurz an.` },
               { q: "Wie lange dauert die Reinigung?", a: "Je nach Umfang 1–8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
               { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: `Ja, wir reinigen regelmässig Firmenflotten aus ${ortData.name}. Kontaktieren Sie uns für ein individuelles Angebot.` },
@@ -333,7 +333,7 @@ export default function LandingPage() {
               {lp.serviceName} in {ortData.name} – jetzt buchen
             </h2>
             <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-              Buchen Sie online oder kontaktieren Sie uns direkt.
+              Termin online sichern oder direkt anrufen – wir sind für Sie da.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">

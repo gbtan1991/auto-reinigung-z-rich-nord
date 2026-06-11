@@ -49,7 +49,7 @@ export default function Home() {
       <section className="px-5 py-10 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            {[[Car,"Seit 2020","in Zürich-Schwamendingen"],[Users,"5-köpfig","Team mit Herz und Hand"],[ShieldCheck,"MFK-ready","Motor, Chassis und Unterboden"],[Gauge,"Werterhalt","für Privat- und Firmenfahrzeuge"]].map(([Icon,title,text]) => (
+            {[[Car,"Seit 2020","in Zürich-Schwamendingen"],[Users,"5-köpfiges Team","Handarbeit, kein Automatikbetrieb"],[ShieldCheck,"MFK-bereit","Motorraum, Chassis und Unterboden"],[Gauge,"Werterhalt","für Privat- und Firmenfahrzeuge"]].map(([Icon,title,text]) => (
               <Reveal key={title} className="rounded-[1.5rem] border border-border bg-card p-5 shadow-sm md:rounded-[2rem] md:p-6"><Icon className="mb-3 h-6 w-6 text-primary md:mb-5 md:h-7 md:w-7" /><p className="font-heading text-lg font-extrabold md:text-2xl">{title}</p><p className="mt-1 text-xs text-muted-foreground md:mt-2 md:text-sm">{text}</p></Reveal>
             ))}
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
 
       <section className="bg-secondary/70 px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader eyebrow="Dienstleistungen" title="Unsere Dienstleistungen" text="Innenreinigung, Aussenreinigung, Politur – sorgfältige Handarbeit für jedes Fahrzeug." />
+          <SectionHeader eyebrow="Dienstleistungen" title="Was wir für Ihr Fahrzeug tun" text="Innenreinigung, Aussenreinigung, Politur – alles per Hand, mit hochwertigen Mitteln und mit sichtbarem Ergebnis." />
           <div className="mt-10"><ServiceCards /></div>
         </div>
       </section>
@@ -69,8 +69,8 @@ export default function Home() {
             <img src={images.trust} alt="Fahrzeug nach der professionellen Reinigung in Zürich Nord" className="w-full rounded-[2rem] shadow-2xl object-cover" />
           </Reveal>
           <Reveal delay={100}>
-            <SectionHeader eyebrow="Warum Kunden uns vertrauen" title="Handarbeit, hochwertige Mittel und schonende Pflege." text="Jedes Fahrzeug wird individuell behandelt – sorgfältig, materialschonend und mit Fokus auf dauerhaften Werterhalt." />
-            <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">Dank unserer Erfahrung wissen wir genau, welche Reinigungs- und Pflegeverfahren in welcher Situation sinnvoll sind. Unser Ziel: gründliche, nachhaltige Autoreinigung für Kunden aus Zürich Nord und Umgebung.</p>
+            <SectionHeader eyebrow="Warum Kunden uns vertrauen" title="Jedes Fahrzeug per Hand – kein Automatikbetrieb, keine Kratzer." text="Wir behandeln jedes Fahrzeug individuell: mit den richtigen Mitteln, der nötigen Zeit und dem Anspruch, dass das Ergebnis stimmt." />
+            <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">Nach vier Jahren und tausenden gereinigten Fahrzeugen wissen wir, worauf es ankommt. Wir reinigen nicht schnell – wir reinigen richtig. Für Kunden aus Zürich Nord und der ganzen Region.</p>
           </Reveal>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl rounded-[2rem] bg-foreground p-8 text-background shadow-2xl md:rounded-[2.5rem] md:p-14">
           <Sparkles className="mb-5 h-7 w-7 text-primary md:mb-6 md:h-8 md:w-8" />
           <h2 className="font-heading text-3xl font-extrabold leading-tight md:text-5xl">Termin sichern – in unter 60 Sekunden</h2>
-          <p className="mt-4 text-base text-background/75 md:text-lg">Jetzt online buchen und Ihr Fahrzeug sauber, gepflegt und werterhaltend wieder abholen.</p>
+          <p className="mt-4 text-base text-background/75 md:text-lg">Termin wählen, Fahrzeug bringen – wir kümmern uns um den Rest.</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5">Online buchen <ArrowRight className="h-5 w-5" /></a>
           </div>

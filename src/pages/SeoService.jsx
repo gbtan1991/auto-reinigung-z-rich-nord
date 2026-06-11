@@ -297,9 +297,9 @@ export default function SeoService() {
       <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <h2 className="font-heading text-2xl font-extrabold sm:text-3xl lg:text-4xl">Bereit für {seoSvc.name}?</h2>
+            <h2 className="font-heading text-2xl font-extrabold sm:text-3xl lg:text-4xl">Termin buchen für {seoSvc.name}</h2>
             <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-              Buchen Sie jetzt online oder kontaktieren Sie uns direkt.
+              Termin online buchen oder anrufen – wir sind Mo–Sa erreichbar.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
