@@ -160,10 +160,10 @@ export default function SeoService() {
       <section className="px-5 py-12 md:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-primary">{seoSvc.name}</p>
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">{seoSvc.name}</p>
             <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">{seoSvc.h1}</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-              {seoSvc.heroText || `Professionelle ${seoSvc.name} in Zürich Nord – schonend, gründlich und mit Fokus auf dauerhaften Werterhalt. Termin online buchbar.`}
+              {seoSvc.heroText || `Professionelle ${seoSvc.name} in Zürich Nord – schonend, gründlich, Termin online buchbar.`}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
@@ -178,20 +178,20 @@ export default function SeoService() {
       </section>
 
       {/* Was ist diese Dienstleistung */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <SectionHeader eyebrow="Die Dienstleistung" title={`Was ist ${seoSvc.name}?`} />
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">{content.was}</p>
+              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">{content.was}</p>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="font-heading text-3xl font-extrabold mb-6">Ihre Vorteile</h2>
-              <ul className="space-y-4">
+              <h2 className="font-heading text-2xl font-extrabold">Ihre Vorteile</h2>
+              <ul className="mt-5 space-y-3">
                 {content.vorteile.map((v) => (
-                  <li key={v} className="flex gap-3 items-start">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-lg">{v}</span>
+                  <li key={v} className="flex items-start gap-3 text-sm sm:text-base">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />
+                    <span>{v}</span>
                   </li>
                 ))}
               </ul>
@@ -201,15 +201,15 @@ export default function SeoService() {
       </section>
 
       {/* Ablauf */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow="So funktioniert es" title="Unser Ablauf" />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {content.ablauf.map((step, i) => (
               <Reveal key={step} delay={i * 70}>
-                <div className="rounded-[2rem] border border-border bg-card p-6 shadow-sm">
-                  <div className="font-heading text-4xl font-extrabold text-primary/20 mb-3">{i + 1}</div>
-                  <p>{step}</p>
+                <div className="rounded-[1.75rem] border border-border bg-card p-5 shadow-sm">
+                  <div className="mb-3 font-heading text-3xl font-extrabold text-primary/20">{i + 1}</div>
+                  <p className="text-sm leading-7 sm:text-base">{step}</p>
                 </div>
               </Reveal>
             ))}
@@ -218,25 +218,25 @@ export default function SeoService() {
       </section>
 
       {/* Einsatzbereiche */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <SectionHeader eyebrow="Für wen?" title={`Für wen eignet sich ${seoSvc.name}?`} />
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">{content.einsatzbereiche}</p>
+              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">{content.einsatzbereiche}</p>
             </Reveal>
             <Reveal delay={100}>
-              <div className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
-                <h3 className="font-heading text-2xl font-extrabold mb-4">Preisfaktoren</h3>
-                <ul className="space-y-3 text-muted-foreground">
+              <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <h3 className="font-heading text-xl font-extrabold mb-4">Preisfaktoren</h3>
+                <ul className="space-y-2.5">
                   {["Fahrzeugtyp und -grösse", "Verschmutzungsgrad", "Gewähltes Paket (Basic / Advanced / Premium)", "Zusatzleistungen und Extras", "Zustand von Lack und Innenraum"].map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
+                <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
                   Jetzt Angebot anfragen <ArrowRight className="h-5 w-5" />
                 </a>
               </div>
@@ -246,23 +246,23 @@ export default function SeoService() {
       </section>
 
       {/* Regionen + Money Pages */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow="Einzugsgebiet" title={`${seoSvc.name} – Region Zürich Nord`} />
-          <div className="mt-10 grid gap-3 md:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-8 flex flex-wrap gap-2 justify-center">
             {standorte.map((ort) => (
-              <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="rounded-full border border-border bg-card px-5 py-3 text-center text-sm font-bold hover:border-primary hover:text-primary transition-colors">
+              <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
                 {ort.name}
               </Link>
             ))}
           </div>
           {relatedLPs.length > 0 && (
             <div className="mt-8">
-              <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary mb-4">Spezifische Infos je Standort</p>
-              <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Spezifische Infos je Standort</p>
+              <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {relatedLPs.map((lp) => (
-                  <Link key={`${lp.serviceSlug}-${lp.ortSlug}`} to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`} className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 text-sm font-bold hover:border-primary hover:text-primary transition-colors">
-                    <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                  <Link key={`${lp.serviceSlug}-${lp.ortSlug}`} to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`} className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
                     {lp.serviceName} {lp.ortName}
                   </Link>
                 ))}
@@ -273,43 +273,39 @@ export default function SeoService() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – ${seoSvc.name}`} />
-          <div className="mt-10 space-y-3">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeader center eyebrow="FAQ" title={`Fragen – ${seoSvc.name}`} />
+          <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {(serviceFaqs[seoSvc.slug] || [
-              { q: `Was kostet eine ${seoSvc.name} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Verschmutzungsgrad ab. Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie direkt online.` },
-              { q: `Wie lange dauert eine ${seoSvc.name}?`, a: "Je nach Umfang dauert die Reinigung zwischen 1 und 8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
-              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenflotten und Geschäftsfahrzeuge. Kontaktieren Sie uns für ein massgeschneidertes Angebot für Ihre Flotte." },
-              { q: "Kann ich online einen Termin buchen?", a: "Ja, über unsere Online-Buchung sichern Sie sich in weniger als 60 Sekunden Ihren Wunschtermin – bequem und ohne Wartezeit." },
-              { q: "Wo befindet sich Ihr Betrieb?", a: "Wir sind an der Heerenwiesen 18, 8051 Zürich, gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Wallisellen und der ganzen Region Zürich Nord." },
+              { q: `Was kostet eine ${seoSvc.name} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Verschmutzungsgrad ab. Unsere Pakete beginnen ab CHF 70.–.` },
+              { q: `Wie lange dauert eine ${seoSvc.name}?`, a: "Je nach Umfang dauert die Reinigung zwischen 1 und 8 Stunden." },
+              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenflotten. Kontaktieren Sie uns für ein massgeschneidertes Angebot." },
+              { q: "Kann ich online einen Termin buchen?", a: "Ja, über unsere Online-Buchung in weniger als 60 Sekunden." },
+              { q: "Wo befindet sich Ihr Betrieb?", a: "Heerenwiesen 18, 8051 Zürich – erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon und Wallisellen." },
             ]).map((item) => (
-              <Reveal key={item.q}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-card">
-                  <div className="p-5 sm:p-6">
-                    <h3 className="font-bold text-base leading-snug sm:text-lg">{item.q}</h3>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{item.a}</p>
-                  </div>
-                </div>
-              </Reveal>
+              <div key={item.q} className="p-5">
+                <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.a}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <h2 className="font-heading text-4xl font-extrabold">Bereit für professionelle {seoSvc.name}?</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Buchen Sie jetzt online oder kontaktieren Sie uns direkt. Wir freuen uns auf Ihr Fahrzeug.
+            <h2 className="font-heading text-2xl font-extrabold sm:text-3xl lg:text-4xl">Bereit für {seoSvc.name}?</h2>
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              Buchen Sie jetzt online oder kontaktieren Sie uns direkt.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin online buchen <ArrowRight className="h-5 w-5" />
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 font-bold">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
                 WhatsApp Anfrage
               </a>
             </div>

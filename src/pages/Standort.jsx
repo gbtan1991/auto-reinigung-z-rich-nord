@@ -33,7 +33,7 @@ export default function Standort() {
       <section className="px-5 py-12 md:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-primary">
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">
               Autoreinigung in {standort.name}
             </p>
             <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -55,25 +55,25 @@ export default function Standort() {
       </section>
 
       {/* Einleitung */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <SectionHeader
                 eyebrow={`Autoreinigung für ${standort.name}`}
-                title={`Professionelle Fahrzeugaufbereitung für Kunden aus ${standort.name}`}
+                title={`Fahrzeugaufbereitung für Kunden aus ${standort.name}`}
               />
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Autoreinigung Zürich-Nord an der Heerenwiesen 18, 8051 Zürich, ist die erste Adresse für professionelle Fahrzeugpflege in der Region Zürich Nord. Kunden aus {standort.name} und Umgebung vertrauen uns für Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugaufbereitung.
+              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+                Autoreinigung Zürich-Nord an der Heerenwiesen 18 ist die erste Adresse für Fahrzeugpflege in der Region. Kunden aus {standort.name} vertrauen uns für Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugaufbereitung.
               </p>
-              <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                Ob Privatfahrzeug, Firmenwagen oder Leasingfahrzeug: Wir reinigen Ihr Auto professionell, materialschonend und mit Fokus auf dauerhaften Werterhalt. Jedes Fahrzeug wird individuell behandelt.
+              <p className="mt-3 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+                Ob Privatfahrzeug, Firmenwagen oder Leasingfahrzeug – wir reinigen materialschonend und mit Fokus auf dauerhaften Werterhalt.
               </p>
             </Reveal>
             <Reveal delay={100}>
-              <div className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
-                <h2 className="font-heading text-2xl font-extrabold mb-6">Schnell & einfach zum Termin</h2>
-                <ul className="space-y-4">
+              <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <h2 className="font-heading text-xl font-extrabold mb-5">Schnell & einfach zum Termin</h2>
+                <ul className="space-y-3">
                   {[
                     "Online-Buchung in 60 Sekunden",
                     "Professionelle Handwäsche & Pflege",
@@ -81,13 +81,13 @@ export default function Standort() {
                     "Leasingrückgabe-Spezialist",
                     "MFK-Vorbereitung aus einer Hand",
                   ].map((item) => (
-                    <li key={item} className="flex gap-3 items-center">
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
+                    <li key={item} className="flex items-center gap-3 text-sm sm:text-base">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-primary sm:h-5 sm:w-5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
+                <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
                   Jetzt Termin buchen <ArrowRight className="h-5 w-5" />
                 </a>
               </div>
@@ -97,20 +97,20 @@ export default function Standort() {
       </section>
 
       {/* Dienstleistungen */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Unsere Dienstleistungen"
-            title={`Fahrzeugpflege-Services für ${standort.name}`}
-            text={`Alle unsere Dienstleistungen stehen Kunden aus ${standort.name} und der gesamten Region Zürich Nord zur Verfügung.`}
+            title={`Fahrzeugpflege für ${standort.name}`}
+            text={`Alle Leistungen stehen Kunden aus ${standort.name} und der Region Zürich Nord zur Verfügung.`}
           />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 70}>
-                <Link to={`/service/${service.slug}`} className="block rounded-[2rem] border border-border bg-card p-7 shadow-sm hover:border-primary transition-colors">
-                  <h3 className="font-heading text-xl font-extrabold">{service.eyebrow}</h3>
-                  <p className="mt-3 text-muted-foreground text-sm leading-7">{service.summary.slice(0, 130)}...</p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-primary font-bold text-sm">
+                <Link to={`/service/${service.slug}`} className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm transition hover:border-primary">
+                  <h3 className="font-heading text-lg font-extrabold">{service.eyebrow}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">{service.summary.slice(0, 120)}…</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-primary">
                     Mehr erfahren <ArrowRight className="h-4 w-4" />
                   </span>
                 </Link>
@@ -121,37 +121,37 @@ export default function Standort() {
       </section>
 
       {/* Lokaler Bezug & Erreichbarkeit */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <h2 className="font-heading text-3xl font-extrabold mb-5">
+              <h2 className="font-heading text-2xl font-extrabold sm:text-3xl">
                 Autoreinigung für {standort.nameFull}
               </h2>
-              <p className="text-lg leading-8 text-muted-foreground">{standort.lokalerBezug}</p>
-              <div className="mt-6">
-                <h3 className="font-bold text-lg mb-2">Quartiere & Umgebung</h3>
-                <p className="text-muted-foreground">{standort.quartiere}</p>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{standort.lokalerBezug}</p>
+              <div className="mt-5">
+                <h3 className="font-bold text-base mb-1.5">Quartiere & Umgebung</h3>
+                <p className="text-sm text-muted-foreground">{standort.quartiere}</p>
               </div>
-              <div className="mt-6">
-                <h3 className="font-bold text-lg mb-2">Typische Kundenanliegen</h3>
-                <p className="text-muted-foreground">{standort.typischAnliegen}</p>
+              <div className="mt-4">
+                <h3 className="font-bold text-base mb-1.5">Typische Kundenanliegen</h3>
+                <p className="text-sm text-muted-foreground">{standort.typischAnliegen}</p>
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <div className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-5">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <h3 className="font-heading text-xl font-extrabold">Erreichbarkeit ab {standort.name}</h3>
+              <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <div className="mb-4 flex items-center gap-2.5">
+                  <MapPin className="h-5 w-5 shrink-0 text-primary" />
+                  <h3 className="font-heading text-lg font-extrabold">Erreichbarkeit ab {standort.name}</h3>
                 </div>
-                <p className="text-muted-foreground leading-8">{standort.erreichbarkeit}</p>
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4 text-primary" />
+                <p className="text-sm leading-7 text-muted-foreground">{standort.erreichbarkeit}</p>
+                <div className="mt-5 space-y-2 border-t border-border pt-5">
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <span>{contact.hours}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
-                    <MapPin className="h-4 w-4 text-primary" />
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <span>{contact.address}</span>
                   </div>
                 </div>
@@ -162,27 +162,27 @@ export default function Standort() {
       </section>
 
       {/* Warum Kunden uns wählen – standortspezifisch */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             center
             eyebrow={`Kunden aus ${standort.name}`}
             title={`Warum Kunden aus ${standort.name} uns vertrauen`}
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { title: `Kurze Anfahrt aus ${standort.name}`, text: standort.erreichbarkeit.split(".")[0] + "." },
-              { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer, nur sorgfältige Handwäsche." },
-              { title: "Spezialist für lokale Bedürfnisse", text: standort.typischAnliegen },
+              { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
+              { title: "Lokale Bedürfnisse", text: standort.typischAnliegen },
               { title: "Alle Quartiere, ein Ziel", text: `Kunden aus ${standort.quartiere} vertrauen uns regelmässig ihre Fahrzeuge an.` },
-              { title: "Werterhalt & Leasingrückgabe", text: "Wir kennen die Anforderungen von Leasinggebern und bereiten Ihr Fahrzeug professionell vor." },
-              { title: "Online buchbar – 24/7", text: "Termin in 60 Sekunden online sichern – flexibel, ohne Wartezeit, direkt mit Wunschdatum." },
+              { title: "Werterhalt & Leasingrückgabe", text: "Wir kennen die Anforderungen von Leasinggebern und bereiten Ihr Fahrzeug vor." },
+              { title: "Online buchbar – 24/7", text: "Termin in 60 Sekunden online sichern – flexibel, ohne Wartezeit." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
-                <div className="rounded-[2rem] border border-border bg-card p-6 shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-primary mb-3" />
-                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.text}</p>
+                <div className="rounded-[1.75rem] border border-border bg-card p-5 shadow-sm">
+                  <CheckCircle2 className="mb-3 h-5 w-5 text-primary" />
+                  <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-6">{item.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -191,25 +191,21 @@ export default function Standort() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – Autoreinigung ${standort.name}`} />
-          <div className="mt-10 space-y-3">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeader center eyebrow="FAQ" title={`Fragen – Autoreinigung ${standort.name}`} />
+          <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {[
               { q: `Wie weit ist Ihr Betrieb von ${standort.name} entfernt?`, a: `Unser Betrieb an der Heerenwiesen 18, 8051 Zürich ist von ${standort.name} gut erreichbar. ${standort.erreichbarkeit.slice(0, 120)}.` },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenwagen, Transportfahrzeuge und komplette Flotten. Kontaktieren Sie uns für ein individuelles Angebot." },
-              { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Je nach Paket dauert eine Innenreinigung 2–4 Stunden, eine Komplettreinigung 4–8 Stunden. Bitte planen Sie genug Zeit ein oder fragen Sie bei der Buchung nach." },
-              { q: "Kann ich einen Termin online buchen?", a: "Ja, direkt über unsere Online-Buchung. In weniger als 60 Sekunden ist Ihr Termin gesichert – bequem von zu Hause aus." },
-              { q: "Was kostet eine professionelle Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung und ab CHF 80.– für die Innenreinigung. Für individuelle Angebote kontaktieren Sie uns gerne." },
+              { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Je nach Paket dauert eine Innenreinigung 2–4 Stunden, eine Komplettreinigung 4–8 Stunden. Bitte fragen Sie bei der Buchung nach." },
+              { q: "Kann ich einen Termin online buchen?", a: "Ja, direkt über unsere Online-Buchung. In weniger als 60 Sekunden ist Ihr Termin gesichert." },
+              { q: "Was kostet eine professionelle Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung und ab CHF 80.– für die Innenreinigung." },
             ].map((item) => (
-              <Reveal key={item.q}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-card">
-                  <div className="p-5 sm:p-6">
-                    <h3 className="font-bold text-base leading-snug sm:text-lg">{item.q}</h3>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{item.a}</p>
-                  </div>
-                </div>
-              </Reveal>
+              <div key={item.q} className="p-5">
+                <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.a}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -217,23 +213,22 @@ export default function Standort() {
 
       {/* Money Pages für diesen Standort */}
       {landingpages.filter((lp) => lp.ortSlug === standort.slug).length > 0 && (
-        <section className="px-5 py-16 lg:px-8">
+        <section className="px-5 py-12 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              eyebrow="Direkt zum Thema"
-              title={`${standort.name}: spezifische Leistungsseiten`}
-              text={`Alle spezifischen Informationen für Kunden aus ${standort.name}.`}
+              eyebrow="Spezifische Leistungsseiten"
+              title={`${standort.name}: detaillierte Infos`}
             />
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+            <div className="mt-7 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
               {landingpages
                 .filter((lp) => lp.ortSlug === standort.slug)
                 .map((lp) => (
                   <Reveal key={`${lp.serviceSlug}-${lp.ortSlug}`}>
                     <Link
                       to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`}
-                      className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm"
+                      className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary"
                     >
-                      <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
                       {lp.serviceName} in {lp.ortName}
                     </Link>
                   </Reveal>
@@ -244,20 +239,20 @@ export default function Standort() {
       )}
 
       {/* CTA */}
-      <section className="px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <h2 className="font-heading text-4xl font-extrabold">
+            <h2 className="font-heading text-2xl font-extrabold sm:text-3xl lg:text-4xl">
               Bereit für ein sauberes Auto?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Buchen Sie jetzt Ihren Termin online oder rufen Sie uns an. Wir freuen uns auf Kunden aus {standort.name} und der ganzen Region.
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              Buchen Sie jetzt online oder rufen Sie uns an. Wir freuen uns auf Kunden aus {standort.name}.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin online buchen <ArrowRight className="h-5 w-5" />
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 font-bold">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
                 WhatsApp Anfrage
               </a>
             </div>

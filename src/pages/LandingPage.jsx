@@ -171,7 +171,7 @@ export default function LandingPage() {
       <section className="px-5 py-12 md:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-primary">
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">
               {lp.serviceName} in {ortData.name}
             </p>
             <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
@@ -193,24 +193,24 @@ export default function LandingPage() {
       </section>
 
       {/* Hauptinhalt */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <SectionHeader
                 eyebrow={`${lp.serviceName} in ${ortData.name}`}
-                title={`${lp.serviceName} in ${ortData.nameFull} – professionell und zuverlässig`}
+                title={`${lp.serviceName} in ${ortData.nameFull}`}
               />
-              <p className="mt-6 text-lg leading-8 text-muted-foreground">{content.leistungBeschrieb}</p>
+              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">{content.leistungBeschrieb}</p>
             </Reveal>
             <Reveal delay={100}>
-              <div className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
-                <h2 className="font-heading text-2xl font-extrabold mb-6">Für wen geeignet?</h2>
-                <p className="text-muted-foreground">{content.fuerWen}</p>
-                <div className="mt-6 space-y-3">
+              <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <h2 className="font-heading text-xl font-extrabold mb-4">Für wen geeignet?</h2>
+                <p className="text-sm leading-7 text-muted-foreground">{content.fuerWen}</p>
+                <div className="mt-5 space-y-2.5">
                   {["Privatfahrzeuge und Familienfahrzeuge", "Firmenfahrzeuge und Flotten", "Leasingfahrzeuge vor Rückgabe", "Fahrzeuge vor MFK oder Verkauf"].map((item) => (
-                    <div key={item} className="flex gap-3 items-center">
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
+                    <div key={item} className="flex items-center gap-3">
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
                       <span className="text-sm">{item}</span>
                     </div>
                   ))}
@@ -222,20 +222,20 @@ export default function LandingPage() {
       </section>
 
       {/* Ablauf */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow="So läuft es ab" title="In 3 Schritten zum sauberen Auto" />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
-              { step: "1", title: "Termin buchen", text: "Online in 60 Sekunden buchen – flexibel, ohne Wartezeit." },
-              { step: "2", title: "Fahrzeug bringen", text: `Bringen Sie Ihr Fahrzeug zu uns an die Heerenwiesen 18, 8051 Zürich – schnell erreichbar aus ${ortData.name}.` },
-              { step: "3", title: "Gepflegtes Auto abholen", text: "Wir reinigen Ihr Fahrzeug professionell und geben es in einwandfreiem Zustand zurück." },
+              { step: "1", title: "Termin buchen", text: "Online in 60 Sekunden – flexibel, ohne Wartezeit." },
+              { step: "2", title: "Fahrzeug bringen", text: `Heerenwiesen 18, 8051 Zürich – schnell erreichbar aus ${ortData.name}.` },
+              { step: "3", title: "Gepflegtes Auto abholen", text: "Professionell gereinigt, in einwandfreiem Zustand." },
             ].map((item) => (
               <Reveal key={item.step} delay={parseInt(item.step) * 80}>
-                <div className="rounded-[2rem] border border-border bg-card p-7 shadow-sm text-center">
-                  <div className="font-heading text-5xl font-extrabold text-primary/20 mb-4">{item.step}</div>
-                  <h3 className="font-bold text-xl mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.text}</p>
+                <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm text-center">
+                  <div className="mb-3 font-heading text-4xl font-extrabold text-primary/20">{item.step}</div>
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -244,29 +244,29 @@ export default function LandingPage() {
       </section>
 
       {/* Lokaler Bezug & Erreichbarkeit */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <h2 className="font-heading text-3xl font-extrabold mb-5">
+              <h2 className="font-heading text-2xl font-extrabold sm:text-3xl">
                 {lp.serviceName} für Kunden aus {ortData.nameFull}
               </h2>
-              <p className="text-lg leading-8 text-muted-foreground">{content.lokalerBezug}</p>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{content.lokalerBezug}</p>
             </Reveal>
             <Reveal delay={100}>
-              <div className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-5">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <h3 className="font-heading text-xl font-extrabold">Erreichbarkeit ab {ortData.name}</h3>
+              <div className="rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <div className="mb-4 flex items-center gap-2.5">
+                  <MapPin className="h-5 w-5 shrink-0 text-primary" />
+                  <h3 className="font-heading text-lg font-extrabold">Erreichbarkeit ab {ortData.name}</h3>
                 </div>
-                <p className="text-muted-foreground leading-8">{ortData.erreichbarkeit}</p>
-                <div className="mt-6 pt-6 border-t border-border space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="h-4 w-4 text-primary" />
+                <p className="text-sm leading-7 text-muted-foreground">{ortData.erreichbarkeit}</p>
+                <div className="mt-5 space-y-2 border-t border-border pt-5">
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <span>{contact.hours}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 text-primary" />
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                     <span>{contact.address}</span>
                   </div>
                 </div>
@@ -277,26 +277,26 @@ export default function LandingPage() {
       </section>
 
       {/* Warum wir */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow={`Warum Kunden aus ${ortData.name}`} title={`Warum Kunden aus ${ortData.name} uns wählen`} />
           <Reveal>
-            <p className="mt-6 max-w-4xl mx-auto text-center text-lg leading-8 text-muted-foreground">{content.warum}</p>
+            <p className="mt-5 max-w-3xl mx-auto text-center text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{content.warum}</p>
           </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
               { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
               { title: "Flexibel buchbar", text: "Termin online sichern – 24/7, in weniger als 60 Sekunden." },
-              { title: "Alle Fahrzeugtypen", text: "Von Kleinwagen bis Transporter, von Privatfahrzeug bis Flotte." },
-              { title: "Werterhalt garantiert", text: "Professionelle Pflege erhält den Wert Ihres Fahrzeugs dauerhaft." },
-              { title: `Kurze Anfahrt aus ${ortData.name}`, text: `Schnell erreichbar per Auto oder ÖV – kein langer Umweg.` },
+              { title: "Alle Fahrzeugtypen", text: "Von Kleinwagen bis Transporter, Privatfahrzeug bis Flotte." },
+              { title: "Werterhalt garantiert", text: "Professionelle Pflege erhält den Wert dauerhaft." },
+              { title: `Kurze Anfahrt aus ${ortData.name}`, text: "Schnell erreichbar per Auto oder ÖV." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
-                <div className="rounded-[2rem] border border-border bg-card p-6 shadow-sm">
-                  <CheckCircle2 className="h-6 w-6 text-primary mb-3" />
-                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.text}</p>
+                <div className="rounded-[1.75rem] border border-border bg-card p-5 shadow-sm">
+                  <CheckCircle2 className="mb-3 h-5 w-5 text-primary" />
+                  <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-6">{item.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -305,45 +305,41 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – ${lp.serviceName} ${ortData.name}`} />
-          <div className="mt-10 space-y-3">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeader center eyebrow="FAQ" title={`Fragen – ${lp.serviceName} ${ortData.name}`} />
+          <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {[
-              { q: `Bieten Sie ${lp.serviceName} für Kunden aus ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} und der ganzen Region Zürich Nord. Unser Betrieb ist von ${ortData.name} schnell und bequem erreichbar.` },
-              { q: `Was kostet eine ${lp.serviceName} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Verschmutzungsgrad ab. Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie direkt online.` },
-              { q: "Wie lange dauert die Reinigung?", a: "Je nach Umfang dauert die Reinigung zwischen 1 und 8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer Ihres gewählten Pakets." },
-              { q: "Kann ich einen Termin online buchen?", a: "Ja, über unsere Online-Buchung sichern Sie sich in weniger als 60 Sekunden Ihren Wunschtermin – bequem von zu Hause oder unterwegs." },
-              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: `Ja, wir reinigen regelmässig Firmenflotten aus ${ortData.name} und der ganzen Region. Kontaktieren Sie uns für ein individuelles Angebot für Ihre Flotte.` },
+              { q: `Bieten Sie ${lp.serviceName} für Kunden aus ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} – schnell und bequem erreichbar.` },
+              { q: `Was kostet eine ${lp.serviceName}?`, a: `Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie online.` },
+              { q: "Wie lange dauert die Reinigung?", a: "Je nach Umfang 1–8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
+              { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
+              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: `Ja, wir reinigen regelmässig Firmenflotten aus ${ortData.name}. Kontaktieren Sie uns für ein individuelles Angebot.` },
             ].map((item) => (
-              <Reveal key={item.q}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-card">
-                  <div className="p-5 sm:p-6">
-                    <h3 className="font-bold text-base leading-snug sm:text-lg">{item.q}</h3>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{item.a}</p>
-                  </div>
-                </div>
-              </Reveal>
+              <div key={item.q} className="p-5">
+                <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.a}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="px-5 py-20 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <h2 className="font-heading text-4xl font-extrabold">
+            <h2 className="font-heading text-2xl font-extrabold sm:text-3xl lg:text-4xl">
               {lp.serviceName} in {ortData.name} – jetzt buchen
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Buchen Sie Ihren Termin online oder kontaktieren Sie uns direkt. Wir freuen uns auf Ihr Fahrzeug aus {ortData.name}.
+            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+              Buchen Sie online oder kontaktieren Sie uns direkt.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin online buchen <ArrowRight className="h-5 w-5" />
               </a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-8 py-4 font-bold">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
                 WhatsApp Anfrage
               </a>
             </div>
