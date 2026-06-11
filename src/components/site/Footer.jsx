@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Clock, Mail, MapPin, Phone, Star } from "lucide-react";
+import { Clock, Cookie, Mail, MapPin, Phone, Star } from "lucide-react";
 import { bookingUrl, contact, googleReviewUrl, images, services } from "@/data/siteContent";
 
 export default function Footer() {
+  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
+
+  const reopenCookieBanner = () => {
+    localStorage.removeItem("azn-cookies-v2");
+    window.location.reload();
+  };
+
   return (
     <footer className="border-t border-border bg-secondary/50">
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
@@ -37,11 +45,17 @@ export default function Footer() {
         <img src={images.map} alt="Karte Autoreinigung Zürich-Nord Heerenwiesen 18" loading="lazy" className="h-40 w-full object-cover opacity-80 transition hover:opacity-100" />
       </a>
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
-        <p>© 2025 Autoreinigung Zürich Nord</p>
+        <p>© 2026 Autoreinigung Zürich Nord</p>
         <div className="flex flex-wrap gap-4">
           <Link to="/kontakt" className="hover:text-primary transition-colors">Kontakt</Link>
           <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
           <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
+          <button
+            onClick={reopenCookieBanner}
+            className="flex items-center gap-1 hover:text-primary transition-colors"
+          >
+            <Cookie className="h-3.5 w-3.5" /> Cookie-Einstellungen
+          </button>
         </div>
       </div>
     </footer>

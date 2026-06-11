@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { MessageCircle, X, Send, Bot } from "lucide-react";
+import { MessageCircle, X, Send, Bot, Info } from "lucide-react";
+import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 
 export default function ChatWidget() {
@@ -66,7 +67,6 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Chat window */}
       {open && (
         <div className="fixed bottom-24 right-5 z-50 flex w-[350px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-2xl">
           {/* Header */}
@@ -75,16 +75,27 @@ export default function ChatWidget() {
               <Bot className="h-5 w-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="font-bold text-white text-sm">Auto Reinigung Zürich Nord</p>
-              <p className="text-xs text-white/70">Virtueller Assistent</p>
+              <p className="font-bold text-white text-sm">Autoreinigung Zürich-Nord</p>
+              <p className="text-xs text-white/70">Virtueller Assistent (KI)</p>
             </div>
             <button onClick={() => setOpen(false)} className="text-white/80 hover:text-white transition">
               <X className="h-5 w-5" />
             </button>
           </div>
 
+          {/* Datenschutzhinweis */}
+          <div className="flex items-start gap-2 bg-accent/50 border-b border-border px-4 py-2.5">
+            <Info className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Dieser Chat wird von einer KI verarbeitet. Bitte keine sensiblen Daten eingeben.{" "}
+              <Link to="/datenschutz" className="underline hover:text-primary transition-colors" onClick={() => setOpen(false)}>
+                Datenschutz
+              </Link>
+            </p>
+          </div>
+
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[320px] max-h-[400px]">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[280px] max-h-[360px]">
             {starting && (
               <div className="flex gap-2 items-start">
                 <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
