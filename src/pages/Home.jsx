@@ -21,59 +21,88 @@ export default function Home() {
         type="home"
         breadcrumbs={[{ name: "Startseite", path: "/" }]}
       />
-      <section className="overflow-hidden px-5 py-16 md:py-24 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="overflow-hidden px-5 py-12 md:py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <Reveal>
-            <p className="mb-5 inline-flex rounded-full border border-border bg-secondary px-4 py-2 text-xs font-extrabold uppercase tracking-[0.24em] text-primary">Swiss Detailing Lab</p>
-            <h1 className="font-heading text-5xl font-extrabold tracking-tight md:text-7xl">Professionelle Autoreinigung und Autoaufbereitung in Zürich Nord</h1>
-            <div className="mt-7 space-y-5 text-lg leading-8 text-muted-foreground">
-              <p>Sie suchen eine professionelle Autoreinigung in Zürich Nord? Bei Autoreinigung Zürich-Nord reinigen, pflegen und bereiten wir Fahrzeuge gründlich und materialschonend auf – von der Innenreinigung über die Aussenreinigung bis hin zu Politur, Lackpflege, Motorraumreinigung und Unterbodenreinigung.</p>
-              <p>Ob Privatfahrzeug, Firmenauto, Leasingrückgabe, Occasion oder Fahrzeug vor der MFK: Wir sorgen dafür, dass Ihr Auto sauber, gepflegt und werterhaltend aufbereitet wird. Mit sorgfältiger Handarbeit, hochwertigen Reinigungsprodukten und viel Erfahrung kümmern wir uns um jedes Detail Ihres Fahrzeugs.</p>
-              <p>Unser Standort in Zürich Nord ist ideal erreichbar für Kundinnen und Kunden aus Zürich-City, Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und Umgebung.</p>
+            <p className="mb-4 inline-flex rounded-full border border-border bg-secondary px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Swiss Detailing Lab · Zürich Nord</p>
+            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">Professionelle Autoreinigung & Autoaufbereitung in Zürich Nord</h1>
+            <div className="mt-5 space-y-3 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              <p>Innenreinigung, Aussenreinigung, Lackpolitur, Leasingrückgabe & MFK-Vorbereitung – sorgfältige Handarbeit, hochwertige Mittel, dauerhafter Werterhalt.</p>
+              <p>Ideal erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg und Wallisellen.</p>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg">Jetzt buchen <ArrowRight className="h-5 w-5" /></a>
-              <a href="#offerte" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-7 py-4 font-bold">Preise berechnen</a>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">Jetzt buchen <ArrowRight className="h-5 w-5" /></a>
+              <a href="#offerte" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-7 py-4 font-bold transition hover:border-primary hover:text-primary">Preise berechnen</a>
             </div>
           </Reveal>
-          <Reveal delay={120} className="relative">
-            <div className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
-            <div className="grid gap-4 md:grid-cols-2">
+          <Reveal delay={120} className="relative hidden sm:block">
+            <div className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+            <div className="grid grid-cols-2 gap-3">
               {[images.heroRim, images.heroInterior, images.heroPolish, images.ctaExterior].map((image, index) => (
-                <img key={image} src={image} alt="Autoreinigung Zürich Nord Fahrzeugpflege" className={`h-64 w-full rounded-[2rem] object-cover shadow-xl ${index === 1 ? "md:mt-14" : ""}`} />
+                <img key={image} src={image} alt="Autoreinigung Zürich Nord Fahrzeugpflege" className={`h-52 w-full rounded-[1.5rem] object-cover shadow-xl lg:h-60 ${index === 1 ? "mt-8" : ""}`} />
               ))}
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="px-5 py-16 lg:px-8">
+      <section className="px-5 py-10 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {[[Car,"Seit 2020","in Zürich-Schwamendingen"],[Users,"5-köpfig","Team mit Herz und Hand"],[ShieldCheck,"MFK-ready","Motor, Chassis und Unterboden"],[Gauge,"Werterhalt","für Privat- und Firmenfahrzeuge"]].map(([Icon,title,text]) => (
-              <Reveal key={title} className="rounded-[2rem] border border-border bg-card p-6 shadow-sm"><Icon className="mb-5 h-7 w-7 text-primary" /><p className="font-heading text-2xl font-extrabold">{title}</p><p className="mt-2 text-sm text-muted-foreground">{text}</p></Reveal>
+              <Reveal key={title} className="rounded-[1.5rem] border border-border bg-card p-5 shadow-sm md:rounded-[2rem] md:p-6"><Icon className="mb-3 h-6 w-6 text-primary md:mb-5 md:h-7 md:w-7" /><p className="font-heading text-lg font-extrabold md:text-2xl">{title}</p><p className="mt-1 text-xs text-muted-foreground md:mt-2 md:text-sm">{text}</p></Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Dienstleistungen" title="Saubere Arbeit: unsere Dienstleistungen" text="Alle bestehenden Leistungen wurden übernommen und in eine klare Premium-Service-Matrix übersetzt." /><div className="mt-10"><ServiceCards /></div></div></section>
-
-      <section className="px-5 py-20 lg:px-8"><div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2"><Reveal><img src={images.trust} alt="Fahrzeug nach der professionellen Reinigung in Zürich Nord" className="rounded-[2.5rem] shadow-2xl" /></Reveal><Reveal delay={100}><SectionHeader eyebrow="Warum Kunden uns vertrauen" title="Handarbeit, hochwertige Mittel und schonende Pflege." text="Bei Autoreinigung Zürich-Nord legen wir grossen Wert auf sorgfältige Handarbeit, hochwertige Reinigungsmittel und schonende Fahrzeugpflege. Jedes Fahrzeug wird individuell behandelt – unabhängig davon, ob es sich um ein Alltagsfahrzeug, ein Firmenauto, einen Sportwagen oder ein Leasingfahrzeug handelt." /><p className="mt-6 text-lg leading-8 text-muted-foreground">Dank unserer Erfahrung in der professionellen Fahrzeugaufbereitung wissen wir genau, welche Reinigungs- und Pflegeverfahren in welcher Situation sinnvoll sind. Unser Ziel ist eine gründliche, materialschonende und nachhaltige Autoreinigung für Kundinnen und Kunden aus Zürich Nord und Umgebung.</p></Reveal></div></section>
-
-      <section id="offerte" className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Lead System" title="Offerte in Sekunden vorbereiten" text="Fahrzeugtyp, Service und Add-ons auswählen – danach direkt buchen oder per WhatsApp anfragen." /><div className="mt-10"><QuoteCalculator /></div></div></section>
-
-      <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Kundenstimmen" title="Vertrauen aus Zürich Nord" /><div className="mt-10"><Testimonials /></div></div></section>
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="FAQ" title="Häufige Fragen" /><div className="mt-10"><FAQAccordion /></div></div></section>
-      {/* Interne Verlinkung: Dienstleistungen */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader eyebrow="Alle Dienstleistungen" title="Professionelle Fahrzeugpflege – das gesamte Angebot" text="Von der Innenreinigung über die Handwäsche bis zur Keramikversiegelung: Wählen Sie die Leistung, die Ihr Fahrzeug braucht." />
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <SectionHeader eyebrow="Dienstleistungen" title="Unsere Dienstleistungen" text="Innenreinigung, Aussenreinigung, Politur – sorgfältige Handarbeit für jedes Fahrzeug." />
+          <div className="mt-10"><ServiceCards /></div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
+            <img src={images.trust} alt="Fahrzeug nach der professionellen Reinigung in Zürich Nord" className="w-full rounded-[2rem] shadow-2xl object-cover" />
+          </Reveal>
+          <Reveal delay={100}>
+            <SectionHeader eyebrow="Warum Kunden uns vertrauen" title="Handarbeit, hochwertige Mittel und schonende Pflege." text="Jedes Fahrzeug wird individuell behandelt – sorgfältig, materialschonend und mit Fokus auf dauerhaften Werterhalt." />
+            <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">Dank unserer Erfahrung wissen wir genau, welche Reinigungs- und Pflegeverfahren in welcher Situation sinnvoll sind. Unser Ziel: gründliche, nachhaltige Autoreinigung für Kunden aus Zürich Nord und Umgebung.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="offerte" className="bg-secondary/70 px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader center eyebrow="Offerte berechnen" title="Preise in Sekunden berechnen" text="Fahrzeugtyp, Service und Add-ons auswählen – dann direkt buchen oder per WhatsApp anfragen." />
+          <div className="mt-10"><QuoteCalculator /></div>
+        </div>
+      </section>
+
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader center eyebrow="Kundenstimmen" title="Was unsere Kunden sagen" />
+          <div className="mt-10"><Testimonials /></div>
+        </div>
+      </section>
+      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader center eyebrow="FAQ" title="Häufige Fragen" />
+          <div className="mt-10"><FAQAccordion /></div>
+        </div>
+      </section>
+      {/* Interne Verlinkung: Dienstleistungen */}
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader eyebrow="Alle Dienstleistungen" title="Das gesamte Leistungsangebot" text="Von der Innenreinigung über die Handwäsche bis zur Keramikversiegelung." />
+          <div className="mt-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {seoServices.map((svc) => (
               <Reveal key={svc.slug}>
-                <Link to={`/dienstleistung/${svc.slug}`} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm">
-                  <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                <Link to={`/dienstleistung/${svc.slug}`} className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition-colors">
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
                   {svc.name}
                 </Link>
               </Reveal>
@@ -83,15 +112,15 @@ export default function Home() {
       </section>
 
       {/* Interne Verlinkung: Standorte */}
-      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="Einzugsgebiet" title="Autoreinigung für die ganze Region Zürich Nord" text="Kunden aus diesen Gemeinden und Stadtteilen kommen regelmässig zu uns." />
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-8 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {standorte.map((ort) => (
               <Reveal key={ort.slug}>
-                <Link to={`/standorte/${ort.slug}`} className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm">
-                  <MapPin className="h-4 w-4 shrink-0 text-primary" />
-                  {ort.nameFull}
+                <Link to={`/standorte/${ort.slug}`} className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition-colors">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 text-primary" />
+                  <span className="truncate">{ort.nameFull}</span>
                 </Link>
               </Reveal>
             ))}
@@ -99,7 +128,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-5xl rounded-[2.5rem] bg-foreground p-8 text-background shadow-2xl md:p-14"><Sparkles className="mb-6 h-8 w-8 text-primary" /><h2 className="font-heading text-4xl font-extrabold md:text-6xl">Nicht lange warten: sekundenschnell Termin sichern</h2><p className="mt-5 text-lg text-background/75">Jetzt online buchen und Ihr Fahrzeug sauber, gepflegt und werterhaltend wieder abholen.</p><a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">Online buchen</a></div></section>
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-5xl rounded-[2rem] bg-foreground p-8 text-background shadow-2xl md:rounded-[2.5rem] md:p-14">
+          <Sparkles className="mb-5 h-7 w-7 text-primary md:mb-6 md:h-8 md:w-8" />
+          <h2 className="font-heading text-3xl font-extrabold leading-tight md:text-5xl">Termin sichern – in unter 60 Sekunden</h2>
+          <p className="mt-4 text-base text-background/75 md:text-lg">Jetzt online buchen und Ihr Fahrzeug sauber, gepflegt und werterhaltend wieder abholen.</p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5">Online buchen <ArrowRight className="h-5 w-5" /></a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -30,23 +30,23 @@ export default function Standort() {
       ]} />
 
       {/* Hero */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-12 md:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-primary">
               Autoreinigung in {standort.name}
             </p>
-            <h1 className="font-heading text-5xl font-extrabold tracking-tight md:text-7xl">
+            <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Professionelle Fahrzeugpflege in {standort.nameFull}
             </h1>
-            <p className="mt-6 max-w-3xl text-xl leading-8 text-muted-foreground">
-              Ihr Fahrzeug professionell gereinigt und aufbereitet – Innenreinigung, Aussenreinigung und Politur. Direkt in Zürich Nord, schnell erreichbar aus {standort.name}.
+            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              Innenreinigung, Aussenreinigung und Politur – direkt in Zürich Nord, schnell erreichbar aus {standort.name}.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin buchen <ArrowRight className="h-5 w-5" />
               </a>
-              <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold">
+              <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
                 <Phone className="h-4 w-4" /> {contact.phone}
               </a>
             </div>
@@ -191,10 +191,10 @@ export default function Standort() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – Autoreinigung ${standort.name}`} />
-          <div className="mt-10 space-y-5">
+          <div className="mt-10 space-y-3">
             {[
               { q: `Wie weit ist Ihr Betrieb von ${standort.name} entfernt?`, a: `Unser Betrieb an der Heerenwiesen 18, 8051 Zürich ist von ${standort.name} gut erreichbar. ${standort.erreichbarkeit.slice(0, 120)}.` },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenwagen, Transportfahrzeuge und komplette Flotten. Kontaktieren Sie uns für ein individuelles Angebot." },
@@ -203,9 +203,11 @@ export default function Standort() {
               { q: "Was kostet eine professionelle Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung und ab CHF 80.– für die Innenreinigung. Für individuelle Angebote kontaktieren Sie uns gerne." },
             ].map((item) => (
               <Reveal key={item.q}>
-                <div className="rounded-[2rem] border border-border bg-card p-6">
-                  <h3 className="font-bold text-lg mb-2">{item.q}</h3>
-                  <p className="text-muted-foreground">{item.a}</p>
+                <div className="overflow-hidden rounded-2xl border border-border bg-card">
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-bold text-base leading-snug sm:text-lg">{item.q}</h3>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{item.a}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}

@@ -168,23 +168,23 @@ export default function LandingPage() {
       ]} />
 
       {/* Hero */}
-      <section className="px-5 py-20 lg:px-8">
+      <section className="px-5 py-12 md:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.22em] text-primary">
               {lp.serviceName} in {ortData.name}
             </p>
-            <h1 className="font-heading text-5xl font-extrabold tracking-tight md:text-7xl">
+            <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               {lp.serviceName} in {ortData.nameFull}
             </h1>
-            <p className="mt-6 max-w-3xl text-xl leading-8 text-muted-foreground">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               {content.einleitung}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin buchen <ArrowRight className="h-5 w-5" />
               </a>
-              <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold">
+              <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
                 <Phone className="h-4 w-4" /> {contact.phone}
               </a>
             </div>
@@ -305,21 +305,23 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – ${lp.serviceName} ${ortData.name}`} />
-          <div className="mt-10 space-y-5">
+          <div className="mt-10 space-y-3">
             {[
               { q: `Bieten Sie ${lp.serviceName} für Kunden aus ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} und der ganzen Region Zürich Nord. Unser Betrieb ist von ${ortData.name} schnell und bequem erreichbar.` },
               { q: `Was kostet eine ${lp.serviceName} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Verschmutzungsgrad ab. Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie direkt online.` },
               { q: "Wie lange dauert die Reinigung?", a: "Je nach Umfang dauert die Reinigung zwischen 1 und 8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer Ihres gewählten Pakets." },
-              { q: "Kann ich ein Termin online buchen?", a: "Ja, über unsere Online-Buchung sichern Sie sich in weniger als 60 Sekunden Ihren Wunschtermin – bequem von zu Hause oder unterwegs." },
+              { q: "Kann ich einen Termin online buchen?", a: "Ja, über unsere Online-Buchung sichern Sie sich in weniger als 60 Sekunden Ihren Wunschtermin – bequem von zu Hause oder unterwegs." },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: `Ja, wir reinigen regelmässig Firmenflotten aus ${ortData.name} und der ganzen Region. Kontaktieren Sie uns für ein individuelles Angebot für Ihre Flotte.` },
             ].map((item) => (
               <Reveal key={item.q}>
-                <div className="rounded-[2rem] border border-border bg-card p-6">
-                  <h3 className="font-bold text-lg mb-2">{item.q}</h3>
-                  <p className="text-muted-foreground">{item.a}</p>
+                <div className="overflow-hidden rounded-2xl border border-border bg-card">
+                  <div className="p-5 sm:p-6">
+                    <h3 className="font-bold text-base leading-snug sm:text-lg">{item.q}</h3>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{item.a}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}

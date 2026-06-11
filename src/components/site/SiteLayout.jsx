@@ -8,7 +8,7 @@ export default function SiteLayout() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="pt-20"><Outlet /></main>
+      <main className="min-h-screen pt-[4.25rem]"><Outlet /></main>
       <Footer />
       <FloatingActions />
       <CookieBanner />
