@@ -4,8 +4,75 @@ import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
-import { seoServices, standorte } from "@/data/seoData";
+import { seoServices, standorte, landingpages } from "@/data/seoData";
 import { bookingUrl, phoneUrl, whatsappUrl, contact } from "@/data/siteContent";
+
+// Service-spezifische FAQs (unique pro Dienstleistung, kein generischer Copy-Paste)
+const serviceFaqs = {
+  autoaufbereitung: [
+    { q: "Was beinhaltet eine vollständige Autoaufbereitung?", a: "Unsere vollständige Autoaufbereitung umfasst die Innenreinigung (Staubsaugen, Shampoonieren, Leder), Aussenreinigung per Handwäsche, Felgen, Scheiben sowie optional Lackpolitur und Versiegelung. Wir begutachten das Fahrzeug zuerst und empfehlen das passende Paket." },
+    { q: "Wie oft sollte ich mein Fahrzeug aufbereiten lassen?", a: "Für Privatfahrzeuge empfehlen wir eine vollständige Aufbereitung 1–2 Mal pro Jahr. Firmenfahrzeuge oder Leasingfahrzeuge vor der Rückgabe profitieren von einer Aufbereitung nach Bedarf – spätestens kurz vor dem Übergabetermin." },
+    { q: "Kann ich das Fahrzeug während der Aufbereitung abholen?", a: "Nein – bitte planen Sie 4–8 Stunden ein. Wir informieren Sie bei der Buchung über die genaue Dauer. Die meisten Kunden kommen per ÖV oder lassen sich abholen." },
+    { q: "Ist die Autoaufbereitung auch für ältere Fahrzeuge sinnvoll?", a: "Ja. Auch ältere Fahrzeuge profitieren enorm von einer professionellen Aufbereitung – besonders vor dem Verkauf. Ein gepflegtes Fahrzeug erzielt deutlich höhere Preise." },
+    { q: "Wo befindet sich Ihr Betrieb?", a: "Heerenwiesen 18, 8051 Zürich-Schwamendingen. Gut erreichbar aus Oerlikon (8 Min.), Schwamendingen (5 Min.), Seebach (7 Min.), Opfikon (10 Min.) und Wallisellen (12 Min.)." },
+  ],
+  innenreinigung: [
+    { q: "Was genau wird bei der Innenreinigung gereinigt?", a: "Wir reinigen alle Bereiche des Innenraums: Sitze und Teppiche (shampooniert), Leder (gereinigt und gepflegt), Armaturen, Ablagen, Türverkleidungen, Lüftungskanäle, Fensterscheiben innen und alle Ritzen und schwer zugänglichen Stellen." },
+    { q: "Wie wird Geruch im Auto beseitigt?", a: "Bei starkem Geruch (Zigaretten, Hund, Feuchtigkeit) bieten wir das Anokath-Desinfektionsverfahren an. Dieses Verfahren beseitigt Gerüche dauerhaft an der Quelle, nicht nur oberflächlich." },
+    { q: "Ich habe Tierhaare im Auto – kein Problem?", a: "Tierhaare sind unsere Spezialität. Mit speziellen Werkzeugen entfernen wir hartnäckige Tierhaare auch aus tiefen Sitznähten und Teppichfasern vollständig." },
+    { q: "Wie lange dauert eine Innenreinigung?", a: "Je nach Fahrzeugtyp und Verschmutzungsgrad 2–4 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
+    { q: "Kann ich einen Termin kurzfristig buchen?", a: "Ja. Über unsere Online-Buchung sind oft Termine innerhalb weniger Tage verfügbar. Für dringende Anfragen können Sie uns auch direkt anrufen: +41 44 511 94 90." },
+  ],
+  aussenreinigung: [
+    { q: "Was ist der Unterschied zwischen Handwäsche und Maschinenwäsche?", a: "Bei der Handwäsche entstehen keine Kratzer oder Hologramme, wie sie Bürsten in Automatikwaschanlagen verursachen. Wir reinigen per Zwei-Eimer-Methode mit pH-neutralen Mitteln – schonend und gründlich." },
+    { q: "Was wird bei der Aussenreinigung alles gereinigt?", a: "Karosserie, Türrahmen und Türschweller, Felgen und Reifen, Scheiben aussen und innen, Spiegel und Kameralinsen. Auf Wunsch: Motorraum, Unterboden, Fahrwerk, Bremssättel." },
+    { q: "Wann ist eine Aussenreinigung besonders wichtig?", a: "Nach dem Winter (Streusalz greift den Lack an), vor dem Frühjahr, vor MFK oder Leasingrückgabe, vor dem Verkauf und nach langen Reisen durch Insekten- oder Schmutzgebiete." },
+    { q: "Bieten Sie auch eine Lackversiegelung an?", a: "Ja. Nach der Handwäsche können wir eine Wachsversiegelung, eine Nanoversiegelung oder eine Keramikversiegelung auftragen. Letztere hält mehrere Jahre." },
+    { q: "Muss ich einen Termin buchen?", a: "Ja. Bitte buchen Sie vorab online oder rufen Sie an. Wir planen jeden Einsatz individuell und möchten Ihr Fahrzeug mit der nötigen Zeit und Sorgfalt reinigen." },
+  ],
+  handwasche: [
+    { q: "Warum Handwäsche statt Automatikwaschanlage?", a: "Automatikwaschanlagen mit Bürsten hinterlassen feine Kratzer und Hologramme im Lack. Wir reinigen ausschliesslich per Hand mit der Zwei-Eimer-Methode und hochwertigen Mikrofasertüchern – ohne jedes Risiko für Ihren Lack." },
+    { q: "Für welche Fahrzeuge ist die Handwäsche besonders wichtig?", a: "Für alle Fahrzeuge mit empfindlichem Lack, Hochglanzlackierungen, Folierungen, Keramikversiegelungen oder hochwertigen Metalliclackierungen. Auch für Sportwagen, Oldtimer und Fahrzeuge mit speziellem Lack." },
+    { q: "Wie oft sollte ich mein Fahrzeug per Handwäsche reinigen lassen?", a: "Idealerweise alle 4–8 Wochen, je nach Nutzung und Jahreszeit. Im Winter öfter, da Streusalz den Lack dauerhaft schädigen kann." },
+    { q: "Reinigen Sie auch Felgen und Reifen?", a: "Ja, die Felgen- und Reifenreinigung ist fester Bestandteil unserer Handwäsche. Bremsstaub und Teerspuren werden vollständig entfernt." },
+    { q: "Kann ich die Handwäsche mit einer Innenreinigung kombinieren?", a: "Ja, und das empfehlen wir auch. Innen und Aussen aus einer Hand – das ist die effizienteste Art der Fahrzeugpflege. Fragen Sie bei der Buchung nach einem Kombipaket." },
+  ],
+  politur: [
+    { q: "Welche Kratzer können durch Politur entfernt werden?", a: "Feine bis mittelschwere Kratzer in der Klarlackschicht, Hologramme von Maschinenwäschen, Oxidationen, matte Flecken und Verwitterungen. Tiefe Kratzer bis auf das Metall können durch Politur nicht vollständig beseitigt werden." },
+    { q: "Was ist der Unterschied zwischen Glanzpolitur und Kratzpolitur?", a: "Die Glanzpolitur (Ein-Schritt) beseitigt leichte Hologramme und Oxidationen und verstärkt den Glanz. Die Kratzpolitur (Zwei-Schritt) ist aggressiver und beseitigt tiefere Kratzer in der Klarlackschicht, erfordert aber anschliessende Politur für maximalen Glanz." },
+    { q: "Muss das Fahrzeug nach der Politur versiegelt werden?", a: "Es ist nicht zwingend, aber sehr empfehlenswert. Nach der Politur ist der Lack rein und optimal vorbereitet für eine Versiegelung, die den Glanz schützt und das nächste Polieren hinauszögert." },
+    { q: "Wie lange hält der Effekt einer Lackpolitur?", a: "Je nach Versiegelung und Nutzung 6–24 Monate. Eine anschliessende Keramikversiegelung verlängert den Effekt auf mehrere Jahre." },
+    { q: "Können Hologramme durch meine Automatikwaschanlage entstehen?", a: "Ja, das ist die häufigste Ursache für Hologramme. Bürsten in Automatikwaschanlagen hinterlassen feine kreisförmige Kratzer, die im Licht als Hologramme sichtbar sind. Wir beseitigen diese durch Maschinenpolieren." },
+  ],
+  leasingrueckgabe: [
+    { q: "Wann sollte ich die Leasingrückgabe-Reinigung buchen?", a: "Idealerweise 2–7 Tage vor dem Übergabetermin. So hat das Fahrzeug Zeit, vollständig zu trocknen, und wir können bei Bedarf kurzfristig nacharbeiten." },
+    { q: "Was können Nachforderungen beim Leasing verursachen?", a: "Flecken auf Sitzen, Geruch, Schmutz im Innenraum, Kratzer auf dem Lack, Felgenschäden, Schmutz im Motorraum und mangelhafte Aussenreinigung. Wir adressieren alle diese Punkte gezielt." },
+    { q: "Können Sie auch Kratzer vor der Rückgabe entfernen?", a: "Feine bis mittelschwere Kratzer können wir durch Lackpolitur deutlich reduzieren. Tiefe Kratzer bis auf das Grundmaterial sind durch Reinigung allein nicht zu beheben – hier empfehlen wir einen Karosseriefachmann." },
+    { q: "Machen Sie auch Firmen-Leasingflotten?", a: "Ja. Wir arbeiten regelmässig mit Unternehmen zusammen, die mehrere Leasingfahrzeuge zurückgeben müssen. Kontaktieren Sie uns für ein individuelles Angebot." },
+    { q: "Was kostet eine Leasingrückgabe-Reinigung?", a: "Die Kosten hängen vom Umfang ab – Innen, Aussen oder komplett. Typisch sind CHF 150.– bis CHF 400.– je nach Fahrzeuggrösse und Zustand. Für ein genaues Angebot melden Sie sich direkt." },
+  ],
+  "mfk-vorbereitung": [
+    { q: "Welche Bereiche reinigen Sie für die MFK-Vorbereitung?", a: "Motorraum (Kaltentfettung und Dampfreinigung), Unterboden, Fahrwerk, Bremssättel, Radhäuser sowie die Karosserie aussen. Der Motorraum wird anschliessend konserviert." },
+    { q: "Verbessert eine Reinigung die Chancen bei der MFK?", a: "Direkt technisch nicht – aber ein sauberer Motorraum erleichtert die Fehlerdiagnose und zeigt dem Prüfer, dass das Fahrzeug gepflegt wird. Oft werden bei sauberen Fahrzeugen auch kleinere Mängel weniger streng bewertet." },
+    { q: "Wann sollte ich die MFK-Vorbereitung buchen?", a: "1–3 Tage vor der MFK. Motorraum und Unterboden müssen trocken sein, um bei der Prüfung einen professionellen Eindruck zu machen." },
+    { q: "Bieten Sie die Motorraum- und Unterbodenreinigung auch separat an?", a: "Ja. Motorraum und Unterboden können als Einzelleistung oder im Paket mit der Aussenreinigung gebucht werden." },
+    { q: "Wo finden MFK-Stationen in Zürich statt?", a: "In Zürich gibt es MFK-Stationen in Schwamendingen (Riedtlistrasse), Oerlikon, Altstetten und weiteren Standorten. Wir sind ideal positioniert als Reinigungsstopp kurz vor der Prüfung." },
+  ],
+  keramikversiegelung: [
+    { q: "Was ist der Unterschied zwischen Keramikversiegelung und Wachsversiegelung?", a: "Wachs hält 2–6 Monate, Keramik 2–5 Jahre. Keramische Beschichtungen sind härter, wasserabweisender und bieten besseren UV- und Kratzschutz. Die Aufbereitung ist aufwendiger, aber das Preis-Leistungs-Verhältnis auf lange Sicht deutlich besser." },
+    { q: "Muss der Lack vor der Keramikversiegelung poliert werden?", a: "Ja, immer. Die Keramikschicht legt sich direkt auf den Klarlack und zeigt jede Unebenheit. Wir polieren zuerst und versiegeln dann – für ein perfektes Ergebnis." },
+    { q: "Wie lange dauert die Keramikversiegelung?", a: "Reinigung, Politur und Versiegelung dauern zusammen einen vollen Tag (6–10 Stunden). Die Keramikschicht benötigt danach 12–24 Stunden Aushärtezeit, in der das Fahrzeug nicht nass werden darf." },
+    { q: "Schützt die Keramikversiegelung auch vor Kratzern?", a: "Keramik erhöht die Lackhärte und kann leichte Kratzer durch Waschen reduzieren – ein vollständiger Kratzschutz ist es jedoch nicht. Sie schützt sehr gut vor UV, Schmutz, Vogelkot und chemischen Einflüssen." },
+    { q: "Für welche Fahrzeuge lohnt sich die Keramikversiegelung besonders?", a: "Für Neufahrzeuge (sofort versiegeln), Premium-Fahrzeuge, Sportwagen und alle Fahrzeuge, bei denen der Werterhalt des Lacks Priorität hat. Auch für foliierte Fahrzeuge gibt es spezielle Keramikprodukte." },
+  ],
+  motorraumreinigung: [
+    { q: "Ist die Motorraumreinigung sicher für mein Fahrzeug?", a: "Ja, wenn sie professionell durchgeführt wird. Wir schützen empfindliche Elektronikteile und Stecker vor Feuchtigkeit und reinigen mit angepasstem Druck. Nach der Reinigung trocknen wir den Motorraum sorgfältig." },
+    { q: "Was bewirkt eine saubere Motorraumreinigung?", a: "Ein sauberer Motorraum erleichtert die Fehlerdiagnose für Ihren Mechaniker, hinterlässt einen professionellen Eindruck bei MFK und Verkauf und verhindert das Schmoren von Ölrückständen an heissen Teilen, was Brandgeruch verursachen kann." },
+    { q: "Wie oft sollte der Motorraum gereinigt werden?", a: "Alle 2–3 Jahre für Normalfahrzeuge, jährlich vor der MFK oder wenn Ölrückstände oder starke Verschmutzungen sichtbar sind." },
+    { q: "Was kostet die Motorraumreinigung?", a: "Die Motorraumreinigung kostet als Einzelleistung ab CHF 80.–. Im Paket mit Aussenreinigung oder MFK-Vorbereitung günstiger – fragen Sie bei der Buchung nach." },
+    { q: "Kann ich die Motorraumreinigung mit der Aussenreinigung kombinieren?", a: "Ja, das ist sogar empfehlenswert. Motorraum, Unterboden und Karosserie aussen sind thematisch zusammengehörig und werden von vielen Kunden gemeinsam gebucht." },
+  ],
+};
 
 // Extended content per service slug
 const serviceContent = {
@@ -69,6 +136,7 @@ export default function SeoService() {
   const { service } = useParams();
   const seoSvc = seoServices.find((s) => s.slug === service) || seoServices[0];
   const content = serviceContent[seoSvc.slug] || serviceContent.autoaufbereitung;
+  const relatedLPs = landingpages.filter((lp) => lp.serviceSlug === seoSvc.slug);
 
   return (
     <>
@@ -177,7 +245,7 @@ export default function SeoService() {
         </div>
       </section>
 
-      {/* Regionen */}
+      {/* Regionen + Money Pages */}
       <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow="Einzugsgebiet" title={`${seoSvc.name} – Region Zürich Nord`} />
@@ -188,6 +256,19 @@ export default function SeoService() {
               </Link>
             ))}
           </div>
+          {relatedLPs.length > 0 && (
+            <div className="mt-8">
+              <p className="text-sm font-extrabold uppercase tracking-[0.2em] text-primary mb-4">Spezifische Infos je Standort</p>
+              <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {relatedLPs.map((lp) => (
+                  <Link key={`${lp.serviceSlug}-${lp.ortSlug}`} to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`} className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 text-sm font-bold hover:border-primary hover:text-primary transition-colors">
+                    <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                    {lp.serviceName} {lp.ortName}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -196,13 +277,13 @@ export default function SeoService() {
         <div className="mx-auto max-w-4xl">
           <SectionHeader center eyebrow="FAQ" title={`Häufige Fragen – ${seoSvc.name}`} />
           <div className="mt-10 space-y-5">
-            {[
+            {(serviceFaqs[seoSvc.slug] || [
               { q: `Was kostet eine ${seoSvc.name} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Verschmutzungsgrad ab. Unsere Pakete beginnen ab CHF 70.–. Für ein genaues Angebot kontaktieren Sie uns oder buchen Sie direkt online.` },
               { q: `Wie lange dauert eine ${seoSvc.name}?`, a: "Je nach Umfang dauert die Reinigung zwischen 1 und 8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenflotten und Geschäftsfahrzeuge. Kontaktieren Sie uns für ein massgeschneidertes Angebot für Ihre Flotte." },
               { q: "Kann ich online einen Termin buchen?", a: "Ja, über unsere Online-Buchung sichern Sie sich in weniger als 60 Sekunden Ihren Wunschtermin – bequem und ohne Wartezeit." },
               { q: "Wo befindet sich Ihr Betrieb?", a: "Wir sind an der Heerenwiesen 18, 8051 Zürich, gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Wallisellen und der ganzen Region Zürich Nord." },
-            ].map((item) => (
+            ]).map((item) => (
               <Reveal key={item.q}>
                 <div className="rounded-[2rem] border border-border bg-card p-6">
                   <h3 className="font-bold text-lg mb-2">{item.q}</h3>

@@ -4,7 +4,7 @@ import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
-import { standorte } from "@/data/seoData";
+import { standorte, landingpages } from "@/data/seoData";
 import { bookingUrl, phoneUrl, whatsappUrl, services, contact } from "@/data/siteContent";
 
 export default function Standort() {
@@ -161,7 +161,7 @@ export default function Standort() {
         </div>
       </section>
 
-      {/* Warum Kunden uns wählen */}
+      {/* Warum Kunden uns wählen – standortspezifisch */}
       <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
@@ -171,12 +171,12 @@ export default function Standort() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Kurze Anfahrt", text: `Von ${standort.name} sind wir schnell und bequem erreichbar – per Auto oder ÖV.` },
-              { title: "Professionelle Handarbeit", text: "Jede Reinigung wird sorgfältig per Hand durchgeführt – kein Automatikbetrieb." },
-              { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– mit klaren Leistungen ohne versteckte Kosten." },
-              { title: "Alle Fahrzeugtypen", text: "Vom Kleinwagen bis zum SUV, vom Privatfahrzeug bis zur Firmenflotte." },
-              { title: "Werterhalt", text: "Professionelle Pflege erhält den Wert Ihres Fahrzeugs langfristig." },
-              { title: "Online buchbar", text: "Termin in 60 Sekunden online buchen – flexibel und ohne Wartezeit." },
+              { title: `Kurze Anfahrt aus ${standort.name}`, text: standort.erreichbarkeit.split(".")[0] + "." },
+              { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer, nur sorgfältige Handwäsche." },
+              { title: "Spezialist für lokale Bedürfnisse", text: standort.typischAnliegen },
+              { title: "Alle Quartiere, ein Ziel", text: `Kunden aus ${standort.quartiere} vertrauen uns regelmässig ihre Fahrzeuge an.` },
+              { title: "Werterhalt & Leasingrückgabe", text: "Wir kennen die Anforderungen von Leasinggebern und bereiten Ihr Fahrzeug professionell vor." },
+              { title: "Online buchbar – 24/7", text: "Termin in 60 Sekunden online sichern – flexibel, ohne Wartezeit, direkt mit Wunschdatum." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="rounded-[2rem] border border-border bg-card p-6 shadow-sm">
@@ -212,6 +212,34 @@ export default function Standort() {
           </div>
         </div>
       </section>
+
+      {/* Money Pages für diesen Standort */}
+      {landingpages.filter((lp) => lp.ortSlug === standort.slug).length > 0 && (
+        <section className="px-5 py-16 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Direkt zum Thema"
+              title={`${standort.name}: spezifische Leistungsseiten`}
+              text={`Alle spezifischen Informationen für Kunden aus ${standort.name}.`}
+            />
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+              {landingpages
+                .filter((lp) => lp.ortSlug === standort.slug)
+                .map((lp) => (
+                  <Reveal key={`${lp.serviceSlug}-${lp.ortSlug}`}>
+                    <Link
+                      to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`}
+                      className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm"
+                    >
+                      <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                      {lp.serviceName} in {lp.ortName}
+                    </Link>
+                  </Reveal>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="px-5 py-20 lg:px-8">

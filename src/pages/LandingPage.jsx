@@ -7,14 +7,121 @@ import { landingpages, standorte, seoServices } from "@/data/seoData";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import { bookingUrl, phoneUrl, whatsappUrl, contact } from "@/data/siteContent";
 
-// Content per (serviceSlug, ortSlug) pair – targeted local content
-const getLandingContent = (serviceSlug, ortName, serviceName) => ({
-  einleitung: `Sie suchen professionelle ${serviceName} in ${ortName}? Autoreinigung Zürich-Nord an der Heerenwiesen 18, 8051 Zürich ist Ihre erste Adresse in der Region. Kunden aus ${ortName} schätzen unsere kurze Anfahrt, die professionellen Ergebnisse und die transparenten Preise. Ob Privatfahrzeug, Firmenwagen oder Leasingfahrzeug – wir reinigen Ihr Auto gründlich, materialschonend und mit Fokus auf dauerhaften Werterhalt.`,
-  leistungBeschrieb: `Unsere ${serviceName} in ${ortName} und der Region Zürich Nord umfasst eine professionelle Behandlung Ihres Fahrzeugs nach höchsten Standards. Jedes Fahrzeug wird individuell begutachtet und entsprechend seinem Zustand behandelt. Wir verwenden ausschliesslich hochwertige, materialschonende Reinigungsmittel und Pflegeprodukte. Das Ergebnis ist ein Fahrzeug, das sauber, gepflegt und werterhaltend übergeben wird. Kunden aus ${ortName} profitieren von der guten Erreichbarkeit unseres Standorts und der Möglichkeit, den Termin flexibel online zu buchen. Unsere Fachleute haben jahrelange Erfahrung und behandeln jedes Fahrzeug mit der nötigen Sorgfalt. Ob kurze Aussenreinigung oder vollständige Aufbereitung – wir finden das passende Paket für Ihr Fahrzeug und Ihr Budget.`,
-  fuerWen: `Die ${serviceName} empfiehlt sich für Privatfahrzeugbesitzer aus ${ortName}, Leasingnehmer vor der Fahrzeugrückgabe, Unternehmen mit Firmenflotten sowie alle, die ihr Fahrzeug optimal pflegen möchten. Auch Fahrzeuge vor dem Verkauf oder der MFK profitieren von einer professionellen Reinigung.`,
-  lokalerBezug: `${ortName} und Zürich Nord sind eng miteinander verbunden. Viele Fahrzeugbesitzer aus ${ortName} nutzen täglich die Verbindungen nach Zürich und schätzen eine zuverlässige, professionelle Anlaufstelle für ihre Fahrzeugpflege. Unser Betrieb an der Heerenwiesen 18 ist von ${ortName} schnell und bequem erreichbar – mit dem Auto über die A1 oder A51, oder mit S-Bahn und Tram direkt bis Oerlikon, von wo aus wir wenige Minuten entfernt sind. Kunden aus ${ortName} schätzen die professionellen Ergebnisse, die persönliche Beratung und die transparente Preisstruktur. Wir betreuen regelmässig Kunden aus der gesamten Region Zürich Nord und kennen die spezifischen Bedürfnisse von Fahrzeugbesitzern in dieser Region.`,
-  warum: `Kunden aus ${ortName} wählen Autoreinigung Zürich-Nord wegen der kurzen Anfahrt, der professionellen Handarbeit und der fairen Preise. Wir kennen die Anforderungen von Fahrzeughaltern in der Region und bieten massgeschneiderte Lösungen – von der einfachen Innenreinigung bis zur vollständigen Fahrzeugaufbereitung mit Keramikversiegelung. Buchen Sie jetzt Ihren Termin online oder rufen Sie uns an. Wir freuen uns auf Ihr Fahrzeug.`,
-});
+// Spezifischer Content pro Kombination (Service + Ort) – kein Duplicate Content
+const specificContent = {
+  "innenreinigung-oerlikon": {
+    einleitung: "Sie suchen professionelle Innenreinigung in Oerlikon? Autoreinigung Zürich-Nord liegt keine 8 Minuten von Oerlikon Zentrum entfernt – ideal für Pendler, die ihren Wagen morgens abgeben und abends sauber abholen. Oerlikon ist geprägt von Geschäftsverkehr, Bahn und hohem Fahrzeugaufkommen: Das spiegelt sich im Innenzustand vieler Fahrzeuge wider.",
+    leistungBeschrieb: "Die professionelle Innenreinigung umfasst das vollständige Staubsaugen aller Oberflächen, Shampoonieren von Sitzen und Teppichen, Reinigung von Leder, Kunststoffen, Armaturen und Lüftungskanälen sowie auf Wunsch eine Desinfektion nach dem Anokath-Verfahren. Gerade für Firmenfahrzeuge aus dem Geschäftszentrum Oerlikon – wo täglich Mitarbeitende oder Kunden mitfahren – ist ein hygienisch sauberer Innenraum entscheidend. Wir behandeln jeden Bereich materialschonend und übergeben Ihr Fahrzeug in frischem, gepflegtem Zustand.",
+    fuerWen: "Firmenfahrzeuge aus Oerlikon und Leutschenbach, Leasingnehmer vor Rückgabe, Familien mit Kindern oder Haustieren sowie Fahrzeugbesitzer, die Wert auf einen hygienisch sauberen Innenraum legen. Besonders beliebt bei Pendlern, die täglich Bahnhof Oerlikon nutzen und ihr Auto bequem vorher abgeben.",
+    lokalerBezug: "Oerlikon ist mit dem Bahnhof Oerlikon, dem zweitgrössten der Schweiz, ein zentraler Knotenpunkt. Viele Nutzer kombinieren die Fahrzeugreinigung mit der ÖV-Fahrt: Wagen morgens abgeben, per Tram 10 oder Buslinie 62 weiterfahren, abends das saubere Auto abholen. Von Neu-Oerlikon, Leutschenbach oder der Messestrasse sind wir in 5–8 Minuten erreichbar.",
+    warum: "Oerliker Kunden schätzen besonders die Kombination aus Nähe, Effizienz und Qualität. Keine langen Wartezeiten, kein Automatikbetrieb – jede Reinigung per Hand. Das zahlt sich besonders für Fahrzeuge aus, die täglich im dichten Stadtverkehr unterwegs sind.",
+  },
+  "aussenreinigung-oerlikon": {
+    einleitung: "Ihr Auto zeigt Bremsstaub, Strassendreck oder Salzflecken nach dem Winter? Die professionelle Aussenreinigung bei Autoreinigung Zürich-Nord – 8 Minuten von Oerlikon – bringt Ihr Fahrzeug wieder auf Hochglanz. Handwäsche ohne Kratzer, Felgenreinigung, Scheiben und optionale Lackversiegelung.",
+    leistungBeschrieb: "Die Aussenreinigung per Handwäsche schützt Ihren Lack vor Kratzern, die bei Maschinenwäschen entstehen. Wir reinigen Karosserie, Türrahmen, Felgen, Reifen und Scheiben sorgfältig per Hand. Gerade in Oerlikon, wo enger Stadtverkehr, Busspuren und häufiges Einparken den Lack beanspruchen, ist eine schonende Handwäsche die richtige Wahl. Optional: Motorraum, Unterboden, Lackkonservierung.",
+    fuerWen: "Privatfahrzeuge und Firmenfahrzeuge aus Oerlikon und Leutschenbach, Premium-Fahrzeuge, foliierte Autos, Fahrzeuge nach der Winterperiode und vor dem Frühjahrsverkauf.",
+    lokalerBezug: "Aus dem Herzen Oerlikons – Oerlikon Zentrum, Neu-Oerlikon, Glattpark oder Messe Zürich – sind wir in wenigen Minuten erreichbar. Buslinie 62 oder Tram 10 bringen Sie direkt in unsere Nähe. Viele Oerliker Kunden kombinieren die Aussenreinigung mit einer Innenreinigung für die komplette Aufbereitung.",
+    warum: "Wer täglich durch Oerlikon fährt, weiss: Bremsstaub und Strassendreck setzen sich schnell fest. Eine professionelle Handwäsche alle 4–6 Wochen hält den Lack schützend sauber und spart langfristig teure Lackreparaturen.",
+  },
+  "leasingrueckgabe-zuerich": {
+    einleitung: "Leasingvertrag läuft aus? Vermeiden Sie teure Nachforderungen mit einer professionellen Leasingrückgabe-Reinigung. Autoreinigung Zürich-Nord ist der Spezialist für Leasingrückgabe in Zürich – Innen und Aussen aus einer Hand, transparent und zuverlässig.",
+    leistungBeschrieb: "Die Leasingrückgabe-Reinigung bereitet Ihr Fahrzeug optimal auf den Übergabetermin vor. Wir reinigen den Innenraum vollständig, entfernen Flecken, Gerüche und Schmutzspuren. Aussen: Handwäsche, Felgenreinigung, Scheiben innen und aussen. Auf Wunsch: leichte Kratzer reduzieren durch Politur, Geruchsbeseitigung und vollständige Aufbereitung. Viele Leasingnehmer in Zürich sparen durch unsere professionelle Aufbereitung Hunderte von Franken an Nachforderungen des Leasinggebers.",
+    fuerWen: "Alle Leasingnehmer in Zürich bei Vertragsende, Unternehmen mit Flottenleasingfahrzeugen, Langzeitmieter und alle, die bei der Fahrzeugrückgabe keine bösen Überraschungen erleben möchten.",
+    lokalerBezug: "Zürich ist die Hochburg des Fahrzeugleasings in der Schweiz. Besonders in Zürich Nord, Oerlikon, Schwamendingen und Seebach sind Leasingfahrzeuge weit verbreitet. Unser Betrieb an der Heerenwiesen 18 ist aus allen Stadtteilen Zürichs schnell erreichbar – ideal für eine letzte professionelle Aufbereitung vor der Rückgabe.",
+    warum: "Ein professionell gereinigtes Fahrzeug hinterlässt beim Leasinggeber einen guten Eindruck und vermeidet Kostenpunkte im Übergabeprotokoll. Wir kennen die Standards und bereiten Ihr Fahrzeug optimal vor.",
+  },
+  "autoaufbereitung-zuerich": {
+    einleitung: "Professionelle Autoaufbereitung in Zürich – komplett, persönlich und mit sichtbarem Ergebnis. Autoreinigung Zürich-Nord bietet die vollständige Fahrzeugaufbereitung für Privat- und Firmenfahrzeuge: Innen, Aussen, Politur und Versiegelung aus einer Hand.",
+    leistungBeschrieb: "Die vollständige Autoaufbereitung kombiniert Innenreinigung, Aussenreinigung, Lackpolitur und optionale Keramikversiegelung zu einem rundum erneuerten Fahrzeug. Jede Aufbereitung beginnt mit einer Zustandserfassung: Wir beurteilen Lack, Innenraum, Felgen und Motorraum und empfehlen das passende Paket. Das Ergebnis: ein Fahrzeug, das aussieht, riecht und fährt wie frisch aus dem Showroom – ideal für Verkauf, Leasingrückgabe oder einfach für den eigenen Anspruch.",
+    fuerWen: "Fahrzeugbesitzer in Zürich, die eine vollständige Aufbereitung suchen: vor dem Verkauf, nach langer Nutzung, für die Leasingrückgabe oder als jährliche Grundpflege. Beliebt auch für Geschäftsfahrzeuge aus Zürich City und Zürich Nord.",
+    lokalerBezug: "Zürich bietet eine hohe Dichte an Fahrzeughaltern mit dem Anspruch auf Qualität. Viele Zürcherinnen und Zürcher entscheiden sich für eine vollständige Aufbereitung statt Verkauf – weil ein gepflegtes Fahrzeug im Wiederverkauf deutlich mehr wert ist. Wir sind von allen Zürcher Stadtteilen erreichbar.",
+    warum: "Eine vollständige Autoaufbereitung in Zürich ist keine Frage des Luxus – sie ist eine Investition in den Werterhalt Ihres Fahrzeugs. Bei uns bekommen Sie professionelle Handarbeit, keine Automatik, zu fairen Preisen.",
+  },
+  "autoaufbereitung-oerlikon": {
+    einleitung: "Autoaufbereitung in Oerlikon – professionell, gründlich, in Ihrer Nähe. Autoreinigung Zürich-Nord liegt 8 Minuten von Oerlikon und bietet die vollständige Fahrzeugaufbereitung für Privat- und Firmenfahrzeuge aus dem Zentrum Zürich Nords.",
+    leistungBeschrieb: "Für Fahrzeuge aus Oerlikon und der Umgebung bieten wir die vollständige Aufbereitung mit Innenreinigung, Handwäsche aussen, Felgenreinigung, Lackpolitur und optionaler Versiegelung. Oerlikon ist ein hochfrequentierter Wirtschaftsstandort – Fahrzeuge sind hier täglich Stadtverkehr, Bahnhofsnähe und intensivem Einsatz ausgesetzt. Die vollständige Aufbereitung alle 6–12 Monate ist die beste Pflege für den Werterhalt.",
+    fuerWen: "Firmenflotten aus Leutschenbach und dem Glattpark, Privatfahrzeuge aus Oerlikon Zentrum und Neu-Oerlikon, Leasingfahrzeuge vor Rückgabe und Occasionsfahrzeuge vor dem Verkauf.",
+    lokalerBezug: "Oerlikon ist der Geschäftsmittelpunkt von Zürich Nord. Viele Unternehmen hier unterhalten eigene Flotten oder Poolfahrzeuge, die regelmässige professionelle Aufbereitung benötigen. Wir haben langjährige Erfahrung mit Oerliker Firmenkunden und kennen die Anforderungen: schnell, zuverlässig, professionell.",
+    warum: "Kunden aus Oerlikon schätzen die Effizienz: Wagen morgens abgeben, per Tram oder Bus weiterfahren, abends ein vollständig aufbereitetes Fahrzeug abholen. Kein Aufwand, maximales Ergebnis.",
+  },
+  "innenreinigung-zuerich": {
+    einleitung: "Professionelle Innenreinigung in Zürich – für Familien, Firmen und alle, die Wert auf einen sauberen, hygienischen Innenraum legen. Autoreinigung Zürich-Nord reinigt Ihren Fahrzeuginnenraum gründlich, materialschonend und mit sichtbarem Ergebnis.",
+    leistungBeschrieb: "Die Innenreinigung umfasst das vollständige Staubsaugen, Shampoonieren von Sitzen und Teppichen, Lederreinigung und -pflege, Reinigung von Armaturen, Lüftungskanälen und Ritzen sowie auf Wunsch eine vollständige Desinfektion. Zürich mit seinem intensiven Stadtverkehr und vielen Pendlern bringt besondere Anforderungen: Schmutz, Abgase und Feuchtigkeit setzen sich im Innenraum fest. Wir reinigen professionell – nicht nur oberflächlich.",
+    fuerWen: "Familien mit Kindern, Tierhalter, Pendler, Leasingnehmer vor Rückgabe, Firmenfahrzeuge und alle, die einen hygienisch sauberen Innenraum in ihrem Zürcher Fahrzeug schätzen.",
+    lokalerBezug: "Zürich ist eine dichte, vielgenutzte Stadt – Fahrzeuge werden intensiv genutzt. Wir reinigen Fahrzeuge aus allen Stadtteilen: Zürich City, Oerlikon, Schwamendingen, Seebach, Altstetten, Wiedikon und mehr. Erreichbar von überall in Zürich, zentrale Lage in Zürich-Schwamendingen.",
+    warum: "Ein sauberer Innenraum ist keine Frage des Komforts, sondern der Hygiene – besonders wenn täglich Kinder, Kollegen oder Kunden mitfahren. Wir bieten Zürcher Qualität zu fairen Preisen.",
+  },
+  "handwasche-oerlikon": {
+    einleitung: "Handwäsche in Oerlikon – schonend, kratzerlos und professionell. Bei Autoreinigung Zürich-Nord, 8 Minuten von Oerlikon, reinigen wir Ihr Fahrzeug nach der Zwei-Eimer-Methode per Hand. Kein Automatikbetrieb, kein Lackkratzer.",
+    leistungBeschrieb: "Die Handwäsche per Zwei-Eimer-Methode ist die schonendste Form der Fahrzeugwäsche und der einzige empfehlenswerte Weg für Fahrzeuge mit empfindlichem Lack, Folierungen oder Keramikversiegelung. Wir reinigen Karosserie, Felgen, Reifen und Scheiben komplett von Hand. Optional: Lackkonservierung, Felgenversiegelung, Reifenglanzpflege. In Oerlikon mit seinem dichten Verkehr sind Fahrzeuge ständig Bremsstaub und Schmutz ausgesetzt – regelmässige Handwäsche ist die beste Langzeitinvestition.",
+    fuerWen: "Besitzer von Premium-Fahrzeugen, Sportwagen, folierten Autos oder Fahrzeugen mit Keramikversiegelung aus Oerlikon und Zürich Nord. Empfehlenswert für alle, die keine Kratzer durch Bürsten riskieren wollen.",
+    lokalerBezug: "Oerlikon und der Glattpark sind bekannt für gehobene Fahrzeugklassen und Firmenwagen. Eine Automatikwaschanlage ist für diese Fahrzeuge keine Option. Unsere Handwäsche in unmittelbarer Nähe ist die logische Lösung für anspruchsvolle Fahrzeugbesitzer aus Oerlikon.",
+    warum: "Handwäsche bei Autoreinigung Zürich-Nord ist kein Luxus – es ist die richtige Behandlung für ein Fahrzeug, das Ihnen wichtig ist. Günstig, lokal, professionell.",
+  },
+  "politur-zuerich": {
+    einleitung: "Autopolitur in Zürich – Kratzerentfernung, Glanzwiederherstellung und Lackpflege vom Profi. Autoreinigung Zürich-Nord bietet professionelle Lackpolitur für Zürcherinnen und Zürcher, die den ursprünglichen Glanz ihres Fahrzeugs wiederherstellen möchten.",
+    leistungBeschrieb: "Die professionelle Lackpolitur mit der Maschine entfernt feine Kratzer, Hologramme, Oxidationen und matte Stellen aus der Lackoberfläche. Wir analysieren zuerst den Lackzustand und wählen das passende Poliermittel und Pad. Das Ergebnis: ein spiegelglatter, strahlender Lack wie am ersten Tag. Besonders in Zürich, wo enge Parkhäuser, Automatikwaschanlagen und Bürsten für Hologramme und feine Kratzer sorgen, ist eine professionelle Politur die beste Massnahme.",
+    fuerWen: "Fahrzeugbesitzer in Zürich, die feine Kratzer aus dem Stadtverkehr, Parkplatzschäden oder Maschinenwäschen entfernen möchten. Empfehlenswert vor dem Verkauf, für die Leasingrückgabe und für Fahrzeuge mit wertvollem Lack.",
+    lokalerBezug: "Zürich bietet viele enge Parkhäuser, dichten Verkehr und häufige Maschinenwäschen – der Feind eines makellosen Lacks. Viele Züricher Fahrzeuge weisen Hologramme und feine Kratzer auf, die nur mit maschineller Politur beseitigt werden können. Wir sind die Politur-Spezialisten in Zürich Nord.",
+    warum: "Eine Lackpolitur ist die effizienteste Methode, den Wert Ihres Fahrzeugs spürbar zu steigern. Sichtbare Verbesserung nach einem Nachmittag – für weniger als eine Fahrzeuglackierung.",
+  },
+  "mfk-vorbereitung-zuerich": {
+    einleitung: "MFK steht an? Eine professionelle Reinigung vor der Motorfahrzeugkontrolle hinterlässt beim Prüfer einen guten Eindruck und erleichtert die technische Inspektion. Autoreinigung Zürich-Nord ist Ihr Spezialist für MFK-Vorbereitung in Zürich.",
+    leistungBeschrieb: "Die MFK-Vorbereitung umfasst die gründliche Reinigung von Motorraum, Unterboden, Fahrwerk und Karosserie. Ein sauberer Motorraum erleichtert die Fehlerdiagnose und zeigt dem Prüfer, dass das Fahrzeug sorgfältig gepflegt wird. Wir entfernen Öl, Schmutz und Ablagerungen aus dem Motorraum, reinigen Unterboden und Fahrwerk von Salz und Korrosion und bereiten die Karosserie aussenrein vor. Alles aus einer Hand, am selben Tag.",
+    fuerWen: "Alle Fahrzeughalter in Zürich vor der periodischen MFK, Occasionsverkäufer, Fuhrparkbetreiber und alle, die bei der Motorfahrzeugkontrolle professionell auftreten möchten.",
+    lokalerBezug: "In Zürich gibt es zahlreiche MFK-Stationen: in Schwamendingen, Oerlikon, Altstetten und weiteren Stadtteilen. Wer die Reinigung und die MFK in Zürich Nord kombinieren möchte, ist bei uns ideal aufgehoben. Wir sind unmittelbar vor der Prüfung buchbar.",
+    warum: "Ein sauberer Motorraum und eine gepflegte Karosserie signalisieren dem Prüfer, dass das Fahrzeug gut gewartet wird. Das kostet wenig – kann aber bei der Prüfung einen grossen Unterschied machen.",
+  },
+  "keramikversiegelung-zuerich": {
+    einleitung: "Keramikversiegelung in Zürich – der modernste und dauerhafteste Schutz für Ihren Fahrzeuglack. Autoreinigung Zürich-Nord bietet professionelle Keramikbeschichtungen für Zürcherinnen und Zürcher, die ihren Lack langfristig schützen möchten.",
+    leistungBeschrieb: "Die Keramikversiegelung bildet eine harte, wasserabweisende Schutzschicht auf Ihrem Lack, die Kratzer, UV-Strahlung, Schmutz und chemische Einflüsse abwehrt. Voraussetzung ist eine vollständige Reinigung und Lackpolitur, die wir ebenfalls übernehmen. Das Ergebnis hält mehrere Jahre – im Gegensatz zu Wachsversiegelungen, die nach wenigen Monaten nachlassen. In Zürich mit seinem ganzjährigen Strassendreck, Salz im Winter und intensiver UV-Strahlung im Sommer ist die Keramikversiegelung die klügste Investition in den Lackschutz.",
+    fuerWen: "Besitzer von Neufahrzeugen, Premium-Fahrzeugen und Sportwagen in Zürich, die ihren Lack dauerhaft schützen möchten. Empfehlenswert für alle Fahrzeuge, bei denen Werterhalt Priorität hat.",
+    lokalerBezug: "Zürich ist eine anspruchsvolle Stadt für Fahrzeuglacke: Winter mit Salz und Splitt, Sommer mit UV und Baumharz, ganzjährig enger Stadtverkehr. Eine Keramikversiegelung schützt ganzjährig und macht die Pflege einfacher. Wir sind die Spezialisten in Zürich Nord.",
+    warum: "Wer ein hochwertiges Fahrzeug fährt, sollte es auch professionell schützen. Eine Keramikversiegelung bei Autoreinigung Zürich-Nord ist die langfristig günstigste Form des Lackschutzes.",
+  },
+  "innenreinigung-wallisellen": {
+    einleitung: "Innenreinigung in Wallisellen – kurze Anfahrt, professionelles Ergebnis. Autoreinigung Zürich-Nord liegt 10 Minuten von Wallisellen und bietet die komplette Innenreinigung für Privatfahrzeuge und Firmenflotten aus dem Glattal.",
+    leistungBeschrieb: "Fahrzeuge aus Wallisellen und dem Glattpark sind oft Teil von Geschäftsflotten oder gehören Premium-Fahrzeughaltern, die hohe Ansprüche stellen. Wir reinigen den Innenraum vollständig: Staubsaugen, Shampoonieren, Leder reinigen und pflegen, Armaturen und Lüftungskanäle behandeln. Auf Wunsch Desinfektion und Geruchsbeseitigung. Das Glattzentrum und der Businesspark Glattpark sind bekannt für Firmenfahrzeuge der gehobenen Klasse – wir kennen die Anforderungen.",
+    fuerWen: "Firmenflotten aus dem Businesspark Glattpark, Leasingnehmer vor Rückgabe, Premium-Fahrzeugbesitzer aus Wallisellen-Dorf und Auzelg sowie Familien mit Kindern.",
+    lokalerBezug: "Von Wallisellen nach Zürich-Schwamendingen: ca. 10 Minuten mit dem Auto über die A1 oder via Dübendorferstrasse. S-Bahn S3/S9 ab Bahnhof Wallisellen bis Oerlikon in 8 Minuten. Viele Walliseller Kunden kombinieren die Reinigung mit einem Einkauf im Glattzentrum.",
+    warum: "Wallisellen ist eine wohlhabende Gemeinde mit überdurchschnittlichem Fahrzeugbestand. Professionelle Innenreinigung ist hier kein Ausnahmefall, sondern Standard für die Pflege hochwertiger Fahrzeuge.",
+  },
+  "autoaufbereitung-wallisellen": {
+    einleitung: "Autoaufbereitung in Wallisellen – für Fahrzeuge mit hohen Ansprüchen. Autoreinigung Zürich-Nord ist die bevorzugte Anlaufstelle für Walliseller Fahrzeugbesitzer und Firmenkunden, die eine vollständige professionelle Aufbereitung suchen.",
+    leistungBeschrieb: "Die vollständige Aufbereitung für Fahrzeuge aus Wallisellen umfasst Innenreinigung, Aussenreinigung per Handwäsche, Lackpolitur und auf Wunsch Keramikversiegelung. Besonders im Glattal, wo viele Unternehmen und wohlhabende Privatpersonen wohnen, ist die vollständige Fahrzeugaufbereitung gefragter Bestandteil regelmässiger Fahrzeugpflege. Wir übernehmen den gesamten Prozess – von der ersten Begutachtung bis zur Übergabe.",
+    fuerWen: "Unternehmen mit Geschäftsflotten aus dem Businesspark Glattpark und Glattzentrum, Leasingnehmer, Privatfahrzeugbesitzer mit Premium- und Mittelklassefahrzeugen sowie Walliseller Autohändler vor Occasionsverkauf.",
+    lokalerBezug: "Wallisellen hat eine der höchsten Autodichten im Kanton Zürich. Das Glattal ist ein wirtschaftlich starkes Gebiet mit hohem Bedarf an professioneller Fahrzeugpflege. Wir betreuen regelmässig Kunden aus Wallisellen und Umgebung und bieten verlässliche Qualität.",
+    warum: "Für Walliseller Firmenkunden bieten wir Flottenverträge und individuelle Lösungen. Rufen Sie uns an – wir erstellen Ihnen ein massgeschneidertes Angebot.",
+  },
+  "innenreinigung-schwamendingen": {
+    einleitung: "Innenreinigung in Schwamendingen – um die Ecke, professionell, zuverlässig. Autoreinigung Zürich-Nord liegt direkt in Zürich-Schwamendingen und ist für Kunden aus diesem Quartier besonders schnell erreichbar.",
+    leistungBeschrieb: "Als Betrieb in Schwamendingen kennen wir unsere Kunden aus dem Quartier besonders gut: Familien, deren Fahrzeuge von Kindern intensiv genutzt werden, Tierhalter mit Hundegeruch im Innenraum, Pendler, die täglich unterwegs sind. Die Innenreinigung umfasst vollständiges Staubsaugen, Shampoonieren, Geruchsbeseitigung, Lederreinigung und die gründliche Behandlung aller Oberflächen. Als lokaler Betrieb sind wir Ihr direkter Ansprechpartner.",
+    fuerWen: "Familien aus Schwamendingen-Mitte, Hirzenbach, Saatlen und Auzelg, Tierhalter, Leasingnehmer, Pendler sowie alle Anwohner, die einen hygienisch sauberen Innenraum möchten.",
+    lokalerBezug: "Wir sind ein lokaler Betrieb in Zürich-Schwamendingen. Unsere Kunden aus dem Quartier sind oft auch Stammkunden, die mehrmals im Jahr zu uns kommen. Schwamendingerstrasse, Zürichbergstrasse oder direkt zu Fuss – wir sind direkt vor Ort.",
+    warum: "Als lokaler Betrieb kennen wir die Bedürfnisse der Schwamendinger Bevölkerung. Kurze Wege, persönlicher Service, faire Preise – das ist unser Versprechen an unser Quartier.",
+  },
+  "leasingrueckgabe-opfikon": {
+    einleitung: "Leasingrückgabe in Opfikon? Vermeiden Sie kostspielige Nachforderungen durch professionelle Aufbereitung. Autoreinigung Zürich-Nord, 10 Minuten von Opfikon-Glattbrugg, ist Ihr Spezialist für Leasingrückgabe in der Flughafenregion.",
+    leistungBeschrieb: "Die Leasingrückgabe-Reinigung für Fahrzeuge aus Opfikon und Glattbrugg ist eine unserer gefragtesten Leistungen. In der Flughafenregion, wo viele internationale Unternehmen und Flughafen-Pendler Leasingfahrzeuge nutzen, ist eine professionelle Aufbereitung vor der Rückgabe Standard. Wir reinigen Innen und Aussen vollständig, entfernen Flecken und Gerüche, reduzieren leichte Kratzer durch Politur und übergeben das Fahrzeug in bestmöglichem Zustand.",
+    fuerWen: "Leasingnehmer aus Opfikon, Glattbrugg und der Flughafenregion, internationale Mitarbeitende in der Region, Unternehmen mit Leasingflotten in Balsberg und dem Industriegebiet sowie Privatpersonen vor Leasingrückgabe.",
+    lokalerBezug: "Opfikon-Glattbrugg liegt direkt an der Grenze zu Zürich und in unmittelbarer Flughafennähe. Viele internationale Unternehmen haben hier ihre Schweizer Büros und unterhalten Leasingflotten. Die Anforderungen an die Fahrzeugrückgabe sind hoch. Wir kennen die Standards und bereiten Ihr Fahrzeug professionell vor. Von Opfikon via A51 oder Leutschenbachstrasse sind wir in 10 Minuten erreichbar.",
+    warum: "In der Flughafenregion sind Leasingverträge Standard. Wir helfen Ihnen, das Fahrzeug ohne Mängel zurückzugeben und teure Nachforderungen zu vermeiden. Buchen Sie frühzeitig – Termine sind gefragt.",
+  },
+};
+
+// Fallback für nicht spezifisch definierte Kombinationen
+const getLandingContent = (serviceSlug, ortSlug, ortName, serviceName) => {
+  const key = `${serviceSlug}-${ortSlug}`;
+  if (specificContent[key]) return specificContent[key];
+  // Fallback (sollte nicht aufgerufen werden für produktive LPs)
+  return {
+    einleitung: `Sie suchen professionelle ${serviceName} in ${ortName}? Autoreinigung Zürich-Nord an der Heerenwiesen 18, 8051 Zürich ist die erste Adresse für Kunden aus ${ortName}. Kurze Anfahrt, professionelle Handarbeit, faire Preise.`,
+    leistungBeschrieb: `Unsere ${serviceName} für Fahrzeuge aus ${ortName} umfasst eine professionelle Behandlung nach höchsten Standards. Jedes Fahrzeug wird individuell begutachtet, mit hochwertigen Produkten behandelt und in gepflegtem Zustand übergeben. Wir haben langjährige Erfahrung mit Fahrzeugen aus der Region Zürich Nord.`,
+    fuerWen: `Privatfahrzeuge, Firmenfahrzeuge und Leasingfahrzeuge aus ${ortName}. Empfehlenswert vor MFK, Leasingrückgabe oder Fahrzeugverkauf.`,
+    lokalerBezug: `${ortName} und Zürich-Schwamendingen sind gut verbunden. Unser Betrieb an der Heerenwiesen 18 ist von ${ortName} schnell erreichbar – per Auto oder ÖV via Oerlikon.`,
+    warum: `Kunden aus ${ortName} wählen uns wegen der kurzen Anfahrt, der professionellen Handarbeit und der transparenten Preise. Buchen Sie online oder rufen Sie uns an.`,
+  };
+};
 
 export default function LandingPage() {
   const { service, ort } = useParams(); // route: /lp/:service/:ort
@@ -35,7 +142,7 @@ export default function LandingPage() {
     );
   }
 
-  const content = getLandingContent(service, ortData.name, lp.serviceName);
+  const content = getLandingContent(service, ort, ortData.name, lp.serviceName);
   const title = `${lp.serviceName} ${ortData.name} | Autoreinigung Zürich Nord`;
   const description = `${lp.serviceName} in ${ortData.name} – professionelle Fahrzeugpflege von Autoreinigung Zürich-Nord. Termin online buchen.`;
 

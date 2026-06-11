@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Car, Gauge, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { ArrowRight, Car, Gauge, ShieldCheck, Sparkles, Users, MapPin } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Reveal from "@/components/site/Reveal";
 import SectionHeader from "@/components/site/SectionHeader";
@@ -8,7 +8,7 @@ import QuoteCalculator from "@/components/site/QuoteCalculator";
 import FAQAccordion from "@/components/site/FAQAccordion";
 import Testimonials from "@/components/site/Testimonials";
 import { bookingUrl, images } from "@/data/siteContent";
-import { standorte } from "@/data/seoData";
+import { standorte, seoServices } from "@/data/seoData";
 
 export default function Home() {
   return (
@@ -64,26 +64,41 @@ export default function Home() {
       <section id="offerte" className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Lead System" title="Offerte in Sekunden vorbereiten" text="Fahrzeugtyp, Service und Add-ons auswählen – danach direkt buchen oder per WhatsApp anfragen." /><div className="mt-10"><QuoteCalculator /></div></div></section>
 
       <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Kundenstimmen" title="Vertrauen aus Zürich Nord" /><div className="mt-10"><Testimonials /></div></div></section>
-      {/* Regionen-Hub – interne Verlinkung */}
-      <section className="px-5 py-16 lg:px-8">
+      <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="FAQ" title="Häufige Fragen" /><div className="mt-10"><FAQAccordion /></div></div></section>
+      {/* Interne Verlinkung: Dienstleistungen */}
+      <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader center eyebrow="Einzugsgebiet" title="Autoreinigung für die ganze Region Zürich Nord" text="Unser Betrieb an der Heerenwiesen 18 ist ideal erreichbar für Kunden aus der gesamten Region." />
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {standorte.map((ort) => (
-              <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-bold hover:border-primary hover:text-primary transition-colors">
-                {ort.name}
-              </Link>
+          <SectionHeader eyebrow="Alle Dienstleistungen" title="Professionelle Fahrzeugpflege – das gesamte Angebot" text="Von der Innenreinigung über die Handwäsche bis zur Keramikversiegelung: Wählen Sie die Leistung, die Ihr Fahrzeug braucht." />
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {seoServices.map((svc) => (
+              <Reveal key={svc.slug}>
+                <Link to={`/dienstleistung/${svc.slug}`} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm">
+                  <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+                  {svc.name}
+                </Link>
+              </Reveal>
             ))}
-          </div>
-          <div className="mt-6 text-center">
-            <Link to="/standorte" className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
-              Alle Standorte ansehen <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="FAQ" title="Häufige Fragen" /><div className="mt-10"><FAQAccordion /></div></div></section>
+      {/* Interne Verlinkung: Standorte */}
+      <section className="bg-secondary/70 px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader eyebrow="Einzugsgebiet" title="Autoreinigung für die ganze Region Zürich Nord" text="Kunden aus diesen Gemeinden und Stadtteilen kommen regelmässig zu uns." />
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {standorte.map((ort) => (
+              <Reveal key={ort.slug}>
+                <Link to={`/standorte/${ort.slug}`} className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 font-bold hover:border-primary hover:text-primary transition-colors text-sm">
+                  <MapPin className="h-4 w-4 shrink-0 text-primary" />
+                  {ort.nameFull}
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-5xl rounded-[2.5rem] bg-foreground p-8 text-background shadow-2xl md:p-14"><Sparkles className="mb-6 h-8 w-8 text-primary" /><h2 className="font-heading text-4xl font-extrabold md:text-6xl">Nicht lange warten: sekundenschnell Termin sichern</h2><p className="mt-5 text-lg text-background/75">Jetzt online buchen und Ihr Fahrzeug sauber, gepflegt und werterhaltend wieder abholen.</p><a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">Online buchen</a></div></section>
     </>
   );
