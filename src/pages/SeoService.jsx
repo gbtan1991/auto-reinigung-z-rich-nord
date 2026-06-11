@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import { seoServices, standorte } from "@/data/seoData";
@@ -71,7 +72,21 @@ export default function SeoService() {
 
   return (
     <>
-      <SEO title={seoSvc.title} description={seoSvc.description} path={`/dienstleistung/${seoSvc.slug}`} />
+      <SEO
+        title={seoSvc.title}
+        description={seoSvc.description}
+        path={`/dienstleistung/${seoSvc.slug}`}
+        type="service"
+        serviceName={seoSvc.name}
+        breadcrumbs={[
+          { label: "Dienstleistungen", href: "/dienstleistungen" },
+          { label: seoSvc.name },
+        ]}
+      />
+      <Breadcrumb items={[
+        { label: "Dienstleistungen", href: "/dienstleistungen" },
+        { label: seoSvc.name },
+      ]} />
 
       {/* Hero */}
       <section className="px-5 py-20 lg:px-8">

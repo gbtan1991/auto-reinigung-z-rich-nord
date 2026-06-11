@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, MapPin, Clock, Phone } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import { landingpages, standorte, seoServices } from "@/data/seoData";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import { bookingUrl, phoneUrl, whatsappUrl, contact } from "@/data/siteContent";
 
 // Content per (serviceSlug, ortSlug) pair – targeted local content
@@ -41,7 +41,24 @@ export default function LandingPage() {
 
   return (
     <>
-      <SEO title={title} description={description} path={`/${service}-${ort}`} />
+      <SEO
+        title={title}
+        description={description}
+        path={`/lp/${service}/${ort}`}
+        type="service"
+        serviceName={lp.serviceName}
+        ortName={ortData.name}
+        breadcrumbs={[
+          { label: "Dienstleistungen", href: "/dienstleistungen" },
+          { label: lp.serviceName, href: `/dienstleistung/${service}` },
+          { label: ortData.nameFull },
+        ]}
+      />
+      <Breadcrumb items={[
+        { label: "Dienstleistungen", href: "/dienstleistungen" },
+        { label: lp.serviceName, href: `/dienstleistung/${service}` },
+        { label: ortData.nameFull },
+      ]} />
 
       {/* Hero */}
       <section className="px-5 py-20 lg:px-8">

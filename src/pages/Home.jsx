@@ -8,11 +8,19 @@ import QuoteCalculator from "@/components/site/QuoteCalculator";
 import FAQAccordion from "@/components/site/FAQAccordion";
 import Testimonials from "@/components/site/Testimonials";
 import { bookingUrl, images } from "@/data/siteContent";
+import { standorte } from "@/data/seoData";
 
 export default function Home() {
   return (
     <>
-      <SEO title="Professionelle Autoreinigung und Autoaufbereitung in Zürich Nord" description="Autoreinigung Zürich-Nord: Innenreinigung, Aussenreinigung, Politur, Lackpflege, Motorraumreinigung und Unterbodenreinigung in Zürich Nord." path="/" image={images.heroRim} />
+      <SEO
+        title="Autoreinigung Zürich Nord | Autoaufbereitung, Innenreinigung, Politur"
+        description="Professionelle Autoreinigung Zürich Nord – Innenreinigung ab CHF 80, Aussenreinigung ab CHF 70, Lackpolitur, Leasingrückgabe & MFK. Online buchen."
+        path="/"
+        image={images.heroRim}
+        type="home"
+        breadcrumbs={[{ name: "Startseite", path: "/" }]}
+      />
       <section className="overflow-hidden px-5 py-16 md:py-24 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
@@ -56,6 +64,25 @@ export default function Home() {
       <section id="offerte" className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Lead System" title="Offerte in Sekunden vorbereiten" text="Fahrzeugtyp, Service und Add-ons auswählen – danach direkt buchen oder per WhatsApp anfragen." /><div className="mt-10"><QuoteCalculator /></div></div></section>
 
       <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Kundenstimmen" title="Vertrauen aus Zürich Nord" /><div className="mt-10"><Testimonials /></div></div></section>
+      {/* Regionen-Hub – interne Verlinkung */}
+      <section className="px-5 py-16 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader center eyebrow="Einzugsgebiet" title="Autoreinigung für die ganze Region Zürich Nord" text="Unser Betrieb an der Heerenwiesen 18 ist ideal erreichbar für Kunden aus der gesamten Region." />
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {standorte.map((ort) => (
+              <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-bold hover:border-primary hover:text-primary transition-colors">
+                {ort.name}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link to="/standorte" className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+              Alle Standorte ansehen <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-secondary/70 px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="FAQ" title="Häufige Fragen" /><div className="mt-10"><FAQAccordion /></div></div></section>
       <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-5xl rounded-[2.5rem] bg-foreground p-8 text-background shadow-2xl md:p-14"><Sparkles className="mb-6 h-8 w-8 text-primary" /><h2 className="font-heading text-4xl font-extrabold md:text-6xl">Nicht lange warten: sekundenschnell Termin sichern</h2><p className="mt-5 text-lg text-background/75">Jetzt online buchen und Ihr Fahrzeug sauber, gepflegt und werterhaltend wieder abholen.</p><a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-full bg-primary px-8 py-4 font-bold text-primary-foreground">Online buchen</a></div></section>
     </>

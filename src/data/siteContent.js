@@ -104,10 +104,13 @@ export const testimonials = [
 ];
 
 export const faqs = [
-  { q: "Für welche Fahrzeuge eignet sich die Autoreinigung?", a: "Unsere professionelle Autoreinigung in Zürich Nord eignet sich ideal für Privatfahrzeuge, Firmenfahrzeuge, Leasingautos, Occasionen sowie Fahrzeuge vor der MFK oder dem Verkauf." },
-  { q: "Warum lohnt sich professionelle Autoreinigung?", a: "Eine professionelle Autoreinigung sorgt nicht nur für ein gepflegtes Erscheinungsbild, sondern trägt auch zum langfristigen Werterhalt Ihres Fahrzeugs bei." },
-  { q: "Kann ich online einen Termin buchen?", a: "Ja. Über unsere Online-Buchung sichern Sie sich sekundenschnell einen Termin für Innenreinigung, Aussenreinigung oder Politur." },
-  { q: "Wo befindet sich Autoreinigung Zürich-Nord?", a: "Unser Standort ist an der Heerenwiesen 18, 8051 Zürich und ideal erreichbar aus Zürich-City, Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und Umgebung." }
+  { q: "Für welche Fahrzeuge eignet sich die Autoreinigung?", a: "Unsere professionelle Autoreinigung in Zürich Nord eignet sich für alle Fahrzeugtypen: Privatfahrzeuge, Familienautos, Firmenwagen, SUVs, Sportwagen, Leasingfahrzeuge, Occasionen sowie Fahrzeuge vor der MFK oder dem Verkauf. Auch Firmenflotten reinigen wir regelmässig." },
+  { q: "Was kostet eine professionelle Autoreinigung in Zürich?", a: "Die Innenreinigung beginnt ab CHF 80.–, die Aussenreinigung ab CHF 70.– und die Lackpolitur ab CHF 350.–. Die genauen Kosten hängen vom Fahrzeugtyp, der Grösse und dem Verschmutzungsgrad ab. Mit unserem Online-Kalkulator erhalten Sie in Sekunden eine erste Preiseinschätzung." },
+  { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Eine einfache Innenreinigung dauert 2–3 Stunden, eine vollständige Aussenreinigung mit Motorraum ca. 2–4 Stunden. Eine komplette Aufbereitung inkl. Politur kann 4–8 Stunden in Anspruch nehmen. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
+  { q: "Kann ich online einen Termin buchen?", a: "Ja. Über unsere Online-Buchung sichern Sie sich sekundenschnell Ihren Wunschtermin – für Innenreinigung, Aussenreinigung, Politur, Leasingrückgabe oder MFK-Vorbereitung. Die Buchung dauert weniger als 60 Sekunden." },
+  { q: "Wo befindet sich Autoreinigung Zürich-Nord und wie komme ich hin?", a: "Unser Betrieb befindet sich an der Heerenwiesen 18, 8051 Zürich-Schwamendingen. Erreichbar mit dem Auto über die Schaffhauserstrasse oder die Zürichbergstrasse. Mit dem ÖV: Tram 10 oder 14 bis Schaffhauserplatz, dann Bus 63. Gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und der ganzen Region Zürich Nord." },
+  { q: "Ist eine Leasingrückgabe-Reinigung bei Ihnen möglich?", a: "Ja. Die Leasingrückgabe-Reinigung ist eine unserer Spezialitäten. Wir bereiten Ihr Fahrzeug professionell auf, um kostspielige Nachforderungen des Leasinggebers zu vermeiden – innen und aussen, auf Wunsch auch mit Kratzerentfernung und Geruchsbeseitigung." },
+  { q: "Wie kann ich eine Autoaufbereitung in Zürich Nord anfragen?", a: "Am einfachsten buchen Sie direkt online. Alternativ erreichen Sie uns telefonisch unter +41 44 511 94 90 oder per WhatsApp unter +41 79 741 56 58. Auf Wunsch erstellen wir Ihnen auch ein individuelles Angebot für Firmenflotten oder spezielle Aufbereitungen." }
 ];
 
 export const contact = {
@@ -121,12 +124,49 @@ export const contact = {
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "AutoWash",
+  "@type": ["LocalBusiness", "AutoWash"],
+  "@id": "https://www.autoreinigung-zuerich-nord.ch/#business",
   name: "Autoreinigung Zürich-Nord",
-  address: { "@type": "PostalAddress", streetAddress: "Heerenwiesen 18", postalCode: "8051", addressLocality: "Zürich", addressCountry: "CH" },
+  legalName: "Autoreinigung Zürich-Nord",
+  description: "Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugpflege in Zürich Nord. Spezialist für Leasingrückgabe und MFK-Vorbereitung.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Heerenwiesen 18",
+    postalCode: "8051",
+    addressLocality: "Zürich",
+    addressRegion: "ZH",
+    addressCountry: "CH",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 47.4114,
+    longitude: 8.5481,
+  },
   telephone: "+41445119490",
   email: "info@autoreinigung-zuerich-nord.ch",
-  areaServed: ["Zürich Nord", "Oerlikon", "Schwamendingen", "Seebach", "Opfikon", "Glattbrugg", "Wallisellen"],
-  openingHours: ["Mo-Fr 08:00-12:00", "Mo-Fr 13:30-18:00", "Sa 09:00-14:00"],
-  url: "https://www.autoreinigung-zuerich-nord.ch/"
+  url: "https://www.autoreinigung-zuerich-nord.ch/",
+  sameAs: [
+    "https://g.page/autoreinigungzuerichnord",
+  ],
+  areaServed: [
+    { "@type": "City", name: "Zürich" },
+    { "@type": "City", name: "Oerlikon" },
+    { "@type": "City", name: "Schwamendingen" },
+    { "@type": "City", name: "Seebach" },
+    { "@type": "City", name: "Opfikon" },
+    { "@type": "City", name: "Glattbrugg" },
+    { "@type": "City", name: "Wallisellen" },
+    { "@type": "City", name: "Dübendorf" },
+    { "@type": "City", name: "Dietlikon" },
+  ],
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "12:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "13:30", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "14:00" },
+  ],
+  hasMap: "https://maps.google.com/?q=Heerenwiesen+18+8051+Z%C3%BCrich",
+  priceRange: "CHF 70.– – CHF 750.–",
+  currenciesAccepted: "CHF",
+  paymentAccepted: "Cash, Credit Card",
+  knowsLanguage: ["de", "de-CH"],
 };

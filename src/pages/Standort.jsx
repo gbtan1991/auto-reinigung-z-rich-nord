@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, MapPin, Clock, Phone, CheckCircle2 } from "lucide-react";
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import { standorte } from "@/data/seoData";
@@ -16,7 +17,17 @@ export default function Standort() {
         title={standort.title}
         description={standort.description}
         path={`/standorte/${standort.slug}`}
+        type="location"
+        ortName={standort.name}
+        breadcrumbs={[
+          { label: "Standorte", href: "/standorte" },
+          { label: standort.nameFull },
+        ]}
       />
+      <Breadcrumb items={[
+        { label: "Standorte", href: "/standorte" },
+        { label: standort.nameFull },
+      ]} />
 
       {/* Hero */}
       <section className="px-5 py-20 lg:px-8">
