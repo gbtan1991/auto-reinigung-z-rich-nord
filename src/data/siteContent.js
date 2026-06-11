@@ -25,6 +25,7 @@ export const images = {
 export const navItems = [
   { label: "Start", href: "/" },
   { label: "Dienstleistungen", href: "/dienstleistungen" },
+  { label: "Standorte", href: "/standorte" },
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Bewertung", href: "/bewertung" },
   { label: "Kontakt", href: "/kontakt" }

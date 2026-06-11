@@ -22,6 +22,10 @@ import Jobs from '@/pages/Jobs';
 import Impressum from '@/pages/Impressum';
 import Datenschutz from '@/pages/Datenschutz';
 import TestimonialPage from '@/pages/TestimonialPage';
+import Standorte from '@/pages/Standorte';
+import Standort from '@/pages/Standort';
+import SeoService from '@/pages/SeoService';
+import LandingPage from '@/pages/LandingPage';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -65,6 +69,10 @@ const AuthenticatedApp = () => {
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/testimonial/:slug" element={<TestimonialPage />} />
+        <Route path="/standorte" element={<Standorte />} />
+        <Route path="/standorte/:ort" element={<Standort />} />
+        <Route path="/dienstleistung/:service" element={<SeoService />} />
+        <Route path="/lp/:service/:ort" element={<LandingPage />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
