@@ -24,7 +24,6 @@ import Datenschutz from '@/pages/Datenschutz';
 import TestimonialPage from '@/pages/TestimonialPage';
 import Standorte from '@/pages/Standorte';
 import Standort from '@/pages/Standort';
-import SeoService from '@/pages/SeoService';
 import LandingPage from '@/pages/LandingPage';
 import FAQ from '@/pages/FAQ';
 // Add page imports here
@@ -62,7 +61,7 @@ const AuthenticatedApp = () => {
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/dienstleistungen" element={<Services />} />
-        <Route path="/service/:slug" element={<ServiceDetail />} />
+        <Route path="/dienstleistungen/:slug" element={<ServiceDetail />} />
         <Route path="/ueber-uns" element={<About />} />
         <Route path="/kontakt" element={<Contact />} />
         <Route path="/bewertung" element={<Review />} />
@@ -72,7 +71,6 @@ const AuthenticatedApp = () => {
         <Route path="/testimonial/:slug" element={<TestimonialPage />} />
         <Route path="/standorte" element={<Standorte />} />
         <Route path="/standorte/:ort" element={<Standort />} />
-        <Route path="/dienstleistung/:service" element={<SeoService />} />
         <Route path="/lp/:service/:ort" element={<LandingPage />} />
         <Route path="/faq" element={<FAQ />} />
       </Route>

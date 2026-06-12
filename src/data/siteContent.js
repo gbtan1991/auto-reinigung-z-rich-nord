@@ -28,6 +28,7 @@ export const navItems = [
   { label: "Standorte", href: "/standorte" },
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Bewertung", href: "/bewertung" },
+  { label: "FAQ", href: "/faq" },
   { label: "Kontakt", href: "/kontakt" }
 ];
 

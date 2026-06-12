@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Clock, Cookie, Mail, MapPin, Phone, Star } from "lucide-react";
 import { bookingUrl, contact, googleReviewUrl, images, services } from "@/data/siteContent";
-import { standorte, landingpages } from "@/data/seoData";
+import { standorte } from "@/data/seoData";
 
 export default function Footer() {
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-secondary/50">
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_0.7fr_0.8fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr_0.8fr]">
           <div>
             <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="mb-4 h-14 w-auto" />
             <p className="text-sm leading-7 text-muted-foreground">Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung und Politur in Zürich Nord – sorgfältig, materialschonend und werterhaltend.</p>
@@ -26,10 +26,8 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-heading text-base font-bold">Dienstleistungen</h3>
             <div className="flex flex-col gap-2.5">
-              {services.map((service) => <Link key={service.slug} to={`/service/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
-              <Link to="/dienstleistung/autoaufbereitung" className="text-sm text-muted-foreground transition hover:text-primary">Autoaufbereitung</Link>
-              <Link to="/dienstleistung/leasingrueckgabe" className="text-sm text-muted-foreground transition hover:text-primary">Leasingrückgabe</Link>
-              <Link to="/dienstleistung/keramikversiegelung" className="text-sm text-muted-foreground transition hover:text-primary">Keramikversiegelung</Link>
+              {services.map((service) => <Link key={service.slug} to={`/dienstleistungen/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
+              <Link to="/dienstleistungen" className="text-sm text-muted-foreground transition hover:text-primary">Alle Dienstleistungen</Link>
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition hover:text-primary">Online buchen</a>
               <Link to="/jobs" className="text-sm text-muted-foreground transition hover:text-primary">Karriere</Link>
             </div>
@@ -37,10 +35,8 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-heading text-base font-bold">Standorte</h3>
             <div className="flex flex-col gap-2.5">
-              {standorte.slice(0, 6).map((ort) => (
-                <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{ort.nameFull}</Link>
-              ))}
-              <Link to="/standorte" className="text-sm font-bold text-primary transition hover:underline">Alle Standorte →</Link>
+              {standorte.slice(0, 5).map((ort) => <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{ort.nameFull}</Link>)}
+              <Link to="/standorte" className="text-sm text-muted-foreground transition hover:text-primary">Alle Standorte</Link>
             </div>
           </div>
           <div>

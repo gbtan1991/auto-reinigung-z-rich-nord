@@ -157,13 +157,13 @@ export default function LandingPage() {
         ortName={ortData.name}
         breadcrumbs={[
           { label: "Dienstleistungen", href: "/dienstleistungen" },
-          { label: lp.serviceName, href: `/dienstleistung/${service}` },
+          { label: lp.serviceName, href: `/dienstleistungen/${service}` },
           { label: ortData.nameFull },
         ]}
       />
       <Breadcrumb items={[
         { label: "Dienstleistungen", href: "/dienstleistungen" },
-        { label: lp.serviceName, href: `/dienstleistung/${service}` },
+        { label: lp.serviceName, href: `/dienstleistungen/${service}` },
         { label: ortData.nameFull },
       ]} />
 

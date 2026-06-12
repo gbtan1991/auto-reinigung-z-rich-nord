@@ -107,7 +107,7 @@ export default function Standort() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={i * 70}>
-                <Link to={`/service/${service.slug}`} className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm transition hover:border-primary">
+                <Link to={`/dienstleistungen/${service.slug}`} className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm transition hover:border-primary">
                   <h3 className="font-heading text-lg font-extrabold">{service.eyebrow}</h3>
                   <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">{service.summary.slice(0, 120)}…</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-primary">
