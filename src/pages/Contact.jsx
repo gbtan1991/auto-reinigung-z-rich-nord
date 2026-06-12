@@ -3,6 +3,7 @@ import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/site/SEO";
 import { contact, images, whatsappUrl } from "@/data/siteContent";
+import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -30,9 +31,21 @@ export default function Contact() {
               <p className="flex gap-3"><Mail className="mt-1 h-5 w-5 text-primary" /> {contact.email}</p>
               <p className="flex gap-3"><Phone className="mt-1 h-5 w-5 text-primary" /> {contact.phone}<br />{contact.mobile}</p>
             </div>
-            <a href={whatsappUrl} className="mt-8 inline-flex rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
-              WhatsApp Schnellkontakt
-            </a>
+            <div className="mt-8">
+              <GoogleReviewBadge />
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a href={whatsappUrl} className="inline-flex rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
+                WhatsApp Schnellkontakt
+              </a>
+              <a href={contact.phone} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-4 font-bold transition hover:border-primary hover:text-primary">
+                <Phone className="h-4 w-4" /> {contact.phone}
+              </a>
+            </div>
+            <p className="mt-5 rounded-xl bg-secondary/70 p-4 text-sm leading-relaxed text-muted-foreground">
+              <b className="text-foreground">Öffnungszeiten:</b><br />
+              {contact.hours}
+            </p>
             <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
               Beim Klick werden Daten (inkl. Telefonnummer) an WhatsApp/Meta (USA) übertragen.{" "}
               <Link to="/datenschutz" className="underline hover:text-primary transition-colors">Mehr Infos</Link>

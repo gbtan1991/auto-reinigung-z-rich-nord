@@ -8,6 +8,8 @@ import QuoteCalculator from "@/components/site/QuoteCalculator";
 import FAQAccordion from "@/components/site/FAQAccordion";
 import Testimonials from "@/components/site/Testimonials";
 import { bookingUrl, images } from "@/data/siteContent";
+import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
+import TrustBadges from "@/components/site/TrustBadges";
 import { standorte, seoServices } from "@/data/seoData";
 
 export default function Home() {
@@ -30,7 +32,10 @@ export default function Home() {
               <p>Innenreinigung, Aussenreinigung, Lackpolitur, Leasingrückgabe & MFK-Vorbereitung – sorgfältige Handarbeit, hochwertige Mittel, dauerhafter Werterhalt.</p>
               <p>Ideal erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg und Wallisellen.</p>
             </div>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex items-center gap-3">
+              <GoogleReviewBadge compact />
+            </div>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">Jetzt buchen <ArrowRight className="h-5 w-5" /></a>
               <a href="#offerte" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-7 py-4 font-bold transition hover:border-primary hover:text-primary">Preise berechnen</a>
             </div>
@@ -52,6 +57,9 @@ export default function Home() {
             {[[Car,"Seit 2020","in Zürich-Schwamendingen"],[Users,"5-köpfiges Team","Handarbeit, kein Automatikbetrieb"],[ShieldCheck,"MFK-bereit","Motorraum, Chassis und Unterboden"],[Gauge,"Werterhalt","für Privat- und Firmenfahrzeuge"]].map(([Icon,title,text]) => (
               <Reveal key={title} className="rounded-[1.5rem] border border-border bg-card p-5 shadow-sm md:rounded-[2rem] md:p-6"><Icon className="mb-3 h-6 w-6 text-primary md:mb-5 md:h-7 md:w-7" /><p className="font-heading text-lg font-extrabold md:text-2xl">{title}</p><p className="mt-1 text-xs text-muted-foreground md:mt-2 md:text-sm">{text}</p></Reveal>
             ))}
+          </div>
+          <div className="mt-8">
+            <TrustBadges />
           </div>
         </div>
       </section>

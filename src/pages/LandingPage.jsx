@@ -6,6 +6,7 @@ import Reveal from "@/components/site/Reveal";
 import { landingpages, standorte, seoServices } from "@/data/seoData";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import { bookingUrl, phoneUrl, whatsappUrl, contact } from "@/data/siteContent";
+import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 
 // Spezifischer Content pro Kombination (Service + Ort) – kein Duplicate Content
 const specificContent = {
@@ -188,6 +189,7 @@ export default function LandingPage() {
                 <Phone className="h-4 w-4" /> {contact.phone}
               </a>
             </div>
+            <div className="mt-4"><GoogleReviewBadge compact /></div>
           </Reveal>
         </div>
       </section>

@@ -27,7 +27,7 @@ export const navItems = [
   { label: "Dienstleistungen", href: "/dienstleistungen" },
   { label: "Standorte", href: "/standorte" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Bewertung", href: "/bewertung" },
+  { label: "Bewertungen ⭐4.6", href: "/bewertungen" },
   { label: "FAQ", href: "/faq" },
   { label: "Kontakt", href: "/kontakt" }
 ];
