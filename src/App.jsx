@@ -26,6 +26,7 @@ import Standorte from '@/pages/Standorte';
 import Standort from '@/pages/Standort';
 import SeoService from '@/pages/SeoService';
 import LandingPage from '@/pages/LandingPage';
+import FAQ from '@/pages/FAQ';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -73,6 +74,7 @@ const AuthenticatedApp = () => {
         <Route path="/standorte/:ort" element={<Standort />} />
         <Route path="/dienstleistung/:service" element={<SeoService />} />
         <Route path="/lp/:service/:ort" element={<LandingPage />} />
+        <Route path="/faq" element={<FAQ />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

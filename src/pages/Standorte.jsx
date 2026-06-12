@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
-import { standorte } from "@/data/seoData";
+import { standorte, landingpages } from "@/data/seoData";
 
 export default function Standorte() {
   return (
@@ -13,7 +14,8 @@ export default function Standorte() {
         description="Professionelle Autoreinigung für Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon & Glattbrugg."
         path="/standorte"
       />
-      <section className="px-5 py-20 lg:px-8">
+      <Breadcrumb items={[{ label: "Standorte" }]} />
+      <section className="px-5 pt-16 pb-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="Einzugsgebiet"
@@ -41,6 +43,32 @@ export default function Standorte() {
           </div>
         </div>
       </section>
+
+      {/* Top Money Pages */}
+      {landingpages.filter((lp) => lp.priority === "SOFORT").length > 0 && (
+        <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Beliebte Kombinationen"
+              title="Dienstleistung + Ort – unsere Top-Angebote"
+            />
+            <div className="mt-7 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+              {landingpages
+                .filter((lp) => lp.priority === "SOFORT")
+                .map((lp) => (
+                  <Link
+                    key={`${lp.serviceSlug}-${lp.ortSlug}`}
+                    to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`}
+                    className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary"
+                  >
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
+                    {lp.serviceName} in {lp.ortName}
+                  </Link>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

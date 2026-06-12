@@ -6,6 +6,7 @@ import SectionHeader from "@/components/site/SectionHeader";
 import Testimonials from "@/components/site/Testimonials";
 import Reveal from "@/components/site/Reveal";
 import { bookingUrl, images, services, contact } from "@/data/siteContent";
+import { standorte, seoServices, landingpages } from "@/data/seoData";
 
 export default function ServiceDetail() {
   const { slug } = useParams();
@@ -118,6 +119,78 @@ export default function ServiceDetail() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader center eyebrow="Referenzen" title="Was Kunden sagen" />
           <div className="mt-10"><Testimonials names={service.testimonials} /></div>
+        </div>
+      </section>
+
+      {/* Cross-Links: verwandte SEO-Seiten, Standorte & Money Pages */}
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader eyebrow="Mehr erfahren" title={`${service.eyebrow} – alle Details & Standorte`} />
+
+          {/* Verwandte SeoService-Seiten */}
+          {(() => {
+            const relatedSeo = seoServices.filter((s) => s.slug === service.slug);
+            return relatedSeo.length > 0 ? (
+              <div className="mt-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Ausführliche Infos</p>
+                <div className="flex flex-wrap gap-2">
+                  {relatedSeo.map((s) => (
+                    <Link key={s.slug} to={`/dienstleistung/${s.slug}`} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                      {s.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null;
+          })()}
+
+          {/* Verwandte Dienstleistungen (andere services) */}
+          <div className="mt-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Verwandte Dienstleistungen</p>
+            <div className="flex flex-wrap gap-2">
+              {services.filter((s) => s.slug !== service.slug).map((s) => (
+                <Link key={s.slug} to={`/service/${s.slug}`} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                  {s.eyebrow}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Relevante Money Pages */}
+          {(() => {
+            const relatedLPs = landingpages.filter((lp) => lp.serviceSlug === service.slug);
+            return relatedLPs.length > 0 ? (
+              <div className="mt-5">
+                <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Nach Standort</p>
+                <div className="flex flex-wrap gap-2">
+                  {relatedLPs.map((lp) => (
+                    <Link key={`${lp.serviceSlug}-${lp.ortSlug}`} to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                      {lp.ortName}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null;
+          })()}
+
+          {/* Standorte */}
+          <div className="mt-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">Standorte in der Region</p>
+            <div className="flex flex-wrap gap-2">
+              {standorte.slice(0, 6).map((ort) => (
+                <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                  {ort.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Kontakt */}
+          <div className="mt-6">
+            <Link to="/kontakt" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+              <ArrowRight className="h-4 w-4" /> Fragen? Kontaktieren Sie uns
+            </Link>
+          </div>
         </div>
       </section>
     </>

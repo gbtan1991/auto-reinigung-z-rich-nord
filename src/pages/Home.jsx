@@ -8,7 +8,7 @@ import QuoteCalculator from "@/components/site/QuoteCalculator";
 import FAQAccordion from "@/components/site/FAQAccordion";
 import Testimonials from "@/components/site/Testimonials";
 import { bookingUrl, images } from "@/data/siteContent";
-import { standorte, seoServices } from "@/data/seoData";
+import { standorte, seoServices, landingpages } from "@/data/seoData";
 
 export default function Home() {
   return (
@@ -110,6 +110,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Top Money Pages */}
+      {landingpages.filter((lp) => lp.priority === "SOFORT").length > 0 && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader eyebrow="Beliebte Angebote" title="Unsere Top-Angebote in Ihrer Region" text="Die meistgesuchten Kombinationen direkt ansehen." />
+            <div className="mt-7 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+              {landingpages.filter((lp) => lp.priority === "SOFORT").map((lp) => (
+                <Reveal key={`${lp.serviceSlug}-${lp.ortSlug}`}>
+                  <Link to={`/lp/${lp.serviceSlug}/${lp.ortSlug}`} className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold transition hover:border-primary hover:text-primary hover:-translate-y-0.5">
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-primary" />
+                    <span className="truncate">{lp.serviceName} {lp.ortName}</span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Interne Verlinkung: Standorte */}
       <section className="bg-secondary/70 px-5 py-14 lg:px-8">
