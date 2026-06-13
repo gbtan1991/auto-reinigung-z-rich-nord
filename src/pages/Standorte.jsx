@@ -10,17 +10,17 @@ export default function Standorte() {
   return (
     <>
       <SEO
-        title="Autoreinigung Region Zürich Nord | Alle Standorte"
+        title="Autoreinigung Region Zürich Nord | Einzugsgebiete"
         description="Professionelle Autoreinigung für Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon & Glattbrugg."
         path="/standorte"
       />
-      <Breadcrumb items={[{ label: "Standorte" }]} />
+      <Breadcrumb items={[{ label: "Einzugsgebiete" }]} />
       <section className="px-5 pt-16 pb-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Einzugsgebiet"
-            title="Autoreinigung für die ganze Region Zürich Nord"
-            text="Unser Betrieb an der Heerenwiesen 18, 8051 Zürich, ist der ideale Standort für Kunden aus Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon und Glattbrugg."
+            eyebrow="Unsere Regionen"
+            title="Professionelle Autoreinigung – schnell erreichbar aus der ganzen Region Zürich Nord"
+            text="Ein Standort, neun Regionen: Von unserem Betrieb an der Heerenwiesen 18, 8051 Zürich aus bedienen wir Kunden aus Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon und Glattbrugg."
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {standorte.map((ort, i) => (
@@ -35,7 +35,7 @@ export default function Standorte() {
                   </div>
                   <p className="text-sm text-muted-foreground leading-7">{ort.description}</p>
                   <span className="mt-5 inline-flex items-center gap-1 text-primary font-bold text-sm">
-                    Zur Standortseite <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    Zur Region <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </Reveal>

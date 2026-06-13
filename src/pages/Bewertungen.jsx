@@ -1,4 +1,5 @@
-import { Star, ExternalLink, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Star, ExternalLink, MessageCircle, ArrowRight } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
@@ -76,12 +77,17 @@ export default function Bewertungen() {
               Termin buchen
             </a>
           </div>
-          <p className="mt-5 text-sm text-muted-foreground">
-            Oder direkt per WhatsApp:{" "}
-            <a href={whatsappUrl} className="inline-flex items-center gap-1 font-semibold text-primary underline">
-              <MessageCircle className="h-4 w-4" /> +41 79 741 56 58
-            </a>
-          </p>
+          <div className="mt-5 flex flex-col items-center gap-2">
+            <Link to="/bewertung" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <ArrowRight className="h-4 w-4" /> Bewertung direkt an uns senden (intern)
+            </Link>
+            <p className="text-sm text-muted-foreground">
+              Oder direkt per WhatsApp:{" "}
+              <a href={whatsappUrl} className="inline-flex items-center gap-1 font-semibold text-primary underline">
+                <MessageCircle className="h-4 w-4" /> +41 79 741 56 58
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </>

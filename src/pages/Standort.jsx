@@ -20,12 +20,12 @@ export default function Standort() {
         type="location"
         ortName={standort.name}
         breadcrumbs={[
-          { label: "Standorte", href: "/standorte" },
+          { label: "Regionen", href: "/standorte" },
           { label: standort.nameFull },
         ]}
       />
       <Breadcrumb items={[
-        { label: "Standorte", href: "/standorte" },
+        { label: "Regionen", href: "/standorte" },
         { label: standort.nameFull },
       ]} />
 

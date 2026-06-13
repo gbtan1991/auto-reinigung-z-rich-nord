@@ -5,7 +5,7 @@ import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import { landingpages, standorte, seoServices } from "@/data/seoData";
 import Breadcrumb from "@/components/site/Breadcrumb";
-import { bookingUrl, phoneUrl, whatsappUrl, contact } from "@/data/siteContent";
+import { bookingUrl, phoneUrl, whatsappUrl, contact, services } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 
 // Spezifischer Content pro Kombination (Service + Ort) – kein Duplicate Content
@@ -146,6 +146,8 @@ export default function LandingPage() {
   const content = getLandingContent(service, ort, ortData.name, lp.serviceName);
   const title = `${lp.serviceName} ${ortData.name} | Autoreinigung Zürich Nord`;
   const description = `${lp.serviceName} in ${ortData.name} – professionelle Fahrzeugpflege von Autoreinigung Zürich-Nord. Termin online buchen.`;
+  // Nur verlinken wenn eine Service-Detailseite existiert (innenreinigung, aussenreinigung, politur)
+  const serviceHasDetailPage = services.some((s) => s.slug === service);
 
   return (
     <>
@@ -158,13 +160,13 @@ export default function LandingPage() {
         ortName={ortData.name}
         breadcrumbs={[
           { label: "Dienstleistungen", href: "/dienstleistungen" },
-          { label: lp.serviceName, href: `/dienstleistungen/${service}` },
+          { label: lp.serviceName, href: serviceHasDetailPage ? `/dienstleistungen/${service}` : undefined },
           { label: ortData.nameFull },
         ]}
       />
       <Breadcrumb items={[
         { label: "Dienstleistungen", href: "/dienstleistungen" },
-        { label: lp.serviceName, href: `/dienstleistungen/${service}` },
+        { label: lp.serviceName, href: serviceHasDetailPage ? `/dienstleistungen/${service}` : undefined },
         { label: ortData.nameFull },
       ]} />
 

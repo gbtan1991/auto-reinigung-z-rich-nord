@@ -11,6 +11,7 @@ import { bookingUrl, images } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 import TrustBadges from "@/components/site/TrustBadges";
 import { standorte, seoServices } from "@/data/seoData";
+import { services } from "@/data/siteContent";
 
 export default function Home() {
   return (
@@ -107,22 +108,25 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="Alle Dienstleistungen" title="Das gesamte Leistungsangebot" text="Von der Innenreinigung über die Handwäsche bis zur Keramikversiegelung." />
           <div className="mt-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {seoServices.map((svc) => (
-              <Reveal key={svc.slug}>
-                <Link to={`/dienstleistungen/${svc.slug}`} className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition-colors">
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
-                  {svc.name}
-                </Link>
-              </Reveal>
-            ))}
+            {seoServices.map((svc) => {
+              const hasDetail = services.some((s) => s.slug === svc.slug);
+              return (
+                <Reveal key={svc.slug}>
+                  <Link to={hasDetail ? `/dienstleistungen/${svc.slug}` : "/dienstleistungen"} className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition-colors">
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
+                    {svc.name}
+                  </Link>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Interne Verlinkung: Standorte */}
+      {/* Interne Verlinkung: Regionen */}
       <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader eyebrow="Einzugsgebiet" title="Autoreinigung für die ganze Region Zürich Nord" text="Kunden aus diesen Gemeinden und Stadtteilen kommen regelmässig zu uns." />
+          <SectionHeader eyebrow="Unsere Regionen" title="Autoreinigung für die ganze Region Zürich Nord" text="Kunden aus diesen Gemeinden und Stadtteilen kommen regelmässig zu uns." />
           <div className="mt-8 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {standorte.map((ort) => (
               <Reveal key={ort.slug}>

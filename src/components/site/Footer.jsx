@@ -33,10 +33,10 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="mb-4 font-heading text-base font-bold">Standorte</h3>
+            <h3 className="mb-4 font-heading text-base font-bold">Regionen</h3>
             <div className="flex flex-col gap-2.5">
               {standorte.slice(0, 5).map((ort) => <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{ort.nameFull}</Link>)}
-              <Link to="/standorte" className="text-sm text-muted-foreground transition hover:text-primary">Alle Standorte</Link>
+              <Link to="/standorte" className="text-sm text-muted-foreground transition hover:text-primary">Alle Regionen</Link>
             </div>
           </div>
           <div>
