@@ -16,6 +16,17 @@ const specificContent = {
     fuerWen: "Firmenfahrzeuge aus Oerlikon und Leutschenbach, Leasingnehmer vor Rückgabe, Familien mit Kindern oder Haustieren sowie Fahrzeugbesitzer, die Wert auf einen hygienisch sauberen Innenraum legen. Besonders beliebt bei Pendlern, die täglich Bahnhof Oerlikon nutzen und ihr Auto bequem vorher abgeben.",
     lokalerBezug: "Oerlikon ist mit dem Bahnhof Oerlikon, dem zweitgrössten der Schweiz, ein zentraler Knotenpunkt. Viele Nutzer kombinieren die Fahrzeugreinigung mit der ÖV-Fahrt: Wagen morgens abgeben, per Tram 10 oder Buslinie 62 weiterfahren, abends das saubere Auto abholen. Von Neu-Oerlikon, Leutschenbach oder der Messestrasse sind wir in 5–8 Minuten erreichbar.",
     warum: "Oerliker Kunden schätzen besonders die Kombination aus Nähe, Effizienz und Qualität. Keine langen Wartezeiten, kein Automatikbetrieb – jede Reinigung per Hand. Das zahlt sich besonders für Fahrzeuge aus, die täglich im dichten Stadtverkehr unterwegs sind.",
+    trustCards: [
+      { title: "Nähe zum Geschäftszentrum", text: "Nur 8 Minuten vom Oerlikon Zentrum und Bahnhof – ideal kombinierbar mit Arbeitsweg." },
+      { title: "Firmenkunden seit 2020", text: "Regelmässige Reinigung von Firmenfahrzeugen aus Leutschenbach und dem Glattpark." },
+      { title: "Pendler-freundlich", text: "Morgens abgeben, per Tram zur Arbeit, abends sauberes Auto abholen." },
+    ],
+    faqs: [
+      { q: "Ist die Innenreinigung für Geschäftsfahrzeuge aus Oerlikon geeignet?", a: "Ja, wir reinigen regelmässig Firmenfahrzeuge aus Leutschenbach und dem Glattpark. Eine saubere Innenausstattung ist für den Geschäftseindruck entscheidend – wir sorgen für hygienisch einwandfreie Fahrzeuge." },
+      { q: "Wie schnell ist der Service für Oerliker Pendler?", a: "Sie geben Ihr Fahrzeug morgens ab, fahren mit Tram 10 oder Bus 62 weiter und holen es abends gereinigt ab. Die reine Innenreinigung dauert 2–3 Stunden." },
+      { q: "Können Sie Tierhaare aus dem Innenraum entfernen?", a: "Ja, mit unserer Spezialausrüstung entfernen wir selbst tief sitzende Hunde- und Katzenhaare aus Polstern und Teppichen – ein häufiges Anliegen in Oerlikon." },
+      { q: "Was kostet die Innenreinigung im Vergleich zu anderen Oerliker Anbietern?", a: "Unsere Innenreinigung beginnt bei CHF 80.– für Kleinwagen. Wir sind preislich fair, arbeiten aber ausschliesslich per Hand – ohne Durchlaufprinzip." },
+    ],
   },
   "aussenreinigung-oerlikon": {
     einleitung: "Ihr Auto zeigt Bremsstaub, Strassendreck oder Salzflecken nach dem Winter? Die professionelle Aussenreinigung bei Autoreinigung Zürich-Nord – 8 Minuten von Oerlikon – bringt Ihr Fahrzeug wieder auf Hochglanz. Handwäsche ohne Kratzer, Felgenreinigung, Scheiben und optionale Lackversiegelung.",
@@ -23,6 +34,17 @@ const specificContent = {
     fuerWen: "Privatfahrzeuge und Firmenfahrzeuge aus Oerlikon und Leutschenbach, Premium-Fahrzeuge, foliierte Autos, Fahrzeuge nach der Winterperiode und vor dem Frühjahrsverkauf.",
     lokalerBezug: "Aus dem Herzen Oerlikons – Oerlikon Zentrum, Neu-Oerlikon, Glattpark oder Messe Zürich – sind wir in wenigen Minuten erreichbar. Buslinie 62 oder Tram 10 bringen Sie direkt in unsere Nähe. Viele Oerliker Kunden kombinieren die Aussenreinigung mit einer Innenreinigung für die komplette Aufbereitung.",
     warum: "Wer täglich durch Oerlikon fährt, weiss: Bremsstaub und Strassendreck setzen sich schnell fest. Eine professionelle Handwäsche alle 4–6 Wochen hält den Lack schützend sauber und spart langfristig teure Lackreparaturen.",
+    trustCards: [
+      { title: "Schutz vor Oerliker Strassenstaub", text: "Bremsstaub und Feinstaub im Stadtverkehr – unsere Handwäsche schützt den Lack." },
+      { title: "Keine Kratzer durch Bürsten", text: "Zwei-Eimer-Methode per Hand – ideal für Premium-Fahrzeuge aus Oerlikon und Glattpark." },
+      { title: "Rundum-Paket möglich", text: "Kombinieren Sie Aussen- und Innenreinigung – viele Oerliker Kunden buchen beides." },
+    ],
+    faqs: [
+      { q: "Warum ist eine Handwäsche für Oerliker Fahrzeuge besser?", a: "Oerlikon hat dichten Stadtverkehr, enge Parksituationen und Busspuren. Automatische Bürstenwaschanlagen verursachen Mikrokratzer – unsere Handwäsche schützt den Lack zuverlässig." },
+      { q: "Wie oft sollte ich mein Fahrzeug in Oerlikon aussen reinigen lassen?", a: "Bei täglicher Nutzung im Stadtverkehr empfehlen wir alle 4–6 Wochen eine Handwäsche. Vor dem Winter und nach der Salzperiode ist eine zusätzliche Reinigung mit Unterbodenschutz sinnvoll." },
+      { q: "Enthält die Aussenreinigung auch die Felgen?", a: "Ja, die Felgenreinigung ist im Preis enthalten. Wir entfernen Bremsstaub, Teerflecken und eingebrannten Schmutz – besonders wichtig bei Oerliker Fahrzeugen mit häufigem Stop-and-Go." },
+      { q: "Kann ich die Aussenreinigung mit einer Politur kombinieren?", a: "Ja, viele Oerliker Kunden buchen eine Handwäsche mit anschliessender Lackpolitur für ein perfektes Finish. Wir beraten Sie gerne bei der Buchung." },
+    ],
   },
   "leasingrueckgabe-zuerich": {
     einleitung: "Leasingvertrag läuft aus? Vermeiden Sie teure Nachforderungen mit einer professionellen Leasingrückgabe-Reinigung. Autoreinigung Zürich-Nord ist der Spezialist für Leasingrückgabe in Zürich – Innen und Aussen aus einer Hand, transparent und zuverlässig.",
@@ -30,6 +52,17 @@ const specificContent = {
     fuerWen: "Alle Leasingnehmer in Zürich bei Vertragsende, Unternehmen mit Flottenleasingfahrzeugen, Langzeitmieter und alle, die bei der Fahrzeugrückgabe keine bösen Überraschungen erleben möchten.",
     lokalerBezug: "Zürich ist die Hochburg des Fahrzeugleasings in der Schweiz. Besonders in Zürich Nord, Oerlikon, Schwamendingen und Seebach sind Leasingfahrzeuge weit verbreitet. Unser Betrieb an der Heerenwiesen 18 ist aus allen Stadtteilen Zürichs schnell erreichbar – ideal für eine letzte professionelle Aufbereitung vor der Rückgabe.",
     warum: "Ein professionell gereinigtes Fahrzeug hinterlässt beim Leasinggeber einen guten Eindruck und vermeidet Kostenpunkte im Übergabeprotokoll. Wir kennen die Standards und bereiten Ihr Fahrzeug optimal vor.",
+    trustCards: [
+      { title: "Spezialist für Leasingrückgabe", text: "Hunderte Zürcher Leasingnehmer vertrauen uns – wir kennen die Prüfkriterien der Leasinggeber." },
+      { title: "Nachforderungen vermeiden", text: "Unsere Kunden sparen im Schnitt CHF 300–600 an Rückgabekosten durch professionelle Aufbereitung." },
+      { title: "Komplettpaket aus einer Hand", text: "Innen, Aussen, Politur und Geruchsbeseitigung – alles an einem Ort, kein Termin-Hopping." },
+    ],
+    faqs: [
+      { q: "Welche Schäden muss ich bei der Leasingrückgabe selbst beheben?", a: "Normale Gebrauchsspuren akzeptieren Leasinggeber – tiefe Kratzer, Flecken auf Polstern und unangenehme Gerüche jedoch nicht. Wir begutachten Ihr Fahrzeug und sagen Ihnen genau, was für die Rückgabe nötig ist." },
+      { q: "Wie viel spare ich mit einer professionellen Leasingrückgabe-Reinigung?", a: "Unsere Zürcher Kunden sparen durchschnittlich CHF 300–600 an Nachforderungen. Bei stärkeren Schäden ist die Ersparnis noch höher – eine Aufbereitung kostet einen Bruchteil der Nachforderung." },
+      { q: "Lohnt sich eine Politur vor der Leasingrückgabe?", a: "Fast immer. Feine Kratzer und Hologramme im Lack sind der häufigste Abzugspunkt bei der Rückgabe. Eine Politur vor der Übergabe kann den Unterschied zwischen 'akzeptiert' und 'Nachforderung' ausmachen." },
+      { q: "Wie früh vor der Rückgabe sollte ich einen Termin buchen?", a: "Mindestens 2–3 Wochen vor dem Übergabetermin. Die Aufbereitung selbst dauert je nach Zustand 4–8 Stunden. In der Hochsaison (Frühling/Herbst) sind Termine schnell ausgebucht." },
+    ],
   },
   "autoaufbereitung-zuerich": {
     einleitung: "Professionelle Autoaufbereitung in Zürich – komplett, persönlich und mit sichtbarem Ergebnis. Autoreinigung Zürich-Nord bietet die vollständige Fahrzeugaufbereitung für Privat- und Firmenfahrzeuge: Innen, Aussen, Politur und Versiegelung aus einer Hand.",
@@ -37,6 +70,17 @@ const specificContent = {
     fuerWen: "Fahrzeugbesitzer in Zürich, die eine vollständige Aufbereitung suchen: vor dem Verkauf, nach langer Nutzung, für die Leasingrückgabe oder als jährliche Grundpflege. Beliebt auch für Geschäftsfahrzeuge aus Zürich City und Zürich Nord.",
     lokalerBezug: "Zürich bietet eine hohe Dichte an Fahrzeughaltern mit dem Anspruch auf Qualität. Viele Zürcherinnen und Zürcher entscheiden sich für eine vollständige Aufbereitung statt Verkauf – weil ein gepflegtes Fahrzeug im Wiederverkauf deutlich mehr wert ist. Wir sind von allen Zürcher Stadtteilen erreichbar.",
     warum: "Eine vollständige Autoaufbereitung in Zürich ist keine Frage des Luxus – sie ist eine Investition in den Werterhalt Ihres Fahrzeugs. Bei uns bekommen Sie professionelle Handarbeit, keine Automatik, zu fairen Preisen.",
+    trustCards: [
+      { title: "Rundum-Service für Zürich", text: "Innen, Aussen, Politur und Versiegelung aus einer Hand – kein Wechsel zwischen Anbietern." },
+      { title: "Werterhalt nachweislich", text: "Professionell aufbereitete Fahrzeuge erzielen beim Verkauf 5–15 % höhere Preise." },
+      { title: "Zürcher Qualitätsanspruch", text: "Handarbeit nach höchsten Standards – seit 2020 für anspruchsvolle Zürcher Kunden." },
+    ],
+    faqs: [
+      { q: "Was ist der Unterschied zwischen Reinigung und Aufbereitung?", a: "Die Reinigung ist die Basis – sauber, aber oberflächlich. Die Aufbereitung geht tiefer: Politur beseitigt Kratzer, Versiegelung schützt den Lack, und die Innenreinigung behandelt jedes Material individuell." },
+      { q: "Wie lange dauert eine vollständige Autoaufbereitung in Zürich?", a: "Je nach Fahrzeugzustand 4–8 Stunden. Wir informieren Sie bei der Begutachtung über die genaue Dauer. Bei Komplett-Aufbereitungen mit Keramikversiegelung planen Sie besser zwei Tage ein." },
+      { q: "Lohnt sich eine Aufbereitung vor dem Autoverkauf in Zürich?", a: "Definitiv. Ein frisch aufbereitetes Fahrzeug verkauft sich nicht nur schneller, sondern erzielt einen deutlich höheren Preis. Die Investition von CHF 300–600 bringt oft CHF 1'000–3'000 mehr beim Verkauf." },
+      { q: "Bieten Sie auch Aufbereitungen für Oldtimer und Youngtimer an?", a: "Ja, für Oldtimer und Classic Cars aus Zürich haben wir spezielle, materialschonende Verfahren. Fahrzeuge mit Patina behandeln wir besonders behutsam – sprechen Sie uns an." },
+    ],
   },
   "autoaufbereitung-oerlikon": {
     einleitung: "Autoaufbereitung in Oerlikon – professionell, gründlich, in Ihrer Nähe. Autoreinigung Zürich-Nord liegt 8 Minuten von Oerlikon und bietet die vollständige Fahrzeugaufbereitung für Privat- und Firmenfahrzeuge aus dem Zentrum Zürich Nords.",
@@ -44,6 +88,17 @@ const specificContent = {
     fuerWen: "Firmenflotten aus Leutschenbach und dem Glattpark, Privatfahrzeuge aus Oerlikon Zentrum und Neu-Oerlikon, Leasingfahrzeuge vor Rückgabe und Occasionsfahrzeuge vor dem Verkauf.",
     lokalerBezug: "Oerlikon ist der Geschäftsmittelpunkt von Zürich Nord. Viele Unternehmen hier unterhalten eigene Flotten oder Poolfahrzeuge, die regelmässige professionelle Aufbereitung benötigen. Wir haben langjährige Erfahrung mit Oerliker Firmenkunden und kennen die Anforderungen: schnell, zuverlässig, professionell.",
     warum: "Kunden aus Oerlikon schätzen die Effizienz: Wagen morgens abgeben, per Tram oder Bus weiterfahren, abends ein vollständig aufbereitetes Fahrzeug abholen. Kein Aufwand, maximales Ergebnis.",
+    trustCards: [
+      { title: "Flotten-erprobt in Oerlikon", text: "Regelmässige Aufbereitung von Firmenfahrzeugen aus Leutschenbach und Glattpark." },
+      { title: "Effizient wie Oerlikon", text: "Morgens abgeben, abends sauber abholen – perfekt in den Geschäftsalltag integrierbar." },
+      { title: "Wirtschaftsstandort-Know-how", text: "Wir kennen die Anforderungen Oerliker Unternehmen an Fahrzeugpflege seit Jahren." },
+    ],
+    faqs: [
+      { q: "Wie unterscheidet sich Ihre Aufbereitung von anderen Oerliker Anbietern?", a: "Wir arbeiten ausschliesslich per Hand – ohne Automatikbetrieb und ohne Durchlaufprinzip. Zudem sind wir Teil einer Kfz-Werkstatt und können technische Mängel direkt erkennen." },
+      { q: "Was kostet eine vollständige Autoaufbereitung in Oerlikon?", a: "Unsere Komplett-Aufbereitung beginnt bei CHF 350.– für Kleinwagen. Firmenkunden erhalten individuelle Flottenkonditionen. Jedes Fahrzeug wird vorher begutachtet und Sie erhalten einen verbindlichen Kostenvoranschlag." },
+      { q: "Bieten Sie auch eine schnelle Express-Aufbereitung für Oerliker Geschäftskunden an?", a: "Für Stammkunden und Firmen mit Flottenvertrag bieten wir Express-Termine mit Prioritätsbehandlung. Kontaktieren Sie uns telefonisch für kurzfristige Buchungen." },
+      { q: "Lohnt sich eine Aufbereitung für mein Firmenfahrzeug steuerlich?", a: "Fahrzeugpflege und -unterhalt sind grundsätzlich geschäftlich absetzbar. Wir stellen selbstverständlich eine detaillierte Rechnung mit MWST aus." },
+    ],
   },
   "innenreinigung-zuerich": {
     einleitung: "Professionelle Innenreinigung in Zürich – für Familien, Firmen und alle, die Wert auf einen sauberen, hygienischen Innenraum legen. Autoreinigung Zürich-Nord reinigt Ihren Fahrzeuginnenraum gründlich, materialschonend und mit sichtbarem Ergebnis.",
@@ -51,6 +106,16 @@ const specificContent = {
     fuerWen: "Familien mit Kindern, Tierhalter, Pendler, Leasingnehmer vor Rückgabe, Firmenfahrzeuge und alle, die einen hygienisch sauberen Innenraum in ihrem Zürcher Fahrzeug schätzen.",
     lokalerBezug: "Zürich ist eine dichte, vielgenutzte Stadt – Fahrzeuge werden intensiv genutzt. Wir reinigen Fahrzeuge aus allen Stadtteilen: Zürich City, Oerlikon, Schwamendingen, Seebach, Altstetten, Wiedikon und mehr. Erreichbar von überall in Zürich, zentrale Lage in Zürich-Schwamendingen.",
     warum: "Ein sauberer Innenraum ist keine Frage des Komforts, sondern der Hygiene – besonders wenn täglich Kinder, Kollegen oder Kunden mitfahren. Wir bieten Zürcher Qualität zu fairen Preisen.",
+    trustCards: [
+      { title: "Ganz Zürich im Einzugsgebiet", text: "Kunden aus allen Stadtteilen – von Altstetten bis Riesbach – vertrauen auf unsere Innenreinigung." },
+      { title: "Anokath-Desinfektion", text: "Unsere patentierte Desinfektionsmethode entfernt Keime, Viren und Gerüche – besonders gefragt in Zürich." },
+      { title: "Familien- und tierfreundlich", text: "Spezielle Verfahren für Tierhaare, Kindersitz-Flecken und Alltagsverschmutzungen." },
+    ],
+    faqs: [
+      { q: "Wie entfernen Sie hartnäckige Gerüche aus dem Zürcher Stadtverkehr?", a: "Wir setzen eine Kombination aus Ozongenerator-Behandlung und Anokath-Desinfektion ein. Das beseitigt selbst tief sitzende Gerüche von Rauch, Haustieren oder Feuchtigkeit zuverlässig." },
+      { q: "Reinigen Sie auch Kinderautositze im Rahmen der Innenreinigung?", a: "Ja, auf Wunsch reinigen wir auch eingebaute und lose Kindersitze. Gerade bei Zürcher Familien mit mehreren Kindern ist das ein häufig gebuchter Zusatzservice." },
+      { q: "Was kostet die Lederreinigung und -pflege für Zürcher Premium-Fahrzeuge?", a: "Die Lederpflege ist Teil des Innenreinigungs-Komplettpakets. Wir verwenden ausschliesslich hochwertige Lederpflegeprodukte namhafter Hersteller – abgestimmt auf Ihren Fahrzeugtyp." },
+    ],
   },
   "handwasche-oerlikon": {
     einleitung: "Handwäsche in Oerlikon – schonend, kratzerlos und professionell. Bei Autoreinigung Zürich-Nord, 8 Minuten von Oerlikon, reinigen wir Ihr Fahrzeug nach der Zwei-Eimer-Methode per Hand. Kein Automatikbetrieb, kein Lackkratzer.",
@@ -58,6 +123,16 @@ const specificContent = {
     fuerWen: "Besitzer von Premium-Fahrzeugen, Sportwagen, folierten Autos oder Fahrzeugen mit Keramikversiegelung aus Oerlikon und Zürich Nord. Empfehlenswert für alle, die keine Kratzer durch Bürsten riskieren wollen.",
     lokalerBezug: "Oerlikon und der Glattpark sind bekannt für gehobene Fahrzeugklassen und Firmenwagen. Eine Automatikwaschanlage ist für diese Fahrzeuge keine Option. Unsere Handwäsche in unmittelbarer Nähe ist die logische Lösung für anspruchsvolle Fahrzeugbesitzer aus Oerlikon.",
     warum: "Handwäsche bei Autoreinigung Zürich-Nord ist kein Luxus – es ist die richtige Behandlung für ein Fahrzeug, das Ihnen wichtig ist. Günstig, lokal, professionell.",
+    trustCards: [
+      { title: "Zwei-Eimer-Methode", text: "Die weltweit empfohlene Technik für kratzerfreie Handwäsche – Standard bei jedem Auftrag." },
+      { title: "Für Premium-Fahrzeuge optimiert", text: "Spezielle Mikrofasertücher und pH-neutrale Reiniger für foliierte und versiegelte Lacke." },
+      { title: "Nur 8 Min. von Oerlikon Zentrum", text: "Schnellste professionelle Handwäsche in Zürich Nord – ohne Termin-Wartezeiten." },
+    ],
+    faqs: [
+      { q: "Was ist die Zwei-Eimer-Methode und warum ist sie besser?", a: "Die Zwei-Eimer-Methode trennt sauberes und schmutziges Wasser, so wird der Dreck nicht über den Lack gerieben. Jede Automatikbürste schleift den Schmutz dagegen über den Lack – das verursacht Mikrokratzer." },
+      { q: "Darf ich mein foliertes Auto in die Waschanlage fahren?", a: "Nein – Folierungen und Keramikversiegelungen werden durch Bürstenwaschanlagen beschädigt. Nur die Handwäsche ist sicher. Wir haben spezielle Reiniger für folierte Fahrzeuge." },
+      { q: "Brauche ich für die Handwäsche einen Termin?", a: "Wir empfehlen eine kurze Online-Buchung, nehmen aber auch spontane Kunden an, wenn Kapazität frei ist. Für die Kombination mit anderen Services bitte vorab buchen." },
+    ],
   },
   "politur-zuerich": {
     einleitung: "Autopolitur in Zürich – Kratzerentfernung, Glanzwiederherstellung und Lackpflege vom Profi. Autoreinigung Zürich-Nord bietet professionelle Lackpolitur für Zürcherinnen und Zürcher, die den ursprünglichen Glanz ihres Fahrzeugs wiederherstellen möchten.",
@@ -65,6 +140,17 @@ const specificContent = {
     fuerWen: "Fahrzeugbesitzer in Zürich, die feine Kratzer aus dem Stadtverkehr, Parkplatzschäden oder Maschinenwäschen entfernen möchten. Empfehlenswert vor dem Verkauf, für die Leasingrückgabe und für Fahrzeuge mit wertvollem Lack.",
     lokalerBezug: "Zürich bietet viele enge Parkhäuser, dichten Verkehr und häufige Maschinenwäschen – der Feind eines makellosen Lacks. Viele Züricher Fahrzeuge weisen Hologramme und feine Kratzer auf, die nur mit maschineller Politur beseitigt werden können. Wir sind die Politur-Spezialisten in Zürich Nord.",
     warum: "Eine Lackpolitur ist die effizienteste Methode, den Wert Ihres Fahrzeugs spürbar zu steigern. Sichtbare Verbesserung nach einem Nachmittag – für weniger als eine Fahrzeuglackierung.",
+    trustCards: [
+      { title: "Maschinelle Lackaufbereitung", text: "Professionelle Exzenter-Politurmaschinen – kein Hobby-Gerät, sondern Profi-Equipment." },
+      { title: "Parkhaus-Kratzer? Kein Problem.", text: "Wir entfernen die typischen Zürcher Parkrempler und Hologramme aus Waschanlagen." },
+      { title: "Sichtbarer Werteffekt", text: "Eine Politur vor dem Verkauf bringt oft CHF 1'000–2'000 mehr – Investition lohnt sich." },
+    ],
+    faqs: [
+      { q: "Was ist der Unterschied zwischen Politur und Versiegelung?", a: "Die Politur entfernt vorhandene Kratzer und matte Stellen aus dem Lack. Die Versiegelung schützt den polierten Lack danach vor neuen Schäden. Beides zusammen ergibt das beste Ergebnis." },
+      { q: "Kann eine Politur tiefe Kratzer aus Zürcher Parkhäusern entfernen?", a: "Feine bis mittlere Kratzer lassen sich fast immer entfernen. Bei tiefen Kratzern bis aufs Blech ist eine Lackierung nötig. Wir begutachten Ihr Fahrzeug vorab und geben eine ehrliche Einschätzung." },
+      { q: "Wie lange hält eine Politur?", a: "Das Ergebnis hält Jahre – vorausgesetzt, Sie pflegen den Lack danach richtig. Wir empfehlen eine Keramikversiegelung nach der Politur für maximalen Schutz." },
+      { q: "Ist die Politur auch für ältere Fahrzeuge mit oxidiertem Lack geeignet?", a: "Ja, gerade oxidierte, matte Lacke profitieren enorm von einer professionellen Politur. Der Unterschied ist oft verblüffend – auch bei Fahrzeugen mit über 10 Jahren." },
+    ],
   },
   "mfk-vorbereitung-zuerich": {
     einleitung: "MFK steht an? Eine professionelle Reinigung vor der Motorfahrzeugkontrolle hinterlässt beim Prüfer einen guten Eindruck und erleichtert die technische Inspektion. Autoreinigung Zürich-Nord ist Ihr Spezialist für MFK-Vorbereitung in Zürich.",
@@ -72,6 +158,16 @@ const specificContent = {
     fuerWen: "Alle Fahrzeughalter in Zürich vor der periodischen MFK, Occasionsverkäufer, Fuhrparkbetreiber und alle, die bei der Motorfahrzeugkontrolle professionell auftreten möchten.",
     lokalerBezug: "In Zürich gibt es zahlreiche MFK-Stationen: in Schwamendingen, Oerlikon, Altstetten und weiteren Stadtteilen. Wer die Reinigung und die MFK in Zürich Nord kombinieren möchte, ist bei uns ideal aufgehoben. Wir sind unmittelbar vor der Prüfung buchbar.",
     warum: "Ein sauberer Motorraum und eine gepflegte Karosserie signalisieren dem Prüfer, dass das Fahrzeug gut gewartet wird. Das kostet wenig – kann aber bei der Prüfung einen grossen Unterschied machen.",
+    trustCards: [
+      { title: "Nähe zu MFK-Stationen", text: "Wir liegen zentral zu den Zürcher MFK-Stationen in Schwamendingen, Oerlikon und Altstetten." },
+      { title: "Motorraum-Spezialisten", text: "Professionelle Motorwäsche und Konservierung – wir kennen die kritischen MFK-Prüfpunkte." },
+      { title: "Gleicher Tag möglich", text: "Reinigung und MFK-Termin am gleichen Tag – wir bereiten Ihr Fahrzeug rechtzeitig vor." },
+    ],
+    faqs: [
+      { q: "Reicht eine normale Waschanlage vor der MFK?", a: "Nein. Die MFK prüft auch Motorraum und Unterboden – beides reinigt keine Waschanlage. Ein sauberer Motorraum erleichtert zudem die Fehlerdiagnose erheblich." },
+      { q: "Welche Teile werden bei der MFK besonders geprüft?", a: "Neben Karosserie und Lack werden Motorraum, Unterboden, Fahrwerk, Bremsleitungen und Abgasanlage geprüft. Wir reinigen alle diese Bereiche vor der MFK gründlich." },
+      { q: "Kann ich die MFK-Vorbereitung mit der jährlichen Wartung kombinieren?", a: "Ja, viele Zürcher Kunden kombinieren Wartung in unserer Partnerwerkstatt (Turicum Automobile GmbH) mit einer MFK-Vorbereitung. Ein Ansprechpartner, ein Termin." },
+    ],
   },
   "keramikversiegelung-zuerich": {
     einleitung: "Keramikversiegelung in Zürich – der modernste und dauerhafteste Schutz für Ihren Fahrzeuglack. Autoreinigung Zürich-Nord bietet professionelle Keramikbeschichtungen für Zürcherinnen und Zürcher, die ihren Lack langfristig schützen möchten.",
@@ -79,6 +175,17 @@ const specificContent = {
     fuerWen: "Besitzer von Neufahrzeugen, Premium-Fahrzeugen und Sportwagen in Zürich, die ihren Lack dauerhaft schützen möchten. Empfehlenswert für alle Fahrzeuge, bei denen Werterhalt Priorität hat.",
     lokalerBezug: "Zürich ist eine anspruchsvolle Stadt für Fahrzeuglacke: Winter mit Salz und Splitt, Sommer mit UV und Baumharz, ganzjährig enger Stadtverkehr. Eine Keramikversiegelung schützt ganzjährig und macht die Pflege einfacher. Wir sind die Spezialisten in Zürich Nord.",
     warum: "Wer ein hochwertiges Fahrzeug fährt, sollte es auch professionell schützen. Eine Keramikversiegelung bei Autoreinigung Zürich-Nord ist die langfristig günstigste Form des Lackschutzes.",
+    trustCards: [
+      { title: "Mehrjähriger Schutz", text: "Unsere Premium-Keramikbeschichtungen halten 3–5 Jahre – kein jährliches Nachwachsen nötig." },
+      { title: "Rundum-Schutz für Zürich", text: "Schützt vor Streusalz, Splitt, UV, Baumharz, Vogelkot und Parkremplern im Stadtverkehr." },
+      { title: "Professionelle Vorbereitung", text: "Jede Keramikversiegelung beginnt mit einer Lackpolitur – wir überspringen keinen Schritt." },
+    ],
+    faqs: [
+      { q: "Was kostet eine Keramikversiegelung für mein Fahrzeug in Zürich?", a: "Die Kosten hängen von Fahrzeuggrösse und Lackzustand ab. In der Regel zwischen CHF 500 und CHF 1'500 inklusive Vorbehandlung. Eine Investition, die sich bei Wiederverkauf und tieferen Pflegekosten amortisiert." },
+      { q: "Macht eine Keramikversiegelung mein Fahrzeug wirklich kratzfest?", a: "Die Versiegelung schützt vor feinen Waschkratzern und Umwelteinflüssen – tiefe Kratzer verhindert sie nicht. Aber: Die Reinigung wird deutlich einfacher, und der Lack bleibt länger glänzend." },
+      { q: "Muss ich mein Fahrzeug nach der Keramikversiegelung speziell pflegen?", a: "Ja, Sie sollten pH-neutrale Autoshampoos verwenden und auf aggressive Felgenreiniger verzichten. Wir erklären Ihnen bei der Übergabe genau, wie Sie den Schutz optimal erhalten." },
+      { q: "Kann ich die Keramikversiegelung mit einer Leasingrückgabe kombinieren?", a: "Sinnvoller ist es, die Versiegelung zu Beginn des Leasings aufzutragen. Für die Rückgabe selbst reicht eine Aufbereitung mit Politur. Gerne beraten wir Sie zur optimalen Strategie." },
+    ],
   },
   "innenreinigung-wallisellen": {
     einleitung: "Innenreinigung in Wallisellen – kurze Anfahrt, professionelles Ergebnis. Autoreinigung Zürich-Nord liegt 10 Minuten von Wallisellen und bietet die komplette Innenreinigung für Privatfahrzeuge und Firmenflotten aus dem Glattal.",
@@ -86,6 +193,16 @@ const specificContent = {
     fuerWen: "Firmenflotten aus dem Businesspark Glattpark, Leasingnehmer vor Rückgabe, Premium-Fahrzeugbesitzer aus Wallisellen-Dorf und Auzelg sowie Familien mit Kindern.",
     lokalerBezug: "Von Wallisellen nach Zürich-Schwamendingen: ca. 10 Minuten mit dem Auto über die A1 oder via Dübendorferstrasse. S-Bahn S3/S9 ab Bahnhof Wallisellen bis Oerlikon in 8 Minuten. Viele Walliseller Kunden kombinieren die Reinigung mit einem Einkauf im Glattzentrum.",
     warum: "Wallisellen ist eine wohlhabende Gemeinde mit überdurchschnittlichem Fahrzeugbestand. Professionelle Innenreinigung ist hier kein Ausnahmefall, sondern Standard für die Pflege hochwertiger Fahrzeuge.",
+    trustCards: [
+      { title: "Premium-Pflege fürs Glattal", text: "Spezielle Lederpflege und materialschonende Reinigung für hochwertige Fahrzeuginterieurs." },
+      { title: "Kombinierbar mit Glattzentrum", text: "Auto abgeben, im Glattzentrum einkaufen, sauberes Fahrzeug abholen." },
+      { title: "10 Min. via A1", text: "Schnellste Verbindung aus Wallisellen – kurze Anfahrt, professionelles Ergebnis." },
+    ],
+    faqs: [
+      { q: "Ist die Innenreinigung auch für Firmenfahrzeuge aus dem Glattpark geeignet?", a: "Ja, wir betreuen regelmässig Firmenflotten aus dem Businesspark. Gerade Geschäftsfahrzeuge profitieren von einer professionellen Innenreinigung – sie repräsentieren Ihr Unternehmen." },
+      { q: "Kann ich das Auto morgens abgeben und nach der Arbeit abholen?", a: "Ja, viele Walliseller Pendler nutzen diesen Service. Sie fahren morgens bei uns vorbei, nehmen die S-Bahn nach Zürich und holen abends Ihr gereinigtes Fahrzeug ab." },
+      { q: "Reinigen Sie auch Kindersitze und entfernen Sie Tierhaare?", a: "Ja, Kindersitze und Tierhaarentfernung sind Standard bei Familienfahrzeugen aus Wallisellen. Wir setzen spezielle Tierhaarbürsten und Allergiker-freundliche Reiniger ein." },
+    ],
   },
   "autoaufbereitung-wallisellen": {
     einleitung: "Autoaufbereitung in Wallisellen – für Fahrzeuge mit hohen Ansprüchen. Autoreinigung Zürich-Nord ist die bevorzugte Anlaufstelle für Walliseller Fahrzeugbesitzer und Firmenkunden, die eine vollständige professionelle Aufbereitung suchen.",
@@ -93,6 +210,16 @@ const specificContent = {
     fuerWen: "Unternehmen mit Geschäftsflotten aus dem Businesspark Glattpark und Glattzentrum, Leasingnehmer, Privatfahrzeugbesitzer mit Premium- und Mittelklassefahrzeugen sowie Walliseller Autohändler vor Occasionsverkauf.",
     lokalerBezug: "Wallisellen hat eine der höchsten Autodichten im Kanton Zürich. Das Glattal ist ein wirtschaftlich starkes Gebiet mit hohem Bedarf an professioneller Fahrzeugpflege. Wir betreuen regelmässig Kunden aus Wallisellen und Umgebung und bieten verlässliche Qualität.",
     warum: "Für Walliseller Firmenkunden bieten wir Flottenverträge und individuelle Lösungen. Rufen Sie uns an – wir erstellen Ihnen ein massgeschneidertes Angebot.",
+    trustCards: [
+      { title: "Höchste Autodichte der Region", text: "Wallisellen hat überdurchschnittlich viele Fahrzeuge pro Einwohner – wir sind darauf eingestellt." },
+      { title: "Flottenverträge fürs Glattal", text: "Individuelle Konditionen für Unternehmen aus Businesspark, Glattzentrum und Umgebung." },
+      { title: "Occasions-Vorbereitung", text: "Professionelle Aufbereitung vor dem Verkauf bringt messbar höhere Verkaufspreise." },
+    ],
+    faqs: [
+      { q: "Was beinhaltet Ihr Flottenvertrag für Walliseller Unternehmen?", a: "Regelmässige Reinigungsintervalle, bevorzugte Terminvergabe, einheitliche Qualitätsstandards über alle Fahrzeuge und monatliche Sammelrechnung. Kontaktieren Sie uns für ein individuelles Angebot." },
+      { q: "Wie profitiere ich als Autohändler in Wallisellen von Ihrer Aufbereitung?", a: "Aufbereitete Occasionen verkaufen sich schneller und zu höheren Preisen. Wir bieten Händlerkonditionen und können auch grössere Fahrzeugmengen in kurzer Zeit aufbereiten." },
+      { q: "Lohnt sich die Keramikversiegelung für mein Firmenfahrzeug aus Wallisellen?", a: "Ja, besonders bei Fahrzeugen mit hoher Laufleistung. Die Versiegelung reduziert den Reinigungsaufwand und schützt vor Waschstrassen-Kratzern – das senkt die Unterhaltskosten spürbar." },
+    ],
   },
   "innenreinigung-schwamendingen": {
     einleitung: "Innenreinigung in Schwamendingen – um die Ecke, professionell, zuverlässig. Autoreinigung Zürich-Nord liegt direkt in Zürich-Schwamendingen und ist für Kunden aus diesem Quartier besonders schnell erreichbar.",
@@ -100,6 +227,16 @@ const specificContent = {
     fuerWen: "Familien aus Schwamendingen-Mitte, Hirzenbach, Saatlen und Auzelg, Tierhalter, Leasingnehmer, Pendler sowie alle Anwohner, die einen hygienisch sauberen Innenraum möchten.",
     lokalerBezug: "Wir sind ein lokaler Betrieb in Zürich-Schwamendingen. Unsere Kunden aus dem Quartier sind oft auch Stammkunden, die mehrmals im Jahr zu uns kommen. Schwamendingerstrasse, Zürichbergstrasse oder direkt zu Fuss – wir sind direkt vor Ort.",
     warum: "Als lokaler Betrieb kennen wir die Bedürfnisse der Schwamendinger Bevölkerung. Kurze Wege, persönlicher Service, faire Preise – das ist unser Versprechen an unser Quartier.",
+    trustCards: [
+      { title: "Direkt im Quartier", text: "Wir sind Ihr Nachbar in Schwamendingen – kein langer Anfahrtsweg, kein anonymes Grossunternehmen." },
+      { title: "Familien-Spezialisten", text: "Kindersitze, Tierhaare, verschüttete Getränke – wir kennen die typischen Schwamendinger Familienautos." },
+      { title: "Stammkunden willkommen", text: "Viele Schwamendinger kommen mehrmals jährlich – persönliche Betreuung und faire Stammkundenpreise." },
+    ],
+    faqs: [
+      { q: "Kann ich mein Auto bei Ihnen zu Fuss abgeben?", a: "Ja, unser Betrieb liegt mitten in Schwamendingen an der Heerenwiesen 18. Viele Kunden aus Hirzenbach, Saatlen und Schwamendingen-Mitte kommen zu Fuss oder mit dem Velo." },
+      { q: "Wie gehen Sie mit stark verschmutzten Familienautos um?", a: "Wir sind darauf spezialisiert. Ob eingetrocknete Milch, Sand vom Spielplatz oder Matsch vom Fussballtraining – wir haben die richtigen Reiniger und das nötige Know-how für Familienfahrzeuge." },
+      { q: "Bieten Sie einen Abholservice im Quartier an?", a: "Ja, für Schwamendinger Kunden holen wir Ihr Fahrzeug auf Wunsch ab und bringen es nach der Reinigung zurück. Ideal, wenn Sie kein Zweitauto haben – fragen Sie bei der Buchung danach." },
+    ],
   },
   "leasingrueckgabe-opfikon": {
     einleitung: "Leasingrückgabe in Opfikon? Vermeiden Sie kostspielige Nachforderungen durch professionelle Aufbereitung. Autoreinigung Zürich-Nord, 10 Minuten von Opfikon-Glattbrugg, ist Ihr Spezialist für Leasingrückgabe in der Flughafenregion.",
@@ -107,6 +244,16 @@ const specificContent = {
     fuerWen: "Leasingnehmer aus Opfikon, Glattbrugg und der Flughafenregion, internationale Mitarbeitende in der Region, Unternehmen mit Leasingflotten in Balsberg und dem Industriegebiet sowie Privatpersonen vor Leasingrückgabe.",
     lokalerBezug: "Opfikon-Glattbrugg liegt direkt an der Grenze zu Zürich und in unmittelbarer Flughafennähe. Viele internationale Unternehmen haben hier ihre Schweizer Büros und unterhalten Leasingflotten. Die Anforderungen an die Fahrzeugrückgabe sind hoch. Wir kennen die Standards und bereiten Ihr Fahrzeug professionell vor. Von Opfikon via A51 oder Leutschenbachstrasse sind wir in 10 Minuten erreichbar.",
     warum: "In der Flughafenregion sind Leasingverträge Standard. Wir helfen Ihnen, das Fahrzeug ohne Mängel zurückzugeben und teure Nachforderungen zu vermeiden. Buchen Sie frühzeitig – Termine sind gefragt.",
+    trustCards: [
+      { title: "Flughafenregion-Know-how", text: "Wir kennen die Leasingstandards internationaler Firmen und bereiten Fahrzeuge entsprechend vor." },
+      { title: "Mehrsprachige Betreuung", text: "Für internationale Kunden aus Opfikon bieten wir Beratung auch auf Englisch an." },
+      { title: "10 Min. ab Opfikon", text: "Schnelle Erreichbarkeit via A51 – ideal für die letzte Aufbereitung vor der Rückgabe." },
+    ],
+    faqs: [
+      { q: "Welche Leasinggeber-Standards kennen Sie aus der Flughafenregion?", a: "Wir arbeiten mit Fahrzeugen aller grossen Leasinggeber – AMAG, Mobility, LeasePlan, ALD und viele mehr. Jeder hat eigene Rückgabekriterien, die wir genau kennen und bei der Aufbereitung berücksichtigen." },
+      { q: "Sprechen Sie Englisch für internationale Kunden aus Opfikon?", a: "Yes, we provide service in English for international clients from Opfikon, Glattbrugg, and the airport region. Booking and consultation available in English." },
+      { q: "Wie kurzfristig kann ich eine Leasingrückgabe-Aufbereitung buchen?", a: "In der Regel 1–2 Wochen im Voraus. Für Express-Buchungen rufen Sie uns bitte direkt an – wir versuchen, kurzfristig eine Lösung zu finden." },
+    ],
   },
 };
 
@@ -121,6 +268,16 @@ const getLandingContent = (serviceSlug, ortSlug, ortName, serviceName) => {
     fuerWen: `Privatfahrzeuge, Firmenfahrzeuge und Leasingfahrzeuge aus ${ortName}. Empfehlenswert vor MFK, Leasingrückgabe oder Fahrzeugverkauf.`,
     lokalerBezug: `${ortName} und Zürich-Schwamendingen sind gut verbunden. Unser Betrieb an der Heerenwiesen 18 ist von ${ortName} schnell erreichbar – per Auto oder ÖV via Oerlikon.`,
     warum: `Kunden aus ${ortName} wählen uns wegen der kurzen Anfahrt, der professionellen Handarbeit und der transparenten Preise. Buchen Sie online oder rufen Sie uns an.`,
+    trustCards: [
+      { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
+      { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
+      { title: `Kurze Anfahrt aus ${ortName}`, text: "Schnell erreichbar per Auto oder ÖV." },
+    ],
+    faqs: [
+      { q: `Bieten Sie ${serviceName} in ${ortName} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortName} – schnell und bequem erreichbar.` },
+      { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
+      { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
+    ],
   };
 };
 
@@ -288,14 +445,14 @@ export default function LandingPage() {
             <p className="mt-5 max-w-3xl mx-auto text-center text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8">{content.warum}</p>
           </Reveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
+            {(content.trustCards || [
               { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
               { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
               { title: "Flexibel buchbar", text: "Termin online sichern – 24/7, in weniger als 60 Sekunden." },
               { title: "Alle Fahrzeugtypen", text: "Von Kleinwagen bis Transporter, Privatfahrzeug bis Flotte." },
               { title: "Werterhalt durch regelmässige Pflege", text: "Professionell gereinigte Fahrzeuge erzielen beim Verkauf und bei der Leasingrückgabe deutlich bessere Resultate." },
               { title: `Kurze Anfahrt aus ${ortData.name}`, text: "Schnell erreichbar per Auto oder ÖV." },
-            ].map((item, i) => (
+            ]).map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="rounded-[1.75rem] border border-border bg-card p-5 shadow-sm">
                   <CheckCircle2 className="mb-3 h-5 w-5 text-primary" />
@@ -313,18 +470,45 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl">
           <SectionHeader center eyebrow="FAQ" title={`Fragen – ${lp.serviceName} ${ortData.name}`} />
           <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
-            {[
-              { q: `Bieten Sie ${lp.serviceName} für Kunden aus ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} – schnell und bequem erreichbar.` },
-              { q: `Was kostet eine ${lp.serviceName} bei Ihnen?`, a: `Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab – buchen Sie online oder rufen Sie uns kurz an.` },
-              { q: "Wie lange dauert die Reinigung?", a: "Je nach Umfang 1–8 Stunden. Wir informieren Sie bei der Buchung über die voraussichtliche Dauer." },
+            {(content.faqs || [
+              { q: `Bieten Sie ${lp.serviceName} in ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} – schnell und bequem erreichbar.` },
+              { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
               { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
-              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: `Ja, wir reinigen regelmässig Firmenflotten aus ${ortData.name}. Kontaktieren Sie uns für ein individuelles Angebot.` },
-            ].map((item) => (
+            ]).map((item) => (
               <div key={item.q} className="p-5">
                 <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Verwandte Seiten */}
+      <section className="px-5 py-12 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader eyebrow="Mehr entdecken" title={`${lp.serviceName} auch in anderen Regionen`} />
+          <div className="mt-7 flex flex-wrap gap-2">
+            {landingpages
+              .filter((l) => l.serviceSlug === service && l.ortSlug !== ort)
+              .slice(0, 4)
+              .map((lpRel) => (
+                <Reveal key={`${lpRel.serviceSlug}-${lpRel.ortSlug}`}>
+                  <Link
+                    to={`/lp/${lpRel.serviceSlug}/${lpRel.ortSlug}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary"
+                  >
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
+                    {lpRel.serviceName} in {lpRel.ortName}
+                  </Link>
+                </Reveal>
+              ))}
+            <Reveal>
+              <Link to={`/standorte/${ort}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary">
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-primary" />
+                Alle Services in {ortData.nameFull}
+              </Link>
+            </Reveal>
           </div>
         </div>
       </section>

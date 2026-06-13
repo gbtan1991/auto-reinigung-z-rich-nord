@@ -195,13 +195,13 @@ export default function Standort() {
         <div className="mx-auto max-w-3xl">
           <SectionHeader center eyebrow="FAQ" title={`Fragen – Autoreinigung ${standort.name}`} />
           <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
-            {[
-              { q: `Wie weit ist Ihr Betrieb von ${standort.name} entfernt?`, a: `Unser Betrieb an der Heerenwiesen 18, 8051 Zürich ist von ${standort.name} gut erreichbar. ${standort.erreichbarkeit.slice(0, 120)}.` },
-              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenwagen, Transportfahrzeuge und komplette Flotten. Kontaktieren Sie uns für ein individuelles Angebot." },
-              { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Je nach Paket dauert eine Innenreinigung 2–4 Stunden, eine Komplettreinigung 4–8 Stunden. Bitte fragen Sie bei der Buchung nach." },
-              { q: "Kann ich einen Termin online buchen?", a: "Ja, direkt über unsere Online-Buchung. In weniger als 60 Sekunden ist Ihr Termin gesichert." },
-              { q: "Was kostet eine professionelle Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung und ab CHF 80.– für die Innenreinigung." },
-            ].map((item) => (
+            {(standort.faqs || [
+              { q: `Wie weit ist Ihr Betrieb von ${standort.name} entfernt?`, a: `Unser Betrieb an der Heerenwiesen 18 ist von ${standort.name} gut erreichbar.` },
+              { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenwagen, Transportfahrzeuge und komplette Flotten." },
+              { q: "Wie lange dauert eine Fahrzeugaufbereitung?", a: "Je nach Paket 1–8 Stunden – wir informieren Sie bei der Buchung." },
+              { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden über unsere Online-Buchung." },
+              { q: "Was kostet eine Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung." },
+            ]).map((item) => (
               <div key={item.q} className="p-5">
                 <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
                 <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.a}</p>
@@ -210,6 +210,35 @@ export default function Standort() {
           </div>
         </div>
       </section>
+
+      {/* Nachbarregionen */}
+      {standort.nachbarOrte && standort.nachbarOrte.length > 0 && (
+        <section className="px-5 py-12 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Auch in Ihrer Nähe"
+              title={`Autoreinigung auch für ${standort.nachbarOrte.map((s) => standorte.find((o) => o.slug === s)?.name).filter(Boolean).join(", ")}`}
+            />
+            <div className="mt-7 flex flex-wrap gap-2">
+              {standort.nachbarOrte.map((slug) => {
+                const nachbar = standorte.find((o) => o.slug === slug);
+                if (!nachbar) return null;
+                return (
+                  <Reveal key={slug}>
+                    <Link
+                      to={`/standorte/${slug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition hover:border-primary hover:text-primary"
+                    >
+                      <MapPin className="h-3.5 w-3.5 shrink-0 text-primary" />
+                      Autoreinigung {nachbar.nameFull}
+                    </Link>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Money Pages für diesen Standort */}
       {landingpages.filter((lp) => lp.ortSlug === standort.slug).length > 0 && (

@@ -14,6 +14,14 @@ export const standorte = [
     typischAnliegen: "Leasingrückgabe, MFK-Vorbereitung, Firmenflotten-Pflege, regelmässige Innenreinigung, Politur nach Parkschäden",
     description: "Professionelle Autoreinigung in Zürich – Innenreinigung, Aussenreinigung & Politur. Termin online buchen.",
     title: "Autoreinigung Zürich | Professionelle Fahrzeugpflege",
+    nachbarOrte: ["oerlikon", "schwamendingen", "seebach"],
+    faqs: [
+      { q: "Wie weit ist Ihr Betrieb vom Zürcher Stadtzentrum entfernt?", a: "Die Heerenwiesen 18, 8051 Zürich liegt im Stadtkreis 11 (Schwamendingen) und ist aus allen Zürcher Stadtteilen innert 10–20 Minuten erreichbar. Von der Zürcher Innenstadt (Bahnhofstrasse) via Tram 10 oder Auto via Schaffhauserstrasse in ca. 12–15 Minuten." },
+      { q: "Bieten Sie Ihre Dienstleistungen in allen Zürcher Stadtkreisen an?", a: "Ja, Kunden aus allen Zürcher Stadtteilen – von Altstetten und Wiedikon über Höngg bis hin zu Riesbach, Enge und Wollishofen – werden von uns betreut. Die kurze Anfahrt lohnt sich für die Qualität der Handarbeit." },
+      { q: "Haben Sie spezielle Pakete für Zürcher Firmenflotten?", a: "Absolut. Wir arbeiten mit mehreren Zürcher Unternehmen zusammen und reinigen deren Flottenfahrzeuge regelmässig. Kontaktieren Sie uns für ein individuelles Flottenangebot – Mengenrabatt inklusive." },
+      { q: "Kann ich mein Fahrzeug vor der MFK in Zürich vorbereiten lassen?", a: "Ja, unsere MFK-Vorbereitung ist speziell auf die Anforderungen der Zürcher MFK-Stationen abgestimmt. Wir reinigen Motorraum, Unterboden und Karosserie gründlich – das erleichtert die technische Prüfung erheblich." },
+      { q: "Was macht Ihre Autoreinigung anders als eine Waschanlage in Zürich?", a: "Wir reinigen jedes Fahrzeug von Hand mit der Zwei-Eimer-Methode – keine rotierenden Bürsten, die Mikrokratzer verursachen. Gerade in Zürich mit häufigen Parkmanövern ist ein kratzerfreier Lack Gold wert." },
+    ],
   },
   {
     slug: "oerlikon",
@@ -26,6 +34,14 @@ export const standorte = [
     typischAnliegen: "Firmenflotten, Leasingrückgabe, Neuwagenpflege, Motorraum-Reinigung, Lackpolitur",
     description: "Autoreinigung Oerlikon – professionelle Fahrzeugpflege in Zürich-Oerlikon. Handwäsche, Innenreinigung, Politur.",
     title: "Autoreinigung Oerlikon | Professionelle Fahrzeugpflege",
+    nachbarOrte: ["zuerich", "seebach", "opfikon", "schwamendingen"],
+    faqs: [
+      { q: "Wie schnell bin ich vom Bahnhof Oerlikon bei Ihnen?", a: "Vom Bahnhof Oerlikon – dem zweitgrössten der Schweiz – erreichen Sie uns in nur 5–8 Minuten: Tram 10 Richtung Seebach, dann Bus 63 oder ein kurzer Fussweg. Viele Oerliker Pendler geben ihr Fahrzeug morgens ab und holen es abends sauber ab." },
+      { q: "Reinigen Sie auch Fahrzeuge von Firmen aus dem Glattpark und Leutschenbach?", a: "Ja, Oerlikons moderne Geschäftsviertel Glattpark und Leutschenbach sind unser tägliches Einzugsgebiet. Wir haben langjährige Firmenkunden aus diesen Quartieren und kennen die Anforderungen an Flottenreinigung genau." },
+      { q: "Ist Ihr Betrieb auch für Messe-Besucher interessant?", a: "Durchaus. Während Messen in der Messe Zürich parken viele Besucher ihre Fahrzeuge bei uns in der Nähe und nutzen die Gelegenheit für eine Innen- oder Aussenreinigung – wir liegen nur 8 Minuten von den Messehallen entfernt." },
+      { q: "Was kostet eine professionelle Politur für mein Fahrzeug aus Oerlikon?", a: "Unsere Lackpolitur richtet sich nach Fahrzeuggrösse und Lackzustand. Gerade bei Oerliker Fahrzeugen, die täglich dem Stadtverkehr ausgesetzt sind, lohnt sich eine regelmässige Politur alle 12 Monate. Fragen Sie uns für einen Kostenvoranschlag." },
+      { q: "Kann ich mein Auto bei Ihnen auch für den Winter vorbereiten lassen?", a: "Ja, die Winteraufbereitung mit Unterbodenwäsche, Lackversiegelung und gründlicher Innenreinigung ist bei Oerliker Kunden besonders beliebt – vor allem vor dem ersten Schnee und nach der Salzperiode." },
+    ],
   },
   {
     slug: "opfikon",
@@ -38,6 +54,14 @@ export const standorte = [
     typischAnliegen: "Reisefahrzeuge, Flughafen-Pendler, Firmenfahrzeuge, Leasing-Aufbereitung, Aussenreinigung",
     description: "Autoreinigung Opfikon & Glattbrugg – Fahrzeugpflege, Innenreinigung, Politur nahe Zürich-Nord.",
     title: "Autoreinigung Opfikon Glattbrugg | Fahrzeugpflege",
+    nachbarOrte: ["oerlikon", "wallisellen", "glattbrugg"],
+    faqs: [
+      { q: "Ist Ihr Betrieb für Flughafen-Pendler aus Opfikon geeignet?", a: "Ideal. Viele Flughafen-Mitarbeiter aus Opfikon nutzen unseren Service: Fahrzeug morgens auf dem Weg zur Arbeit abgeben, per S-Bahn 4 Minuten zum Flughafen, abends ein sauberes Auto abholen. Die Nähe zur A51-Einfahrt macht den Umweg minimal." },
+      { q: "Reinigen Sie auch Fahrzeuge von internationalen Firmen aus der Flughafenregion?", a: "Ja, Opfikon und Glattbrugg beherbergen zahlreiche internationale Unternehmen mit Schweizer Niederlassungen. Wir reinigen deren Firmenflotten und Leasingfahrzeuge regelmässig – inklusive englischsprachiger Betreuung bei Bedarf." },
+      { q: "Was unterscheidet Ihre Reinigung von einer Flughafen-Waschanlage?", a: "Flughafen-Waschanlagen arbeiten mit Bürsten und Standardprogrammen – das schadet dem Lack. Wir waschen per Hand mit hochwertigen Produkten. Besonders für Vielflieger-Fahrzeuge, die oft lange stehen, ist eine gründliche Handaufbereitung die bessere Wahl." },
+      { q: "Wie oft sollte ich mein Fahrzeug in der Flughafenregion reinigen lassen?", a: "Durch Flugverkehr, Strassenstaub und häufige Kurzstrecken empfehlen wir eine Aussenreinigung alle 4–6 Wochen und eine vollständige Innenreinigung alle 2–3 Monate. Bei Leasingfahrzeugen ist quartalsweise Pflege sinnvoll." },
+      { q: "Bieten Sie auch eine Innenreinigung mit Desinfektion für Vielfahrer an?", a: "Ja, unser Anokath-Desinfektionsverfahren ist bei Opfiker Pendlern und Vielfahrern besonders gefragt. Es entfernt Keime, Gerüche und Allergene aus dem Innenraum – gerade bei Fahrzeugen, die oft von verschiedenen Personen genutzt werden." },
+    ],
   },
   {
     slug: "wallisellen",
@@ -50,6 +74,14 @@ export const standorte = [
     typischAnliegen: "Premium-Fahrzeuge, Leasingrückgabe, Detailing, Politur, Keramikversiegelung",
     description: "Autoreinigung Wallisellen – professionelle Fahrzeugaufbereitung, Innenreinigung & Politur. Termin buchen.",
     title: "Autoreinigung Wallisellen | Fahrzeugaufbereitung Zürich",
+    nachbarOrte: ["opfikon", "duebendorf", "dietlikon"],
+    faqs: [
+      { q: "Lohnt sich eine professionelle Aufbereitung für mein Premium-Fahrzeug aus Wallisellen?", a: "Absolut. Wallisellen hat einen überdurchschnittlichen Bestand an Premium- und Luxusfahrzeugen. Eine regelmässige Handaufbereitung schützt den Lack vor Kratzern und erhält den Wiederverkaufswert. Unsere Keramikversiegelung ist bei Walliseller Kunden besonders gefragt." },
+      { q: "Kann ich während der Reinigung im Glattzentrum einkaufen?", a: "Ja, das ist bei Walliseller Kunden sehr beliebt. Sie geben Ihr Fahrzeug bei uns ab, fahren mit dem Bus oder S-Bahn zum Glattzentrum (8–10 Minuten) und holen es danach sauber wieder ab – perfekte Kombination." },
+      { q: "Bieten Sie Flottenverträge für Unternehmen aus dem Businesspark Glattpark an?", a: "Ja, mehrere Firmen aus dem Businesspark Glattpark und dem Glattzentrum sind langjährige Kunden. Wir bieten individuelle Flottenvereinbarungen mit festen Reinigungsintervallen und Vorzugsterminen." },
+      { q: "Was kostet eine Keramikversiegelung für mein Fahrzeug?", a: "Die Keramikversiegelung richtet sich nach Fahrzeuggrösse und Lackzustand. Bei Walliseller Premium-Fahrzeugen gehört eine vorgängige Lackaufbereitung und Politur fast immer dazu. Gerne erstellen wir Ihnen ein individuelles Angebot nach Begutachtung." },
+      { q: "Wie unterscheiden Sie sich von anderen Aufbereitern in der Region Wallisellen?", a: "Wir arbeiten ausschliesslich per Hand – keine Maschinenpolitur im Akkord, sondern individuelle Behandlung jedes Fahrzeugs. Zudem sind wir Teil der Turicum Automobile GmbH, einer etablierten Kfz-Werkstatt – das gibt unseren Kunden zusätzliche Sicherheit." },
+    ],
   },
   {
     slug: "glattbrugg",
@@ -62,6 +94,14 @@ export const standorte = [
     typischAnliegen: "Flottenreinigung, Mietwagen-Aufbereitung, Aussenreinigung, Innenreinigung, MFK",
     description: "Autoreinigung Glattbrugg – Fahrzeugpflege, Flottenreinigung & Aufbereitung nahe Flughafen Zürich.",
     title: "Autoreinigung Glattbrugg | Fahrzeugpflege Flughafen",
+    nachbarOrte: ["opfikon", "oerlikon"],
+    faqs: [
+      { q: "Reinigen Sie auch Mietwagen und Flottenfahrzeuge aus Glattbrugg?", a: "Ja, Glattbrugg ist ein Hotspot für Mietwagenfirmen und Autohändler. Wir haben langjährige Erfahrung mit der Aufbereitung von Mietwagen, Vorführwagen und Firmenflotten – schnelle Abwicklung und konstant hohe Qualität." },
+      { q: "Wie schnell kann ich mehrere Fahrzeuge aus meinem Glattbrugger Betrieb reinigen lassen?", a: "Für gewerbliche Kunden aus Glattbrugg bieten wir bevorzugte Termine und Durchlaufzeiten. Eine Flottenreinigung für 3–5 Fahrzeuge ist in der Regel innerhalb eines Tages machbar – sprechen Sie uns frühzeitig an." },
+      { q: "Was kostet eine regelmässige Flottenreinigung für mein Unternehmen?", a: "Für Firmenkunden aus Glattbrugg erstellen wir individuelle Flottenverträge mit Mengenrabatt. Die Kosten richten sich nach Fahrzeuganzahl, Reinigungsintervall und Leistungsumfang. Kontaktieren Sie uns für eine Offerte." },
+      { q: "Ist Ihr Betrieb auch für Autohändler aus der Region interessant?", a: "Ja, mehrere Autohändler aus Glattbrugg und Opfikon lassen Occasionsfahrzeuge vor dem Verkauf bei uns aufbereiten. Ein professionell gereinigtes Fahrzeug erzielt nachweislich einen höheren Verkaufspreis." },
+      { q: "Wie reinigen Sie Fahrzeuge, die oft im Flughafenumfeld geparkt werden?", a: "Flughafen-Fahrzeuge sind speziellen Belastungen ausgesetzt: Kerosinablagerungen, Bremsstaub von Shuttlebussen und längere Standzeiten. Wir verwenden spezielle Reinigungsmittel für diese Beanspruchungen und behandeln den Lack mit Langzeitschutz." },
+    ],
   },
   {
     slug: "schwamendingen",
@@ -74,6 +114,14 @@ export const standorte = [
     typischAnliegen: "Familienfahrzeuge, Innenreinigung, Leasingrückgabe, MFK-Vorbereitung, Geruchsbeseitigung",
     description: "Autoreinigung Schwamendingen – Innenreinigung, Aussenreinigung & Aufbereitung in Zürich-Nord.",
     title: "Autoreinigung Schwamendingen | Fahrzeugpflege Zürich",
+    nachbarOrte: ["zuerich", "oerlikon", "seebach", "duebendorf"],
+    faqs: [
+      { q: "Sie sind ja direkt in Schwamendingen – kann ich zu Fuss kommen?", a: "Ja, unser Betrieb an der Heerenwiesen 18 liegt mitten in Zürich-Schwamendingen. Viele Anwohner aus Schwamendingen-Mitte, Hirzenbach oder Saatlen bringen ihr Fahrzeug und gehen zu Fuss nach Hause – wir rufen an, wenn das Auto fertig ist." },
+      { q: "Reinigen Sie auch Familienfahrzeuge mit Kindersitzen und Tierhaaren?", a: "Das ist unsere Spezialität! Schwamendingen hat viele Familien mit Kindern und Haustieren. Wir entfernen Tierhaare, Flecken von verschütteten Getränken und Krümel aus allen Ritzen – inklusive Geruchsbeseitigung." },
+      { q: "Was kostet eine Innenreinigung für ein typisches Schwamendinger Familienauto?", a: "Die Innenreinigung für einen Kombi oder Van mit Familiennutzung beginnt bei CHF 120.– (Komplettpaket Innen). Je nach Verschmutzungsgrad und Zusatzleistungen wie Geruchsbeseitigung oder Lederpflege kann der Preis variieren." },
+      { q: "Bieten Sie auch einen Abholservice in Schwamendingen an?", a: "Auf Anfrage holen wir Ihr Fahrzeug in Schwamendingen ab und bringen es nach der Reinigung zurück. Dieser Service ist besonders beliebt bei älteren Kunden oder wenn Sie kein zweites Auto haben. Bitte bei Buchung anfragen." },
+      { q: "Wie lange im Voraus sollte ich einen Termin in Schwamendingen buchen?", a: "Für Standardreinigungen reichen 2–3 Tage Vorlauf. Für Komplettaufbereitungen, Polituren oder Leasingrückgaben empfehlen wir 1–2 Wochen Vorausbuchung – besonders im Frühling und vor den Sommerferien sind wir stark ausgelastet." },
+    ],
   },
   {
     slug: "seebach",
@@ -86,6 +134,14 @@ export const standorte = [
     typischAnliegen: "Privatfahrzeuge, Innenreinigung, Aussenreinigung, Werterhalt, Politur",
     description: "Autoreinigung Seebach – Fahrzeugpflege, Innenreinigung & Politur in Zürich-Seebach. Termin online.",
     title: "Autoreinigung Seebach | Fahrzeugpflege Zürich-Nord",
+    nachbarOrte: ["oerlikon", "zuerich", "schwamendingen", "opfikon"],
+    faqs: [
+      { q: "Wie weit ist Ihr Betrieb von Zürich-Seebach entfernt?", a: "Nur 6–9 Minuten mit dem Auto via Schaffhauserstrasse. Mit dem Tram 10 oder 14 ab Seebach-Endstation sind Sie in ca. 10 Minuten bei uns. Viele Seebacher Kunden schätzen die Nähe und den kurzen Heimweg mit dem ÖV." },
+      { q: "Ist eine professionelle Politur auch für ältere Fahrzeuge aus Seebach sinnvoll?", a: "Auf jeden Fall. Seebach hat viele Einfamilienhäuser mit älteren, gut gepflegten Fahrzeugen. Eine professionelle Politur kann selbst bei Fahrzeugen mit 10+ Jahren den Lack wieder zum Glänzen bringen und den Werterhalt unterstützen." },
+      { q: "Bieten Sie auch eine regelmässige Pflege für Privatfahrzeuge an?", a: "Ja, viele Seebacher Kunden kommen quartalsweise für die Aussenreinigung und halbjährlich für eine vollständige Innenreinigung. Wir merken uns Ihre Präferenzen und behandeln Ihr Fahrzeug jedes Mal nach den gleichen hohen Standards." },
+      { q: "Was kostet eine Handwäsche für mein Fahrzeug aus Seebach?", a: "Unsere Aussenreinigung per Hand beginnt bei CHF 70.– für Kleinwagen. Für Kombis, SUVs und Transporter gelten gestaffelte Preise. Eine Handwäsche ist die beste Investition in den Lack Ihres Fahrzeugs – ohne Kratzerrisiko." },
+      { q: "Reinigen Sie auch Fahrzeuge aus Zürich-Affoltern?", a: "Ja, Affoltern grenzt direkt an Seebach und viele Kunden aus beiden Quartieren kommen zu uns. Die Verbindung via Tram oder Auto ist kurz und bequem – wir sind die nächstgelegene professionelle Handaufbereitung für den ganzen Zürcher Norden." },
+    ],
   },
   {
     slug: "duebendorf",
@@ -98,6 +154,14 @@ export const standorte = [
     typischAnliegen: "Gewerbliche Fahrzeuge, Flottenaufbereitung, Innenreinigung, Aussenreinigung, Keramikversiegelung",
     description: "Autoreinigung Dübendorf – professionelle Fahrzeugpflege, Innenreinigung & Aufbereitung nahe Zürich.",
     title: "Autoreinigung Dübendorf | Fahrzeugpflege Zürich-Ost",
+    nachbarOrte: ["wallisellen", "dietlikon", "schwamendingen"],
+    faqs: [
+      { q: "Reinigen Sie auch gewerbliche Fahrzeuge und Transporter aus Dübendorf?", a: "Ja, Dübendorf hat eine starke Gewerbestruktur mit vielen Handwerksbetrieben und Dienstleistern. Wir reinigen Transporter, Lieferwagen und Firmenfahrzeuge regelmässig – auch kurzfristig bei Bedarf." },
+      { q: "Wie weit ist es vom Flugplatz Dübendorf zu Ihnen?", a: "Vom Flugplatz Dübendorf erreichen Sie uns in ca. 12 Minuten via Überlandstrasse und A1. Auch für Mitarbeitende der ansässigen Unternehmen und Forschungsinstitute ist unser Betrieb gut erreichbar." },
+      { q: "Bieten Sie auch Politur und Keramikversiegelung für Dübendorfer Kunden an?", a: "Ja, die Keramikversiegelung ist bei Dübendorfer Fahrzeugbesitzern sehr gefragt – besonders vor dem Winter, wenn Streusalz und Splitt den Lack belasten. Eine Keramikversiegelung schützt Ihren Lack für mehrere Jahre." },
+      { q: "Lohnt sich eine professionelle Aufbereitung für ein Fahrzeug aus dem Zürcher Oberland?", a: "Auf jeden Fall. Kunden aus Dübendorf, Volketswil, Schwerzenbach und dem ganzen Zürcher Oberland kommen zu uns, weil die Qualität der Handaufbereitung den etwas weiteren Weg rechtfertigt. Ein sauberes Auto ist die Fahrt wert." },
+      { q: "Kann ich mein Fahrzeug für die Leasingrückgabe in Dübendorf vorbereiten lassen?", a: "Ja, die Leasingrückgabe-Aufbereitung ist eine unserer Kernkompetenzen. Viele Dübendorfer Leasingnehmer lassen ihr Fahrzeug vor der Rückgabe bei uns professionell reinigen und sparen so hohe Nachforderungen." },
+    ],
   },
   {
     slug: "dietlikon",
@@ -110,6 +174,14 @@ export const standorte = [
     typischAnliegen: "Pendlerfahrzeuge, Innenreinigung, Leasingrückgabe, MFK-Vorbereitung",
     description: "Autoreinigung Dietlikon – Fahrzeugpflege, Innenreinigung & Aufbereitung im Glattal. Termin online.",
     title: "Autoreinigung Dietlikon | Fahrzeugpflege Glattal",
+    nachbarOrte: ["wallisellen", "duebendorf"],
+    faqs: [
+      { q: "Wie schnell bin ich von Dietlikon mit der S-Bahn bei Ihnen?", a: "Die S-Bahn S3 bringt Sie in nur 7 Minuten vom Bahnhof Dietlikon zum Bahnhof Oerlikon. Von dort sind es noch 5 Minuten mit Tram oder Bus zu unserem Betrieb. Ideal für Pendler: Auto abgeben, mit der S-Bahn zur Arbeit, abends sauber zurück." },
+      { q: "Lohnt sich die Anfahrt aus Dietlikon für eine Handwäsche?", a: "Ja, die 12–16 Minuten Fahrt lohnen sich. In Dietlikon gibt es keine vergleichbare Handaufbereitung – die meisten Anbieter arbeiten mit Waschanlagen. Wer seinen Lack langfristig schützen will, nimmt die kurze Anfahrt gerne in Kauf." },
+      { q: "Bieten Sie auch eine MFK-Vorbereitung für Dietliker Fahrzeuge an?", a: "Ja, die MFK-Vorbereitung mit Motorraumreinigung, Unterbodenwäsche und Karosseriereinigung ist bei Dietliker Kunden sehr gefragt. Wir bereiten Ihr Fahrzeug gründlich vor – das macht bei der Prüfung einen positiven Eindruck." },
+      { q: "Was kostet eine Leasingrückgabe-Aufbereitung für ein Dietliker Fahrzeug?", a: "Unsere Leasingrückgabe-Pakete beginnen bei CHF 250.– und umfassen die vollständige Innen- und Aussenreinigung. Bei Bedarf ergänzen wir mit Politur und Geruchsbeseitigung. Die Investition spart meist ein Vielfaches an Rückgabekosten." },
+      { q: "Reinigen Sie auch Fahrzeuge aus Bassersdorf und Kloten?", a: "Ja, unser Einzugsgebiet umfasst das ganze nördliche Glattal – von Dietlikon über Bassersdorf und Kloten bis Wallisellen. Die gute Autobahnanbindung macht unseren Standort für die ganze Region attraktiv." },
+    ],
   },
 ];
 
