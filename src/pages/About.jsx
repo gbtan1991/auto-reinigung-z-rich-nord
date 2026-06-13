@@ -59,7 +59,7 @@ export default function About() {
       {/* Arbeitsweise */}
       <section className="px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <SectionHeader eyebrow="Unsere Arbeitsweise" title="Keine Waschanlage – jedes Fahrzeug von Hand" text="Automatikbetrieb, Standardprogramme, Fließband – das gibt es bei uns nicht. Warum? Weil jedes Fahrzeug anders ist." />
+          <SectionHeader eyebrow="Unsere Arbeitsweise" title="Keine Waschanlage – jedes Fahrzeug von Hand" text="Automatikbetrieb, Standardprogramme, Fliessband – das gibt es bei uns nicht. Warum? Weil jedes Fahrzeug anders ist." />
           <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground sm:text-lg">
             <p>
               Eine Waschanlage arbeitet mit rotierenden Bürsten, die Schmutz und Staub nicht entfernen, sondern über den Lack schleifen. Mikrokratzer, Hologramme und matter Lack sind die Folge. Wir waschen jedes Fahrzeug <strong>von Hand</strong> – mit sauberen Mikrofasertüchern, hochwertigen Reinigungsmitteln und dem nötigen Auge fürs Detail. Jedes Panel, jede Ritze, jede Felge wird einzeln bearbeitet.

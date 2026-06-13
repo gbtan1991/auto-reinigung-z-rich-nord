@@ -17,7 +17,8 @@ export default function Impressum() {
 
           <h2>Verantwortlich für den Inhalt dieser Website</h2>
           <p>
-            <strong>Autoreinigung Zürich-Nord</strong><br />
+            <strong>Turicum Automobile GmbH</strong><br />
+            (Marke: Autoreinigung Zürich-Nord)<br />
             Heerenwiesen 18<br />
             8051 Zürich<br />
             Schweiz

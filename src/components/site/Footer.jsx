@@ -58,7 +58,7 @@ export default function Footer() {
         <img src={images.map} alt="Karte Autoreinigung Zürich-Nord Heerenwiesen 18" loading="lazy" className="h-40 w-full object-cover opacity-80 transition hover:opacity-100" />
       </a>
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
-        <p>© 2026 Autoreinigung Zürich Nord</p>
+        <p>© 2026 Autoreinigung Zürich-Nord</p>
         <div className="flex flex-wrap gap-4">
           <Link to="/kontakt" className="hover:text-primary transition-colors">Kontakt</Link>
           <Link to="/bewertungen" className="hover:text-primary transition-colors">Bewertungen</Link>

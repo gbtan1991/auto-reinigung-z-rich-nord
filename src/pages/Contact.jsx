@@ -41,7 +41,7 @@ export default function Contact() {
               <a href={whatsappUrl} className="inline-flex rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground">
                 WhatsApp Schnellkontakt
               </a>
-              <a href={contact.phone} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-4 font-bold transition hover:border-primary hover:text-primary">
+              <a href="tel:+41445119490" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-4 font-bold transition hover:border-primary hover:text-primary">
                 <Phone className="h-4 w-4" /> {contact.phone}
               </a>
             </div>

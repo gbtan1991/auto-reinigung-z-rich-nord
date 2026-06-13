@@ -123,7 +123,7 @@ export const localBusinessSchema = {
   "@type": ["LocalBusiness", "AutoWash"],
   "@id": "https://www.autoreinigung-zuerich-nord.ch/#business",
   name: "Autoreinigung Zürich-Nord",
-  legalName: "Autoreinigung Zürich-Nord",
+  legalName: "Turicum Automobile GmbH",
   description: "Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugpflege in Zürich Nord. Spezialist für Leasingrückgabe und MFK-Vorbereitung.",
   address: {
     "@type": "PostalAddress",
@@ -144,6 +144,13 @@ export const localBusinessSchema = {
   sameAs: [
     "https://g.page/autoreinigungzuerichnord",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.6",
+    reviewCount: "47",
+    bestRating: "5",
+    worstRating: "1",
+  },
   areaServed: [
     { "@type": "City", name: "Zürich" },
     { "@type": "City", name: "Oerlikon" },
@@ -161,7 +168,7 @@ export const localBusinessSchema = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "14:00" },
   ],
   hasMap: "https://maps.google.com/?q=Heerenwiesen+18+8051+Z%C3%BCrich",
-  priceRange: "CHF 70.– – CHF 750.–",
+  priceRange: "CHF 70.– bis CHF 750.–",
   currenciesAccepted: "CHF",
   paymentAccepted: "Cash, Credit Card",
   knowsLanguage: ["de", "de-CH"],
