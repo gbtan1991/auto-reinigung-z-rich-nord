@@ -17,11 +17,12 @@ export default function Standorte() {
       <Breadcrumb items={[{ label: "Einzugsgebiete" }]} />
       <section className="px-5 pt-16 pb-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader
-            eyebrow="Unsere Regionen"
-            title="Professionelle Autoreinigung – schnell erreichbar aus der ganzen Region Zürich Nord"
-            text="Ein Standort, neun Regionen: Von unserem Betrieb an der Heerenwiesen 18, 8051 Zürich aus bedienen wir Kunden aus Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon und Glattbrugg."
-          />
+          <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl mb-6">
+            Professionelle Autoreinigung – schnell erreichbar aus der ganzen Region Zürich Nord
+          </h1>
+          <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8 max-w-3xl">
+            Ein Standort, neun Regionen: Von unserem Betrieb an der Heerenwiesen 18, 8051 Zürich aus bedienen wir Kunden aus Zürich, Oerlikon, Opfikon, Wallisellen, Schwamendingen, Seebach, Dübendorf, Dietlikon und Glattbrugg.
+          </p>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {standorte.map((ort, i) => (
               <Reveal key={ort.slug} delay={i * 60}>

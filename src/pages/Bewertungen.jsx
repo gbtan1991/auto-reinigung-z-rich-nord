@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Star, ExternalLink, MessageCircle, ArrowRight } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
-import SectionHeader from "@/components/site/SectionHeader";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 import { googleReviewUrl, whatsappUrl, bookingUrl, images } from "@/data/siteContent";
 
@@ -18,14 +17,14 @@ export default function Bewertungen() {
       <Breadcrumb items={[{ label: "Bewertungen" }]} />
 
       {/* Hero */}
-      <section className="px-5 py-16 lg:px-8">
+      <section className="px-5 pt-6 pb-12 lg:px-8 lg:pt-8">
         <div className="mx-auto max-w-4xl text-center">
-          <SectionHeader
-            center
-            eyebrow="Echte Kundenstimmen"
-            title="Das sagen unsere Kunden auf Google"
-            text="Lesen Sie ungefilterte Bewertungen auf Google – oder geben Sie Ihre eigene Bewertung ab."
-          />
+          <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl mb-4">
+            Das sagen unsere Kunden auf Google
+          </h1>
+          <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8 max-w-2xl mx-auto">
+            Lesen Sie ungefilterte Bewertungen auf Google – oder geben Sie Ihre eigene Bewertung ab.
+          </p>
           <div className="mt-8 flex justify-center">
             <GoogleReviewBadge />
           </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import { contact, images, whatsappUrl } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 
@@ -14,8 +15,10 @@ export default function Contact() {
         description="Kontaktieren Sie Autoreinigung Zürich-Nord an der Heerenwiesen 18, 8051 Zürich. Telefon, E-Mail, WhatsApp und Anfrageformular."
         path="/kontakt"
         image={images.map}
+        breadcrumbs={[{ label: "Kontakt" }]}
       />
-      <section className="px-5 py-20 lg:px-8">
+      <Breadcrumb items={[{ label: "Kontakt" }]} />
+      <section className="px-5 pt-6 pb-16 lg:px-8 lg:pt-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h1 className="font-heading text-5xl font-extrabold tracking-tight md:text-7xl">Kontakt</h1>

@@ -1,6 +1,7 @@
 import { Clock, MapPin, Users, ShieldCheck, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
@@ -14,7 +15,9 @@ export default function About() {
         description="Autoreinigung Zürich-Nord: 5-köpfiges Team in Zürich-Schwamendingen. Professionelle Fahrzeugpflege von Hand – Teil der Turicum Automobile GmbH. Jetzt kennenlernen."
         path="/ueber-uns"
         image={images.about}
+        breadcrumbs={[{ label: "Über uns" }]}
       />
+      <Breadcrumb items={[{ label: "Über uns" }]} />
 
       {/* Hero */}
       <section className="px-5 py-20 lg:px-8">

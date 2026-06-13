@@ -1,4 +1,5 @@
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 
 export default function Impressum() {
   return (
@@ -7,8 +8,10 @@ export default function Impressum() {
         title="Impressum | Autoreinigung Zürich-Nord"
         description="Impressum der Autoreinigung Zürich-Nord, Heerenwiesen 18, 8051 Zürich."
         path="/impressum"
+        breadcrumbs={[{ label: "Impressum" }]}
       />
-      <section className="px-5 py-20 lg:px-8">
+      <Breadcrumb items={[{ label: "Impressum" }]} />
+      <section className="px-5 pt-6 pb-20 lg:px-8 lg:pt-8">
         <article className="prose prose-slate mx-auto max-w-4xl rounded-[2rem] border border-border bg-card p-8 shadow-xl md:p-12">
           <h1>Impressum</h1>
 

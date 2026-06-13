@@ -1,4 +1,5 @@
 import SEO from "@/components/site/SEO";
+import Breadcrumb from "@/components/site/Breadcrumb";
 import { contact } from "@/data/siteContent";
 
 export default function Datenschutz() {
@@ -8,8 +9,10 @@ export default function Datenschutz() {
         title="Datenschutzerklärung | Autoreinigung Zürich-Nord"
         description="Datenschutzerklärung nach Schweizer revDSG für Autoreinigung Zürich-Nord. Transparente Informationen zu Datenverarbeitung, Cookies und externen Diensten."
         path="/datenschutz"
+        breadcrumbs={[{ label: "Datenschutzerklärung" }]}
       />
-      <section className="px-5 py-20 lg:px-8">
+      <Breadcrumb items={[{ label: "Datenschutzerklärung" }]} />
+      <section className="px-5 pt-6 pb-20 lg:px-8 lg:pt-8">
         <article className="prose prose-slate mx-auto max-w-4xl rounded-[2rem] border border-border bg-card p-8 shadow-xl md:p-12">
           <h1>Datenschutzerklärung</h1>
           <p><em>Stand: Juni 2026</em></p>

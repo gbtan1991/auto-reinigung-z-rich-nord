@@ -27,6 +27,10 @@ export default function Footer() {
             <h3 className="mb-4 font-heading text-base font-bold">Dienstleistungen</h3>
             <div className="flex flex-col gap-2.5">
               {services.map((service) => <Link key={service.slug} to={`/dienstleistungen/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
+              <Link to="/dienstleistungen/leasingrueckgabe" className="text-sm text-muted-foreground transition hover:text-primary">Leasingrückgabe</Link>
+              <Link to="/dienstleistungen/mfk-vorbereitung" className="text-sm text-muted-foreground transition hover:text-primary">MFK-Vorbereitung</Link>
+              <Link to="/dienstleistungen/keramikversiegelung" className="text-sm text-muted-foreground transition hover:text-primary">Keramikversiegelung</Link>
+              <Link to="/dienstleistungen/motorraumreinigung" className="text-sm text-muted-foreground transition hover:text-primary">Motorraumreinigung</Link>
               <Link to="/dienstleistungen" className="text-sm text-muted-foreground transition hover:text-primary">Alle Dienstleistungen</Link>
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition hover:text-primary">Online buchen</a>
               <Link to="/jobs" className="text-sm text-muted-foreground transition hover:text-primary">Karriere</Link>
@@ -35,7 +39,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-heading text-base font-bold">Regionen</h3>
             <div className="flex flex-col gap-2.5">
-              {standorte.slice(0, 5).map((ort) => <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{ort.nameFull}</Link>)}
+              {standorte.map((ort) => <Link key={ort.slug} to={`/standorte/${ort.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{ort.nameFull}</Link>)}
               <Link to="/standorte" className="text-sm text-muted-foreground transition hover:text-primary">Alle Regionen</Link>
             </div>
           </div>
