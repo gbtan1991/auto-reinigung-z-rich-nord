@@ -93,7 +93,7 @@ export default function Home() {
 
       <section className="px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader center eyebrow="Kundenstimmen" title="Was unsere Kunden sagen" />
+          <SectionHeader center eyebrow="Google Bewertungen" title="Das sagen unsere Kunden auf Google" />
           <div className="mt-10"><Testimonials /></div>
         </div>
       </section>

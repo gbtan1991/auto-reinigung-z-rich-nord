@@ -37,7 +37,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Bewertungen" title="Kunden berichten" /><div className="mt-10"><Testimonials names={["Grazia Sclaverano", "Sandra Stierli", "Ivasto Heizungen GmbH", "Andreas Stofer"]} /></div></div></section>
+      <section className="px-5 py-20 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader center eyebrow="Google Bewertungen" title="Was Kunden auf Google sagen" /><div className="mt-10"><Testimonials /></div></div></section>
     </>
   );
 }

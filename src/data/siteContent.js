@@ -27,7 +27,7 @@ export const navItems = [
   { label: "Dienstleistungen", href: "/dienstleistungen" },
   { label: "Regionen", href: "/standorte" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Bewertungen ⭐4.6", href: "/bewertungen" },
+  { label: "Bewertungen 4.6 ★", href: "/bewertungen" },
   { label: "FAQ", href: "/faq" },
   { label: "Kontakt", href: "/kontakt" }
 ];
@@ -49,8 +49,7 @@ export const services = [
       { name: "Advanced", price: "CHF 150.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
       { name: "Premium", price: "CHF 350.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shampoonieren / Stoff reinigen", "Lederreinigung, -pflege und -konservierung"] }
     ],
-    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 140.–"],
-    testimonials: ["Andreas Stofer", "Ivasto Heizungen GmbH", "Sandra Stierli"]
+    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 140.–"]
   },
   {
     slug: "aussenreinigung",
@@ -69,8 +68,7 @@ export const services = [
       { name: "Advanced", price: "ab CHF 100.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung (MFK-gerecht)"] },
       { name: "Premium", price: "ab CHF 200.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel, Federbein, Radhausabdeckung)", "Lackversiegelung und -konservierung"] }
     ],
-    extras: [],
-    testimonials: ["Grazia Sclaverano", "Ivasto Heizungen GmbH"]
+    extras: []
   },
   {
     slug: "politur",
@@ -90,7 +88,6 @@ export const services = [
       { name: "Premium", price: "ab CHF 750.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
     ],
     extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"],
-    testimonials: ["Sandra Stierli", "Andreas Stofer"]
   }
 ];
 
