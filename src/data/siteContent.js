@@ -27,7 +27,7 @@ export const navItems = [
   { label: "Dienstleistungen", href: "/dienstleistungen" },
   { label: "Regionen", href: "/standorte" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Bewertungen 4.6 ★", href: "/bewertungen" },
+  { label: "Bewertungen 4.6", href: "/bewertungen" },
   { label: "FAQ", href: "/faq" },
   { label: "Kontakt", href: "/kontakt" }
 ];
@@ -87,19 +87,17 @@ export const services = [
       { name: "Advanced", price: "ab CHF 500.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
       { name: "Premium", price: "ab CHF 750.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
     ],
-    extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"],
+    extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"]
   }
 ];
 
-export const testimonials = [
-  { name: "Andreas Stofer", location: "Schwamendingen", text: "Kompliment, das ist ein echter Unterschied. Ihr habt nicht nur rausgesaugt und drübergewischt. Auch alle Kunststoffe, Armaturen und die Scheiben glänzen jetzt... hab praktisch wieder einen Neuwagen!" },
-  { name: "Grazia Sclaverano", location: "Zürich-Oerlikon", text: "Für Unterboden, Federbeinholme und Innenkotflügel gilt: Sauberkeit ist der beste Rostschutz! Damit es bei der MFK keine böse Überraschung gibt, braucht es für die Pflege stets Leute vom Fach." },
-  { name: "Ivasto Heizungen GmbH", location: "Zürich-Oerlikon", text: "Alle Ivasto Heizungen GmbH Firmenfahrzeuge werden von unseren Handwerkern stark genutzt. Die monatlichen Innenreinigungen bei Autoreinigung Zürich-Nord sind für uns daher unerlässlich, auch im Hinblick auf den späteren Wiederverkaufswert." },
-  { name: "Sandra Stierli", location: "Russikon", text: "Ich bin jahrelang samstags durch die Waschanlage gefahren. Irgendwann bemerkte ich diese typischen Hologramm-Rückstrahlungen auf dem Lack. Autoreinigung Zürich-Nord hat’s wieder ausgebügelt und mir gezeigt, wie sich sowas vermeiden lässt." },
-  { name: "Andreas Stofer", location: "Schwamendingen", text: "Auto glänzt, Familie strahlt! Ihr habt die Lackschäden echt günstig ausgebessert. Man sieht sich nächstes Jahr wieder nach der Sommerferientour!" },
-  { name: "Sandra Stierli", location: "Russikon", text: "Wer Kinder hat, kennt das: Man fährt Krümel, Safttüten, Schokoflecken und verschwundene Spielsachen ;-) durch die Gegend. Die Autoreinigung Zürich-Nord-Leute bringen unser Auto immer schnell auf Vordermann – einfach klasse!" },
-  { name: "Ivasto Heizungen GmbH", location: "Zürich-Oerlikon", text: "Autoreinigung Zürich-Nord wäscht unsere Autos seit einem Jahr. Man erlaubt sich dort keine noch so kleine Nachlässigkeit. So zeigt der Autolack niemals Silikatspuren oder unscheinbare Polierkratzer auf, was hässliche Lichtbrechungen verursachen kann." }
-];
+export const googleBusinessProfile = {
+  url: "https://g.page/autoreinigungzuerichnord",
+  name: "Autoreinigung Zürich-Nord",
+  placeId: "ChIJ_7hxivmloUcRwinm5kNPf8E",
+  rating: 4.6,
+  reviewCount: 47,
+};
 
 export const faqs = [
   { q: "Für welche Fahrzeuge bieten Sie die Autoreinigung an?", a: "Für alle: Privatfahrzeuge, Familienautos, Firmenwagen, SUVs, Sportwagen, Leasingfahrzeuge, Occasionen, Fahrzeuge vor der MFK oder dem Verkauf. Auch Firmenflotten reinigen wir regelmässig – auf Wunsch mit Flottenvertrag." },
