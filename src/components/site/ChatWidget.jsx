@@ -92,39 +92,37 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [status, setStatus] = useState("idle"); // idle | creating | ready | waiting | error
   const [error, setError] = useState(null);
-  const convRef = useRef(null);
+  const convIdRef = useRef(null);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, status]);
 
+  const apiCall = async (payload) => {
+    const res = await base44.functions.invoke("chatbot", payload);
+    return res.data;
+  };
+
   const startConversation = async () => {
-    if (convRef.current) return;
+    if (convIdRef.current) return;
     setStatus("creating");
     setError(null);
     try {
-      const conv = await base44.agents.createConversation({
-        agent_name: "auto_reinigung_chatbot",
-        metadata: { name: "Website Chat" },
-      });
-      convRef.current = conv;
+      const data = await apiCall({});
+      convIdRef.current = data.conversationId;
+      setMessages(data.messages || []);
       setStatus("ready");
-
-      base44.agents.subscribeToConversation(conv.id, (data) => {
-        setMessages(data.messages || []);
-        setStatus("ready");
-      });
     } catch (e) {
       console.error("Chat init error:", e);
-      setError(e?.message || "Konversation konnte nicht gestartet werden");
+      setError(e?.response?.data?.error || e?.message || "Konversation konnte nicht gestartet werden");
       setStatus("error");
     }
   };
 
   const handleOpen = () => {
     setOpen(true);
-    if (!convRef.current) startConversation();
+    if (!convIdRef.current) startConversation();
   };
 
   const handleClose = () => {
@@ -133,18 +131,21 @@ export default function ChatWidget() {
 
   const sendMessage = async (text) => {
     if (!text) return;
-    if (!convRef.current) {
+    if (!convIdRef.current) {
       await startConversation();
-      if (!convRef.current) return;
+      if (!convIdRef.current) return;
     }
     setStatus("waiting");
     const msg = text.trim();
     setInput("");
     try {
-      await base44.agents.addMessage(convRef.current, { role: "user", content: msg });
+      const data = await apiCall({ conversationId: convIdRef.current, message: msg });
+      setMessages(data.messages || []);
+      setStatus("ready");
     } catch (e) {
       console.error("Send error:", e);
-      setStatus("ready");
+      setError(e?.response?.data?.error || e?.message || "Nachricht konnte nicht gesendet werden");
+      setStatus("error");
     }
   };
 
@@ -161,6 +162,7 @@ export default function ChatWidget() {
   };
 
   const handleRetry = () => {
+    convIdRef.current = null;
     startConversation();
   };
 
@@ -201,8 +203,8 @@ export default function ChatWidget() {
 
           {/* Messages */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px] max-h-[400px]">
-            {/* Creating state */}
-            {status === "creating" && (
+            {/* Creating / Waiting */}
+            {(status === "creating" || status === "waiting") && (
               <div className="flex gap-2 items-start">
                 <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Bot className="h-4 w-4 text-primary" />
@@ -213,7 +215,7 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {/* Error state */}
+            {/* Error */}
             {status === "error" && (
               <div className="flex flex-col items-center gap-3 py-8 px-4 text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
@@ -277,7 +279,7 @@ export default function ChatWidget() {
                     )}
                   </div>
 
-                  {parsed.buttons.length > 0 && isLastAssistantMsg && status !== "waiting" && (
+                  {parsed.buttons.length > 0 && isLastAssistantMsg && status === "ready" && (
                     <div className="flex flex-wrap gap-2 pl-9">
                       {parsed.buttons.map((btn, j) => (
                         <ChatButton key={j} button={btn} onClick={sendMessage} />
@@ -287,18 +289,6 @@ export default function ChatWidget() {
                 </div>
               );
             })}
-
-            {/* Waiting */}
-            {status === "waiting" && (
-              <div className="flex gap-2 items-start">
-                <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Bot className="h-4 w-4 text-primary" />
-                </div>
-                <div className="rounded-2xl rounded-tl-none bg-secondary px-4 py-2.5 text-sm">
-                  <span className="animate-pulse">...</span>
-                </div>
-              </div>
-            )}
 
             <div ref={messagesEndRef} />
           </div>
