@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from "react";
-import { MessageCircle, X, Send, Bot, Info, Phone, MapPin, Mail, ExternalLink, ChevronRight, CalendarDays } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { MessageCircle, X, Send, Bot, Info, Phone, MapPin, Mail, ExternalLink, ChevronRight, CalendarDays, AlertCircle, RefreshCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 
@@ -18,7 +18,7 @@ function parseMessage(text) {
   if (!text) return { content: "", buttons: [] };
   const lines = text.split("\n");
   const buttons = [];
-  let contentLines = [];
+  const contentLines = [];
 
   for (const line of lines) {
     if (line.trim().startsWith("BUTTONS:")) {
@@ -78,78 +78,104 @@ function ChatButton({ button, onClick }) {
   );
 }
 
+const WELCOME_BUTTONS = [
+  { label: "Offerte anfragen", type: "message" },
+  { label: "Termin buchen", type: "message" },
+  { label: "Preise", type: "message" },
+  { label: "Dienstleistungen", type: "message" },
+  { label: "Kontakt & Standort", type: "message" },
+];
+
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [conversation, setConversation] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [starting, setStarting] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | creating | ready | waiting | error
+  const [error, setError] = useState(null);
+  const convRef = useRef(null);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, status]);
 
   const startConversation = async () => {
-    if (conversation) return;
-    setStarting(true);
+    if (convRef.current) return;
+    setStatus("creating");
+    setError(null);
     try {
       const conv = await base44.agents.createConversation({
         agent_name: "auto_reinigung_chatbot",
         metadata: { name: "Website Chat" },
       });
-      setConversation(conv);
+      convRef.current = conv;
+      setStatus("ready");
+
       base44.agents.subscribeToConversation(conv.id, (data) => {
         setMessages(data.messages || []);
+        setStatus("ready");
       });
     } catch (e) {
-      console.error(e);
+      console.error("Chat init error:", e);
+      setError(e?.message || "Konversation konnte nicht gestartet werden");
+      setStatus("error");
     }
-    setStarting(false);
   };
 
-  const handleOpen = async () => {
+  const handleOpen = () => {
     setOpen(true);
-    if (!conversation) await startConversation();
+    if (!convRef.current) startConversation();
   };
 
-  const sendMessage = useCallback(async (text) => {
-    if (!text || loading || !conversation) return;
-    setLoading(true);
-    try {
-      await base44.agents.addMessage(conversation, { role: "user", content: text });
-    } catch (e) {
-      console.error(e);
-    }
-    setLoading(false);
-  }, [loading, conversation]);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  const handleInputSend = async () => {
-    if (!input.trim()) return;
-    await sendMessage(input.trim());
+  const sendMessage = async (text) => {
+    if (!text) return;
+    if (!convRef.current) {
+      await startConversation();
+      if (!convRef.current) return;
+    }
+    setStatus("waiting");
+    const msg = text.trim();
     setInput("");
+    try {
+      await base44.agents.addMessage(convRef.current, { role: "user", content: msg });
+    } catch (e) {
+      console.error("Send error:", e);
+      setStatus("ready");
+    }
+  };
+
+  const handleSend = () => {
+    if (!input.trim()) return;
+    sendMessage(input);
   };
 
   const handleKey = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleInputSend();
+      handleSend();
     }
+  };
+
+  const handleRetry = () => {
+    startConversation();
   };
 
   const visibleMessages = messages.filter(
     (m) => m.role === "user" || (m.role === "assistant" && m.content)
   );
 
+  const showWelcome = visibleMessages.length === 0 && status !== "creating" && status !== "error";
+
   return (
     <>
       {open && (
         <div className="fixed bottom-24 right-5 z-50 flex w-[380px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-2xl">
           {/* Header */}
-          <div className="flex items-center gap-3 bg-primary px-5 py-4">
+          <div className="flex items-center gap-3 bg-primary px-5 py-4 shrink-0">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
               <Bot className="h-5 w-5 text-white" />
             </div>
@@ -157,17 +183,17 @@ export default function ChatWidget() {
               <p className="font-bold text-white text-sm">Autoreinigung Zürich-Nord</p>
               <p className="text-xs text-white/70">Virtueller Assistent</p>
             </div>
-            <button onClick={() => setOpen(false)} className="text-white/80 hover:text-white transition">
+            <button onClick={handleClose} className="text-white/80 hover:text-white transition">
               <X className="h-5 w-5" />
             </button>
           </div>
 
-          {/* Datenschutzhinweis */}
-          <div className="flex items-start gap-2 bg-accent/50 border-b border-border px-4 py-2.5">
+          {/* Datenschutz */}
+          <div className="flex items-start gap-2 bg-accent/50 border-b border-border px-4 py-2.5 shrink-0">
             <Info className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Dieser Chat wird von einer KI verarbeitet. Keine sensiblen Daten eingeben.{" "}
-              <Link to="/datenschutz" className="underline hover:text-primary transition-colors" onClick={() => setOpen(false)}>
+              KI-Assistent – keine sensiblen Daten.{" "}
+              <Link to="/datenschutz" className="underline hover:text-primary transition-colors" onClick={handleClose}>
                 Datenschutz
               </Link>
             </p>
@@ -175,7 +201,8 @@ export default function ChatWidget() {
 
           {/* Messages */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[300px] max-h-[400px]">
-            {starting && (
+            {/* Creating state */}
+            {status === "creating" && (
               <div className="flex gap-2 items-start">
                 <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Bot className="h-4 w-4 text-primary" />
@@ -186,7 +213,24 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {visibleMessages.length === 0 && !starting && (
+            {/* Error state */}
+            {status === "error" && (
+              <div className="flex flex-col items-center gap-3 py-8 px-4 text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+                  <AlertCircle className="h-6 w-6 text-destructive" />
+                </div>
+                <p className="text-sm text-muted-foreground">{error || "Fehler beim Starten"}</p>
+                <button
+                  onClick={handleRetry}
+                  className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+                >
+                  <RefreshCw className="h-4 w-4" /> Erneut versuchen
+                </button>
+              </div>
+            )}
+
+            {/* Welcome */}
+            {showWelcome && (
               <div className="flex gap-2 items-start flex-col">
                 <div className="flex gap-2 items-start">
                   <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -197,24 +241,18 @@ export default function ChatWidget() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 pl-9">
-                  {[
-                    { label: "Offerte anfragen", type: "message" },
-                    { label: "Termin buchen", type: "message" },
-                    { label: "Preise", type: "message" },
-                    { label: "Dienstleistungen", type: "message" },
-                    { label: "Kontakt & Standort", type: "message" },
-                  ].map((btn, i) => (
+                  {WELCOME_BUTTONS.map((btn, i) => (
                     <ChatButton key={i} button={btn} onClick={sendMessage} />
                   ))}
                 </div>
               </div>
             )}
 
+            {/* Messages */}
             {visibleMessages.map((msg, i) => {
               const isLastAssistantMsg =
                 msg.role === "assistant" &&
-                (i === visibleMessages.length - 1 ||
-                  visibleMessages[i + 1]?.role === "user");
+                (i === visibleMessages.length - 1 || visibleMessages[i + 1]?.role === "user");
 
               const parsed = parseMessage(msg.content);
 
@@ -239,7 +277,7 @@ export default function ChatWidget() {
                     )}
                   </div>
 
-                  {parsed.buttons.length > 0 && isLastAssistantMsg && (
+                  {parsed.buttons.length > 0 && isLastAssistantMsg && status !== "waiting" && (
                     <div className="flex flex-wrap gap-2 pl-9">
                       {parsed.buttons.map((btn, j) => (
                         <ChatButton key={j} button={btn} onClick={sendMessage} />
@@ -250,7 +288,8 @@ export default function ChatWidget() {
               );
             })}
 
-            {loading && (
+            {/* Waiting */}
+            {status === "waiting" && (
               <div className="flex gap-2 items-start">
                 <div className="h-7 w-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Bot className="h-4 w-4 text-primary" />
@@ -265,7 +304,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="border-t border-border p-3 flex gap-2">
+          <div className="border-t border-border p-3 flex gap-2 shrink-0">
             <input
               type="text"
               value={input}
@@ -273,11 +312,11 @@ export default function ChatWidget() {
               onKeyDown={handleKey}
               placeholder="Nachricht schreiben..."
               className="flex-1 rounded-full border border-border bg-secondary px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/30"
-              disabled={starting || loading}
+              disabled={status === "creating" || status === "waiting"}
             />
             <button
-              onClick={handleInputSend}
-              disabled={!input.trim() || loading || starting}
+              onClick={handleSend}
+              disabled={!input.trim() || status === "creating" || status === "waiting"}
               className="h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-40 transition hover:scale-105 shrink-0"
             >
               <Send className="h-4 w-4" />
@@ -286,11 +325,11 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* Toggle button */}
+      {/* Toggle */}
       <button
-        onClick={open ? () => setOpen(false) : handleOpen}
+        onClick={open ? handleClose : handleOpen}
         className="fixed bottom-24 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition hover:scale-105"
-        aria-label="Chat öffnen"
+        aria-label={open ? "Chat schliessen" : "Chat öffnen"}
       >
         {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
       </button>
