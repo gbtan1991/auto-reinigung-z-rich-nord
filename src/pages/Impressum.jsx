@@ -12,59 +12,78 @@ export default function Impressum() {
       />
       <Breadcrumb items={[{ label: "Impressum" }]} />
       <section className="px-5 pt-6 pb-20 lg:px-8 lg:pt-8">
-        <article className="prose prose-slate mx-auto max-w-4xl rounded-[2rem] border border-border bg-card p-8 shadow-xl md:p-12">
-          <h1>Impressum</h1>
+        <div className="mx-auto max-w-3xl">
+          <h1 className="font-heading text-3xl font-extrabold text-foreground mb-10">Impressum</h1>
 
-          <h2>Verantwortlich für den Inhalt dieser Website</h2>
-          <p>
-            <strong>Turicum Automobile GmbH</strong><br />
-            (Marke: Autoreinigung Zürich-Nord)<br />
-            Heerenwiesen 18<br />
-            8051 Zürich<br />
-            Schweiz
-          </p>
-          <p>
-            <a href="mailto:info@autoreinigung-zuerich-nord.ch">info@autoreinigung-zuerich-nord.ch</a>
-          </p>
-          <p>
-            Telefon: <a href="tel:+41445119490">+41 44 511 94 90</a><br />
-            Mobile: <a href="tel:+41797415658">+41 79 741 56 58</a>
-          </p>
-          <p>
-            MWST-Nr.: CHE-329.889.425 MWST<br />
-            Handelsreg. Nr.: CH-020.4.068.035-4
-          </p>
+          <div className="rounded-2xl border border-border bg-card p-6 md:p-10 shadow-sm">
 
-          <h2>Haftungsausschluss</h2>
-          <p>
-            Die Inhalte dieser Website wurden sorgfältig zusammengestellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten verantwortlich. Für fremde Inhalte auf verlinkten externen Seiten übernehmen wir keine Haftung, da wir auf diese keinen Einfluss haben.
-          </p>
+            <section className="pb-8 border-b border-border">
+              <h2 className="font-heading text-xl font-bold text-foreground mb-5">Verantwortlich für den Inhalt dieser Website</h2>
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="space-y-0.5 text-sm leading-relaxed">
+                  <p className="font-semibold text-foreground">Turicum Automobile GmbH</p>
+                  <p className="text-muted-foreground text-xs">Marke: Autoreinigung Zürich-Nord</p>
+                  <p className="text-muted-foreground">Heerenwiesen 18<br />8051 Zürich<br />Schweiz</p>
+                </div>
+                <div className="space-y-1.5 text-sm">
+                  <div>
+                    <span className="text-xs text-muted-foreground block">E-Mail</span>
+                    <a href="mailto:info@autoreinigung-zuerich-nord.ch" className="text-primary font-medium underline hover:opacity-80">info@autoreinigung-zuerich-nord.ch</a>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground block">Telefon</span>
+                    <a href="tel:+41445119490" className="text-primary font-medium underline hover:opacity-80">+41 44 511 94 90</a>
+                  </div>
+                  <div>
+                    <span className="text-xs text-muted-foreground block">Mobile</span>
+                    <a href="tel:+41797415658" className="text-primary font-medium underline hover:opacity-80">+41 79 741 56 58</a>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-1 text-sm text-muted-foreground">
+                <p><span className="font-semibold text-foreground">MWST-Nr.:</span> CHE-329.889.425 MWST</p>
+                <p><span className="font-semibold text-foreground">Handelsreg. Nr.:</span> CH-020.4.068.035-4</p>
+              </div>
+            </section>
 
-          <h2>Urheberrecht</h2>
-          <p>
-            Die durch uns erstellten Inhalte und Werke auf dieser Website unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von Autoreinigung Zürich-Nord.
-          </p>
+            <section className="pt-8 pb-8 border-b border-border">
+              <h2 className="font-heading text-lg font-bold text-foreground mb-3">Haftungsausschluss</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Die Inhalte dieser Website wurden sorgfältig zusammengestellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten verantwortlich. Für fremde Inhalte auf verlinkten externen Seiten übernehmen wir keine Haftung, da wir auf diese keinen Einfluss haben.
+              </p>
+            </section>
 
-          <h2>Hosting</h2>
-          <p>
-            Diese Website wird auf Servern der <strong>Hostpoint AG</strong> in der Schweiz gehostet. Sämtliche Daten verbleiben in Rechenzentren in der Schweiz.
-          </p>
-          <p>
-            Hostpoint AG<br />
-            Neue Jonastrasse 60<br />
-            8640 Rapperswil-Jona<br />
-            Schweiz<br />
-            <a href="https://www.hostpoint.ch/" target="_blank" rel="noreferrer noopener">www.hostpoint.ch</a>
-          </p>
+            <section className="pt-8 pb-8 border-b border-border">
+              <h2 className="font-heading text-lg font-bold text-foreground mb-3">Urheberrecht</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Die durch uns erstellten Inhalte und Werke auf dieser Website unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von Autoreinigung Zürich-Nord.
+              </p>
+            </section>
 
-          <h2>Datenschutz</h2>
-          <p>
-            Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.
-          </p>
-          <p>
-            Einer Nutzung der im Impressum veröffentlichten Kontaktdaten durch Dritte zu Werbezwecken wird hiermit ausdrücklich widersprochen.
-          </p>
-        </article>
+            <section className="pt-8 pb-8 border-b border-border">
+              <h2 className="font-heading text-lg font-bold text-foreground mb-3">Hosting</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Diese Website wird auf Servern der <span className="font-semibold text-foreground">Hostpoint AG</span> in der Schweiz gehostet. Sämtliche Daten verbleiben in Rechenzentren in der Schweiz.
+              </p>
+              <div className="text-sm text-muted-foreground leading-relaxed">
+                <p className="font-semibold text-foreground">Hostpoint AG</p>
+                <p>Neue Jonastrasse 60<br />8640 Rapperswil-Jona<br />Schweiz</p>
+                <p><a href="https://www.hostpoint.ch/" target="_blank" rel="noreferrer noopener" className="text-primary underline hover:opacity-80">www.hostpoint.ch</a></p>
+              </div>
+            </section>
+
+            <section className="pt-8">
+              <h2 className="font-heading text-lg font-bold text-foreground mb-3">Datenschutz</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a href="/datenschutz" className="text-primary underline hover:opacity-80 font-medium">Datenschutzerklärung</a>.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Einer Nutzung der im Impressum veröffentlichten Kontaktdaten durch Dritte zu Werbezwecken wird hiermit ausdrücklich widersprochen.
+              </p>
+            </section>
+
+          </div>
+        </div>
       </section>
     </>
   );
