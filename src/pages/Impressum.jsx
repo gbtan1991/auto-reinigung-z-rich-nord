@@ -45,6 +45,18 @@ export default function Impressum() {
             Die durch uns erstellten Inhalte und Werke auf dieser Website unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von Autoreinigung Zürich-Nord.
           </p>
 
+          <h2>Hosting</h2>
+          <p>
+            Diese Website wird auf Servern der <strong>Hostpoint AG</strong> in der Schweiz gehostet. Sämtliche Daten verbleiben in Rechenzentren in der Schweiz.
+          </p>
+          <p>
+            Hostpoint AG<br />
+            Neue Jonastrasse 60<br />
+            8640 Rapperswil-Jona<br />
+            Schweiz<br />
+            <a href="https://www.hostpoint.ch/" target="_blank" rel="noreferrer noopener">www.hostpoint.ch</a>
+          </p>
+
           <h2>Datenschutz</h2>
           <p>
             Informationen zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.

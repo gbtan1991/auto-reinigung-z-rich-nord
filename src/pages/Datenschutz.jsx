@@ -62,7 +62,7 @@ export default function Datenschutz() {
 
           <h3>2.5 Virtueller Assistent / KI-Chatbot</h3>
           <p>
-            Auf unserer Website befindet sich ein virtueller Assistent (Chatbot), der auf Basis von Künstlicher Intelligenz betrieben wird. Wenn Sie den Chat nutzen, werden Ihre eingegebenen Nachrichten zur Beantwortung Ihrer Anfrage verarbeitet. Die Konversationen werden auf Servern des Dienstleisters <strong>Base44</strong> gespeichert.<br />
+            Auf unserer Website befindet sich ein virtueller Assistent (Chatbot), der auf Basis von Künstlicher Intelligenz betrieben wird. Wenn Sie den Chat nutzen, werden Ihre eingegebenen Nachrichten zur Beantwortung Ihrer Anfrage verarbeitet. Die Konversationen werden auf unseren Servern bei <strong>Hostpoint</strong> (Schweiz) gespeichert.<br />
             <strong>Achtung:</strong> Bitte geben Sie im Chat keine sensiblen Personendaten (z.B. Passwörter, Zahlungsdaten) ein.<br />
             <strong>Rechtsgrundlage:</strong> Berechtigtes Interesse (Kundenservice).<br />
             <strong>Aufbewahrungsfrist:</strong> Chatverläufe werden nach 90 Tagen gelöscht.
@@ -116,7 +116,7 @@ export default function Datenschutz() {
 
           <h2>9. Internationale Datenübermittlung</h2>
           <p>
-            Einige der von uns eingesetzten Dienste (Google, LeadConnector/HighLevel, Base44, WhatsApp/Meta) übermitteln Daten in die USA oder andere Länder ausserhalb der Schweiz. Diese Übermittlungen erfolgen auf Basis von Standardvertragsklauseln (SCC) oder anderen geeigneten Garantien gemäss Art. 16 revDSG.
+            Einige der von uns eingesetzten Dienste (Google, LeadConnector/HighLevel, WhatsApp/Meta) übermitteln Daten in die USA oder andere Länder ausserhalb der Schweiz. Diese Übermittlungen erfolgen auf Basis von Standardvertragsklauseln (SCC) oder anderen geeigneten Garantien gemäss Art. 16 revDSG.
           </p>
 
           <h2>10. Ihre Rechte</h2>
@@ -145,7 +145,19 @@ export default function Datenschutz() {
             Wir treffen angemessene technische und organisatorische Sicherheitsmassnahmen, um Ihre Personendaten gegen unbefugten Zugriff, Verlust oder Missbrauch zu schützen. Unsere Website wird über eine gesicherte HTTPS-Verbindung übertragen.
           </p>
 
-          <h2>13. Änderungen dieser Datenschutzerklärung</h2>
+          <h2>13. Hosting</h2>
+          <p>
+            Diese Website wird auf Servern der <strong>Hostpoint AG</strong> in der Schweiz gehostet. Sämtliche Daten verbleiben in Schweizer Rechenzentren und unterliegen dem Schweizer Datenschutzrecht. Es findet keine Datenübermittlung an Server ausserhalb der Schweiz statt.
+          </p>
+          <p>
+            Hostpoint AG<br />
+            Neue Jonastrasse 60<br />
+            8640 Rapperswil-Jona<br />
+            Schweiz<br />
+            <a href="https://www.hostpoint.ch/" target="_blank" rel="noreferrer noopener">www.hostpoint.ch</a>
+          </p>
+
+          <h2>14. Änderungen dieser Datenschutzerklärung</h2>
           <p>
             Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Die aktuelle Version ist stets auf dieser Seite abrufbar. Bei wesentlichen Änderungen werden wir Sie auf geeignete Weise informieren.
           </p>
