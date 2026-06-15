@@ -2,6 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { MessageCircle, X, Send, Bot, Info, Phone, MapPin, Mail, ExternalLink, ChevronRight, CalendarDays, AlertCircle, RefreshCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
+import { appParams } from "@/lib/app-params";
+
+const FUNCTIONS_BASE = appParams.appBaseUrl || "";
+const CHATBOT_URL = FUNCTIONS_BASE ? `${FUNCTIONS_BASE}/functions/chatbot` : "";
 
 const ACTION_BUTTONS = {
   "WhatsApp öffnen": { type: "link", url: "https://wa.me/41797415658", icon: "whatsapp" },
@@ -100,8 +104,21 @@ export default function ChatWidget() {
   }, [messages, status]);
 
   const apiCall = async (payload) => {
-    const res = await base44.functions.invoke("chatbot", payload);
-    return res.data;
+    // Try SDK first, fall back to direct fetch
+    try {
+      const res = await base44.functions.invoke("chatbot", payload);
+      return res.data;
+    } catch (sdkErr) {
+      console.warn("SDK invoke failed, trying direct fetch:", sdkErr?.message);
+      if (!CHATBOT_URL) throw sdkErr;
+      const res = await fetch(CHATBOT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    }
   };
 
   const startConversation = async () => {
@@ -175,7 +192,7 @@ export default function ChatWidget() {
   return (
     <>
       {open && (
-        <div className="fixed bottom-24 right-5 z-50 flex w-[380px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-2xl">
+        <div className="fixed bottom-24 right-4 z-[999] flex w-[380px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-2xl">
           {/* Header */}
           <div className="flex items-center gap-3 bg-primary px-5 py-4 shrink-0">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
@@ -318,7 +335,7 @@ export default function ChatWidget() {
       {/* Toggle */}
       <button
         onClick={open ? handleClose : handleOpen}
-        className="fixed bottom-24 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition hover:scale-105"
+        className="fixed bottom-24 right-4 z-[999] flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-2xl transition hover:scale-105"
         aria-label={open ? "Chat schliessen" : "Chat öffnen"}
       >
         {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
