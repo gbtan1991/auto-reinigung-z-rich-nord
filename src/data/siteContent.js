@@ -1,6 +1,6 @@
 export const bookingUrl = "https://widget.calenso.com/?partner=turicumreinigung&type=appointment&store_id=&service[]=&isFrame=true&lang=de_CH";
 export const googleReviewUrl = "https://g.page/autoreinigungzuerichnord";
-export const whatsappUrl = "https://wa.me/41797415658?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20professionelle%20Autoreinigung%20in%20Z%C3%BCrich%20Nord.";
+export const whatsappUrl = "https://wa.me/41793784423?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20professionelle%20Autoreinigung%20in%20Z%C3%BCrich%20Nord.";
 export const phoneUrl = "tel:+41445119490";
 
 export const images = {
@@ -106,7 +106,7 @@ export const faqs = [
   { q: "Kann ich online einen Termin buchen?", a: "Ja. Über unsere Online-Buchung sichern Sie sich sekundenschnell Ihren Wunschtermin – für Innenreinigung, Aussenreinigung, Politur, Leasingrückgabe oder MFK-Vorbereitung. Die Buchung dauert weniger als 60 Sekunden." },
   { q: "Wo befindet sich Autoreinigung Zürich-Nord und wie komme ich hin?", a: "Unser Betrieb befindet sich an der Heerenwiesen 18, 8051 Zürich-Schwamendingen. Erreichbar mit dem Auto über die Schaffhauserstrasse oder die Zürichbergstrasse. Mit dem ÖV: Tram 10 oder 14 bis Schaffhauserplatz, dann Bus 63. Gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und der ganzen Region Zürich Nord." },
   { q: "Ist eine Leasingrückgabe-Reinigung bei Ihnen möglich?", a: "Ja – die Leasingrückgabe ist eine unserer Spezialitäten. Wir bereiten Ihr Fahrzeug innen und aussen auf, um teure Nachforderungen zu vermeiden. Auf Wunsch entfernen wir zusätzlich leichte Kratzer und Gerüche." },
-  { q: "Wie kann ich eine Autoaufbereitung in Zürich Nord anfragen?", a: "Am einfachsten über unsere Online-Buchung. Sie können uns auch anrufen: +41 44 511 94 90 oder per WhatsApp: +41 79 741 56 58. Für Firmenflotten und spezielle Aufbereitungen erstellen wir Ihnen gerne ein individuelles Angebot." }
+  { q: "Wie kann ich eine Autoaufbereitung in Zürich Nord anfragen?", a: "Am einfachsten über unsere Online-Buchung. Sie können uns auch anrufen: +41 44 511 94 90 oder per WhatsApp: +41 79 378 44 23. Für Firmenflotten und spezielle Aufbereitungen erstellen wir Ihnen gerne ein individuelles Angebot." }
 ];
 
 export const contact = {
@@ -114,7 +114,7 @@ export const contact = {
   address: "Heerenwiesen 18, 8051 Zürich",
   email: "info@autoreinigung-zuerich-nord.ch",
   phone: "+41 44 511 94 90",
-  mobile: "+41 79 741 56 58",
+  mobile: "+41 79 378 44 23",
   hours: "Mo–Fr: 08.00–12.00 Uhr / 13.30–18.00 Uhr · Sa: 09.00–14.00 Uhr"
 };
 

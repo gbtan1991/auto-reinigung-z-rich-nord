@@ -36,7 +36,7 @@ export default function Impressum() {
                   </div>
                   <div>
                     <span className="text-xs text-muted-foreground block">Mobile</span>
-                    <a href="tel:+41797415658" className="text-primary font-medium underline hover:opacity-80">+41 79 741 56 58</a>
+                    <a href="tel:+41797415658" className="text-primary font-medium underline hover:opacity-80">+41 79 378 44 23</a>
                   </div>
                 </div>
               </div>
