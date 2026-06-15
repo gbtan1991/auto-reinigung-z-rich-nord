@@ -79,17 +79,6 @@ export default function Datenschutz() {
                 </DetailRow>
               </SubSection>
 
-              <SubSection title="2.4 Terminbuchung über LeadConnector / HighLevel">
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                  Ein weiterer Buchungskanal nutzt den Dienst <span className="font-semibold text-foreground">LeadConnector (HighLevel)</span>, ein CRM- und Buchungssystem mit Sitz in den USA. Bei der Nutzung dieses Buchungslinks werden Daten an Server in den USA übermittelt. HighLevel LLC hat sich gemäss dem EU-US Data Privacy Framework zur Einhaltung von Datenschutzstandards verpflichtet.
-                </p>
-                <DetailRow label="Rechtsgrundlage">Vertragserfüllung.</DetailRow>
-                <DetailRow label="Drittlandübermittlung">USA – Standardvertragsklauseln (SCC) gemäss Art. 16 revDSG.</DetailRow>
-                <DetailRow label="Datenschutzrichtlinie HighLevel">
-                  <a href="https://www.highlevel.com/privacy-policy" target="_blank" rel="noreferrer noopener" className="text-primary underline hover:opacity-80">highlevel.com/privacy-policy</a>
-                </DetailRow>
-              </SubSection>
-
               <SubSection title="2.5 Virtueller Assistent / KI-Chatbot">
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   Auf unserer Website befindet sich ein virtueller Assistent (Chatbot), der auf Basis von Künstlicher Intelligenz betrieben wird. Wenn Sie den Chat nutzen, werden Ihre eingegebenen Nachrichten zur Beantwortung Ihrer Anfrage verarbeitet. Die Konversationen werden auf unseren Servern bei <span className="font-semibold text-foreground">Hostpoint</span> (Schweiz) gespeichert.
@@ -162,7 +151,7 @@ export default function Datenschutz() {
 
             <Section id="internationale-datenuebermittlung" title="9. Internationale Datenübermittlung">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Einige der von uns eingesetzten Dienste (Google, LeadConnector/HighLevel, WhatsApp/Meta) übermitteln Daten in die USA oder andere Länder ausserhalb der Schweiz. Diese Übermittlungen erfolgen auf Basis von Standardvertragsklauseln (SCC) oder anderen geeigneten Garantien gemäss Art. 16 revDSG.
+                Einige der von uns eingesetzten Dienste (Google, WhatsApp/Meta) übermitteln Daten in die USA oder andere Länder ausserhalb der Schweiz. Diese Übermittlungen erfolgen auf Basis von Standardvertragsklauseln (SCC) oder anderen geeigneten Garantien gemäss Art. 16 revDSG.
               </p>
             </Section>
 
