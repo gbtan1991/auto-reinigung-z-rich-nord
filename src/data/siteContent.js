@@ -17,8 +17,8 @@ export const images = {
   interiorHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-innenreinigung-2-800x450.jpg",
   exteriorHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-aussenreinigung-von-hand-4-800x450.jpg",
   polishHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-politur-1-800x450.jpg",
-  before: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=1200&q=80",
-  after: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200&q=80",
+  before: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/725e7766d_before-interior.png",
+  after: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/822646113_after-interior.png",
   map: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/03/output-1.svg"
 };
 
