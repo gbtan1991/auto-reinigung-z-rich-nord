@@ -24,13 +24,13 @@ jobs:
         npm ci
         npm run build
 
-    - name: SFTP Deploy Production Files
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: SCP Deploy Production Files
+      uses: appleboy/scp-action@v0.1.7
       with:
+        host: 'sl2679.web.hostpoint.ch'
         username: 'gazazoze'
-        server: 'sl2679.web.hostpoint.ch'
+        key: ${{ secrets.HOSTPOINT_SSH_KEY }}
         port: 22
-        ssh_private_key: ${{ secrets.HOSTPOINT_SSH_KEY }}
-        # This tells it to only upload the freshly compiled build output folder:
-        local_path: './dist/*'
-        remote_path: '/www/autoreinigung.meisterflow.ch/'
+        source: 'dist/*'
+        target: '/www/autoreinigung.meisterflow.ch/'
+        strip_components: 1
