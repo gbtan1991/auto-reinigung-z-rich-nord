@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 24
         cache: 'npm'
 
     - name: Install Dependencies and Build App
@@ -30,7 +30,6 @@ jobs:
         host: 'sl2679.web.hostpoint.ch'
         username: 'gazazoze'
         key: ${{ secrets.HOSTPOINT_SSH_KEY }}
-        passphrase: ${{ secrets.HOSTPOINT_SSH_PASSPHRASE }}
         port: 22
         source: 'dist/*'
         target: '/www/autoreinigung.meisterflow.ch/'
