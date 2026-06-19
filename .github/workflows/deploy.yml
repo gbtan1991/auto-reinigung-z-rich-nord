@@ -1,4 +1,4 @@
-name: Deploy Website to Hostpoint
+name: Build and Deploy to Hostpoint
 
 on:
   push:
@@ -6,19 +6,31 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Sync Files to Hostpoint
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
       with:
-        server: sl2679.web.hostpoint.ch
-        username: gazazoze
-        ssh: true
-        private-key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEhafGsoPeLu6UhW/HFeP3r/72GQHQu+oYrO5rfTZ8IJ gilbert.tan1023@gmail.com
-        server-dir: /www/autoreinigung.meisterflow.ch/
-        local-dir: ./
+        node-version: 20
+        cache: 'npm'
+
+    - name: Install Dependencies and Build App
+      run: |
+        npm ci
+        npm run build
+
+    - name: SFTP Deploy Production Files
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: 'gazazoze'
+        server: 'sl2679.web.hostpoint.ch'
+        port: 22
+        ssh_private_key: ${{ secrets.HOSTPOINT_SSH_KEY }}
+        # This tells it to only upload the freshly compiled build output folder:
+        local_path: './dist/*'
+        remote_path: '/www/autoreinigung.meisterflow.ch/'
