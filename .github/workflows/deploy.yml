@@ -34,3 +34,5 @@ jobs:
         source: 'dist/*'
         target: '/www/autoreinigung.meisterflow.ch/'
         strip_components: 1
+
+        
