@@ -1,0 +1,24 @@
+name: Deploy Website to Hostpoint
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Sync Files to Hostpoint
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: sl2679.web.hostpoint.ch
+        username: gazazoze
+        ssh: true
+        private-key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEhafGsoPeLu6UhW/HFeP3r/72GQHQu+oYrO5rfTZ8IJ gilbert.tan1023@gmail.com
+        server-dir: /www/autoreinigung.meisterflow.ch/
+        local-dir: ./
