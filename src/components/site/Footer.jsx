@@ -59,7 +59,7 @@ export default function Footer() {
       </a>
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <p>© 2026 Autoreinigung Zürich-Nord</p>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:flex-wrap sm:gap-4">
           <Link to="/kontakt" className="hover:text-primary transition-colors">Kontakt</Link>
           <Link to="/bewertungen" className="hover:text-primary transition-colors">Bewertungen</Link>
           <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
