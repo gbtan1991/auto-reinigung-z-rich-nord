@@ -11,7 +11,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
         <Link to="/" className="group flex items-center shrink-0">
-          <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="h-32 w-auto transition group-hover:scale-105" />
+          <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="h-24 w-auto transition group-hover:scale-105" />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
