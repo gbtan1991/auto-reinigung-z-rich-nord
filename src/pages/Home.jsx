@@ -24,7 +24,7 @@ export default function Home() {
         type="home"
         breadcrumbs={[{ name: "Startseite", path: "/" }]}
       />
-      <section className="overflow-hidden px-5 py-12 md:py-20 lg:px-8">
+      <section className="overflow-hidden px-5 pt-20 pb-12 md:pt-28 md:pb-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <Reveal>
             <p className="mb-4 inline-flex rounded-full border border-border bg-secondary px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Swiss Detailing Lab · Zürich Nord</p>
