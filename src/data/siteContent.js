@@ -123,7 +123,7 @@ export const localBusinessSchema = {
   "@type": ["LocalBusiness", "AutoWash"],
   "@id": "https://www.autoreinigung-zuerich-nord.ch/#business",
   name: "Autoreinigung Zürich-Nord",
-  legalName: "Turicum Automobile GmbH",
+  legalName: "Autohaus Zürich Nord GmbH",
   description: "Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung, Lackpolitur und Fahrzeugpflege in Zürich Nord. Spezialist für Leasingrückgabe und MFK-Vorbereitung.",
   address: {
     "@type": "PostalAddress",

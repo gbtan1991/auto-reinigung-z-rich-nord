@@ -21,7 +21,7 @@ export default function Impressum() {
               <h2 className="font-heading text-xl font-bold text-foreground mb-5">Verantwortlich für den Inhalt dieser Website</h2>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-0.5 text-sm leading-relaxed">
-                  <p className="font-semibold text-foreground">Turicum Automobile GmbH</p>
+                  <p className="font-semibold text-foreground">Autohaus Zürich Nord GmbH</p>
                   <p className="text-muted-foreground text-xs">Marke: Autoreinigung Zürich-Nord</p>
                   <p className="text-muted-foreground">Heerenwiesen 18<br />8051 Zürich<br />Schweiz</p>
                 </div>
