@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1fr_0.8fr_0.8fr_0.8fr]">
           <div>
-            <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="mb-4 h-14 w-auto" />
+            <img src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/564e5face_autoreinigung.png" alt="Autoreinigung Zürich-Nord Logo" className="mb-4 h-24 w-auto" />
             <p className="text-sm leading-7 text-muted-foreground">Professionelle Autoreinigung, Autoaufbereitung, Innenreinigung, Aussenreinigung und Politur in Zürich Nord – sorgfältig, materialschonend und werterhaltend.</p>
             <a href={googleReviewUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
               <Star className="h-4 w-4 fill-primary-foreground" /> 4.6 ★ auf Google
