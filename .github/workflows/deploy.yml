@@ -29,10 +29,9 @@ jobs:
       with:
         host: 'sl2679.web.hostpoint.ch'
         username: 'gazazoze'
-        key: ${{ secrets.HOSTPOINT_SSH_KEY }}
+        passphrase: ${{ secrets.HOSTPOINT_SSH_PASSPHRASE }} # Add this line
         port: 22
         source: 'dist/*'
         target: '/www/autoreinigung.meisterflow.ch/'
         strip_components: 1
 
-        
