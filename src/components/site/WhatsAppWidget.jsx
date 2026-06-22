@@ -12,7 +12,7 @@ export default function WhatsAppWidget() {
     return () => document.removeEventListener("keydown", handler);
   }, [open]);
 
-  const whatsappUrl = "https://wa.me/41793784423";
+  const whatsappUrl = "https://wa.me/41763958050";
 
   return (
     <>
@@ -47,7 +47,7 @@ export default function WhatsAppWidget() {
 
             <p className="text-sm text-muted-foreground text-center">
               Sie werden zu WhatsApp weitergeleitet.<br />
-              <span className="font-semibold text-foreground">+41 79 378 44 23</span>
+              <span className="font-semibold text-foreground">+41 76 395 80 50</span>
             </p>
 
             <a
