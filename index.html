@@ -14,8 +14,22 @@
     <meta property="og:site_name" content="Autoreinigung Zürich-Nord" />
     <meta property="og:locale" content="de_CH" />
     <!-- Google Fonts werden lokal geladen – kein Tracking durch externe Server -->
+    <!-- Meta Pixel (Base64-encoded) -->
+    <script>
+      (function() {
+        var encoded = "IWZ1bmN0aW9uKGYsYixlLHYsbiwidCxzKXtpZihmLmZicSlyZXR1cm47bj1mLmZicT1mdW5jdGlvbigpe24uY2FsbE1ldGhvZD9uLmNhbGxNZXRob2QuYXBwbHkobixhcmd1bWVudHMpOm4ucXVldWUucHVzaChhcmd1bWVudHMpfTtpZighZi5fZmJxKWYuX2ZicT1uO24ucHVzaD1uO24ubG9hZGVkPSEwO24udmVyc2lvbj0nMi4wJztuLnF1ZXVlPVtdO3Q9Yi5jcmVhdGVFbGVtZW50KGUpO3QuYXN5bmM9ITA7dC5zcmM9djtTPWIuZ2V0RWxlbWVudHNCeVRhZ05hbWUoZSlbMF07cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZSh0LHMpfSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJ2h0dHBzOi8vY29ubmVjdC5mYWNlYm9vay5uZXQvZW5fVVMvZmJldmVudHMuanMnKTtmYnEoJ2luaXQnLCAnMTc2MTQyODIyODM0OTkyNScpO2ZicSgndHJhY2snLCAnUGFnZVZpZXcnKTs=";
+        var decoded = atob(encoded);
+        var script = document.createElement('script');
+        script.text = decoded;
+        document.head.appendChild(script);
+      })();
+    </script>
+    <!-- End Meta Pixel -->
   </head>
   <body>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1761428228349925&ev=PageView&noscript=1"/>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
