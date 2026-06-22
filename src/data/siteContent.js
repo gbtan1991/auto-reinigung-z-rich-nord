@@ -1,6 +1,6 @@
 export const bookingUrl = "https://widget.calenso.com/?partner=turicumreinigung&type=appointment&store_id=&service[]=&isFrame=true&lang=de_CH";
 export const googleReviewUrl = "https://g.page/autoreinigungzuerichnord";
-export const whatsappUrl = "https://wa.me/41793784423?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20professionelle%20Autoreinigung%20in%20Z%C3%BCrich%20Nord.";
+export const whatsappUrl = "https://wa.me/41763958050?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20professionelle%20Autoreinigung%20in%20Z%C3%BCrich%20Nord.";
 export const phoneUrl = "tel:+41445119490";
 
 export const images = {
@@ -114,7 +114,7 @@ export const contact = {
   address: "Heerenwiesen 18, 8051 Zürich",
   email: "info@autoreinigung-zuerich-nord.ch",
   phone: "+41 44 511 94 90",
-  mobile: "+41 79 378 44 23",
+  mobile: "+41 76 395 80 50",
   hours: "Mo–Fr: 08.00–12.00 Uhr / 13.30–18.00 Uhr · Sa: 09.00–14.00 Uhr"
 };
 
