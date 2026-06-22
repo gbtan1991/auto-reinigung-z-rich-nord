@@ -8,7 +8,7 @@ export default function FloatingActions() {
       <WhatsAppWidget />
       <div className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-2 gap-2 rounded-2xl border border-border bg-background/95 p-2 shadow-2xl backdrop-blur-xl md:hidden">
         <a href={phoneUrl} className="flex items-center justify-center gap-2 rounded-xl bg-secondary px-4 py-3.5 text-sm font-bold transition active:scale-95"><Phone className="h-4 w-4 text-primary" /> Anrufen</a>
-        <a href={whatsappUrl} className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-bold text-primary-foreground transition active:scale-95">Jetzt buchen</a>
+        <a href="https://widget.calenso.com/?partner=turicumreinigung&type=appointment&store_id=&service%5B%5D=&isFrame=true&lang=de_CH" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-bold text-primary-foreground transition active:scale-95">Jetzt buchen</a>
       </div>
     </>
   );
