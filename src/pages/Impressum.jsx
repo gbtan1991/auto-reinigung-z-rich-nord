@@ -41,8 +41,8 @@ export default function Impressum() {
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-1 text-sm text-muted-foreground">
-                <p><span className="font-semibold text-foreground">MWST-Nr.:</span> CHE-329.889.425 MWST</p>
-                <p><span className="font-semibold text-foreground">Handelsreg. Nr.:</span> CH-020.4.068.035-4</p>
+                <p><span className="font-semibold text-foreground">MWST-Nr.:</span> CHE-406.280.998 MWST</p>
+                <p><span className="font-semibold text-foreground">Handelsreg. Nr.:</span> CHE-406.280.998</p>
               </div>
             </section>
 
