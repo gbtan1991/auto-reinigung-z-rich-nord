@@ -19,7 +19,7 @@ export const images = {
   polishHero: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/59af6dbc0_zuerich-nord-autoreinigung-politur-1.jpg",
   before: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/94c134c00_before-interior.png",
   after: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/ce814bc54_after-interior.png",
-  map: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/03/output-1.svg"
+  map: null
 };
 
 export const navItems = [

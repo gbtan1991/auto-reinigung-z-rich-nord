@@ -14,7 +14,7 @@ export default function Contact() {
         title="Kontakt | Autoreinigung Zürich-Nord"
         description="Kontaktieren Sie Autoreinigung Zürich-Nord an der Heerenwiesen 18, 8051 Zürich. Telefon, E-Mail, WhatsApp und Anfrageformular."
         path="/kontakt"
-        image={images.map}
+        image={images.ctaExterior}
         breadcrumbs={[{ label: "Kontakt" }]}
       />
       <Breadcrumb items={[{ label: "Kontakt" }]} />
@@ -81,9 +81,16 @@ export default function Contact() {
           </form>
         </div>
       </section>
-      <a href="https://g.page/autoreinigungzuerichnord" target="_blank" rel="noreferrer" className="block px-5 pb-20 lg:px-8">
-        <img src={images.map} alt="Google Karte Autoreinigung Zürich-Nord" className="mx-auto max-h-96 w-full max-w-7xl rounded-[2rem] object-cover shadow-xl" />
-      </a>
+      <div className="px-5 pb-20 lg:px-8">
+        <iframe
+          title="Autoreinigung Zürich-Nord Standort"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.4!2d8.5481!3d47.4114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa79f8a71b8ff%3A0xc17f4f4366e629a!2sHeerenwiesen%2018%2C%208051%20Z%C3%BCrich!5e0!3m2!1sde!2sch!4v1234567890"
+          className="mx-auto h-96 w-full max-w-7xl rounded-[2rem] shadow-xl border-0"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
     </>
   );
 }
