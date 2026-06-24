@@ -12,7 +12,7 @@ export default function About() {
     <>
       <SEO
         title="Über uns | Autoreinigung Zürich-Nord – Handarbeit seit 2020"
-        description="Autoreinigung Zürich-Nord: 5-köpfiges Team in Zürich-Schwamendingen. Professionelle Fahrzeugpflege von Hand – Teil der Turicum Automobile GmbH. Jetzt kennenlernen."
+        description="Autoreinigung Zürich-Nord: 5-köpfiges Team in Zürich-Schwamendingen. Professionelle Fahrzeugpflege von Hand – Teil der Autohaus Zürich Nord GmbH. Jetzt kennenlernen."
         path="/ueber-uns"
         image={images.about}
         breadcrumbs={[{ label: "Über uns" }]}
@@ -26,7 +26,7 @@ export default function About() {
             <p className="mb-5 text-xs font-extrabold uppercase tracking-[0.28em] text-primary">Über uns</p>
             <h1 className="font-heading text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">Handarbeit, Erfahrung, echte Resultate</h1>
             <p className="mt-7 text-lg leading-8 text-muted-foreground">
-              Seit 2020 reinigen wir Fahrzeuge in Zürich-Schwamendingen – von Hand, mit hochwertigen Mitteln und mit dem Anspruch, dass Sie Ihr Auto danach wirklich wiedererkennen. Unser 5-köpfiges Team ist Teil der Kfz-Werkstatt <strong>turicum-automobile.ch</strong> und pflegt Fahrzeuge mit der gleichen Sorgfalt, die man von einem guten Mechaniker erwartet: gründlich, ehrlich und ohne unnötigen Aufwand.
+              Seit 2020 reinigen wir Fahrzeuge in Zürich-Schwamendingen – von Hand, mit hochwertigen Mitteln und mit dem Anspruch, dass Sie Ihr Auto danach wirklich wiedererkennen. Unser 5-köpfiges Team ist Teil der Kfz-Werkstatt <strong>Autohaus Zürich Nord GmbH</strong> und pflegt Fahrzeuge mit der gleichen Sorgfalt, die man von einem guten Mechaniker erwartet: gründlich, ehrlich und ohne unnötigen Aufwand.
             </p>
             <div className="mt-6"><GoogleReviewBadge compact /></div>
           </Reveal>
@@ -44,7 +44,7 @@ export default function About() {
               { icon: MapPin, label: "Standort", value: "Zürich-Schwamendingen" },
               { icon: Clock, label: "Seit", value: "2020" },
               { icon: Users, label: "Team", value: "5 Mitarbeiter" },
-              { icon: ShieldCheck, label: "Firma", value: "Turicum Automobile GmbH" },
+              { icon: ShieldCheck, label: "Firma", value: "Autohaus Zürich Nord GmbH" },
             ].map(({ icon: Icon, label, value }) => (
               <Reveal key={label} className="rounded-2xl border border-border bg-card p-5 text-center shadow-sm">
                 <Icon className="mx-auto mb-2 h-6 w-6 text-primary" />

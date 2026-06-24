@@ -166,7 +166,7 @@ const specificContent = {
     faqs: [
       { q: "Reicht eine normale Waschanlage vor der MFK?", a: "Nein. Die MFK prüft auch Motorraum und Unterboden – beides reinigt keine Waschanlage. Ein sauberer Motorraum erleichtert zudem die Fehlerdiagnose erheblich." },
       { q: "Welche Teile werden bei der MFK besonders geprüft?", a: "Neben Karosserie und Lack werden Motorraum, Unterboden, Fahrwerk, Bremsleitungen und Abgasanlage geprüft. Wir reinigen alle diese Bereiche vor der MFK gründlich." },
-      { q: "Kann ich die MFK-Vorbereitung mit der jährlichen Wartung kombinieren?", a: "Ja, viele Zürcher Kunden kombinieren Wartung in unserer Partnerwerkstatt (Turicum Automobile GmbH) mit einer MFK-Vorbereitung. Ein Ansprechpartner, ein Termin." },
+      { q: "Kann ich die MFK-Vorbereitung mit der jährlichen Wartung kombinieren?", a: "Ja, viele Zürcher Kunden kombinieren Wartung in unserer Partnerwerkstatt (Autohaus Zürich Nord GmbH) mit einer MFK-Vorbereitung. Ein Ansprechpartner, ein Termin." },
     ],
   },
   "keramikversiegelung-zuerich": {
