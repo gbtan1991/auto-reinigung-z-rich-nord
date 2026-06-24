@@ -82,14 +82,27 @@ export default function Contact() {
         </div>
       </section>
       <div className="px-5 pb-20 lg:px-8">
-        <iframe
-          title="Autoreinigung Zürich-Nord Standort"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.4!2d8.5481!3d47.4114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa79f8a71b8ff%3A0xc17f4f4366e629a!2sHeerenwiesen%2018%2C%208051%20Z%C3%BCrich!5e0!3m2!1sde!2sch!4v1234567890"
-          className="mx-auto h-96 w-full max-w-7xl rounded-[2rem] shadow-xl border-0"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+        <a href="https://maps.google.com/?q=Heerenwiesen+18,+8051+Zürich" target="_blank" rel="noreferrer"
+          className="relative mx-auto block max-w-7xl rounded-[2rem] overflow-hidden shadow-xl h-80 md:h-96 cursor-pointer group">
+          {/* Base map - detailed OpenStreetMap */}
+          <img
+            src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/9fd4b1fb1_map.jpg"
+            alt="Karte Schwamendingen Zürich"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Pin overlay - semi-transparent, blended to show marker */}
+          <img
+            src="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/a47cce46d_Screenshot-2021-03-02-at-102803.png"
+            alt="Standort Autoreinigung Zürich-Nord"
+            className="absolute inset-0 w-full h-full object-cover object-center mix-blend-multiply opacity-80"
+          />
+          {/* Hover overlay */}
+          <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors flex items-end justify-center pb-5">
+            <span className="bg-white/90 backdrop-blur-sm text-foreground text-sm font-semibold px-4 py-2 rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity">
+              In Google Maps öffnen ↗
+            </span>
+          </div>
+        </a>
       </div>
     </>
   );
