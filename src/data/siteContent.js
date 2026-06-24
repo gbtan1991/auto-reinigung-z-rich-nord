@@ -4,22 +4,22 @@ export const whatsappUrl = "https://wa.me/41763958050?text=Guten%20Tag%2C%20ich%
 export const phoneUrl = "tel:+41445119490";
 
 export const images = {
-  heroRim: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-  heroInterior: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=80",
-  heroPolish: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=900&q=80",
-  ctaExterior: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=1200&q=80",
-  serviceInterior: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-  serviceExterior: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
-  servicePolish: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-  trust: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
-  about: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=900&q=80",
-  booking: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&q=80",
-  interiorHero: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&q=80",
-  exteriorHero: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
-  polishHero: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+  heroRim: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-felgenreinigung-900x675.jpg",
+  heroInterior: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-innenreinigung-1-900x675.jpg",
+  heroPolish: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-politur-3-900x675.jpg",
+  ctaExterior: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-aussenreinigung-von-hand-1-1200x675.jpg",
+  serviceInterior: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-innenreinigung-2.jpg",
+  serviceExterior: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-aussenreinigung-von-hand-4.jpg",
+  servicePolish: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-politur-1.jpg",
+  trust: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-nach-der-reinigung-800x450.jpg",
+  about: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-turicum-ueber-uns-900x675.jpg",
+  booking: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-innenreinigung-3-900x675.jpg",
+  interiorHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-innenreinigung-2-800x450.jpg",
+  exteriorHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-aussenreinigung-von-hand-4-800x450.jpg",
+  polishHero: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/05/zuerich-nord-autoreinigung-politur-1-800x450.jpg",
   before: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/94c134c00_before-interior.png",
   after: "https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/ce814bc54_after-interior.png",
-  map: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
+  map: "https://www.autoreinigung-zuerich-nord.ch/wp-content/uploads/2021/03/output-1.svg"
 };
 
 export const navItems = [
