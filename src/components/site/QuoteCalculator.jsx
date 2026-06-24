@@ -54,6 +54,7 @@ export default function QuoteCalculator() {
         <div>
           <p className="text-sm font-bold text-muted-foreground">Geschätzter Startpreis</p>
           <p className="font-heading text-3xl font-extrabold sm:text-4xl">ab CHF {total}.–</p>
+          <p className="text-xs text-muted-foreground">exkl. MwSt.</p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row">
           <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5">Termin buchen</a>
