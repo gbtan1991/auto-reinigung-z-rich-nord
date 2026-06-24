@@ -63,12 +63,12 @@ export default function Impressum() {
             <section className="pt-8 pb-8 border-b border-border">
               <h2 className="font-heading text-lg font-bold text-foreground mb-3">Hosting</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Diese Website wird auf Servern der <span className="font-semibold text-foreground">Hostpoint AG</span> in der Schweiz gehostet. Sämtliche Daten verbleiben in Rechenzentren in der Schweiz.
+                Diese Website wird auf Servern der <span className="font-semibold text-foreground">Infomaniak Network SA</span> in der Schweiz gehostet. Sämtliche Daten verbleiben in Rechenzentren in der Schweiz.
               </p>
               <div className="text-sm text-muted-foreground leading-relaxed">
-                <p className="font-semibold text-foreground">Hostpoint AG</p>
-                <p>Neue Jonastrasse 60<br />8640 Rapperswil-Jona<br />Schweiz</p>
-                <p><a href="https://www.hostpoint.ch/" target="_blank" rel="noreferrer noopener" className="text-primary underline hover:opacity-80">www.hostpoint.ch</a></p>
+                <p className="font-semibold text-foreground">Infomaniak Network SA</p>
+                <p>Rue Eugène-Marziano 25<br />1227 Genf (Les Acacias)<br />Schweiz</p>
+                <p><a href="https://www.infomaniak.com/" target="_blank" rel="noreferrer noopener" className="text-primary underline hover:opacity-80">www.infomaniak.com</a></p>
               </div>
             </section>
 
