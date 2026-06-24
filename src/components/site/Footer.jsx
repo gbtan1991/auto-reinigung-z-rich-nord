@@ -54,9 +54,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <a href={googleReviewUrl} target="_blank" rel="noreferrer" className="block overflow-hidden border-y border-border">
-        <img src={images.map} alt="Karte Autoreinigung Zürich-Nord Heerenwiesen 18" loading="lazy" className="h-40 w-full object-cover opacity-80 transition hover:opacity-100" />
-      </a>
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 mb-24 sm:mb-0 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <p>© 2026 Autoreinigung Zürich-Nord</p>
         <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:flex-wrap sm:gap-4">
