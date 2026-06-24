@@ -1,9 +1,9 @@
-name: Build and Deploy to Hostpoint (Staging)
+name: Build and Deploy to Hostpoint (Production Live)
 
 on:
   push:
     branches:
-      - main  # <--- Base44 triggers this automatically on publish
+      - production  # <--- Only runs when you merge staging/main into here
 
 jobs:
   build-and-deploy:
@@ -23,7 +23,7 @@ jobs:
         npm ci
         npm run build
 
-    - name: SCP Deploy Staging Files
+    - name: SCP Deploy Production Live Files
       uses: appleboy/scp-action@v0.1.7
       with:
         host: 'sl2679.web.hostpoint.ch'
@@ -31,5 +31,5 @@ jobs:
         key: ${{ secrets.HOSTPOINT_SSH_KEY }}
         port: 22
         source: 'dist/*'
-        target: 'www/autoreinigung.meisterflow.ch/'  # Staging target
+        target: 'www/autoreinigung-zuerich-nord.ch/'  # Live target folder from Infomaniak/Hostpoint site maps
         strip_components: 1
