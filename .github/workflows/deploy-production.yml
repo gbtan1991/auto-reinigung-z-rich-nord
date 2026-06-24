@@ -1,13 +1,14 @@
-name: Build and Deploy to Hostpoint (Production Live)
+name: Build and Deploy to Infomaniak (Production Live)
 
 on:
   push:
     branches:
-      - production  # <--- Only runs when you merge staging/main into here
+      - production
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -23,13 +24,14 @@ jobs:
         npm ci
         npm run build
 
-    - name: SCP Deploy Production Live Files
+    - name: SCP Deploy Production Files via SSH
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: 'sl2679.web.hostpoint.ch'
-        username: 'gazazoze'
-        key: ${{ secrets.HOSTPOINT_SSH_KEY }}
+        host: 'o765f.ftp.infomaniak.com'
+        username: 'o765f_meisterflow'
+        password: 'Meisterflow01!'
         port: 22
         source: 'dist/*'
-        target: 'www/autoreinigung-zuerich-nord.ch/'  # Live target folder from Infomaniak/Hostpoint site maps
+        # Extracted directly from the Absolute Path in image_8a44dc.png
+        target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/' 
         strip_components: 1
