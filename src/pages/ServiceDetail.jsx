@@ -237,6 +237,7 @@ export default function ServiceDetail() {
                   <div className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
                     <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">{pkg.name}</p>
                     <p className="mt-2 font-heading text-3xl font-extrabold">{pkg.price}</p>
+                    <p className="text-xs text-muted-foreground">exkl. MwSt.</p>
                     <ul className="mt-4 flex-1 space-y-2.5">
                       {pkg.features.map((f) => (
                         <li key={f} className="flex items-start gap-2.5 text-sm text-muted-foreground">
