@@ -36,4 +36,5 @@ jobs:
         target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/' 
         strip_components: 1 
 
-        
+        # added integration google tag manager and klaviyo
+
