@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, Cookie, Mail, MapPin, Phone, Star } from "lucide-react";
 import { bookingUrl, contact, googleReviewUrl, images, services } from "@/data/siteContent";
 import { standorte } from "@/data/seoData";
+import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
@@ -53,6 +54,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-5 pb-10 lg:px-8">
+        <NewsletterSignup />
       </div>
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 mb-24 sm:mb-0 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <p>© 2026 Autoreinigung Zürich-Nord</p>
