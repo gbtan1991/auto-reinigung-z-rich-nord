@@ -34,4 +34,7 @@ jobs:
         source: 'dist/*'
         # Extracted directly from the Absolute Path in image_8a44dc.png
         target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/' 
-        strip_components: 1
+        strip_components: 1 
+
+        # added integration google tag manager and klaviyo
+
