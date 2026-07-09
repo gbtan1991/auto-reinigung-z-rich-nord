@@ -1,4 +1,4 @@
-export const bookingUrl = "https://widget.calenso.com/?partner=turicumreinigung&type=appointment&store_id=&service[]=&isFrame=true&lang=de_CH";
+export const bookingUrl = "https://book.calenso.com/autoreinigung";
 export const googleReviewUrl = "https://g.page/autoreinigungzuerichnord";
 export const whatsappUrl = "https://wa.me/41763958050?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20professionelle%20Autoreinigung%20in%20Z%C3%BCrich%20Nord.";
 export const phoneUrl = "tel:+41445119490";
