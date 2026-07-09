@@ -36,4 +36,5 @@ jobs:
         strip_components: 1
 
         #UPDATED ALL OF THE CTA BASED ON WHAT THE CLIENT WANTS.
+        #Changed the SSH keys to the github secrets.
 
