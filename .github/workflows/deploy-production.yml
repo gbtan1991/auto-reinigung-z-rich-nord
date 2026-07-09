@@ -37,4 +37,5 @@ jobs:
 
         # added integration google tag manager and klaviyo!!
         # Updated all of the CTA with the new Calenso provided by the client.
+        # Changed all the ssh keys with the proper ones provided by the client.
 
