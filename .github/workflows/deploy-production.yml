@@ -36,5 +36,6 @@ jobs:
         target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/' 
         strip_components: 1 
 
-        # added integration google tag manager and klaviyo
+        # added integration google tag manager and klaviyo!!
+        # Updated all of the CTA with the new Calenso provided by the client.
 
