@@ -1,10 +1,28 @@
 import { useMemo, useState } from "react";
 import { Calculator, CheckCircle2, Send } from "lucide-react";
-import { bookingUrl, whatsappUrl } from "@/data/siteContent";
+import { bookingUrl, calensoLinks } from "@/data/siteContent";
 
 const vehiclePrices = { Kleinwagen: 0, Limousine: 20, SUV: 45, Firmenfahrzeug: 35 };
 const servicePrices = { Innenreinigung: 99, Aussenreinigung: 99, Politur: 419 };
-const addons = { Tierhaarentfernung: 100, Desinfektion: 149, Unterbodenreinigung: 120, Nanoversiegelung: 180 };
+const serviceBookingUrls = {
+  Innenreinigung: calensoLinks.innenreinigung.beratung,
+  Aussenreinigung: calensoLinks.aussenreinigung.beratung,
+  Politur: calensoLinks.politur.beratung,
+};
+const addons = {
+  "Tierhaarentfernung": 100,
+  "Desinfektion": 149,
+  "Unterbodenreinigung": 120,
+  "Nanoversiegelung": 180,
+  "Lederpflege": 179,
+  "Sitze schamponieren": 169,
+  "Motorraum reinigen": 79,
+  "Felgenwäsche (abmontiert)": 49,
+  "Cabrio-Dach versiegeln": 149,
+  "Felgen-Politur": 149,
+  "Versiegelung": 149,
+  "Motor-/Chassis MFK": 169,
+};
 
 export default function QuoteCalculator() {
   const [vehicle, setVehicle] = useState("Limousine");
@@ -14,6 +32,10 @@ export default function QuoteCalculator() {
 
   const total = useMemo(() => servicePrices[service] + vehiclePrices[vehicle] + selected.reduce((sum, item) => sum + addons[item], 0), [vehicle, service, selected]);
   const toggle = (item) => setSelected((current) => current.includes(item) ? current.filter((i) => i !== item) : [...current, item]);
+
+  const bookingLink = serviceBookingUrls[service] || bookingUrl;
+  const waMessage = `Guten Tag, ich interessiere mich für ${service} (${vehicle}), geschätzter Preis: ab CHF ${total}.–. Gewählte Add-ons: ${selected.length ? selected.join(", ") : "keine"}.`;
+  const waLink = `https://wa.me/41763958050?text=${encodeURIComponent(waMessage)}`;
 
   return (
     <div className="rounded-[2rem] border border-border bg-card p-5 shadow-xl sm:p-7 md:p-8">
@@ -43,9 +65,9 @@ export default function QuoteCalculator() {
         </div>
         <div>
           <p className="mb-3 text-sm font-bold">3. Add-ons</p>
-          <div className="grid gap-2">
+          <div className="grid gap-2 grid-cols-2">
             {Object.keys(addons).map((item) => (
-              <button key={item} onClick={() => toggle(item)} className={`rounded-xl border px-4 py-2.5 text-left text-sm font-semibold transition ${selected.includes(item) ? "border-primary bg-primary/10 text-primary" : "border-border bg-background hover:border-primary/50"}`}>{item}</button>
+              <button key={item} onClick={() => toggle(item)} className={`rounded-xl border px-3 py-2.5 text-left text-xs font-semibold transition ${selected.includes(item) ? "border-primary bg-primary/10 text-primary" : "border-border bg-background hover:border-primary/50"}`}>{item}</button>
             ))}
           </div>
         </div>
@@ -57,8 +79,8 @@ export default function QuoteCalculator() {
           <p className="text-xs text-muted-foreground">exkl. MwSt.</p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row">
-          <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5">Termin buchen</a>
-          <a href={whatsappUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-bold transition hover:border-primary">WhatsApp</a>
+          <a href={bookingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:-translate-y-0.5">Termin buchen</a>
+          <a href={waLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-bold transition hover:border-primary">WhatsApp</a>
         </div>
       </div>
       <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="mt-5 grid gap-3 sm:grid-cols-[1fr_1fr_auto]">
