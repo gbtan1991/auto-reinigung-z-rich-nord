@@ -207,7 +207,7 @@ export const services = [
       "Die Versiegelung schützt das Dach langfristig vor Verwitterung und erhält seine Farbe und Struktur. Ideal vor der Saison oder nach der Winterpause."
     ],
     packages: [
-      { name: "Cabrio-Dach versiegeln", price: "CHF 149.–", bookingUrl: calensoLinks.aussenreinigung.cabrioDach, features: ["Reinigung des Stoffdachs", "Imprägnierung und Versiegelung", "Schutz vor Wasser und UV-Strahlung", "Farbe- und Strukturerhalt", "Dauer: ca. 3 Std."] }
+      { name: "Cabrio-Dach versiegeln", price: "ab CHF 199.–", bookingUrl: calensoLinks.aussenreinigung.cabrioDach, features: ["Reinigung des Stoffdachs", "Imprägnierung und Versiegelung", "Schutz vor Wasser und UV-Strahlung", "Farbe- und Strukturerhalt", "Dauer: ca. 3 Std."] }
     ],
     extras: []
   },
@@ -241,7 +241,7 @@ export const services = [
       "Ein sauberer Motorraum und ein sauberes Chassis erleichtern dem Prüfer die Arbeit und hinterlassen einen positiven Eindruck. Ideal für alle Fahrzeughalter vor der MFK."
     ],
     packages: [
-      { name: "Motor-/Chassis-Reinigung MFK", price: "CHF 169.–", bookingUrl: calensoLinks.aussenreinigung.motorChassisMfk, features: ["Motorraumreinigung und Konservierung", "Chassis-Reinigung (MFK-gerecht)", "Entfernung von Schmutz, Öl und Korrosion", "Optimal vorbereitet für die Prüfung", "Dauer: ca. 1 Std."] }
+      { name: "Motor-/Chassis-Reinigung MFK", price: "ab CHF 149.–", bookingUrl: calensoLinks.aussenreinigung.motorChassisMfk, features: ["Motorraumreinigung und Konservierung", "Chassis-Reinigung (MFK-gerecht)", "Entfernung von Schmutz, Öl und Korrosion", "Optimal vorbereitet für die Prüfung", "Dauer: ca. 1 Std."] }
     ],
     extras: []
   },
@@ -258,7 +258,7 @@ export const services = [
       "Ideal vor dem Verkauf, für die Saisonvorbereitung oder als Ergänzung zur Aussenreinigung. Strahlend saubere Felgen werten jedes Fahrzeug optisch auf."
     ],
     packages: [
-      { name: "Felgenwäsche (abmontiert)", price: "CHF 49.–", bookingUrl: calensoLinks.aussenreinigung.felgenwaesche, features: ["Reinigung abmontierter Felgen", "Felgenrückseiten und Radnaben", "Entfernung von Bremsstaub und Ablagerungen", "Schonende und gründliche Reinigung", "Dauer: ca. 45 Min."] }
+      { name: "Felgenwäsche (abmontiert)", price: "ab CHF 79.–", bookingUrl: calensoLinks.aussenreinigung.felgenwaesche, features: ["Reinigung abmontierter Felgen", "Felgenrückseiten und Radnaben", "Entfernung von Bremsstaub und Ablagerungen", "Schonende und gründliche Reinigung", "Dauer: ca. 45 Min."] }
     ],
     extras: []
   },
@@ -275,7 +275,7 @@ export const services = [
       "Nach der Politur versiegeln wir die Felgen auf Wunsch für langanhaltenden Schutz. Ideal für Premium-Felgen, Alufelgen und vor dem Verkauf."
     ],
     packages: [
-      { name: "Felgen-Politur", price: "ab CHF 149.–", bookingUrl: calensoLinks.politur.felgenPolitur, features: ["Politur und Veredelung der Felgen", "Entfernung feiner Kratzer und Verwitterungen", "Wiederherstellung des Glanzes", "Optionale Versiegelung", "Dauer: ca. 2 Std."] }
+      { name: "Felgen-Politur", price: "ab CHF 349.–", bookingUrl: calensoLinks.politur.felgenPolitur, features: ["Politur und Veredelung der Felgen", "Entfernung feiner Kratzer und Verwitterungen", "Wiederherstellung des Glanzes", "Optionale Versiegelung", "Dauer: ca. 2 Std."] }
     ],
     extras: []
   },
@@ -292,7 +292,7 @@ export const services = [
       "Wir bieten Wachsversiegelung und Nanoversiegelung je nach Bedarf. Ideal nach der Politur oder als eigenständiger Lackschutz."
     ],
     packages: [
-      { name: "Versiegelung", price: "CHF 149.–", bookingUrl: calensoLinks.politur.versiegelung, features: ["Lackversiegelung für langfristigen Schutz", "Abweisung von Schmutz und Wasser", "Dauerhafter Glanz", "Einfachere Pflege", "Dauer: ca. 1,5 Std."] }
+      { name: "Versiegelung", price: "ab CHF 199.–", bookingUrl: calensoLinks.politur.versiegelung, features: ["Lackversiegelung für langfristigen Schutz", "Abweisung von Schmutz und Wasser", "Dauerhafter Glanz", "Einfachere Pflege", "Dauer: ca. 1,5 Std."] }
     ],
     extras: []
   }

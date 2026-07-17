@@ -17,12 +17,12 @@ const addons = {
   Nanoversiegelung: 180,
   Lederpflege: 179,
   "Sitze schamponieren": 169,
-  "Cabrio-Dach versiegeln": 149,
+  "Cabrio-Dach versiegeln": 199,
   "Motorraum reinigen": 79,
-  "Motor-/Chassis MFK": 169,
-  "Felgenwäsche (abmontiert)": 49,
-  "Felgen-Politur": 149,
-  Versiegelung: 149,
+  "Motor-/Chassis MFK": 149,
+  "Felgenwäsche (abmontiert)": 79,
+  "Felgen-Politur": 349,
+  Versiegelung: 199,
 };
 
 export default function QuoteCalculator() {
