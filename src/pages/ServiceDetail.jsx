@@ -6,6 +6,9 @@ import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
 import { services, bookingUrl, phoneUrl, whatsappUrl, contact, images } from "@/data/siteContent";
 import { seoServices, standorte, landingpages } from "@/data/seoData";
+import { useState } from "react";
+import ServicePackageSelector from "@/components/site/ServicePackageSelector";
+import { serviceCategories } from "@/data/quoteData";
 
 // Service-spezifische FAQs
 const serviceFaqs = {
@@ -197,6 +200,11 @@ export default function ServiceDetail() {
   const content = serviceContent[seoSvc.slug] || serviceContent.autoaufbereitung;
   const relatedLPs = landingpages.filter((lp) => lp.serviceSlug === seoSvc.slug);
   const beforeAfter = beforeAfterImages[slug];
+  const categoryData = serviceCategories[slug];
+  const [selectedPackage, setSelectedPackage] = useState(null);
+  const [selectedAddons, setSelectedAddons] = useState([]);
+  const selectedPkgData = categoryData?.packages.find((p) => p.name === selectedPackage);
+  const dynamicBookingUrl = selectedPkgData?.bookingUrl || coreService?.bookingUrl || bookingUrl;
 
   return (
     <>
@@ -226,7 +234,7 @@ export default function ServiceDetail() {
               {seoSvc.heroText || coreService?.summary || `Professionelle ${seoSvc.name} in Zürich Nord – schonend, gründlich, Termin online buchbar.`}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
+              <a href={dynamicBookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
@@ -285,39 +293,19 @@ export default function ServiceDetail() {
         <section className="bg-secondary/70 px-5 py-14 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader center eyebrow="Pakete & Preise" title={`${seoSvc.name} – Unsere Pakete`} text="Transparente Preise, keine versteckten Kosten." />
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {coreService.packages.map((pkg, i) => (
-                <Reveal key={pkg.name} delay={i * 80}>
-                  <div className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
-                    <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">{pkg.name}</p>
-                    <p className="mt-2 font-heading text-3xl font-extrabold">{pkg.price}</p>
-                    <p className="text-xs text-muted-foreground">exkl. MwSt.</p>
-                    <ul className="mt-4 flex-1 space-y-2.5">
-                      {pkg.features.map((f) => (
-                        <li key={f} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <a href={pkg.bookingUrl || coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:opacity-90">
-                      Jetzt buchen <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-            {coreService.extras && coreService.extras.length > 0 && (
-              <div className="mt-8 rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
-                <h3 className="font-heading text-lg font-extrabold mb-3">Zusatzleistungen</h3>
-                <ul className="space-y-2">
-                  {coreService.extras.map((e) => (
-                    <li key={e} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {e}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <ServicePackageSelector
+              serviceSlug={slug}
+              packages={coreService.packages}
+              serviceName={seoSvc.name}
+              selectedPackage={selectedPackage}
+              onSelectPackage={setSelectedPackage}
+              selectedAddons={selectedAddons}
+              onToggleAddon={(name) =>
+                setSelectedAddons((current) =>
+                  current.includes(name) ? current.filter((i) => i !== name) : [...current, name]
+                )
+              }
+            />
           </div>
         </section>
       )}
@@ -364,7 +352,7 @@ export default function ServiceDetail() {
                     </li>
                   ))}
                 </ul>
-                <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
+                <a href={dynamicBookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
                   Jetzt Angebot anfragen <ArrowRight className="h-5 w-5" />
                 </a>
               </div>
@@ -449,7 +437,7 @@ export default function ServiceDetail() {
               Termin online buchen oder anrufen – wir sind Mo–Sa erreichbar.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
+              <a href={dynamicBookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin online buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 px-7 py-4 font-bold text-background transition hover:bg-background hover:text-foreground">
