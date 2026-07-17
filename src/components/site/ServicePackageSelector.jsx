@@ -1,3 +1,4 @@
+// Interaktive Paket- und Zusatzleistungen-Auswahl für Serviceseiten
 import { useMemo } from "react";
 import { ArrowRight, Check, CheckCircle2 } from "lucide-react";
 import { services, bookingUrl } from "@/data/siteContent";

@@ -1,3 +1,4 @@
+// Gemeinsame Preis- und Zusatzleistungen-Daten für Offertenrechner und Serviceseiten
 import { calensoLinks } from "@/data/siteContent";
 
 export const serviceCategories = {
