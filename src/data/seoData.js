@@ -303,14 +303,6 @@ export const seoServices = [
     mainKeyword: "sitze schamponieren auto zürich",
   },
   {
-    slug: "sommer-aktion",
-    name: "Sommer-Aktion",
-    title: "Sommer-Aktion Autoreinigung Zürich | Saisonal sparen",
-    description: "Limitierte Sommer-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen.",
-    h1: "Sommer-Aktion bei Autoreinigung Zürich-Nord",
-    mainKeyword: "sommer aktion autoreinigung zürich",
-  },
-  {
     slug: "cabrio-dach-versiegeln",
     name: "Cabrio-Dach versiegeln",
     title: "Cabrio-Dach versiegeln Zürich | Stoffdach imprägnieren",

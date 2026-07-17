@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Calculator, CheckCircle2, Send } from "lucide-react";
-import { bookingUrl, calensoLinks } from "@/data/siteContent";
+import { bookingUrl, calensoLinks, services } from "@/data/siteContent";
 
 const vehiclePrices = { Kleinwagen: 0, Limousine: 20, SUV: 45, Firmenfahrzeug: 35 };
 const servicePrices = { Innenreinigung: 99, Aussenreinigung: 99, Politur: 419 };
@@ -9,20 +9,15 @@ const serviceBookingUrls = {
   Aussenreinigung: calensoLinks.aussenreinigung.beratung,
   Politur: calensoLinks.politur.beratung,
 };
-const addons = {
-  "Tierhaarentfernung": 100,
-  "Desinfektion": 149,
-  "Unterbodenreinigung": 120,
-  "Nanoversiegelung": 180,
-  "Lederpflege": 179,
-  "Sitze schamponieren": 169,
-  "Motorraum reinigen": 79,
-  "Felgenwäsche (abmontiert)": 49,
-  "Cabrio-Dach versiegeln": 149,
-  "Felgen-Politur": 149,
-  "Versiegelung": 149,
-  "Motor-/Chassis MFK": 169,
-};
+
+// Add-ons: bestehende Extras + Zusatzleistungen aus den Hauptdiensten
+const addons = { Tierhaarentfernung: 100, Unterbodenreinigung: 120 };
+services.forEach((svc) => {
+  (svc.zusatzleistungen || []).forEach((z) => {
+    const match = z.price.match(/(\d+)/);
+    if (match) addons[z.eyebrow] = parseInt(match[1], 10);
+  });
+});
 
 export default function QuoteCalculator() {
   const [vehicle, setVehicle] = useState("Limousine");

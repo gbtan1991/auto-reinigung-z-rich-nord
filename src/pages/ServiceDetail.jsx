@@ -4,7 +4,7 @@ import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
-import { services, bookingUrl, phoneUrl, whatsappUrl, contact, images } from "@/data/siteContent";
+import { allServices, bookingUrl, phoneUrl, whatsappUrl, contact, images } from "@/data/siteContent";
 import { seoServices, standorte, landingpages } from "@/data/seoData";
 
 // Service-spezifische FAQs
@@ -147,12 +147,6 @@ const serviceContent = {
     ablauf: ["Vorbehandlung der Flecken", "Shampoonierung mit Extraktionsmethode", "Tiefenreinigung der Fasern", "Wasserextraktion", "Trocknung"],
     einsatzbereiche: "Familienfahrzeuge, Tierhalter, Leasingrückgaben, Occasionen, stark verschmutzte Stoffbezüge.",
   },
-  "sommer-aktion": {
-    was: "Die Sommer-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
-    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Sommer"],
-    ablauf: ["Fahrzeugbegutachtung", "Innenreinigung nach Bedarf", "Aussenreinigung per Hand", "Pflege und Schutz", "Übergabe"],
-    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Sommersaison, für Cabrios und Wohnmobile.",
-  },
   "cabrio-dach-versiegeln": {
     was: "Die Cabrio-Dach-Versiegelung schützt Stoffdächer vor Wasser, Schmutz und UV-Strahlung. Wir reinigen das Dach gründlich, imprägnieren es und versiegeln es für langfristigen Schutz.",
     vorteile: ["Wasserabweisender Schutz", "Schutz vor UV-Strahlung und Verwitterung", "Farbe- und Strukturerhalt", "Längere Lebensdauer des Stoffdachs"],
@@ -193,7 +187,7 @@ const beforeAfterImages = {
 export default function ServiceDetail() {
   const { slug } = useParams();
   const seoSvc = seoServices.find((s) => s.slug === slug) || seoServices[0];
-  const coreService = services.find((s) => s.slug === slug);
+  const coreService = allServices.find((s) => s.slug === slug);
   const content = serviceContent[seoSvc.slug] || serviceContent.autoaufbereitung;
   const relatedLPs = landingpages.filter((lp) => lp.serviceSlug === seoSvc.slug);
   const beforeAfter = beforeAfterImages[slug];
@@ -318,6 +312,56 @@ export default function ServiceDetail() {
                 </ul>
               </div>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* Zusatzleistungen (nur für Hauptdienste) */}
+      {coreService?.zusatzleistungen && coreService.zusatzleistungen.length > 0 && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Zusatzleistungen" title="Ergänzende Dienstleistungen" text="Zusätzlich zu unseren Paketen bieten wir folgende Einzelleistungen an." />
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {coreService.zusatzleistungen.map((z, i) => (
+                <Reveal key={z.slug} delay={i * 80}>
+                  <Link to={`/dienstleistungen/${z.slug}`} className="shine group flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm transition duration-500 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-xl">
+                    <div className="overflow-hidden">
+                      <img src={z.cardImage} alt={`${z.eyebrow} Autoreinigung Zürich Nord`} loading="lazy" className="h-48 w-full object-cover transition duration-700 group-hover:scale-105" />
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="font-heading text-lg font-extrabold">{z.eyebrow}</h3>
+                      <p className="mt-2 flex-1 text-sm leading-6 text-muted-foreground">{z.summary}</p>
+                      <div className="mt-4 flex items-center justify-between">
+                        <span className="font-heading text-lg font-extrabold text-primary">{z.price}</span>
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-primary">Mehr <ArrowRight className="h-4 w-4" /></span>
+                      </div>
+                    </div>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Preis (für Zusatzleistungen ohne Pakete) */}
+      {!coreService?.packages && coreService?.price && (
+        <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Preis" title={`${seoSvc.name}`} text="Transparente Preise, keine versteckten Kosten." />
+            <div className="mt-10 mx-auto max-w-md">
+              <div className="flex flex-col rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">{seoSvc.name}</p>
+                <p className="mt-2 font-heading text-3xl font-extrabold">{coreService.price}</p>
+                <p className="text-xs text-muted-foreground">exkl. MwSt.</p>
+                {coreService.content && coreService.content.map((p, i) => (
+                  <p key={i} className="mt-3 text-sm leading-7 text-muted-foreground">{p}</p>
+                ))}
+                <a href={coreService.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:opacity-90">
+                  Jetzt buchen <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       )}

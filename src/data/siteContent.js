@@ -11,9 +11,6 @@ export const calensoLinks = {
     lederpflege: "https://book.calenso.com/autoreinigung/info@autoreinigung-zuerich-nord.ch/lederpflege",
     sitzeSchamponieren: "https://book.calenso.com/autoreinigung/info@autoreinigung-zuerich-nord.ch/sitz-schamponieren",
   },
-  aktionen: {
-    sommeraktion: "https://book.calenso.com/autoreinigung/info@autoreinigung-zuerich-nord.ch/sommeraktion",
-  },
   aussenreinigung: {
     beratung: "https://book.calenso.com/autoreinigung/info@autoreinigung-zuerich-nord.ch/kostenloses-beratungsgespraech-aussenreinigung",
     basic: "https://book.calenso.com/autoreinigung/info@autoreinigung-zuerich-nord.ch/basic-aussenwaesche",
@@ -84,7 +81,51 @@ export const services = [
       { name: "Advanced", price: "ab CHF 179.–", bookingUrl: calensoLinks.innenreinigung.advanced, features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
       { name: "Premium", price: "ab CHF 399.–", bookingUrl: calensoLinks.innenreinigung.premium, features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shampoonieren / Stoff reinigen", "Lederreinigung, -pflege und -konservierung"] }
     ],
-    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 149.–"]
+    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 149.–"],
+    zusatzleistungen: [
+      {
+        slug: "geruchsentfernung-desinfektion",
+        eyebrow: "Geruchsentfernung + Desinfektion",
+        title: "Geruchsentfernung + Desinfektion: Frisch und hygienisch",
+        summary: "Wir beseitigen unangenehme Gerüche dauerhaft an der Quelle und desinfizieren den gesamten Innenraum mit dem professionellen Anokath-Verfahren – für hygienische Frische und ein angenehmes Raumgefühl.",
+        price: "CHF 149.–",
+        bookingUrl: calensoLinks.innenreinigung.geruchsentfernung,
+        image: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Hartnäckige Gerüche durch Rauchen, Tiere, verschüttete Flüssigkeiten oder Schimmel lassen sich mit herkömmlichen Reinigungsmitteln oft nicht dauerhaft entfernen. Unser Anokath-Desinfektionsverfahren beseitigt Gerüche an der Quelle – nicht durch Überdecken, sondern durch Eliminierung der verursachenden Mikroorganismen.",
+          "Die Desinfektion eignet sich ideal für Familienfahrzeuge, Firmenfahrzeuge, Leasingrückgaben und Occasionen. Sie sorgt für einen hygienisch sauberen Innenraum und entfernt Bakterien, Viren und Allergene zuverlässig."
+        ],
+      },
+      {
+        slug: "lederpflege",
+        eyebrow: "Lederpflege",
+        title: "Lederpflege: Geschmeidig, geschützt, wie neu",
+        summary: "Professionelle Lederreinigung und -pflege für Sitze, Türverkleidungen und Armlehnen. Wir entfernen Schmutz und Abnutzungsspuren, pflegen das Leder geschmeidig und konservieren es vor vorzeitigem Verschleiss.",
+        price: "CHF 179.–",
+        bookingUrl: calensoLinks.innenreinigung.lederpflege,
+        image: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Lederbezüge bedürfen besonderer Pflege, um geschmeidig, farbecht und rissfrei zu bleiben. Unsere professionelle Lederpflege umfasst die gründliche Reinigung aller Lederflächen, die Pflege mit hochwertigen Lederpflegeprodukten und die Konservierung zum Schutz vor UV-Strahlung und Verschleiss.",
+          "Ideal für Fahrzeuge mit Lederausstattung, Occasionen vor dem Verkauf und Leasingrückgaben. Regelmässige Lederpflege erhält den Wert Ihres Fahrzeugs und sorgt für ein angenehmes Sitzgefühl."
+        ],
+      },
+      {
+        slug: "sitze-schamponieren",
+        eyebrow: "Sitze schamponieren",
+        title: "Sitze schamponieren: Tiefenreinheit für Stoffbezüge",
+        summary: "Gründliche Shampoonierung von Sitzbezügen und Teppichen. Wir entfernen Flecken, Verschüttungen und tiefen Schmutz – für frische, saubere und hygienische Sitze.",
+        price: "ab CHF 169.–",
+        bookingUrl: calensoLinks.innenreinigung.sitzeSchamponieren,
+        image: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Stoffbezüge nehmen im Alltag viel Schmutz auf: Flecken durch Kaffee, Essen, Tierhaare oder allgemeine Abnutzung. Mit der professionellen Shampoonierung dringen wir tief in die Fasern ein und entfernen Schmutz, Flecken und Gerüche zuverlässig.",
+          "Nach der Reinigung trocknen die Sitze in kurzer Zeit und sehen wieder frisch aus. Ideal für Familienfahrzeuge, Leasingrückgaben und Occasionen."
+        ],
+      },
+    ],
   },
   {
     slug: "aussenreinigung",
@@ -104,7 +145,65 @@ export const services = [
       { name: "Advanced", price: "ab CHF 149.–", bookingUrl: calensoLinks.aussenreinigung.advanced, features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung (MFK-gerecht)"] },
       { name: "Premium", price: "ab CHF 299.–", bookingUrl: calensoLinks.aussenreinigung.premium, features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel, Federbein, Radhausabdeckung)", "Lackversiegelung und -konservierung"] }
     ],
-    extras: []
+    extras: [],
+    zusatzleistungen: [
+      {
+        slug: "cabrio-dach-versiegeln",
+        eyebrow: "Cabrio-Dach versiegeln",
+        title: "Cabrio-Dach versiegeln: Schutz und Pflege für Stoffdächer",
+        summary: "Professionelle Versiegelung von Stoff- und Verdeckdächern. Wir reinigen das Dach gründlich, imprägnieren es und schützen es vor Wasser, Schmutz und UV-Strahlung.",
+        price: "CHF 149.–",
+        bookingUrl: calensoLinks.aussenreinigung.cabrioDach,
+        image: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Cabrio-Dächer aus Stoff benötigen besondere Pflege. Wir reinigen das Dach gründlich von Schmutz, Algen und Ablagerungen, imprägnieren es anschliessend und versiegeln es gegen Wasser und UV-Strahlung.",
+          "Die Versiegelung schützt das Dach langfristig vor Verwitterung und erhält seine Farbe und Struktur. Ideal vor der Saison oder nach der Winterpause."
+        ],
+      },
+      {
+        slug: "motorraumreinigung",
+        eyebrow: "Motorraum reinigen",
+        title: "Motorraum reinigen: Sauber, geschützt, MFK-bereit",
+        summary: "Professionelle Motorraumreinigung: Wir entfernen Öl, Fett, Schmutz und Ablagerungen schonend und konservieren Gummiteile und Dichtungen für langfristigen Schutz.",
+        price: "CHF 79.–",
+        bookingUrl: calensoLinks.aussenreinigung.motorraum,
+        image: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Ein sauberer Motorraum erleichtert die Fehlerdiagnose, hinterlässt einen professionellen Eindruck bei MFK und Verkauf und schützt vor Überhitzung durch Schmutzablagerungen. Wir reinigen den Motorraum mit angepasstem Druck und schonenden Reinigungsmitteln.",
+          "Nach der Reinigung konservieren wir Gummiteile und Dichtungen für langfristigen Schutz. Ideal vor der MFK, vor dem Verkauf oder nach langer Betriebsdauer."
+        ],
+      },
+      {
+        slug: "motor-chassis-reinigung-mfk",
+        eyebrow: "Motor-/Chassis-Reinigung MFK",
+        title: "Motor-/Chassis-Reinigung MFK: Optimal vorbereitet",
+        summary: "Kombinierte Motor- und Chassis-Reinigung speziell für die MFK-Vorbereitung. Wir entfernen Schmutz, Öl und Korrosion gründlich – für eine erfolgreiche Prüfung.",
+        price: "CHF 169.–",
+        bookingUrl: calensoLinks.aussenreinigung.motorChassisMfk,
+        image: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Die MFK-Vorbereitung erfordert eine besonders gründliche Reinigung des Motorraums und des Chassis. Wir entfernen Schmutz, Öl, Salz und Korrosionsablagerungen zuverlässig und bereiten Ihr Fahrzeug optimal auf die Prüfung vor.",
+          "Ein sauberer Motorraum und ein sauberes Chassis erleichtern dem Prüfer die Arbeit und hinterlassen einen positiven Eindruck. Ideal für alle Fahrzeughalter vor der MFK."
+        ],
+      },
+      {
+        slug: "felgenwaesche",
+        eyebrow: "Felgenwäsche (abmontiert)",
+        title: "Felgenwäsche (abmontiert): Strahlend saubere Felgen",
+        summary: "Gründliche Reinigung abmontierter Felgen inklusive Rückseiten und Radnaben. Wir entfernen Bremsstaub, Strassenschmutz und Ablagerungen – für ein sauberes Erscheinungsbild.",
+        price: "CHF 49.–",
+        bookingUrl: calensoLinks.aussenreinigung.felgenwaesche,
+        image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Die professionelle Felgenwäsche abmontiert ermöglicht die Reinigung auch schwer zugänglicher Bereiche wie Felgenrückseiten und Radnaben. Wir entfernen hartnäckigen Bremsstaub, Strassenschmutz und Ablagerungen schonend und gründlich.",
+          "Ideal vor dem Verkauf, für die Saisonvorbereitung oder als Ergänzung zur Aussenreinigung. Strahlend saubere Felgen werten jedes Fahrzeug optisch auf."
+        ],
+      },
+    ],
   },
   {
     slug: "politur",
@@ -124,179 +223,45 @@ export const services = [
       { name: "Advanced", price: "ab CHF 559.–", bookingUrl: calensoLinks.politur.advanced, features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
       { name: "Premium", price: "ab CHF 1'119.–", bookingUrl: calensoLinks.politur.premium, features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
     ],
-    extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"]
+    extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"],
+    zusatzleistungen: [
+      {
+        slug: "felgen-politur",
+        eyebrow: "Felgen-Politur",
+        title: "Felgen-Politur: Glänzende Felgen ohne Kratzer",
+        summary: "Professionelle Politur für Felgen: Wir entfernen feine Kratzer, Bremsstaub-Rückstände und Verwitterungen und bringen Ihre Felgen zum Glänzen.",
+        price: "ab CHF 149.–",
+        bookingUrl: calensoLinks.politur.felgenPolitur,
+        image: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Felgen leiden besonders unter Bremsstaub, Strassenschmutz und feinen Kratzern. Mit der professionellen Felgen-Politur beseitigen wir diese Spuren und stellen den ursprünglichen Glanz Ihrer Felgen wieder her.",
+          "Nach der Politur versiegeln wir die Felgen auf Wunsch für langanhaltenden Schutz. Ideal für Premium-Felgen, Alufelgen und vor dem Verkauf."
+        ],
+      },
+      {
+        slug: "versiegelung",
+        eyebrow: "Versiegelung",
+        title: "Versiegelung: Langfristiger Schutz für Ihren Lack",
+        summary: "Professionelle Lackversiegelung: Wir schützen Ihren Fahrzeuglack langfristig vor Umwelteinflüssen, Schmutz und Wasser – für dauerhaften Glanz und einfachere Pflege.",
+        price: "CHF 149.–",
+        bookingUrl: calensoLinks.politur.versiegelung,
+        image: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
+        cardImage: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
+        content: [
+          "Die Lackversiegelung bildet eine Schutzschicht auf Ihrem Lack, die Schmutz, Wasser und Umwelteinflüssen abweist. Dadurch bleibt Ihr Fahrzeug länger sauber, der Lack behält seinen Glanz und die Pflege wird deutlich einfacher.",
+          "Wir bieten Wachsversiegelung und Nanoversiegelung je nach Bedarf. Ideal nach der Politur oder als eigenständiger Lackschutz."
+        ],
+      },
+    ],
   },
-  {
-    slug: "geruchsentfernung-desinfektion",
-    bookingUrl: calensoLinks.innenreinigung.geruchsentfernung,
-    eyebrow: "Geruchsentfernung + Desinfektion",
-    title: "Geruchsentfernung + Desinfektion: Frisch und hygienisch",
-    summary: "Wir beseitigen unangenehme Gerüche dauerhaft an der Quelle und desinfizieren den gesamten Innenraum mit dem professionellen Anokath-Verfahren – für hygienische Frische und ein angenehmes Raumgefühl.",
-    image: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Hartnäckige Gerüche durch Rauchen, Tiere, verschüttete Flüssigkeiten oder Schimmel lassen sich mit herkömmlichen Reinigungsmitteln oft nicht dauerhaft entfernen. Unser Anokath-Desinfektionsverfahren beseitigt Gerüche an der Quelle – nicht durch Überdecken, sondern durch Eliminierung der verursachenden Mikroorganismen.",
-      "Die Desinfektion eignet sich ideal für Familienfahrzeuge, Firmenfahrzeuge, Leasingrückgaben und Occasionen. Sie sorgt für einen hygienisch sauberen Innenraum und entfernt Bakterien, Viren und Allergene zuverlässig."
-    ],
-    packages: [
-      { name: "Geruchsentfernung + Desinfektion", price: "CHF 149.–", bookingUrl: calensoLinks.innenreinigung.geruchsentfernung, features: ["Professionelle Geruchsbeseitigung an der Quelle", "Desinfektion mit Anokath-Verfahren", "Entfernung von Bakterien, Viren und Allergenen", "Hygienisch sauberer Innenraum", "Dauer: ca. 1 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "lederpflege",
-    bookingUrl: calensoLinks.innenreinigung.lederpflege,
-    eyebrow: "Lederpflege",
-    title: "Lederpflege: Geschmeidig, geschützt, wie neu",
-    summary: "Professionelle Lederreinigung und -pflege für Sitze, Türverkleidungen und Armlehnen. Wir entfernen Schmutz und Abnutzungsspuren, pflegen das Leder geschmeidig und konservieren es vor vorzeitigem Verschleiss.",
-    image: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Lederbezüge bedürfen besonderer Pflege, um geschmeidig, farbecht und rissfrei zu bleiben. Unsere professionelle Lederpflege umfasst die gründliche Reinigung aller Lederflächen, die Pflege mit hochwertigen Lederpflegeprodukten und die Konservierung zum Schutz vor UV-Strahlung und Verschleiss.",
-      "Ideal für Fahrzeuge mit Lederausstattung, Occasionen vor dem Verkauf und Leasingrückgaben. Regelmässige Lederpflege erhält den Wert Ihres Fahrzeugs und sorgt für ein angenehmes Sitzgefühl."
-    ],
-    packages: [
-      { name: "Lederpflege", price: "CHF 179.–", bookingUrl: calensoLinks.innenreinigung.lederpflege, features: ["Reinigung aller Lederflächen", "Pflege mit hochwertigen Produkten", "Konservierung gegen UV-Strahlung und Verschleiss", "Geschmeidiges und geschütztes Leder", "Dauer: ca. 1 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "sitze-schamponieren",
-    bookingUrl: calensoLinks.innenreinigung.sitzeSchamponieren,
-    eyebrow: "Sitze schamponieren",
-    title: "Sitze schamponieren: Tiefenreinheit für Stoffbezüge",
-    summary: "Gründliche Shampoonierung von Sitzbezügen und Teppichen. Wir entfernen Flecken, Verschüttungen und tiefen Schmutz – für frische, saubere und hygienische Sitze.",
-    image: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Stoffbezüge nehmen im Alltag viel Schmutz auf: Flecken durch Kaffee, Essen, Tierhaare oder allgemeine Abnutzung. Mit der professionellen Shampoonierung dringen wir tief in die Fasern ein und entfernen Schmutz, Flecken und Gerüche zuverlässig.",
-      "Nach der Reinigung trocknen die Sitze in kurzer Zeit und sehen wieder frisch aus. Ideal für Familienfahrzeuge, Leasingrückgaben und Occasionen."
-    ],
-    packages: [
-      { name: "Sitze schamponieren", price: "ab CHF 169.–", bookingUrl: calensoLinks.innenreinigung.sitzeSchamponieren, features: ["Tiefenreinigung von Stoffbezügen", "Flecken- und Geruchsentfernung", "Schonende Extraktionsmethode", "Saubere und frische Sitze", "Dauer: ca. 1 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "sommer-aktion",
-    bookingUrl: calensoLinks.aktionen.sommeraktion,
-    eyebrow: "Sommer-Aktion",
-    title: "Sommer-Aktion: Ihr Fahrzeug bereit für die Saison",
-    summary: "Limitierte Sommer-Aktion: Profitieren Sie von einem saisonalen Spezialpreis für die Kombination aus Innen- und Aussenreinigung. Frisch, sauber und geschützt in den Sommer.",
-    image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Die Sommer-Aktion kombiniert unsere beliebtesten Leistungen zu einem attraktiven Aktionspreis. Geniessen Sie den Sommer mit einem frisch aufbereiteten Fahrzeug – innen wie aussen.",
-      "Die Aktion ist nur für kurze Zeit verfügbar. Sichern Sie sich Ihren Termin jetzt online und profitieren Sie vom Aktionspreis."
-    ],
-    packages: [
-      { name: "Sommer-Aktion", price: "Aktionspreis", bookingUrl: calensoLinks.aktionen.sommeraktion, features: ["Saisonale Aktion mit Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Online buchen und sparen"] }
-    ],
-    extras: []
-  },
-  {
-    slug: "cabrio-dach-versiegeln",
-    bookingUrl: calensoLinks.aussenreinigung.cabrioDach,
-    eyebrow: "Cabrio-Dach versiegeln",
-    title: "Cabrio-Dach versiegeln: Schutz und Pflege für Stoffdächer",
-    summary: "Professionelle Versiegelung von Stoff- und Verdeckdächern. Wir reinigen das Dach gründlich, imprägnieren es und schützen es vor Wasser, Schmutz und UV-Strahlung.",
-    image: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Cabrio-Dächer aus Stoff benötigen besondere Pflege. Wir reinigen das Dach gründlich von Schmutz, Algen und Ablagerungen, imprägnieren es anschliessend und versiegeln es gegen Wasser und UV-Strahlung.",
-      "Die Versiegelung schützt das Dach langfristig vor Verwitterung und erhält seine Farbe und Struktur. Ideal vor der Saison oder nach der Winterpause."
-    ],
-    packages: [
-      { name: "Cabrio-Dach versiegeln", price: "CHF 149.–", bookingUrl: calensoLinks.aussenreinigung.cabrioDach, features: ["Reinigung des Stoffdachs", "Imprägnierung und Versiegelung", "Schutz vor Wasser und UV-Strahlung", "Farbe- und Strukturerhalt", "Dauer: ca. 3 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "motorraumreinigung",
-    bookingUrl: calensoLinks.aussenreinigung.motorraum,
-    eyebrow: "Motorraum reinigen",
-    title: "Motorraum reinigen: Sauber, geschützt, MFK-bereit",
-    summary: "Professionelle Motorraumreinigung: Wir entfernen Öl, Fett, Schmutz und Ablagerungen schonend und konservieren Gummiteile und Dichtungen für langfristigen Schutz.",
-    image: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Ein sauberer Motorraum erleichtert die Fehlerdiagnose, hinterlässt einen professionellen Eindruck bei MFK und Verkauf und schützt vor Überhitzung durch Schmutzablagerungen. Wir reinigen den Motorraum mit angepasstem Druck und schonenden Reinigungsmitteln.",
-      "Nach der Reinigung konservieren wir Gummiteile und Dichtungen für langfristigen Schutz. Ideal vor der MFK, vor dem Verkauf oder nach langer Betriebsdauer."
-    ],
-    packages: [
-      { name: "Motorraum reinigen", price: "CHF 79.–", bookingUrl: calensoLinks.aussenreinigung.motorraum, features: ["Kaltentfettung des Motorraums", "Schonende Reinigung mit angepasstem Druck", "Konservierung von Gummiteilen und Dichtungen", "MFK- und verkaufsbereit", "Dauer: ca. 30 Min."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "motor-chassis-reinigung-mfk",
-    bookingUrl: calensoLinks.aussenreinigung.motorChassisMfk,
-    eyebrow: "Motor-/Chassis-Reinigung MFK",
-    title: "Motor-/Chassis-Reinigung MFK: Optimal vorbereitet",
-    summary: "Kombinierte Motor- und Chassis-Reinigung speziell für die MFK-Vorbereitung. Wir entfernen Schmutz, Öl und Korrosion gründlich – für eine erfolgreiche Prüfung.",
-    image: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Die MFK-Vorbereitung erfordert eine besonders gründliche Reinigung des Motorraums und des Chassis. Wir entfernen Schmutz, Öl, Salz und Korrosionsablagerungen zuverlässig und bereiten Ihr Fahrzeug optimal auf die Prüfung vor.",
-      "Ein sauberer Motorraum und ein sauberes Chassis erleichtern dem Prüfer die Arbeit und hinterlassen einen positiven Eindruck. Ideal für alle Fahrzeughalter vor der MFK."
-    ],
-    packages: [
-      { name: "Motor-/Chassis-Reinigung MFK", price: "CHF 169.–", bookingUrl: calensoLinks.aussenreinigung.motorChassisMfk, features: ["Motorraumreinigung und Konservierung", "Chassis-Reinigung (MFK-gerecht)", "Entfernung von Schmutz, Öl und Korrosion", "Optimal vorbereitet für die Prüfung", "Dauer: ca. 1 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "felgenwaesche",
-    bookingUrl: calensoLinks.aussenreinigung.felgenwaesche,
-    eyebrow: "Felgenwäsche (abmontiert)",
-    title: "Felgenwäsche (abmontiert): Strahlend saubere Felgen",
-    summary: "Gründliche Reinigung abmontierter Felgen inklusive Rückseiten und Radnaben. Wir entfernen Bremsstaub, Strassenschmutz und Ablagerungen – für ein sauberes Erscheinungsbild.",
-    image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Die professionelle Felgenwäsche abmontiert ermöglicht die Reinigung auch schwer zugänglicher Bereiche wie Felgenrückseiten und Radnaben. Wir entfernen hartnäckigen Bremsstaub, Strassenschmutz und Ablagerungen schonend und gründlich.",
-      "Ideal vor dem Verkauf, für die Saisonvorbereitung oder als Ergänzung zur Aussenreinigung. Strahlend saubere Felgen werten jedes Fahrzeug optisch auf."
-    ],
-    packages: [
-      { name: "Felgenwäsche (abmontiert)", price: "CHF 49.–", bookingUrl: calensoLinks.aussenreinigung.felgenwaesche, features: ["Reinigung abmontierter Felgen", "Felgenrückseiten und Radnaben", "Entfernung von Bremsstaub und Ablagerungen", "Schonende und gründliche Reinigung", "Dauer: ca. 45 Min."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "felgen-politur",
-    bookingUrl: calensoLinks.politur.felgenPolitur,
-    eyebrow: "Felgen-Politur",
-    title: "Felgen-Politur: Glänzende Felgen ohne Kratzer",
-    summary: "Professionelle Politur für Felgen: Wir entfernen feine Kratzer, Bremsstaub-Rückstände und Verwitterungen und bringen Ihre Felgen zum Glänzen.",
-    image: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Felgen leiden besonders unter Bremsstaub, Strassenschmutz und feinen Kratzern. Mit der professionellen Felgen-Politur beseitigen wir diese Spuren und stellen den ursprünglichen Glanz Ihrer Felgen wieder her.",
-      "Nach der Politur versiegeln wir die Felgen auf Wunsch für langanhaltenden Schutz. Ideal für Premium-Felgen, Alufelgen und vor dem Verkauf."
-    ],
-    packages: [
-      { name: "Felgen-Politur", price: "ab CHF 149.–", bookingUrl: calensoLinks.politur.felgenPolitur, features: ["Politur und Veredelung der Felgen", "Entfernung feiner Kratzer und Verwitterungen", "Wiederherstellung des Glanzes", "Optionale Versiegelung", "Dauer: ca. 2 Std."] }
-    ],
-    extras: []
-  },
-  {
-    slug: "versiegelung",
-    bookingUrl: calensoLinks.politur.versiegelung,
-    eyebrow: "Versiegelung",
-    title: "Versiegelung: Langfristiger Schutz für Ihren Lack",
-    summary: "Professionelle Lackversiegelung: Wir schützen Ihren Fahrzeuglack langfristig vor Umwelteinflüssen, Schmutz und Wasser – für dauerhaften Glanz und einfachere Pflege.",
-    image: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
-    content: [
-      "Die Lackversiegelung bildet eine Schutzschicht auf Ihrem Lack, die Schmutz, Wasser und Umwelteinflüssen abweist. Dadurch bleibt Ihr Fahrzeug länger sauber, der Lack behält seinen Glanz und die Pflege wird deutlich einfacher.",
-      "Wir bieten Wachsversiegelung und Nanoversiegelung je nach Bedarf. Ideal nach der Politur oder als eigenständiger Lackschutz."
-    ],
-    packages: [
-      { name: "Versiegelung", price: "CHF 149.–", bookingUrl: calensoLinks.politur.versiegelung, features: ["Lackversiegelung für langfristigen Schutz", "Abweisung von Schmutz und Wasser", "Dauerhafter Glanz", "Einfachere Pflege", "Dauer: ca. 1,5 Std."] }
-    ],
-    extras: []
-  }
 ];
+
+// Flache Liste aller Dienste (Hauptdienste + Zusatzleistungen) für Suche und Filter
+export const allServices = services.flatMap((s) => [
+  { slug: s.slug, eyebrow: s.eyebrow, title: s.title, summary: s.summary, bookingUrl: s.bookingUrl, image: s.image, cardImage: s.cardImage, content: s.content, packages: s.packages, extras: s.extras, parentSlug: s.slug },
+  ...(s.zusatzleistungen || []).map((z) => ({ ...z, parentSlug: s.slug })),
+]);
 
 export const googleBusinessProfile = {
   url: "https://g.page/autoreinigungzuerichnord",
