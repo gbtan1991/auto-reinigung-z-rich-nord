@@ -37,4 +37,4 @@ jobs:
 
         #Done with some changes in the prices, services and promos
         #Change the targer path to the correct one for your production server. The current path is just an example and may not match your actual deployment directory.
-
+        #Update the source path in the hosting.
