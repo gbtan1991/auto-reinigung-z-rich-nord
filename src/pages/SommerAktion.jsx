@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Phone, Sun } from "lucide-react";
+import { ArrowRight, CheckCircle2, Car, Phone, ShieldCheck, Sparkles, Sun, Wind } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
@@ -8,19 +8,26 @@ import { calensoLinks, contact, phoneUrl, whatsappUrl, images } from "@/data/sit
 const bookingLink = calensoLinks.aktionen.sommeraktion;
 const heroImage = "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=1200&h=800&fit=crop&q=80&auto=format";
 
-const leistungsumfang = [
-  "Saisonale Aktion mit Spezialpreis",
-  "Kombination aus Innen- und Aussenreinigung",
-  "Limitiertes Angebot",
-  "Online buchen und sparen",
+const paketinhalt = [
+  { title: "Premium Innenreinigung", image: images.heroInterior },
+  { title: "Basic Aussenreinigung", image: images.ctaExterior },
+  { title: "Geruchsentfernung & Desinfektion", image: images.heroRim },
+];
+
+const Vorteile = [
+  { icon: Sun, title: "Perfekt für die Sommermonate", text: "Starten Sie gepflegt in die warme Jahreszeit." },
+  { icon: Car, title: "Rundum-Reinigung innen und aussen", text: "Komplette Fahrzeugpflege aus einer Hand." },
+  { icon: Wind, title: "Geruchsneutralisierung inklusive", text: "Frischer Innenraum durch Desinfektion." },
+  { icon: Sparkles, title: "Professionelle Handwäsche", text: "Schonend, kratzerfrei, per Hand." },
+  { icon: ShieldCheck, title: "Premium Fahrzeugpflege", text: "Werterhalt und Schutz für Ihr Auto." },
 ];
 
 export default function SommerAktion() {
   return (
     <>
       <SEO
-        title="Sommer-Aktion Autoreinigung Zürich | Saisonal sparen"
-        description="Limitierte Sommer-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen."
+        title="Sommer-Aktion | Autoreinigung Zürich Nord"
+        description="Profitieren Sie von unserer zeitlich begrenzten Sommer-Aktion: Premium-Innenreinigung, Basic-Aussenreinigung und Geruchsentfernung & Desinfektion in einem attraktiven Paket."
         path="/sommer-aktion"
         type="service"
         serviceName="Sommer-Aktion"
@@ -38,15 +45,17 @@ export default function SommerAktion() {
         <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
-              <Sun className="h-4 w-4" /> Limitiertes Sommer-Angebot
+              <Sun className="h-4 w-4" /> Zeitlich begrenztes Angebot
             </span>
-            <h1 className="mt-5 font-heading text-4xl font-extrabold leading-tight tracking-tight text-background sm:text-5xl lg:text-6xl">Sommer-Aktion</h1>
+            <h1 className="mt-5 font-heading text-4xl font-extrabold leading-tight tracking-tight text-background sm:text-5xl lg:text-6xl">
+              <Sun className="inline h-9 w-9 text-primary sm:h-11 sm:w-11" /> Sommer-Aktion
+            </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-background/85">
-              Limitierte Sommer-Aktion: Profitieren Sie von einem saisonalen Spezialpreis für die Kombination aus Innen- und Aussenreinigung. Frisch, sauber und geschützt in den Sommer.
+              Premium-Innenreinigung + Basic Aussenreinigung + Geruchsentfernung &amp; Desinfektion. Ihr Auto rundum wie ab Werk – innen, aussen und Felgen.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a href={bookingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
-                Jetzt Termin buchen <ArrowRight className="h-5 w-5" />
+                Jetzt Sommer-Aktion buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-7 py-4 font-bold text-background backdrop-blur transition hover:bg-background hover:text-foreground">
                 <Phone className="h-4 w-4" /> {contact.phone}
@@ -56,37 +65,47 @@ export default function SommerAktion() {
         </div>
       </section>
 
-      {/* Leistungsumfang */}
+      {/* Paketinhalt */}
       <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader center eyebrow="Leistungsumfang" title="Das ist in der Sommer-Aktion enthalten" text="Eine Kombination aus Innen- und Aussenreinigung zu einem attraktiven Aktionspreis." />
-          <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
-              <div className="overflow-hidden rounded-[1.75rem] shadow-lg">
-                <img src={images.ctaExterior} alt="Aussenreinigung im Sommer" className="h-72 w-full object-cover" />
-              </div>
-              <ul className="mt-8 space-y-3">
-                {leistungsumfang.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-base">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={100}>
-              <div className="overflow-hidden rounded-[1.75rem] shadow-lg">
-                <img src={images.heroRim} alt="Fahrzeugpflege Sommer" className="h-72 w-full object-cover" />
-              </div>
-              <div className="mt-8 rounded-[1.75rem] border border-border bg-secondary/70 p-6">
-                <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Saisonaler Preis</p>
-                <p className="mt-2 font-heading text-3xl font-extrabold">Aktionspreis</p>
-                <p className="mt-2 text-sm text-muted-foreground">exkl. MwSt.</p>
-                <a href={bookingLink} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
-                  Jetzt Angebot anfragen <ArrowRight className="h-5 w-5" />
-                </a>
-              </div>
-            </Reveal>
+          <SectionHeader center eyebrow="Paketinhalt" title="Das ist in der Sommer-Aktion enthalten" />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {paketinhalt.map((item, i) => (
+              <Reveal key={item.title} delay={i * 80}>
+                <div className="overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-sm">
+                  <img src={item.image} alt={item.title} className="h-52 w-full object-cover" />
+                  <div className="flex items-center gap-3 p-5">
+                    <CheckCircle2 className="h-6 w-6 shrink-0 text-primary" />
+                    <p className="font-heading text-lg font-bold">{item.title}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={240}>
+            <div className="mx-auto mt-10 max-w-3xl rounded-[1.75rem] border border-primary/20 bg-secondary/70 p-6 text-center sm:p-8">
+              <p className="font-heading text-xl font-extrabold sm:text-2xl">Ihr Auto rundum wie ab Werk – innen, aussen und Felgen.</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Vorteile */}
+      <section className="bg-secondary/70 px-5 py-14 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader center eyebrow="Vorteile" title="Warum die Sommer-Aktion?" />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {Vorteile.map((v, i) => (
+              <Reveal key={v.title} delay={i * 60}>
+                <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <v.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold">{v.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{v.text}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -98,7 +117,7 @@ export default function SommerAktion() {
             <Sun className="mx-auto mb-5 h-10 w-10 text-primary" />
             <h2 className="font-heading text-2xl font-extrabold text-background sm:text-3xl lg:text-4xl">Jetzt Sommer-Aktion buchen</h2>
             <p className="mt-4 text-base text-background/75 sm:text-lg">
-              Die Aktion ist nur für kurze Zeit verfügbar. Sichern Sie sich Ihren Termin jetzt online und profitieren Sie vom Aktionspreis.
+              Premium-Innenreinigung, Basic-Aussenreinigung und Geruchsentfernung &amp; Desinfektion in einem attraktiven Paket.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a href={bookingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">

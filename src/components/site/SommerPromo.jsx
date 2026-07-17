@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sun } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sun } from "lucide-react";
 import Reveal from "@/components/site/Reveal";
+
+const paketLeistungen = [
+  "Premium-Innenreinigung",
+  "Basic-Aussenreinigung",
+  "Geruchsentfernung & Desinfektion",
+];
 
 export default function SommerPromo() {
   return (
@@ -15,12 +21,19 @@ export default function SommerPromo() {
                 </div>
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-primary">Sommer-Aktion</p>
-                  <h3 className="mt-1.5 font-heading text-2xl font-extrabold tracking-tight sm:text-3xl">Limitiertes Sommer-Angebot</h3>
-                  <p className="mt-2 text-base text-muted-foreground">Saisonaler Spezialpreis für Innen- und Aussenreinigung. Jetzt profitieren.</p>
+                  <h3 className="mt-1.5 font-heading text-2xl font-extrabold tracking-tight sm:text-3xl">Zeitlich begrenztes Angebot</h3>
+                  <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+                    {paketLeistungen.map((l) => (
+                      <li key={l} className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                        {l}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="inline-flex items-center gap-2 self-start rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition group-hover:gap-3 lg:whitespace-nowrap">
-                Jetzt profitieren <ArrowRight className="h-5 w-5" />
+                Jetzt buchen <ArrowRight className="h-5 w-5" />
               </div>
             </div>
           </Link>
