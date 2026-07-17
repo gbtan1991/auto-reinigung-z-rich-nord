@@ -25,7 +25,7 @@ const specificContent = {
       { q: "Ist die Innenreinigung für Geschäftsfahrzeuge aus Oerlikon geeignet?", a: "Ja, wir reinigen regelmässig Firmenfahrzeuge aus Leutschenbach und dem Glattpark. Eine saubere Innenausstattung ist für den Geschäftseindruck entscheidend – wir sorgen für hygienisch einwandfreie Fahrzeuge." },
       { q: "Wie schnell ist der Service für Oerliker Pendler?", a: "Sie geben Ihr Fahrzeug morgens ab, fahren mit Tram 10 oder Bus 62 weiter und holen es abends gereinigt ab. Die reine Innenreinigung dauert 2–3 Stunden." },
       { q: "Können Sie Tierhaare aus dem Innenraum entfernen?", a: "Ja, mit unserer Spezialausrüstung entfernen wir selbst tief sitzende Hunde- und Katzenhaare aus Polstern und Teppichen – ein häufiges Anliegen in Oerlikon." },
-      { q: "Was kostet die Innenreinigung im Vergleich zu anderen Oerliker Anbietern?", a: "Unsere Innenreinigung beginnt bei CHF 80.– für Kleinwagen. Wir sind preislich fair, arbeiten aber ausschliesslich per Hand – ohne Durchlaufprinzip." },
+      { q: "Was kostet die Innenreinigung im Vergleich zu anderen Oerliker Anbietern?", a: "Unsere Innenreinigung beginnt bei CHF 99.– für Kleinwagen. Wir sind preislich fair, arbeiten aber ausschliesslich per Hand – ohne Durchlaufprinzip." },
     ],
   },
   "aussenreinigung-oerlikon": {
@@ -95,7 +95,7 @@ const specificContent = {
     ],
     faqs: [
       { q: "Wie unterscheidet sich Ihre Aufbereitung von anderen Oerliker Anbietern?", a: "Wir arbeiten ausschliesslich per Hand – ohne Automatikbetrieb und ohne Durchlaufprinzip. Zudem sind wir Teil einer Kfz-Werkstatt und können technische Mängel direkt erkennen." },
-      { q: "Was kostet eine vollständige Autoaufbereitung in Oerlikon?", a: "Unsere Komplett-Aufbereitung beginnt bei CHF 350.– für Kleinwagen. Firmenkunden erhalten individuelle Flottenkonditionen. Jedes Fahrzeug wird vorher begutachtet und Sie erhalten einen verbindlichen Kostenvoranschlag." },
+      { q: "Was kostet eine vollständige Autoaufbereitung in Oerlikon?", a: "Unsere Komplett-Aufbereitung beginnt bei CHF 419.– für Kleinwagen. Firmenkunden erhalten individuelle Flottenkonditionen. Jedes Fahrzeug wird vorher begutachtet und Sie erhalten einen verbindlichen Kostenvoranschlag." },
       { q: "Bieten Sie auch eine schnelle Express-Aufbereitung für Oerliker Geschäftskunden an?", a: "Für Stammkunden und Firmen mit Flottenvertrag bieten wir Express-Termine mit Prioritätsbehandlung. Kontaktieren Sie uns telefonisch für kurzfristige Buchungen." },
       { q: "Lohnt sich eine Aufbereitung für mein Firmenfahrzeug steuerlich?", a: "Fahrzeugpflege und -unterhalt sind grundsätzlich geschäftlich absetzbar. Wir stellen selbstverständlich eine detaillierte Rechnung mit MWST aus." },
     ],
@@ -270,12 +270,12 @@ const getLandingContent = (serviceSlug, ortSlug, ortName, serviceName) => {
     warum: `Kunden aus ${ortName} wählen uns wegen der kurzen Anfahrt, der professionellen Handarbeit und der transparenten Preise. Buchen Sie online oder rufen Sie uns an.`,
     trustCards: [
       { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
-      { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
+      { title: "Faire Preise", text: "Transparente Pakete ab CHF 99.– ohne versteckte Kosten." },
       { title: `Kurze Anfahrt aus ${ortName}`, text: "Schnell erreichbar per Auto oder ÖV." },
     ],
     faqs: [
       { q: `Bieten Sie ${serviceName} in ${ortName} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortName} – schnell und bequem erreichbar.` },
-      { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
+      { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 99.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
       { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
     ],
   };
@@ -447,7 +447,7 @@ export default function LandingPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {(content.trustCards || [
               { title: "Professionelle Handarbeit", text: "Jede Reinigung per Hand – kein Automatikbetrieb, kein Lackkratzer." },
-              { title: "Faire Preise", text: "Transparente Pakete ab CHF 70.– ohne versteckte Kosten." },
+              { title: "Faire Preise", text: "Transparente Pakete ab CHF 99.– ohne versteckte Kosten." },
               { title: "Flexibel buchbar", text: "Termin online sichern – 24/7, in weniger als 60 Sekunden." },
               { title: "Alle Fahrzeugtypen", text: "Von Kleinwagen bis Transporter, Privatfahrzeug bis Flotte." },
               { title: "Werterhalt durch regelmässige Pflege", text: "Professionell gereinigte Fahrzeuge erzielen beim Verkauf und bei der Leasingrückgabe deutlich bessere Resultate." },
@@ -472,7 +472,7 @@ export default function LandingPage() {
           <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {(content.faqs || [
               { q: `Bieten Sie ${lp.serviceName} in ${ortData.name} an?`, a: `Ja, wir sind die bevorzugte Anlaufstelle für Kunden aus ${ortData.name} – schnell und bequem erreichbar.` },
-              { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 70.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
+              { q: "Was kostet die Reinigung?", a: "Unsere Pakete beginnen ab CHF 99.–. Der genaue Preis hängt von Fahrzeugtyp und Zustand ab." },
               { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden – bequem von zu Hause oder unterwegs." },
             ]).map((item) => (
               <div key={item.q} className="p-5">

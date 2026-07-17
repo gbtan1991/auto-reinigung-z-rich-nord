@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <SEO
         title="Autoreinigung Zürich Nord | Autoaufbereitung, Innenreinigung, Politur"
-        description="Professionelle Autoreinigung Zürich Nord – Innenreinigung ab CHF 80, Aussenreinigung ab CHF 70, Lackpolitur, Leasingrückgabe & MFK. Online buchen."
+        description="Professionelle Autoreinigung Zürich Nord – Innenreinigung ab CHF 99, Aussenreinigung ab CHF 99, Lackpolitur, Leasingrückgabe & MFK. Online buchen."
         path="/"
         image={images.heroRim}
         type="home"

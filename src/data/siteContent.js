@@ -45,11 +45,11 @@ export const services = [
       "Auf Wunsch desinfizieren wir Ihr Fahrzeug zusätzlich und sorgen für einen hygienisch sauberen Innenraum. Unsere Innenreinigung eignet sich ideal für Privatfahrzeuge, Familienautos, Firmenfahrzeuge, Leasingrückgaben, Occasionen sowie Fahrzeuge vor der MFK. Dank professioneller Reinigungsmittel und schonender Verfahren bleibt Ihr Auto gepflegt, sauber und werterhaltend."
     ],
     packages: [
-      { name: "Basic", price: "CHF 80.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen"] },
-      { name: "Advanced", price: "CHF 150.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
-      { name: "Premium", price: "CHF 350.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shampoonieren / Stoff reinigen", "Lederreinigung, -pflege und -konservierung"] }
+      { name: "Basic", price: "ab CHF 99.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen"] },
+      { name: "Advanced", price: "ab CHF 179.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen"] },
+      { name: "Premium", price: "ab CHF 399.–", features: ["Grundreinigung: Staub, Schmutz und fetthaltige Flecken von Oberflächen entfernen", "Ritzen und Lüftungskanäle reinigen", "Sitze shampoonieren / Stoff reinigen", "Lederreinigung, -pflege und -konservierung"] }
     ],
-    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 140.–"]
+    extras: ["Tierhaar-Entfernung: nach Aufwand, ab CHF 100.–", "Vollständige Desinfektion mit Anokath inkl. Geruchsbeseitigung: CHF 149.–"]
   },
   {
     slug: "aussenreinigung",
@@ -64,9 +64,9 @@ export const services = [
       "Für zusätzlichen Schutz bieten wir eine hochwertige Nanoversiegelung und Lackkonservierung an. Diese schützt den Lack langfristig vor Umwelteinflüssen, Schmutz und Wasser und sorgt für einen langanhaltenden Glanz. Unsere Aussenreinigung eignet sich ideal für Privatfahrzeuge, Firmenwagen, Leasingfahrzeuge, Occasionen und gepflegte Alltagsautos in Zürich, Oerlikon, Seebach, Opfikon, Wallisellen und Umgebung."
     ],
     packages: [
-      { name: "Basic", price: "ab CHF 70.–", features: ["Handwäsche", "Felgenreinigung"] },
-      { name: "Advanced", price: "ab CHF 100.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung (MFK-gerecht)"] },
-      { name: "Premium", price: "ab CHF 200.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel, Federbein, Radhausabdeckung)", "Lackversiegelung und -konservierung"] }
+      { name: "Basic", price: "ab CHF 99.–", features: ["Handwäsche", "Felgenreinigung"] },
+      { name: "Advanced", price: "ab CHF 149.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung (MFK-gerecht)"] },
+      { name: "Premium", price: "ab CHF 299.–", features: ["Handwäsche", "Felgenreinigung", "Motorraumreinigung und -konservierung", "Chassis-Reinigung", "Unterbodenreinigung", "Fahrwerkreinigung (Bremssättel, Federbein, Radhausabdeckung)", "Lackversiegelung und -konservierung"] }
     ],
     extras: []
   },
@@ -83,9 +83,9 @@ export const services = [
       "Für einen dauerhaften Schutz bieten wir hochwertige Lackkonservierungen, Wachsbehandlungen und Nanoversiegelungen an. Diese schützen den Lack vor Witterungseinflüssen, UV-Strahlung, Schmutz und Wasser und sorgen für einen langanhaltenden Tiefenglanz. Unsere Lackpflege eignet sich ideal für Privatfahrzeuge, Firmenwagen, Leasingfahrzeuge, Sportwagen und gepflegte Occasionen in Zürich, Oerlikon, Seebach, Opfikon, Wallisellen und Umgebung."
     ],
     packages: [
-      { name: "Basic", price: "ab CHF 350.–", features: ["Glanzpolitur"] },
-      { name: "Advanced", price: "ab CHF 500.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
-      { name: "Premium", price: "ab CHF 750.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
+      { name: "Basic", price: "ab CHF 419.–", features: ["Glanzpolitur"] },
+      { name: "Advanced", price: "ab CHF 559.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)"] },
+      { name: "Premium", price: "ab CHF 1'119.–", features: ["Glanzpolitur", "Kratzpolitur (Kratzerentfernung)", "Swissvax-Wachsversiegelung per Hand", "Nanoversiegelung nach Wunsch"] }
     ],
     extras: ["Spot-Reparatur (Polieren und Lackieren kleiner kosmetischer Schäden): nach Aufwand, ab CHF 100.–", "Kunststoffkonservierung: nach Aufwand, ab CHF 50.–", "Stoff-Reparatur: nach Aufwand, ab CHF 50.–", "Leder-Reparatur: nach Aufwand, ab CHF 50.–", "Felgenreparatur (kosmetisch): nach Aufwand, ab CHF 50.–", "Matte Scheinwerfer schleifen und neu lackieren: nach Aufwand, ab CHF 50.–"]
   }
@@ -101,8 +101,8 @@ export const googleBusinessProfile = {
 
 export const faqs = [
   { q: "Für welche Fahrzeuge bieten Sie die Autoreinigung an?", a: "Für alle: Privatfahrzeuge, Familienautos, Firmenwagen, SUVs, Sportwagen, Leasingfahrzeuge, Occasionen, Fahrzeuge vor der MFK oder dem Verkauf. Auch Firmenflotten reinigen wir regelmässig – auf Wunsch mit Flottenvertrag." },
-  { q: "Was kostet eine professionelle Autoreinigung in Zürich?", a: "Die Innenreinigung beginnt ab CHF 80.–, die Aussenreinigung ab CHF 70.– und die Lackpolitur ab CHF 350.–. Die genauen Kosten hängen vom Fahrzeugtyp, der Grösse und dem Verschmutzungsgrad ab. Mit unserem Online-Kalkulator erhalten Sie in Sekunden eine erste Preiseinschätzung." },
-  { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Eine einfache Innenreinigung dauert 2–3 Stunden, eine Aussenreinigung mit Motorraum ca. 2–4 Stunden. Eine komplette Aufbereitung mit Politur kann 4–8 Stunden dauern. Die genaue Dauer besprechen wir bei der Buchung mit Ihnen." },
+  { q: "Was kostet eine professionelle Autoreinigung in Zürich?", a: "Die Innenreinigung beginnt ab CHF 99.–, die Aussenreinigung ab CHF 99.– und die Lackpolitur ab CHF 419.–. Die genauen Kosten hängen vom Fahrzeugtyp, der Grösse und dem Verschmutzungsgrad ab. Mit unserem Online-Kalkulator erhalten Sie in Sekunden eine erste Preiseinschätzung." },
+  { q: "Wie lange dauert eine vollständige Fahrzeugaufbereitung?", a: "Eine einfache Innenreinigung dauert 1–4 Stunden, eine Aussenreinigung mit Motorraum ca. 1–2 Stunden. Eine komplette Aufbereitung mit Politur kann 3–8 Stunden dauern. Die genaue Dauer besprechen wir bei der Buchung mit Ihnen." },
   { q: "Kann ich online einen Termin buchen?", a: "Ja. Über unsere Online-Buchung sichern Sie sich sekundenschnell Ihren Wunschtermin – für Innenreinigung, Aussenreinigung, Politur, Leasingrückgabe oder MFK-Vorbereitung. Die Buchung dauert weniger als 60 Sekunden." },
   { q: "Wo befindet sich Autoreinigung Zürich-Nord und wie komme ich hin?", a: "Unser Betrieb befindet sich an der Heerenwiesen 18, 8051 Zürich-Schwamendingen. Erreichbar mit dem Auto über die Schaffhauserstrasse oder die Zürichbergstrasse. Mit dem ÖV: Tram 10 oder 14 bis Schaffhauserplatz, dann Bus 63. Gut erreichbar aus Oerlikon, Schwamendingen, Seebach, Opfikon, Glattbrugg, Wallisellen und der ganzen Region Zürich Nord." },
   { q: "Ist eine Leasingrückgabe-Reinigung bei Ihnen möglich?", a: "Ja – die Leasingrückgabe ist eine unserer Spezialitäten. Wir bereiten Ihr Fahrzeug innen und aussen auf, um teure Nachforderungen zu vermeiden. Auf Wunsch entfernen wir zusätzlich leichte Kratzer und Gerüche." },
@@ -168,7 +168,7 @@ export const localBusinessSchema = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "14:00" },
   ],
   hasMap: "https://maps.google.com/?q=Heerenwiesen+18+8051+Z%C3%BCrich",
-  priceRange: "CHF 70.– bis CHF 750.–",
+  priceRange: "CHF 99.– bis CHF 1'119.–",
   currenciesAccepted: "CHF",
   paymentAccepted: "Cash, Credit Card",
   knowsLanguage: ["de", "de-CH"],

@@ -3,8 +3,8 @@ import { Calculator, CheckCircle2, Send } from "lucide-react";
 import { bookingUrl, whatsappUrl } from "@/data/siteContent";
 
 const vehiclePrices = { Kleinwagen: 0, Limousine: 20, SUV: 45, Firmenfahrzeug: 35 };
-const servicePrices = { Innenreinigung: 80, Aussenreinigung: 70, Politur: 350 };
-const addons = { Tierhaarentfernung: 100, Desinfektion: 140, Unterbodenreinigung: 120, Nanoversiegelung: 180 };
+const servicePrices = { Innenreinigung: 99, Aussenreinigung: 99, Politur: 419 };
+const addons = { Tierhaarentfernung: 100, Desinfektion: 149, Unterbodenreinigung: 120, Nanoversiegelung: 180 };
 
 export default function QuoteCalculator() {
   const [vehicle, setVehicle] = useState("Limousine");

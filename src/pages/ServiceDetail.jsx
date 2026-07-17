@@ -20,7 +20,7 @@ const serviceFaqs = {
     { q: "Was genau wird bei der Innenreinigung gereinigt?", a: "Wir reinigen alle Bereiche des Innenraums: Sitze und Teppiche (shampooniert), Leder (gereinigt und gepflegt), Armaturen, Ablagen, Türverkleidungen, Lüftungskanäle, Fensterscheiben innen und alle schwer zugänglichen Stellen." },
     { q: "Wie wird Geruch im Auto beseitigt?", a: "Bei starkem Geruch bieten wir das Anokath-Desinfektionsverfahren an. Dieses beseitigt Gerüche dauerhaft an der Quelle." },
     { q: "Ich habe Tierhaare im Auto – kein Problem?", a: "Tierhaare sind unsere Spezialität. Mit speziellen Werkzeugen entfernen wir hartnäckige Tierhaare auch aus tiefen Sitznähten und Teppichfasern." },
-    { q: "Wie lange dauert eine Innenreinigung?", a: "Je nach Fahrzeugtyp und Verschmutzungsgrad 2–4 Stunden." },
+    { q: "Wie lange dauert eine Innenreinigung?", a: "Je nach Fahrzeugtyp und Verschmutzungsgrad 1–4 Stunden." },
     { q: "Kann ich einen Termin kurzfristig buchen?", a: "Ja. Über unsere Online-Buchung sind oft Termine innerhalb weniger Tage verfügbar." },
   ],
   aussenreinigung: [
@@ -69,7 +69,7 @@ const serviceFaqs = {
     { q: "Ist die Motorraumreinigung sicher für mein Fahrzeug?", a: "Ja, wir schützen empfindliche Elektronikteile und reinigen mit angepasstem Druck." },
     { q: "Was bewirkt eine saubere Motorraumreinigung?", a: "Erleichtert Fehlerdiagnose, professioneller Eindruck bei MFK und Verkauf." },
     { q: "Wie oft sollte der Motorraum gereinigt werden?", a: "Alle 2–3 Jahre oder jährlich vor der MFK." },
-    { q: "Was kostet die Motorraumreinigung?", a: "Als Einzelleistung ab CHF 80.–." },
+    { q: "Was kostet die Motorraumreinigung?", a: "Als Einzelleistung ab CHF 79.–." },
     { q: "Kann ich die Motorraumreinigung mit der Aussenreinigung kombinieren?", a: "Ja, das ist empfehlenswert." },
   ],
 };
@@ -366,7 +366,7 @@ export default function ServiceDetail() {
           <SectionHeader center eyebrow="FAQ" title={`Fragen – ${seoSvc.name}`} />
           <div className="mt-8 divide-y divide-border overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
             {(serviceFaqs[seoSvc.slug] || [
-              { q: `Was kostet eine ${seoSvc.name} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Zustand ab. Unsere Pakete beginnen ab CHF 70.–.` },
+              { q: `Was kostet eine ${seoSvc.name} bei Ihnen?`, a: `Die Kosten hängen von Fahrzeugtyp, Grösse und Zustand ab. Unsere Pakete beginnen ab CHF 99.–.` },
               { q: `Wie lange dauert eine ${seoSvc.name}?`, a: "Je nach Umfang 1–8 Stunden." },
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenflotten." },
               { q: "Kann ich online einen Termin buchen?", a: "Ja, in weniger als 60 Sekunden." },

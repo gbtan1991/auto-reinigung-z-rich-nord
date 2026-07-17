@@ -200,7 +200,7 @@ export default function Standort() {
               { q: "Nehmen Sie auch Firmenfahrzeuge an?", a: "Ja, wir reinigen regelmässig Firmenwagen, Transportfahrzeuge und komplette Flotten." },
               { q: "Wie lange dauert eine Fahrzeugaufbereitung?", a: "Je nach Paket 1–8 Stunden – wir informieren Sie bei der Buchung." },
               { q: "Kann ich online buchen?", a: "Ja, in weniger als 60 Sekunden über unsere Online-Buchung." },
-              { q: "Was kostet eine Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 70.– für die Aussenreinigung." },
+              { q: "Was kostet eine Autoreinigung?", a: "Unsere Pakete beginnen ab CHF 99.– für die Aussenreinigung." },
             ]).map((item) => (
               <div key={item.q} className="p-5">
                 <h3 className="font-bold text-base sm:text-lg">{item.q}</h3>
