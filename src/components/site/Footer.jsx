@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Clock, Cookie, Mail, MapPin, Phone, Star } from "lucide-react";
-import { bookingUrl, contact, googleReviewUrl, images, services } from "@/data/siteContent";
+import { bookingUrl, contact, googleReviewUrl, images, mainServices } from "@/data/siteContent";
 import { standorte } from "@/data/seoData";
 import NewsletterSignup from "./NewsletterSignup";
 
@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-heading text-base font-bold">Dienstleistungen</h3>
             <div className="flex flex-col gap-2.5">
-              {services.map((service) => <Link key={service.slug} to={`/dienstleistungen/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
+              {mainServices.map((service) => <Link key={service.slug} to={`/dienstleistungen/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
               <Link to="/dienstleistungen/leasingrueckgabe" className="text-sm text-muted-foreground transition hover:text-primary">Leasingrückgabe</Link>
               <Link to="/dienstleistungen/mfk-vorbereitung" className="text-sm text-muted-foreground transition hover:text-primary">MFK-Vorbereitung</Link>
               <Link to="/dienstleistungen/keramikversiegelung" className="text-sm text-muted-foreground transition hover:text-primary">Keramikversiegelung</Link>

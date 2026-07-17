@@ -298,6 +298,22 @@ export const services = [
   }
 ];
 
+export const mainServiceSlugs = ["innenreinigung", "aussenreinigung", "politur"];
+export const mainServices = services.filter((s) => mainServiceSlugs.includes(s.slug));
+export const addonRedirects = {
+  "geruchsentfernung-desinfektion": "innenreinigung",
+  "lederpflege": "innenreinigung",
+  "sitze-schamponieren": "innenreinigung",
+  "cabrio-dach-versiegeln": "aussenreinigung",
+  "motorraumreinigung": "aussenreinigung",
+  "motor-chassis-reinigung-mfk": "aussenreinigung",
+  "felgenwaesche": "aussenreinigung",
+  "felgen-politur": "politur",
+  "versiegelung": "politur",
+  "sommer-aktion": "innenreinigung",
+};
+export const addonSlugs = Object.keys(addonRedirects);
+
 export const googleBusinessProfile = {
   url: "https://g.page/autoreinigungzuerichnord",
   name: "Autoreinigung Zürich-Nord",

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { services } from "@/data/siteContent";
+import { mainServices } from "@/data/siteContent";
 import Reveal from "./Reveal";
 
 export default function ServiceCards() {
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {services.map((service, index) => (
+      {mainServices.map((service, index) => (
         <Reveal key={service.slug} delay={index * 90}>
           <Link to={`/dienstleistungen/${service.slug}`} className="shine group flex flex-col overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm transition duration-500 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-xl">
             <div className="overflow-hidden">

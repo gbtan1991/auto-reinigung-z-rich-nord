@@ -1,10 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import Reveal from "@/components/site/Reveal";
-import { services, bookingUrl, phoneUrl, whatsappUrl, contact, images } from "@/data/siteContent";
+import { services, bookingUrl, phoneUrl, whatsappUrl, contact, images, addonRedirects } from "@/data/siteContent";
 import { seoServices, standorte, landingpages } from "@/data/seoData";
 import { useState } from "react";
 import ServicePackageSelector from "@/components/site/ServicePackageSelector";
@@ -195,14 +195,17 @@ const beforeAfterImages = {
 
 export default function ServiceDetail() {
   const { slug } = useParams();
+  const [selectedPackage, setSelectedPackage] = useState(null);
+  const [selectedAddons, setSelectedAddons] = useState([]);
+  if (addonRedirects[slug]) {
+    return <Navigate to={`/dienstleistungen/${addonRedirects[slug]}`} replace />;
+  }
   const seoSvc = seoServices.find((s) => s.slug === slug) || seoServices[0];
   const coreService = services.find((s) => s.slug === slug);
   const content = serviceContent[seoSvc.slug] || serviceContent.autoaufbereitung;
   const relatedLPs = landingpages.filter((lp) => lp.serviceSlug === seoSvc.slug);
   const beforeAfter = beforeAfterImages[slug];
   const categoryData = serviceCategories[slug];
-  const [selectedPackage, setSelectedPackage] = useState(null);
-  const [selectedAddons, setSelectedAddons] = useState([]);
   const selectedPkgData = categoryData?.packages.find((p) => p.name === selectedPackage);
   const dynamicBookingUrl = selectedPkgData?.bookingUrl || coreService?.bookingUrl || bookingUrl;
 

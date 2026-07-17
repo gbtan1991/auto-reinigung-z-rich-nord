@@ -11,7 +11,7 @@ import { bookingUrl, images } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 import TrustBadges from "@/components/site/TrustBadges";
 import { standorte, seoServices } from "@/data/seoData";
-import { services } from "@/data/siteContent";
+import { services, addonSlugs } from "@/data/siteContent";
 
 export default function Home() {
   return (
@@ -108,7 +108,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="Alle Dienstleistungen" title="Das gesamte Leistungsangebot" text="Von der Innenreinigung über die Handwäsche bis zur Keramikversiegelung." />
           <div className="mt-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {seoServices.map((svc) => {
+            {seoServices.filter((svc) => !addonSlugs.includes(svc.slug)).map((svc) => {
               const hasDetail = services.some((s) => s.slug === svc.slug);
               return (
                 <Reveal key={svc.slug}>

@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/site/Breadcrumb";
 import SectionHeader from "@/components/site/SectionHeader";
 import ServiceCards from "@/components/site/ServiceCards";
 import Testimonials from "@/components/site/Testimonials";
-import { bookingUrl, images } from "@/data/siteContent";
+import { bookingUrl, images, addonSlugs } from "@/data/siteContent";
 import { seoServices } from "@/data/seoData";
 
 export default function Services() {
@@ -27,7 +27,7 @@ export default function Services() {
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="Alle Dienstleistungen" title="Weitere Leistungen im Überblick" />
           <div className="mt-8 grid gap-3 md:grid-cols-3">
-            {seoServices.map((svc) => (
+            {seoServices.filter((svc) => !addonSlugs.includes(svc.slug)).map((svc) => (
               <Link key={svc.slug} to={`/dienstleistungen/${svc.slug}`} className="flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 hover:border-primary hover:text-primary transition-colors group">
                 <span className="font-bold text-sm">{svc.name}</span>
                 <ArrowRight className="h-4 w-4 shrink-0 group-hover:translate-x-1 transition-transform" />

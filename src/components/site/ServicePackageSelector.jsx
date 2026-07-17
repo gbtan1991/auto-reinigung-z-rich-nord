@@ -42,7 +42,8 @@ export default function ServicePackageSelector({
   const selectedPkgBookingUrl = selectedPackage
     ? categoryData?.packages.find((p) => p.name === selectedPackage)?.bookingUrl
     : null;
-  const dynamicBookingUrl = selectedPkgBookingUrl || bookingUrl;
+  const selectedAddonBookingUrl = selectedAddonItems.find((a) => a.bookingUrl)?.bookingUrl;
+  const dynamicBookingUrl = selectedPkgBookingUrl || selectedAddonBookingUrl || bookingUrl;
 
   const hasSelection = selectedPackage || selectedAddons.length > 0;
 
