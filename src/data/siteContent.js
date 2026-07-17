@@ -73,8 +73,8 @@ export const services = [
     eyebrow: "Innenreinigung",
     title: "Professionelle Innenreinigung: Frisch, hygienisch, wie neu",
     summary: "Eine gründliche Innenreinigung bringt Ihren Fahrzeuginnenraum wieder auf Vordermann. Wir entfernen Staub, Flecken, Gerüche und Tierhaare – sorgfältig per Hand, materialschonend und mit sichtbarem Ergebnis.",
-    image: images.interiorHero,
-    cardImage: images.serviceInterior,
+    image: "https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Damit Sie sich in Ihrem Fahrzeug rundum wohlfühlen, übernehmen wir die gründliche Auto-Innenreinigung in Zürich Nord. Wir entfernen Staub, Schmutz, Tierhaare, Flecken, Bakterien und unangenehme Gerüche sorgfältig und materialschonend. Je nach Bedarf reinigen wir schwer erreichbare Ritzen, Lüftungskanäle, Sitze, Teppiche, Armaturen sowie Stoff- und Lederbezüge professionell und pflegend.",
       "Auf Wunsch desinfizieren wir Ihr Fahrzeug zusätzlich und sorgen für einen hygienisch sauberen Innenraum. Unsere Innenreinigung eignet sich ideal für Privatfahrzeuge, Familienautos, Firmenfahrzeuge, Leasingrückgaben, Occasionen sowie Fahrzeuge vor der MFK. Dank professioneller Reinigungsmittel und schonender Verfahren bleibt Ihr Auto gepflegt, sauber und werterhaltend."
@@ -92,8 +92,8 @@ export const services = [
     eyebrow: "Aussenreinigung",
     title: "Handwäsche Aussenreinigung Zürich-Nord – kratzerlos, gründlich",
     summary: "Wir waschen jedes Fahrzeug von Hand – gründlich, schonend und ohne Kratzer. Auf Wunsch reinigen wir auch Motorraum, Fahrwerk und Bremssättel. Das Ergebnis spricht für sich.",
-    image: images.exteriorHero,
-    cardImage: images.serviceExterior,
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Unsere Auto-Aussenreinigung in Zürich Nord umfasst eine sorgfältige und schonende Handwäsche inklusive gründlicher Felgenreinigung. Dabei entfernen wir Schmutz, Bremsstaub, Ablagerungen und Verschmutzungen professionell, damit Ihr Fahrzeug wieder sauber, gepflegt und glänzend aussieht.",
       "Je nach gewähltem Paket reinigen wir zusätzlich den Motorraum, das Fahrwerk, Bremssättel, Federbeine, Radhäuser sowie den Unterboden Ihres Fahrzeugs. Besonders nach dem Winter oder vor der MFK ist eine gründliche Fahrzeugreinigung sinnvoll, um Salz, Schmutz und Ablagerungen zu entfernen und den Werterhalt Ihres Autos zu unterstützen.",
@@ -112,8 +112,8 @@ export const services = [
     eyebrow: "Politur und kleine Ausbesserungen",
     title: "Lackpolitur & Kratzerentfernung Zürich-Nord – sichtbarer Unterschied",
     summary: "Feine Kratzer, Hologramme und matten Lack bringen wir maschinell und per Hand wieder zum Glänzen. Auf Wunsch versiegeln wir den Lack anschliessend dauerhaft – mit Wachs oder Nano.",
-    image: images.polishHero,
-    cardImage: images.servicePolish,
+    image: "https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Mit professioneller Autopolitur und Lackpflege in Zürich Nord bringen wir matte und stumpfe Lacke wieder zum Glänzen und reduzieren leichte Kratzer, Hologramme, Gebrauchsspuren sowie Verwitterungen sichtbar. Unsere sorgfältige Lackaufbereitung verbessert nicht nur die Optik Ihres Fahrzeugs, sondern unterstützt auch den langfristigen Werterhalt.",
       "Dank unserer Erfahrung beseitigen wir Lackmängel wie Flugrost, Farbflecken, Baumharz, stumpfe Stellen und feine Oberflächenkratzer besonders schonend und effektiv. Zusätzlich kümmern wir uns auf Wunsch um leicht beschädigte Kunststoffe, Felgen, Fahrzeugbeleuchtung sowie Stoff- und Lederoberflächen.",
@@ -132,8 +132,8 @@ export const services = [
     eyebrow: "Geruchsentfernung + Desinfektion",
     title: "Geruchsentfernung + Desinfektion: Frisch und hygienisch",
     summary: "Wir beseitigen unangenehme Gerüche dauerhaft an der Quelle und desinfizieren den gesamten Innenraum mit dem professionellen Anokath-Verfahren – für hygienische Frische und ein angenehmes Raumgefühl.",
-    image: images.serviceInterior,
-    cardImage: images.serviceInterior,
+    image: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1732357624591-f2137085659b?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Hartnäckige Gerüche durch Rauchen, Tiere, verschüttete Flüssigkeiten oder Schimmel lassen sich mit herkömmlichen Reinigungsmitteln oft nicht dauerhaft entfernen. Unser Anokath-Desinfektionsverfahren beseitigt Gerüche an der Quelle – nicht durch Überdecken, sondern durch Eliminierung der verursachenden Mikroorganismen.",
       "Die Desinfektion eignet sich ideal für Familienfahrzeuge, Firmenfahrzeuge, Leasingrückgaben und Occasionen. Sie sorgt für einen hygienisch sauberen Innenraum und entfernt Bakterien, Viren und Allergene zuverlässig."
@@ -149,8 +149,8 @@ export const services = [
     eyebrow: "Lederpflege",
     title: "Lederpflege: Geschmeidig, geschützt, wie neu",
     summary: "Professionelle Lederreinigung und -pflege für Sitze, Türverkleidungen und Armlehnen. Wir entfernen Schmutz und Abnutzungsspuren, pflegen das Leder geschmeidig und konservieren es vor vorzeitigem Verschleiss.",
-    image: images.interiorHero,
-    cardImage: images.interiorHero,
+    image: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1682858110563-3f609263d418?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Lederbezüge bedürfen besonderer Pflege, um geschmeidig, farbecht und rissfrei zu bleiben. Unsere professionelle Lederpflege umfasst die gründliche Reinigung aller Lederflächen, die Pflege mit hochwertigen Lederpflegeprodukten und die Konservierung zum Schutz vor UV-Strahlung und Verschleiss.",
       "Ideal für Fahrzeuge mit Lederausstattung, Occasionen vor dem Verkauf und Leasingrückgaben. Regelmässige Lederpflege erhält den Wert Ihres Fahrzeugs und sorgt für ein angenehmes Sitzgefühl."
@@ -166,8 +166,8 @@ export const services = [
     eyebrow: "Sitze schamponieren",
     title: "Sitze schamponieren: Tiefenreinheit für Stoffbezüge",
     summary: "Gründliche Shampoonierung von Sitzbezügen und Teppichen. Wir entfernen Flecken, Verschüttungen und tiefen Schmutz – für frische, saubere und hygienische Sitze.",
-    image: images.serviceInterior,
-    cardImage: images.serviceInterior,
+    image: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1656077885491-3922185f3932?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Stoffbezüge nehmen im Alltag viel Schmutz auf: Flecken durch Kaffee, Essen, Tierhaare oder allgemeine Abnutzung. Mit der professionellen Shampoonierung dringen wir tief in die Fasern ein und entfernen Schmutz, Flecken und Gerüche zuverlässig.",
       "Nach der Reinigung trocknen die Sitze in kurzer Zeit und sehen wieder frisch aus. Ideal für Familienfahrzeuge, Leasingrückgaben und Occasionen."
@@ -183,8 +183,8 @@ export const services = [
     eyebrow: "Sommer-Aktion",
     title: "Sommer-Aktion: Ihr Fahrzeug bereit für die Saison",
     summary: "Limitierte Sommer-Aktion: Profitieren Sie von einem saisonalen Spezialpreis für die Kombination aus Innen- und Aussenreinigung. Frisch, sauber und geschützt in den Sommer.",
-    image: images.ctaExterior,
-    cardImage: images.ctaExterior,
+    image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Die Sommer-Aktion kombiniert unsere beliebtesten Leistungen zu einem attraktiven Aktionspreis. Geniessen Sie den Sommer mit einem frisch aufbereiteten Fahrzeug – innen wie aussen.",
       "Die Aktion ist nur für kurze Zeit verfügbar. Sichern Sie sich Ihren Termin jetzt online und profitieren Sie vom Aktionspreis."
@@ -200,8 +200,8 @@ export const services = [
     eyebrow: "Cabrio-Dach versiegeln",
     title: "Cabrio-Dach versiegeln: Schutz und Pflege für Stoffdächer",
     summary: "Professionelle Versiegelung von Stoff- und Verdeckdächern. Wir reinigen das Dach gründlich, imprägnieren es und schützen es vor Wasser, Schmutz und UV-Strahlung.",
-    image: images.serviceExterior,
-    cardImage: images.serviceExterior,
+    image: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1469285994282-454ceb49e63c?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Cabrio-Dächer aus Stoff benötigen besondere Pflege. Wir reinigen das Dach gründlich von Schmutz, Algen und Ablagerungen, imprägnieren es anschliessend und versiegeln es gegen Wasser und UV-Strahlung.",
       "Die Versiegelung schützt das Dach langfristig vor Verwitterung und erhält seine Farbe und Struktur. Ideal vor der Saison oder nach der Winterpause."
@@ -217,8 +217,8 @@ export const services = [
     eyebrow: "Motorraum reinigen",
     title: "Motorraum reinigen: Sauber, geschützt, MFK-bereit",
     summary: "Professionelle Motorraumreinigung: Wir entfernen Öl, Fett, Schmutz und Ablagerungen schonend und konservieren Gummiteile und Dichtungen für langfristigen Schutz.",
-    image: images.serviceExterior,
-    cardImage: images.serviceExterior,
+    image: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1594573677313-757d4aeea449?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Ein sauberer Motorraum erleichtert die Fehlerdiagnose, hinterlässt einen professionellen Eindruck bei MFK und Verkauf und schützt vor Überhitzung durch Schmutzablagerungen. Wir reinigen den Motorraum mit angepasstem Druck und schonenden Reinigungsmitteln.",
       "Nach der Reinigung konservieren wir Gummiteile und Dichtungen für langfristigen Schutz. Ideal vor der MFK, vor dem Verkauf oder nach langer Betriebsdauer."
@@ -234,8 +234,8 @@ export const services = [
     eyebrow: "Motor-/Chassis-Reinigung MFK",
     title: "Motor-/Chassis-Reinigung MFK: Optimal vorbereitet",
     summary: "Kombinierte Motor- und Chassis-Reinigung speziell für die MFK-Vorbereitung. Wir entfernen Schmutz, Öl und Korrosion gründlich – für eine erfolgreiche Prüfung.",
-    image: images.serviceExterior,
-    cardImage: images.serviceExterior,
+    image: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1654616111851-5394318e3279?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Die MFK-Vorbereitung erfordert eine besonders gründliche Reinigung des Motorraums und des Chassis. Wir entfernen Schmutz, Öl, Salz und Korrosionsablagerungen zuverlässig und bereiten Ihr Fahrzeug optimal auf die Prüfung vor.",
       "Ein sauberer Motorraum und ein sauberes Chassis erleichtern dem Prüfer die Arbeit und hinterlassen einen positiven Eindruck. Ideal für alle Fahrzeughalter vor der MFK."
@@ -251,8 +251,8 @@ export const services = [
     eyebrow: "Felgenwäsche (abmontiert)",
     title: "Felgenwäsche (abmontiert): Strahlend saubere Felgen",
     summary: "Gründliche Reinigung abmontierter Felgen inklusive Rückseiten und Radnaben. Wir entfernen Bremsstaub, Strassenschmutz und Ablagerungen – für ein sauberes Erscheinungsbild.",
-    image: images.heroRim,
-    cardImage: images.heroRim,
+    image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Die professionelle Felgenwäsche abmontiert ermöglicht die Reinigung auch schwer zugänglicher Bereiche wie Felgenrückseiten und Radnaben. Wir entfernen hartnäckigen Bremsstaub, Strassenschmutz und Ablagerungen schonend und gründlich.",
       "Ideal vor dem Verkauf, für die Saisonvorbereitung oder als Ergänzung zur Aussenreinigung. Strahlend saubere Felgen werten jedes Fahrzeug optisch auf."
@@ -268,8 +268,8 @@ export const services = [
     eyebrow: "Felgen-Politur",
     title: "Felgen-Politur: Glänzende Felgen ohne Kratzer",
     summary: "Professionelle Politur für Felgen: Wir entfernen feine Kratzer, Bremsstaub-Rückstände und Verwitterungen und bringen Ihre Felgen zum Glänzen.",
-    image: images.heroRim,
-    cardImage: images.heroRim,
+    image: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1768577615446-31993f99f537?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Felgen leiden besonders unter Bremsstaub, Strassenschmutz und feinen Kratzern. Mit der professionellen Felgen-Politur beseitigen wir diese Spuren und stellen den ursprünglichen Glanz Ihrer Felgen wieder her.",
       "Nach der Politur versiegeln wir die Felgen auf Wunsch für langanhaltenden Schutz. Ideal für Premium-Felgen, Alufelgen und vor dem Verkauf."
@@ -285,8 +285,8 @@ export const services = [
     eyebrow: "Versiegelung",
     title: "Versiegelung: Langfristiger Schutz für Ihren Lack",
     summary: "Professionelle Lackversiegelung: Wir schützen Ihren Fahrzeuglack langfristig vor Umwelteinflüssen, Schmutz und Wasser – für dauerhaften Glanz und einfachere Pflege.",
-    image: images.servicePolish,
-    cardImage: images.servicePolish,
+    image: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
+    cardImage: "https://images.unsplash.com/photo-1620584898989-d39f7f9ed1b7?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
       "Die Lackversiegelung bildet eine Schutzschicht auf Ihrem Lack, die Schmutz, Wasser und Umwelteinflüssen abweist. Dadurch bleibt Ihr Fahrzeug länger sauber, der Lack behält seinen Glanz und die Pflege wird deutlich einfacher.",
       "Wir bieten Wachsversiegelung und Nanoversiegelung je nach Bedarf. Ideal nach der Politur oder als eigenständiger Lackschutz."
