@@ -27,15 +27,13 @@ jobs:
     - name: SCP Deploy Production Files via SSH
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: 'o765f.ftp.infomaniak.com'
-        username: 'o765f_meisterflow'
-        password: 'Meisterflow01!'
+        host: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_HOST }}
+        username: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_USERNAME }}
+        password: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_PASSWORD }}
         port: 22
         source: 'dist/*'
-        # Extracted directly from the Absolute Path in image_8a44dc.png
-        target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/' 
-        strip_components: 1 
+        target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/'
+        strip_components: 1
 
-        # added integration google tag manager and klaviyo!!
-        # Updated all of the CTA with the new Calenso provided by the client.
+        #Done with some changes in the prices, services and promos
 
