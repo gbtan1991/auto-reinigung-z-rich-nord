@@ -31,7 +31,6 @@ export default function Footer() {
               <Link to="/dienstleistungen/leasingrueckgabe" className="text-sm text-muted-foreground transition hover:text-primary">Leasingrückgabe</Link>
               <Link to="/dienstleistungen/mfk-vorbereitung" className="text-sm text-muted-foreground transition hover:text-primary">MFK-Vorbereitung</Link>
               <Link to="/dienstleistungen/keramikversiegelung" className="text-sm text-muted-foreground transition hover:text-primary">Keramikversiegelung</Link>
-              <Link to="/dienstleistungen/motorraumreinigung" className="text-sm text-muted-foreground transition hover:text-primary">Motorraumreinigung</Link>
               <Link to="/dienstleistungen" className="text-sm text-muted-foreground transition hover:text-primary">Alle Dienstleistungen</Link>
               <a href={bookingUrl} target="_blank" rel="noreferrer" className="text-sm text-muted-foreground transition hover:text-primary">Online buchen</a>
               <Link to="/jobs" className="text-sm text-muted-foreground transition hover:text-primary">Karriere</Link>

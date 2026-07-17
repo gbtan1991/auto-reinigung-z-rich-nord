@@ -129,6 +129,60 @@ const serviceContent = {
     ablauf: ["Kaltentfettung des Motorraums", "Dampfreinigung oder Schaumreinigung", "Pinselreinigung schwer zugänglicher Bereiche", "Trocknung", "Konservierung von Dichtungen und Kunststoffen"],
     einsatzbereiche: "Alle Fahrzeuge vor MFK, Verkauf oder nach langer Betriebsdauer.",
   },
+  "geruchsentfernung-desinfektion": {
+    was: "Die Geruchsentfernung mit Desinfektion beseitigt unangenehme Gerüche dauerhaft an der Quelle. Mit dem professionellen Anokath-Verfahren eliminieren wir Bakterien, Viren und Allergene zuverlässig.",
+    vorteile: ["Dauerhafte Geruchsbeseitigung an der Quelle", "Hygienisch sauberer Innenraum", "Entfernung von Bakterien, Viren und Allergenen", "Angenehmes Raumgefühl ohne Überdecken"],
+    ablauf: ["Innenraum begutachten und Geruchsquelle lokalisieren", "Anokath-Desinfektionsverfahren anwenden", "Alle Oberflächen und Lüftungskanäle behandeln", "Trocknung und Belüftung", "Erfolgskontrolle"],
+    einsatzbereiche: "Familienfahrzeuge, Firmenfahrzeuge, Raucherfahrzeuge, Tierhalter, Leasingrückgaben, Occasionen.",
+  },
+  "lederpflege": {
+    was: "Die professionelle Lederpflege umfasst die Reinigung, Pflege und Konservierung aller Lederflächen im Fahrzeug. Wir verwenden hochwertige Produkte, die das Leder geschmeidig halten und vor Verschleiss schützen.",
+    vorteile: ["Geschmeidiges und farbechtes Leder", "Schutz vor UV-Strahlung und Rissbildung", "Wiederherstellung des originalen Aussehens", "Langfristiger Werterhalt der Lederausstattung"],
+    ablauf: ["Lederflächen reinigen", "Hochwertige Lederpflege auftragen", "Konservierung gegen UV-Strahlung", "Schutzschicht aufbauen", "Finish und Kontrolle"],
+    einsatzbereiche: "Fahrzeuge mit Lederausstattung, Premium-Fahrzeuge, Occasionen vor dem Verkauf, Leasingrückgaben.",
+  },
+  "sitze-schamponieren": {
+    was: "Die professionelle Shampoonierung entfernt tiefen Schmutz, Flecken und Gerüche aus Stoffbezügen und Teppichen. Mit der Extraktionsmethode dringen wir tief in die Fasern ein.",
+    vorteile: ["Tiefenreinheit für Stoffbezüge", "Flecken- und Geruchsentfernung", "Schonende Reinigung der Fasern", "Frische und saubere Sitze"],
+    ablauf: ["Vorbehandlung der Flecken", "Shampoonierung mit Extraktionsmethode", "Tiefenreinigung der Fasern", "Wasserextraktion", "Trocknung"],
+    einsatzbereiche: "Familienfahrzeuge, Tierhalter, Leasingrückgaben, Occasionen, stark verschmutzte Stoffbezüge.",
+  },
+  "sommer-aktion": {
+    was: "Die Sommer-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
+    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Sommer"],
+    ablauf: ["Fahrzeugbegutachtung", "Innenreinigung nach Bedarf", "Aussenreinigung per Hand", "Pflege und Schutz", "Übergabe"],
+    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Sommersaison, für Cabrios und Wohnmobile.",
+  },
+  "cabrio-dach-versiegeln": {
+    was: "Die Cabrio-Dach-Versiegelung schützt Stoffdächer vor Wasser, Schmutz und UV-Strahlung. Wir reinigen das Dach gründlich, imprägnieren es und versiegeln es für langfristigen Schutz.",
+    vorteile: ["Wasserabweisender Schutz", "Schutz vor UV-Strahlung und Verwitterung", "Farbe- und Strukturerhalt", "Längere Lebensdauer des Stoffdachs"],
+    ablauf: ["Dach gründlich reinigen", "Algen und Ablagerungen entfernen", "Imprägnierung auftragen", "Versiegelung aufbringen", "Trocknung und Kontrolle"],
+    einsatzbereiche: "Cabrios mit Stoffdach, vor der Saison, nach der Winterpause, bei Verwitterungserscheinungen.",
+  },
+  "motor-chassis-reinigung-mfk": {
+    was: "Die Motor-/Chassis-Reinigung für die MFK kombiniert die Motorraumreinigung mit der Chassis-Reinigung. Sie entfernt Schmutz, Öl und Korrosion zuverlässig und bereitet das Fahrzeug optimal auf die Prüfung vor.",
+    vorteile: ["Optimal vorbereitet für die MFK", "Sauberer Motorraum und Chassis", "Entfernung von Schmutz, Öl und Korrosion", "Positiver Eindruck beim Prüfer"],
+    ablauf: ["Motorraum reinigen und konservieren", "Chassis-Reinigung (MFK-gerecht)", "Korrosionsablagerungen entfernen", "Trocknung", "Abschlusskontrolle"],
+    einsatzbereiche: "Alle Fahrzeughalter vor der MFK, Occasionen vor dem Verkauf, nach dem Winter.",
+  },
+  "felgenwaesche": {
+    was: "Die Felgenwäsche abmontiert ermöglicht die Reinigung auch schwer zugänglicher Bereiche wie Felgenrückseiten und Radnaben. Wir entfernen Bremsstaub, Strassenschmutz und Ablagerungen schonend und gründlich.",
+    vorteile: ["Reinigung auch schwer zugänglicher Bereiche", "Entfernung hartnäckigen Bremsstaubs", "Schonende Reinigung der Felgenoberfläche", "Strahlend saubere Felgen"],
+    ablauf: ["Felgen abmontieren", "Vorreinigung und Einweichen", "Gründliche Reinigung inkl. Rückseiten", "Radnaben reinigen", "Trocknung und Kontrolle"],
+    einsatzbereiche: "Premium-Felgen, Alufelgen, vor dem Verkauf, Saisonvorbereitung, als Ergänzung zur Aussenreinigung.",
+  },
+  "felgen-politur": {
+    was: "Die Felgen-Politur beseitigt feine Kratzer, Bremsstaub-Rückstände und Verwitterungen auf den Felgen. Wir stellen den ursprünglichen Glanz wieder her und versiegeln auf Wunsch für langanhaltenden Schutz.",
+    vorteile: ["Sichtbare Kratzerentfernung", "Wiederherstellung des Glanzes", "Schutz vor erneuter Verschmutzung", "Wertsteigerung der Felgen"],
+    ablauf: ["Felgen reinigen", "Politur auftragen und maschinell bearbeiten", "Feinpolitur für perfekten Glanz", "Optionale Versiegelung", "Kontrolle"],
+    einsatzbereiche: "Premium-Felgen, Alufelgen, vor dem Verkauf, gepflegte Occasionen, nach Maschinenwaschschäden.",
+  },
+  "versiegelung": {
+    was: "Die Lackversiegelung bildet eine Schutzschicht auf dem Fahrzeuglack, die Schmutz, Wasser und Umwelteinflüssen abweist. Wir bieten Wachs- und Nanoversiegelung je nach Bedarf.",
+    vorteile: ["Langfristiger Lackschutz", "Abweisung von Schmutz und Wasser", "Dauerhafter Glanz", "Deutlich einfachere Pflege"],
+    ablauf: ["Lack reinigen und dekontaminieren", "Versiegelung auftragen", "Schutzschicht aufbauen", "Aushärten", "Kontrolle und Finish"],
+    einsatzbereiche: "Alle Fahrzeuge, nach der Politur, als eigenständiger Lackschutz, Premium-Fahrzeuge, Neufahrzeuge.",
+  },
 };
 
 // Before/After images nur für Innenreinigung
@@ -172,7 +226,7 @@ export default function ServiceDetail() {
               {seoSvc.heroText || coreService?.summary || `Professionelle ${seoSvc.name} in Zürich Nord – schonend, gründlich, Termin online buchbar.`}
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
+              <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-7 py-4 font-bold transition hover:border-primary hover:text-primary">
@@ -245,7 +299,7 @@ export default function ServiceDetail() {
                         </li>
                       ))}
                     </ul>
-                    <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:opacity-90">
+                    <a href={pkg.bookingUrl || coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:opacity-90">
                       Jetzt buchen <ArrowRight className="h-4 w-4" />
                     </a>
                   </div>
@@ -310,7 +364,7 @@ export default function ServiceDetail() {
                     </li>
                   ))}
                 </ul>
-                <a href={bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
+                <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-bold text-primary-foreground transition hover:opacity-90">
                   Jetzt Angebot anfragen <ArrowRight className="h-5 w-5" />
                 </a>
               </div>
@@ -395,7 +449,7 @@ export default function ServiceDetail() {
               Termin online buchen oder anrufen – wir sind Mo–Sa erreichbar.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a href={bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
+              <a href={coreService?.bookingUrl || bookingUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
                 Termin online buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 px-7 py-4 font-bold text-background transition hover:bg-background hover:text-foreground">
