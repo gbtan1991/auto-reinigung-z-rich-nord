@@ -27,6 +27,7 @@ import Standort from '@/pages/Standort';
 import LandingPage from '@/pages/LandingPage';
 import FAQ from '@/pages/FAQ';
 import Bewertungen from '@/pages/Bewertungen';
+import SommerAktion from '@/pages/SommerAktion';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -75,6 +76,7 @@ const AuthenticatedApp = () => {
         <Route path="/lp/:service/:ort" element={<LandingPage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/bewertungen" element={<Bewertungen />} />
+        <Route path="/sommer-aktion" element={<SommerAktion />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

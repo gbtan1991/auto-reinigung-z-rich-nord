@@ -197,6 +197,9 @@ export default function ServiceDetail() {
   const { slug } = useParams();
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [selectedAddons, setSelectedAddons] = useState([]);
+  if (slug === "sommer-aktion") {
+    return <Navigate to="/sommer-aktion" replace />;
+  }
   if (addonRedirects[slug]) {
     return <Navigate to={`/dienstleistungen/${addonRedirects[slug]}`} replace />;
   }

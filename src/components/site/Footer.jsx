@@ -28,6 +28,7 @@ export default function Footer() {
             <h3 className="mb-4 font-heading text-base font-bold">Dienstleistungen</h3>
             <div className="flex flex-col gap-2.5">
               {mainServices.map((service) => <Link key={service.slug} to={`/dienstleistungen/${service.slug}`} className="text-sm text-muted-foreground transition hover:text-primary">{service.eyebrow}</Link>)}
+              <Link to="/sommer-aktion" className="text-sm font-semibold text-primary transition hover:text-primary">Sommer-Aktion</Link>
               <Link to="/dienstleistungen/leasingrueckgabe" className="text-sm text-muted-foreground transition hover:text-primary">Leasingrückgabe</Link>
               <Link to="/dienstleistungen/mfk-vorbereitung" className="text-sm text-muted-foreground transition hover:text-primary">MFK-Vorbereitung</Link>
               <Link to="/dienstleistungen/keramikversiegelung" className="text-sm text-muted-foreground transition hover:text-primary">Keramikversiegelung</Link>

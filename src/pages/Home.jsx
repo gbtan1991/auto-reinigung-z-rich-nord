@@ -7,6 +7,7 @@ import ServiceCards from "@/components/site/ServiceCards";
 import QuoteCalculator from "@/components/site/QuoteCalculator";
 import FAQAccordion from "@/components/site/FAQAccordion";
 import Testimonials from "@/components/site/Testimonials";
+import SommerPromo from "@/components/site/SommerPromo";
 import { bookingUrl, images } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
 import TrustBadges from "@/components/site/TrustBadges";
@@ -71,6 +72,8 @@ export default function Home() {
           <div className="mt-10"><ServiceCards /></div>
         </div>
       </section>
+
+      <SommerPromo />
 
       <section className="px-5 py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">

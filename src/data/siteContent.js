@@ -310,9 +310,8 @@ export const addonRedirects = {
   "felgenwaesche": "aussenreinigung",
   "felgen-politur": "politur",
   "versiegelung": "politur",
-  "sommer-aktion": "innenreinigung",
 };
-export const addonSlugs = Object.keys(addonRedirects);
+export const addonSlugs = [...Object.keys(addonRedirects), "sommer-aktion"];
 
 export const googleBusinessProfile = {
   url: "https://g.page/autoreinigungzuerichnord",
