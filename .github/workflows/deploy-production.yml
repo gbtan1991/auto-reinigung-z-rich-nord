@@ -32,8 +32,9 @@ jobs:
         password: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_PASSWORD }}
         port: 22
         source: 'dist/*'
-        target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/'
+        target: 'sites/autoreinigung-zuerich-nord.ch/'
         strip_components: 1
 
         #Done with some changes in the prices, services and promos
+        #Change the targer path to the correct one for your production server. The current path is just an example and may not match your actual deployment directory.
 
