@@ -35,6 +35,5 @@ jobs:
         target: 'sites/meisterflow.autoreinigung-zuerich-nord.ch/'
         strip_components: 1
 
-        #UPDATED ALL OF THE CTA BASED ON WHAT THE CLIENT WANTS.
-        #Changed the SSH keys to the github secrets.
+        #Done with some changes in the prices, services and promos
 
