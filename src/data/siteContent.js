@@ -73,8 +73,8 @@ export const services = [
     eyebrow: "Innenreinigung",
     title: "Professionelle Innenreinigung: Frisch, hygienisch, wie neu",
     summary: "Eine gründliche Innenreinigung bringt Ihren Fahrzeuginnenraum wieder auf Vordermann. Wir entfernen Staub, Flecken, Gerüche und Tierhaare – sorgfältig per Hand, materialschonend und mit sichtbarem Ergebnis.",
-    image: "https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?w=800&h=600&fit=crop&q=80&auto=format",
+    image: images.interiorHero,
+    cardImage: images.serviceInterior,
     content: [
       "Damit Sie sich in Ihrem Fahrzeug rundum wohlfühlen, übernehmen wir die gründliche Auto-Innenreinigung in Zürich Nord. Wir entfernen Staub, Schmutz, Tierhaare, Flecken, Bakterien und unangenehme Gerüche sorgfältig und materialschonend. Je nach Bedarf reinigen wir schwer erreichbare Ritzen, Lüftungskanäle, Sitze, Teppiche, Armaturen sowie Stoff- und Lederbezüge professionell und pflegend.",
       "Auf Wunsch desinfizieren wir Ihr Fahrzeug zusätzlich und sorgen für einen hygienisch sauberen Innenraum. Unsere Innenreinigung eignet sich ideal für Privatfahrzeuge, Familienautos, Firmenfahrzeuge, Leasingrückgaben, Occasionen sowie Fahrzeuge vor der MFK. Dank professioneller Reinigungsmittel und schonender Verfahren bleibt Ihr Auto gepflegt, sauber und werterhaltend."
@@ -92,8 +92,8 @@ export const services = [
     eyebrow: "Aussenreinigung",
     title: "Handwäsche Aussenreinigung Zürich-Nord – kratzerlos, gründlich",
     summary: "Wir waschen jedes Fahrzeug von Hand – gründlich, schonend und ohne Kratzer. Auf Wunsch reinigen wir auch Motorraum, Fahrwerk und Bremssättel. Das Ergebnis spricht für sich.",
-    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=600&fit=crop&q=80&auto=format",
+    image: images.exteriorHero,
+    cardImage: images.serviceExterior,
     content: [
       "Unsere Auto-Aussenreinigung in Zürich Nord umfasst eine sorgfältige und schonende Handwäsche inklusive gründlicher Felgenreinigung. Dabei entfernen wir Schmutz, Bremsstaub, Ablagerungen und Verschmutzungen professionell, damit Ihr Fahrzeug wieder sauber, gepflegt und glänzend aussieht.",
       "Je nach gewähltem Paket reinigen wir zusätzlich den Motorraum, das Fahrwerk, Bremssättel, Federbeine, Radhäuser sowie den Unterboden Ihres Fahrzeugs. Besonders nach dem Winter oder vor der MFK ist eine gründliche Fahrzeugreinigung sinnvoll, um Salz, Schmutz und Ablagerungen zu entfernen und den Werterhalt Ihres Autos zu unterstützen.",
@@ -112,8 +112,8 @@ export const services = [
     eyebrow: "Politur und kleine Ausbesserungen",
     title: "Lackpolitur & Kratzerentfernung Zürich-Nord – sichtbarer Unterschied",
     summary: "Feine Kratzer, Hologramme und matten Lack bringen wir maschinell und per Hand wieder zum Glänzen. Auf Wunsch versiegeln wir den Lack anschliessend dauerhaft – mit Wachs oder Nano.",
-    image: "https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=800&h=600&fit=crop&q=80&auto=format",
-    cardImage: "https://images.unsplash.com/photo-1708805282706-f44730b7e527?w=800&h=600&fit=crop&q=80&auto=format",
+    image: images.polishHero,
+    cardImage: images.servicePolish,
     content: [
       "Mit professioneller Autopolitur und Lackpflege in Zürich Nord bringen wir matte und stumpfe Lacke wieder zum Glänzen und reduzieren leichte Kratzer, Hologramme, Gebrauchsspuren sowie Verwitterungen sichtbar. Unsere sorgfältige Lackaufbereitung verbessert nicht nur die Optik Ihres Fahrzeugs, sondern unterstützt auch den langfristigen Werterhalt.",
       "Dank unserer Erfahrung beseitigen wir Lackmängel wie Flugrost, Farbflecken, Baumharz, stumpfe Stellen und feine Oberflächenkratzer besonders schonend und effektiv. Zusätzlich kümmern wir uns auf Wunsch um leicht beschädigte Kunststoffe, Felgen, Fahrzeugbeleuchtung sowie Stoff- und Lederoberflächen.",
