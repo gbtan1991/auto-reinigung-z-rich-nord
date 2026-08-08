@@ -233,10 +233,11 @@ export const seoServices = [
   {
     slug: "handwasche",
     name: "Handwäsche Auto",
-    title: "Handwäsche Auto Zürich | Schonende Fahrzeugwäsche",
-    description: "Schonende Handwäsche für Ihr Auto in Zürich Nord – Schutz vor Kratzern, Lackreinigung per Hand. Termin buchen.",
+    title: "Handwäsche Zürich | Schonende Auto-Handwäsche per Hand",
+    description: "Handwäsche in Zürich Nord: Karosserie, Felgen & Scheiben schonend per Hand waschen – ohne Kratzer, ohne Hologramme. Termin online buchen.",
     h1: "Schonende Auto-Handwäsche in Zürich Nord",
-    mainKeyword: "handwäsche auto zürich",
+    mainKeyword: "handwäsche zürich",
+    heroText: "Unsere Handwäsche in Zürich Nord reinigt Karosserie, Felgen und Scheiben schonend per Hand – ohne rotierende Bürsten, ohne Kratzer. Auf Wunsch erweitern wir die Handwäsche um Motorraum, Fahrwerk und Unterboden.",
   },
   {
     slug: "politur",

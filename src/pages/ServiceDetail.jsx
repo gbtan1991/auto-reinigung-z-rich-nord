@@ -198,6 +198,16 @@ const innenVerschmutzungen = [
   { title: "Bakterien & Allergene", text: "Mit optionaler Desinfektion (Anokath-Verfahren) hygienisch entfernt." },
 ];
 
+// Thematische Vertiefung "Was wird gereinigt" – nur Handwäsche
+const handwascheBereiche = [
+  { title: "Karosserie", text: "Handwäsche mit der Zwei-Eimer-Methode – schonend, ohne Bürstenkratzer." },
+  { title: "Felgen & Reifen", text: "Bremsstaub und Ablagerungen gründlich und schonend entfernt." },
+  { title: "Scheiben", text: "Scheiben innen und aussen streifenfrei und klar gereinigt." },
+  { title: "Türrahmen & Türschweller", text: "Schmutz und Feuchtigkeit in oft übersehenen Bereichen." },
+  { title: "Motorraum (auf Wunsch)", text: "Kaltentfettung und Konservierung – MFK- und verkaufsbereit." },
+  { title: "Fahrwerk & Unterboden (auf Wunsch)", text: "Salz und Schmutz nach dem Winter zuverlässig entfernt." },
+];
+
 // Before/After images nur für Innenreinigung
 const beforeAfterImages = {
   innenreinigung: { before: images.before, after: images.after },
@@ -294,6 +304,26 @@ export default function ServiceDetail() {
             <SectionHeader center eyebrow="Soiling" title="Welche Verschmutzungen entfernen wir bei der Innenreinigung?" text="Vom alltäglichen Staub bis zu hartnäckigen Flecken und Gerüchen – wir entfernen Schmutz materialschonend und gründlich." />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {innenVerschmutzungen.map((item, i) => (
+                <Reveal key={item.title} delay={i * 60}>
+                  <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                    <CheckCircle2 className="mb-3 h-6 w-6 text-primary" />
+                    <h3 className="font-heading text-base font-bold">{item.title}</h3>
+                    <p className="mt-1.5 text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Reinigungsumfang – nur Handwäsche */}
+      {slug === "handwasche" && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Reinigungsumfang" title="Was wird bei der Handwäsche gereinigt?" text="Schonende Handwäsche für Karosserie, Felgen und Scheiben – auf Wunsch erweitert um Motorraum, Fahrwerk und Unterboden." />
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {handwascheBereiche.map((item, i) => (
                 <Reveal key={item.title} delay={i * 60}>
                   <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
                     <CheckCircle2 className="mb-3 h-6 w-6 text-primary" />
