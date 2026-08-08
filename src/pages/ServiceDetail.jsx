@@ -188,6 +188,16 @@ const serviceContent = {
   },
 };
 
+// Thematische Vertiefung "Welche Verschmutzungen" – nur Innenreinigung
+const innenVerschmutzungen = [
+  { title: "Tierhaare", text: "Aus Sitzen, Teppichen, Ritzen und Sitznähten – auch aus tiefen Fasern." },
+  { title: "Flecken & Verschüttetes", text: "Kaffee, Essen und Flüssigkeiten auf Stoff-, Leder- und Teppichbezügen." },
+  { title: "Gerüche", text: "Rauchen, Tiere, verschüttete Flüssigkeiten und Schimmel – beseitigt an der Quelle." },
+  { title: "Staub & Schmutz", text: "In Lüftungskanälen, Ritzen, Ablagen und schwer zugänglichen Bereichen." },
+  { title: "Abnutzung auf Bezügen", text: "Schmutz und Verschleiss auf Leder-, Stoff- und Kunststoffoberflächen." },
+  { title: "Bakterien & Allergene", text: "Mit optionaler Desinfektion (Anokath-Verfahren) hygienisch entfernt." },
+];
+
 // Before/After images nur für Innenreinigung
 const beforeAfterImages = {
   innenreinigung: { before: images.before, after: images.after },
@@ -276,6 +286,26 @@ export default function ServiceDetail() {
           </div>
         </div>
       </section>
+
+      {/* Welche Verschmutzungen – nur Innenreinigung */}
+      {slug === "innenreinigung" && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Soiling" title="Welche Verschmutzungen entfernen wir bei der Innenreinigung?" text="Vom alltäglichen Staub bis zu hartnäckigen Flecken und Gerüchen – wir entfernen Schmutz materialschonend und gründlich." />
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {innenVerschmutzungen.map((item, i) => (
+                <Reveal key={item.title} delay={i * 60}>
+                  <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                    <CheckCircle2 className="mb-3 h-6 w-6 text-primary" />
+                    <h3 className="font-heading text-base font-bold">{item.title}</h3>
+                    <p className="mt-1.5 text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Ablauf */}
       <section className="px-5 py-14 lg:px-8">

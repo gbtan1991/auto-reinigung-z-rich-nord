@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Car, Phone, ShieldCheck, Sparkles, Sun, Wind } from "lucide-react";
 import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
@@ -9,9 +10,9 @@ const bookingLink = calensoLinks.aktionen.sommeraktion;
 const heroImage = "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=1200&h=800&fit=crop&q=80&auto=format";
 
 const paketinhalt = [
-  { title: "Premium Innenreinigung", image: images.heroInterior },
-  { title: "Basic Aussenreinigung", image: images.ctaExterior },
-  { title: "Geruchsentfernung & Desinfektion", image: images.heroRim },
+  { title: "Premium Innenreinigung", image: images.heroInterior, href: "/dienstleistungen/innenreinigung" },
+  { title: "Basic Aussenreinigung", image: images.ctaExterior, href: "/dienstleistungen/aussenreinigung" },
+  { title: "Geruchsentfernung & Desinfektion", image: images.heroRim, href: "/dienstleistungen/innenreinigung" },
 ];
 
 const Vorteile = [
@@ -72,13 +73,15 @@ export default function SommerAktion() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {paketinhalt.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
-                <div className="overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-sm">
-                  <img src={item.image} alt={item.title} className="h-52 w-full object-cover" />
+                <Link to={item.href} className="group block h-full overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg">
+                  <div className="overflow-hidden">
+                    <img src={item.image} alt={item.title} className="h-52 w-full object-cover transition duration-700 group-hover:scale-105" />
+                  </div>
                   <div className="flex items-center gap-3 p-5">
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-primary" />
-                    <p className="font-heading text-lg font-bold">{item.title}</p>
+                    <p className="font-heading text-lg font-bold transition group-hover:text-primary">{item.title}</p>
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>

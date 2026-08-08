@@ -217,8 +217,8 @@ export const seoServices = [
   {
     slug: "innenreinigung",
     name: "Innenreinigung Auto",
-    title: "Innenreinigung Auto Zürich | Professionelle Fahrzeugreinigung",
-    description: "Professionelle Auto-Innenreinigung in Zürich Nord – Sitze, Teppiche, Leder, Desinfektion. Termin online.",
+    title: "Innenreinigung Auto Zürich | Professionelle Auto-Innenreinigung",
+    description: "Innenreinigung Auto in Zürich Nord: Sitze, Teppiche, Leder & Desinfektion von Hand reinigen. Schonend, gründlich, materialschonend. Termin online.",
     h1: "Professionelle Auto-Innenreinigung in Zürich Nord",
     mainKeyword: "innenreinigung auto zürich",
   },
