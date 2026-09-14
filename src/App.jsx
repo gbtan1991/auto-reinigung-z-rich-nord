@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 import GadsRouteTracker from './components/GadsRouteTracker';
+import GadsClickTracker from './components/GadsClickTracker';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
@@ -93,6 +94,7 @@ function App() {
         <Router>
           <ScrollToTop />
           <GadsRouteTracker />
+          <GadsClickTracker />
           <AuthenticatedApp />
         </Router>
         <Toaster />
