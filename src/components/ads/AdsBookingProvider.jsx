@@ -3,7 +3,8 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { Loader2, ExternalLink } from 'lucide-react';
 import { providerEventMap, trackAds } from '@/components/ads/adsTracking';
 export const AdsBookingContext = createContext(null);
-export default function AdsBookingProvider({ children }) {
+export const AdsBookingModeContext = createContext(false);
+export default function AdsBookingProvider({ children, bookingOnly = false }) {
   const [booking,setBooking] = useState(null);
   const [loading,setLoading] = useState(true);
   const frame = useRef(null);
@@ -23,7 +24,7 @@ export default function AdsBookingProvider({ children }) {
   const open = selection => { completed.current = false;setLoading(true);setBooking(selection); };
   const url = booking ? new URL(booking.href) : null;
   if (url) url.searchParams.set('isFrame','true');
-  return <AdsBookingContext.Provider value={open}>{children}
+  return <AdsBookingModeContext.Provider value={bookingOnly}><AdsBookingContext.Provider value={open}>{children}
     <Dialog open={!!booking} onOpenChange={value => {if(!value)setBooking(null);}}>
       <DialogContent className="flex max-h-[95dvh] w-[calc(100%-1rem)] max-w-4xl flex-col gap-2 rounded-2xl p-4 sm:p-6">
         <DialogTitle className="pr-7 font-heading">Termin online buchen</DialogTitle>
@@ -34,5 +35,5 @@ export default function AdsBookingProvider({ children }) {
         {booking && <a href={booking.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 text-sm text-primary underline"><ExternalLink className="h-4 w-4" />Buchung separat öffnen</a>}
       </DialogContent>
     </Dialog>
-  </AdsBookingContext.Provider>;
+  </AdsBookingContext.Provider></AdsBookingModeContext.Provider>;
 }

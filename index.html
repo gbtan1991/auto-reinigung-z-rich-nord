@@ -33,7 +33,14 @@
     </script>
     <!-- End Meta Pixel -->
     <!-- Klaviyo onsite script -->
-    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XxzTRp"></script>
+    <script>
+      if (window.location.hash.split('?')[0].replace(/\/$/, '') !== '#/autoreinigung-buchen' && window.location.pathname.replace(/\/$/, '') !== '/autoreinigung-buchen') {
+        var klaviyoScript = document.createElement('script');
+        klaviyoScript.async = true;
+        klaviyoScript.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XxzTRp';
+        document.head.appendChild(klaviyoScript);
+      }
+    </script>
     <!-- End Klaviyo -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPT1418JQ4"></script>
