@@ -18,13 +18,15 @@ export default function GadsRouteTracker() {
       isFirstRun.current = false;
       return;
     }
-    if (typeof window.gtag !== "function") return;
-
-    window.gtag("event", "page_view", {
+    const page = {
       page_path: pathname + search + hash,
       page_location: window.location.href,
       page_title: document.title,
-    });
+    };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'virtual_page_view', ...page });
+    if (typeof window.gtag === "function") window.gtag("event", "page_view", page);
+    if (typeof window.fbq === "function") window.fbq('track', 'PageView');
   }, [pathname, search, hash]);
 
   return null;
