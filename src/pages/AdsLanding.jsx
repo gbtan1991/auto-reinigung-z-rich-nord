@@ -21,11 +21,12 @@ import AdsStickyCTA from '@/components/ads/AdsStickyCTA';
 import AdsConsent from '@/components/ads/AdsConsent';
 import AdsTracking from '@/components/ads/AdsTracking';
 import BookingCTA from '@/components/ads/BookingCTA';
+import AdsBookingProvider from '@/components/ads/AdsBookingProvider';
 export default function AdsLanding() {
   const [consentVersion,setConsentVersion] = useState(0);
   const [cookieKey,setCookieKey] = useState(0);
   const reopen = () => { localStorage.removeItem('azn-cookies-v2');setCookieKey(x=>x+1); };
-  return <div data-ads-landing className="min-h-screen bg-background font-body text-foreground">
+  return <AdsBookingProvider><div data-ads-landing className="min-h-screen bg-background font-body text-foreground">
     <SEO title="Autoreinigung Zürich Nord – Herbstangebot & Online-Buchung" description="Innenreinigung und Aussenreinigung ab CHF 99.–, Politur ab CHF 419.–. Herbstangebot ab CHF 399.–. Professionelle Handarbeit in Zürich Nord. Termin online buchen." path="/#/termin-buchen" type="service" serviceName="Autoreinigung Zürich Nord" image={images.heroPolish} noindex />
     <AdsTracking consentVersion={consentVersion} /><AdsHeader />
     <main>
@@ -36,5 +37,5 @@ export default function AdsLanding() {
     </main>
     <AdsFooter onCookies={reopen} /><AdsStickyCTA />
     <AdsConsent key={cookieKey} onDecision={() => setConsentVersion(x=>x+1)} />
-  </div>;
+  </div></AdsBookingProvider>;
 }

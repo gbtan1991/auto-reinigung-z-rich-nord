@@ -1,7 +1,8 @@
 const campaignKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id', 'gclid', 'gbraid', 'wbraid'];
 export const providerEventMap = { appointment_booking_start: 'booking_started', compact_widget_booking_start: 'booking_started', appointment_booking_step_success: 'booking_completed' };
 // These provider events are NOT inferred from links, page loads, submitted forms or return URLs.
-// External Calenso must send its actual success event through its own GTM integration.
+// The embedded booking dialog listens for Calenso's documented postMessage success event.
+// External-tab fallback requires Calenso-side GTM for the same completed-booking measurement.
 export function trackAds(event, details = {}) {
   const saved = localStorage.getItem('azn-cookies-v2');
   if (!saved || !JSON.parse(saved).analytics) return;
