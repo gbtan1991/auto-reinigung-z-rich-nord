@@ -7,7 +7,8 @@ export function trackAds(event, details = {}) {
   const saved = localStorage.getItem('azn-cookies-v2');
   if (!saved || !JSON.parse(saved).analytics) return;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event, landing_page: 'termin-buchen', ...details });
+  const landingPage = window.location.hash.split('?')[0] === '#/autoreinigung-buchen' ? 'autoreinigung-buchen' : 'termin-buchen';
+  window.dataLayer.push({ event, landing_page: landingPage, ...details });
 }
 export function bookingHref(link) {
   const url = new URL(link);

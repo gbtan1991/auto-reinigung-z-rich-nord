@@ -22,20 +22,24 @@ import AdsConsent from '@/components/ads/AdsConsent';
 import AdsTracking from '@/components/ads/AdsTracking';
 import BookingCTA from '@/components/ads/BookingCTA';
 import AdsBookingProvider from '@/components/ads/AdsBookingProvider';
-export default function AdsLanding() {
+import BookingOnlyFooter from '@/components/ads/BookingOnlyFooter';
+import BookingLegalDialog from '@/components/ads/BookingLegalDialog';
+export default function AdsLanding({ bookingOnly = false }) {
+  const [legalTopic, setLegalTopic] = useState(null);
   const [consentVersion,setConsentVersion] = useState(0);
   const [cookieKey,setCookieKey] = useState(0);
   const reopen = () => { localStorage.removeItem('azn-cookies-v2');setCookieKey(x=>x+1); };
   return <AdsBookingProvider><div data-ads-landing className="min-h-screen bg-background font-body text-foreground">
-    <SEO title="Autoreinigung Zürich Nord – Herbstangebot & Online-Buchung" description="Innenreinigung und Aussenreinigung ab CHF 99.–, Politur ab CHF 419.–. Herbstangebot ab CHF 399.–. Professionelle Handarbeit in Zürich Nord. Termin online buchen." path="/#/termin-buchen" type="service" serviceName="Autoreinigung Zürich Nord" image={images.heroPolish} noindex />
-    <AdsTracking consentVersion={consentVersion} /><AdsHeader />
+    <SEO title="Autoreinigung Zürich Nord – Herbstangebot & Online-Buchung" description="Innenreinigung und Aussenreinigung ab CHF 99.–, Politur ab CHF 419.–. Herbstangebot ab CHF 399.–. Professionelle Handarbeit in Zürich Nord. Termin online buchen." path={bookingOnly ? '/#/autoreinigung-buchen' : '/#/termin-buchen'} type="service" serviceName="Autoreinigung Zürich Nord" image={images.heroPolish} noindex />
+    <AdsTracking consentVersion={consentVersion} /><AdsHeader bookingOnly={bookingOnly} />
     <main>
       <AdsHero /><AdsTrustStrip /><AdsServices /><AdsOffer /><AdsBeforeAfter />
       <div className="mx-auto max-w-6xl px-5 pb-12 lg:px-8"><BookingCTA placement="visual_proof">Termin für mein Fahrzeug buchen</BookingCTA></div>
-      <AdsBenefits /><AdsReviews /><AdsSteps /><AdsPackages /><AdsAddons />
-      <AdsUseCases /><AdsLocation /><AdsFAQ /><AdsFinalCTA />
+      <AdsBenefits /><AdsReviews bookingOnly={bookingOnly} /><AdsSteps /><AdsPackages /><AdsAddons />
+      <AdsUseCases /><AdsLocation bookingOnly={bookingOnly} /><AdsFAQ /><AdsFinalCTA />
     </main>
-    <AdsFooter onCookies={reopen} /><AdsStickyCTA />
-    <AdsConsent key={cookieKey} onDecision={() => setConsentVersion(x=>x+1)} />
+    {bookingOnly ? <BookingOnlyFooter onCookies={reopen} onLegal={setLegalTopic} /> : <AdsFooter onCookies={reopen} />}<AdsStickyCTA />
+    <AdsConsent key={cookieKey} onDecision={() => setConsentVersion(x=>x+1)} onPrivacy={bookingOnly ? () => setLegalTopic('datenschutz') : undefined} />
+    {bookingOnly && <BookingLegalDialog topic={legalTopic} onClose={() => setLegalTopic(null)} />}
   </div></AdsBookingProvider>;
 }

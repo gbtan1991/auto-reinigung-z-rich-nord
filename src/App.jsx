@@ -31,6 +31,7 @@ import FAQ from '@/pages/FAQ';
 import Bewertungen from '@/pages/Bewertungen';
 import SommerAktion from '@/pages/SommerAktion';
 import AdsLanding from '@/pages/AdsLanding';
+import BookingLanding from '@/pages/BookingLanding';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -64,6 +65,7 @@ const AuthenticatedApp = () => {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/termin-buchen" element={<AdsLanding />} />
+      <Route path="/autoreinigung-buchen" element={<BookingLanding />} />
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/dienstleistungen" element={<Services />} />
