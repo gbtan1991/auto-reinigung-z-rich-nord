@@ -30,6 +30,7 @@ import LandingPage from '@/pages/LandingPage';
 import FAQ from '@/pages/FAQ';
 import Bewertungen from '@/pages/Bewertungen';
 import SommerAktion from '@/pages/SommerAktion';
+import AdsLanding from '@/pages/AdsLanding';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -62,6 +63,7 @@ const AuthenticatedApp = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/termin-buchen" element={<AdsLanding />} />
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/dienstleistungen" element={<Services />} />

@@ -16,7 +16,7 @@ export default function GadsClickTracker() {
   useEffect(() => {
     const handleClick = (event) => {
       const anchor = event.target?.closest?.("a");
-      if (!anchor) return;
+      if (!anchor || anchor.closest('[data-ads-landing]')) return;
       const href = anchor.getAttribute("href") || "";
 
       // Telefon-Klick
