@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="de-CH">
   <head>
+    <script>
+      // Support direct landing-page and editor-preview URLs with the hash router.
+      var pagePath = window.location.pathname.replace(/\/$/, '').toLowerCase();
+      if ((pagePath === '/autoreinigung-buchen' || pagePath === '/bookinglanding') && (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/')) {
+        window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + '#/autoreinigung-buchen');
+      }
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
