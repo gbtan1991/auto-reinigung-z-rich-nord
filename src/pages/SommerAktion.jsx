@@ -16,7 +16,7 @@ const paketinhalt = [
 ];
 
 const Vorteile = [
-  { icon: Sun, title: "Perfekt für die Sommermonate", text: "Starten Sie gepflegt in die warme Jahreszeit." },
+  { icon: Sun, title: "Perfekt für die Herbstmonate", text: "Starten Sie gepflegt in den Herbst." },
   { icon: Car, title: "Rundum-Reinigung innen und aussen", text: "Komplette Fahrzeugpflege aus einer Hand." },
   { icon: Wind, title: "Geruchsneutralisierung inklusive", text: "Frischer Innenraum durch Desinfektion." },
   { icon: Sparkles, title: "Professionelle Handwäsche", text: "Schonend, kratzerfrei, per Hand." },
@@ -27,20 +27,20 @@ export default function SommerAktion() {
   return (
     <>
       <SEO
-        title="Sommer-Aktion | Autoreinigung Zürich Nord"
-        description="Profitieren Sie von unserer zeitlich begrenzten Sommer-Aktion: Premium-Innenreinigung, Basic-Aussenreinigung und Geruchsentfernung & Desinfektion in einem attraktiven Paket."
+        title="Herbst-Aktion | Autoreinigung Zürich Nord"
+        description="Profitieren Sie von unserer zeitlich begrenzten Herbst-Aktion: Premium-Innenreinigung, Basic-Aussenreinigung und Geruchsentfernung & Desinfektion in einem attraktiven Paket."
         path="/sommer-aktion"
         type="service"
-        serviceName="Sommer-Aktion"
-        breadcrumbs={[{ label: "Sommer-Aktion" }]}
+        serviceName="Herbst-Aktion"
+        breadcrumbs={[{ label: "Herbst-Aktion" }]}
         image={heroImage}
       />
-      <Breadcrumb items={[{ label: "Sommer-Aktion" }]} />
+      <Breadcrumb items={[{ label: "Herbst-Aktion" }]} />
 
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Sommer-Aktion Autoreinigung Zürich Nord" className="h-full w-full object-cover" />
+          <img src={heroImage} alt="Herbst-Aktion Autoreinigung Zürich Nord" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-foreground/50 via-foreground/30 to-foreground/70" />
         </div>
         <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
@@ -49,14 +49,14 @@ export default function SommerAktion() {
               <Sun className="h-4 w-4" /> Zeitlich begrenztes Angebot
             </span>
             <h1 className="mt-5 font-heading text-4xl font-extrabold leading-tight tracking-tight text-background sm:text-5xl lg:text-6xl">
-              <Sun className="inline h-9 w-9 text-primary sm:h-11 sm:w-11" /> Sommer-Aktion
+              <Sun className="inline h-9 w-9 text-primary sm:h-11 sm:w-11" /> Herbst-Aktion
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-background/85">
               Premium-Innenreinigung + Basic Aussenreinigung + Geruchsentfernung &amp; Desinfektion. Ihr Auto rundum wie ab Werk – innen, aussen und Felgen.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a href={bookingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl">
-                Jetzt Sommer-Aktion buchen <ArrowRight className="h-5 w-5" />
+                Jetzt Herbst-Aktion buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={phoneUrl} className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 bg-background/10 px-7 py-4 font-bold text-background backdrop-blur transition hover:bg-background hover:text-foreground">
                 <Phone className="h-4 w-4" /> {contact.phone}
@@ -69,7 +69,7 @@ export default function SommerAktion() {
       {/* Paketinhalt */}
       <section className="px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader center eyebrow="Paketinhalt" title="Das ist in der Sommer-Aktion enthalten" />
+          <SectionHeader center eyebrow="Paketinhalt" title="Das ist in der Herbst-Aktion enthalten" />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {paketinhalt.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
@@ -96,7 +96,7 @@ export default function SommerAktion() {
       {/* Vorteile */}
       <section className="bg-secondary/70 px-5 py-14 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader center eyebrow="Vorteile" title="Warum die Sommer-Aktion?" />
+          <SectionHeader center eyebrow="Vorteile" title="Warum die Herbst-Aktion?" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {Vorteile.map((v, i) => (
               <Reveal key={v.title} delay={i * 60}>
@@ -118,13 +118,13 @@ export default function SommerAktion() {
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <Sun className="mx-auto mb-5 h-10 w-10 text-primary" />
-            <h2 className="font-heading text-2xl font-extrabold text-background sm:text-3xl lg:text-4xl">Jetzt Sommer-Aktion buchen</h2>
+            <h2 className="font-heading text-2xl font-extrabold text-background sm:text-3xl lg:text-4xl">Jetzt Herbst-Aktion buchen</h2>
             <p className="mt-4 text-base text-background/75 sm:text-lg">
               Premium-Innenreinigung, Basic-Aussenreinigung und Geruchsentfernung &amp; Desinfektion in einem attraktiven Paket.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a href={bookingLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 font-bold text-primary-foreground transition hover:-translate-y-0.5 hover:shadow-lg">
-                Jetzt Sommer-Aktion buchen <ArrowRight className="h-5 w-5" />
+                Jetzt Herbst-Aktion buchen <ArrowRight className="h-5 w-5" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-background/30 px-7 py-4 font-bold text-background transition hover:bg-background hover:text-foreground">
                 WhatsApp Anfrage

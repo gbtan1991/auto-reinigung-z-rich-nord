@@ -20,7 +20,7 @@ export default function SommerPromo() {
                   <Sun className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-primary">Sommer-Aktion</p>
+                  <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-primary">Herbst-Aktion</p>
                   <h3 className="mt-1.5 font-heading text-2xl font-extrabold tracking-tight sm:text-3xl">Zeitlich begrenztes Angebot</h3>
                   <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
                     {paketLeistungen.map((l) => (

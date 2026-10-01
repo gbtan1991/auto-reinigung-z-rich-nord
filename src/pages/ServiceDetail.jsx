@@ -151,10 +151,10 @@ const serviceContent = {
     einsatzbereiche: "Familienfahrzeuge, Tierhalter, Leasingrückgaben, Occasionen, stark verschmutzte Stoffbezüge.",
   },
   "sommer-aktion": {
-    was: "Die Sommer-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
-    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Sommer"],
+    was: "Die Herbst-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
+    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Herbst"],
     ablauf: ["Fahrzeugbegutachtung", "Innenreinigung nach Bedarf", "Aussenreinigung per Hand", "Pflege und Schutz", "Übergabe"],
-    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Sommersaison, für Cabrios und Wohnmobile.",
+    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Herbstsaison, für Cabrios und Wohnmobile.",
   },
   "cabrio-dach-versiegeln": {
     was: "Die Cabrio-Dach-Versiegelung schützt Stoffdächer vor Wasser, Schmutz und UV-Strahlung. Wir reinigen das Dach gründlich, imprägnieren es und versiegeln es für langfristigen Schutz.",

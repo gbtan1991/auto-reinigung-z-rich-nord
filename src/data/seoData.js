@@ -305,11 +305,11 @@ export const seoServices = [
   },
   {
     slug: "sommer-aktion",
-    name: "Sommer-Aktion",
-    title: "Sommer-Aktion Autoreinigung Zürich | Saisonal sparen",
-    description: "Limitierte Sommer-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen.",
-    h1: "Sommer-Aktion bei Autoreinigung Zürich-Nord",
-    mainKeyword: "sommer aktion autoreinigung zürich",
+    name: "Herbst-Aktion",
+    title: "Herbst-Aktion Autoreinigung Zürich | Saisonal sparen",
+    description: "Limitierte Herbst-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen.",
+    h1: "Herbst-Aktion bei Autoreinigung Zürich-Nord",
+    mainKeyword: "herbst aktion autoreinigung zürich",
   },
   {
     slug: "cabrio-dach-versiegeln",
