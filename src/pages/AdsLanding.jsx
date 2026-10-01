@@ -30,7 +30,7 @@ export default function AdsLanding({ bookingOnly = false }) {
   const [cookieKey,setCookieKey] = useState(0);
   const reopen = () => { localStorage.removeItem('azn-cookies-v2');setCookieKey(x=>x+1); };
   return <AdsBookingProvider bookingOnly={bookingOnly}><div data-ads-landing className="min-h-screen bg-background font-body text-foreground">
-    <SEO title="Autoreinigung Zürich Nord – Herbstangebot & Online-Buchung" description="Innenreinigung und Aussenreinigung ab CHF 99.–, Politur ab CHF 419.–. Herbstangebot ab CHF 399.–. Professionelle Handarbeit in Zürich Nord. Termin online buchen." path={bookingOnly ? '/#/autoreinigung-buchen' : '/#/termin-buchen'} type="service" serviceName="Autoreinigung Zürich Nord" image={images.heroPolish} noindex />
+    <SEO title={bookingOnly ? 'Autoreinigung Zürich Nord – Basic ab CHF 99.–' : 'Autoreinigung Zürich Nord – Herbstangebot & Online-Buchung'} description="Innenreinigung und Aussenreinigung ab CHF 99.–, Politur ab CHF 419.–. Herbstangebot ab CHF 399.–. Professionelle Handarbeit in Zürich Nord. Termin online buchen." path={bookingOnly ? '/#/autoreinigung-buchen' : '/#/termin-buchen'} type="service" serviceName="Autoreinigung Zürich Nord" image={images.heroPolish} noindex />
     <AdsTracking consentVersion={consentVersion} /><AdsHeader bookingOnly={bookingOnly} />
     <main>
       <AdsHero bookingOnly={bookingOnly} /><AdsTrustStrip /><AdsServices /><AdsOffer /><AdsBeforeAfter />
