@@ -1,9 +1,9 @@
-name: Build and Deploy to Infomaniak (Production Live)
+name: Build and Deploy to Infomaniak (Main Live)
 
 on:
   push:
     branches:
-      - production
+      - main
 
 jobs:
   build-and-deploy:
