@@ -38,3 +38,4 @@ jobs:
         #Done with some changes in the prices, services and promos
         #Change the targer path to the correct one for your production server. The current path is just an example and may not match your actual deployment directory.
         #Update the source path in the hosting.
+        #Change the branch name in workflow to main so we can have CI/CD for the production server. The current branch name is just an example and may not match your actual deployment branch.
