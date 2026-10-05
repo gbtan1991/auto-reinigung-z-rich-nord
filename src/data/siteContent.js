@@ -180,17 +180,17 @@ export const services = [
   {
     slug: "sommer-aktion",
     bookingUrl: calensoLinks.aktionen.sommeraktion,
-    eyebrow: "Sommer-Aktion",
-    title: "Sommer-Aktion: Ihr Fahrzeug bereit für die Saison",
-    summary: "Limitierte Sommer-Aktion: Profitieren Sie von einem saisonalen Spezialpreis für die Kombination aus Innen- und Aussenreinigung. Frisch, sauber und geschützt in den Sommer.",
+    eyebrow: "Herbst-Aktion",
+    title: "Herbst-Aktion: Ihr Fahrzeug bereit für die Saison",
+    summary: "Limitierte Herbst-Aktion: Profitieren Sie von einem saisonalen Spezialpreis für die Kombination aus Innen- und Aussenreinigung. Frisch, sauber und geschützt in den Herbst.",
     image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
     cardImage: "https://images.unsplash.com/photo-1508974239320-0a029497e820?w=800&h=600&fit=crop&q=80&auto=format",
     content: [
-      "Die Sommer-Aktion kombiniert unsere beliebtesten Leistungen zu einem attraktiven Aktionspreis. Geniessen Sie den Sommer mit einem frisch aufbereiteten Fahrzeug – innen wie aussen.",
+      "Die Herbst-Aktion kombiniert unsere beliebtesten Leistungen zu einem attraktiven Aktionspreis. Geniessen Sie den Herbst mit einem frisch aufbereiteten Fahrzeug – innen wie aussen.",
       "Die Aktion ist nur für kurze Zeit verfügbar. Sichern Sie sich Ihren Termin jetzt online und profitieren Sie vom Aktionspreis."
     ],
     packages: [
-      { name: "Sommer-Aktion", price: "Aktionspreis", bookingUrl: calensoLinks.aktionen.sommeraktion, features: ["Saisonale Aktion mit Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Online buchen und sparen"] }
+      { name: "Herbst-Aktion", price: "Aktionspreis", bookingUrl: calensoLinks.aktionen.sommeraktion, features: ["Saisonale Aktion mit Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Online buchen und sparen"] }
     ],
     extras: []
   },

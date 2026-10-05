@@ -135,6 +135,9 @@ const specificContent = {
     ],
   },
   "politur-zuerich": {
+    seoTitle: "Politur Zürich | Autopolitur & Lackpolitur vom Profi",
+    seoDescription: "Politur in Zürich: Kratzer, Hologramme und matte Stellen entfernen lassen. Autopolitur & Lackpolitur per Profi-Handarbeit – vor Verkauf oder Leasingrückgabe. Termin online.",
+    h1: "Autopolitur & Lackpolitur in Zürich",
     einleitung: "Autopolitur in Zürich – Kratzerentfernung, Glanzwiederherstellung und Lackpflege vom Profi. Autoreinigung Zürich-Nord bietet professionelle Lackpolitur für Zürcherinnen und Zürcher, die den ursprünglichen Glanz ihres Fahrzeugs wiederherstellen möchten.",
     leistungBeschrieb: "Die professionelle Lackpolitur mit der Maschine entfernt feine Kratzer, Hologramme, Oxidationen und matte Stellen aus der Lackoberfläche. Wir analysieren zuerst den Lackzustand und wählen das passende Poliermittel und Pad. Das Ergebnis: ein spiegelglatter, strahlender Lack wie am ersten Tag. Besonders in Zürich, wo enge Parkhäuser, Automatikwaschanlagen und Bürsten für Hologramme und feine Kratzer sorgen, ist eine professionelle Politur die beste Massnahme.",
     fuerWen: "Fahrzeugbesitzer in Zürich, die feine Kratzer aus dem Stadtverkehr, Parkplatzschäden oder Maschinenwäschen entfernen möchten. Empfehlenswert vor dem Verkauf, für die Leasingrückgabe und für Fahrzeuge mit wertvollem Lack.",
@@ -301,8 +304,8 @@ export default function LandingPage() {
   }
 
   const content = getLandingContent(service, ort, ortData.name, lp.serviceName);
-  const title = `${lp.serviceName} ${ortData.name} | Autoreinigung Zürich Nord`;
-  const description = `${lp.serviceName} in ${ortData.name} – professionelle Fahrzeugpflege von Autoreinigung Zürich-Nord. Termin online buchen.`;
+  const title = content.seoTitle || `${lp.serviceName} ${ortData.name} | Autoreinigung Zürich Nord`;
+  const description = content.seoDescription || `${lp.serviceName} in ${ortData.name} – professionelle Fahrzeugpflege von Autoreinigung Zürich-Nord. Termin online buchen.`;
   // Nur verlinken wenn eine Service-Detailseite existiert (innenreinigung, aussenreinigung, politur)
   const serviceHasDetailPage = services.some((s) => s.slug === service);
 
@@ -335,7 +338,7 @@ export default function LandingPage() {
               {lp.serviceName} in {ortData.name}
             </p>
             <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              {lp.serviceName} in {ortData.nameFull}
+              {content.h1 || `${lp.serviceName} in ${ortData.nameFull}`}
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
               {content.einleitung}

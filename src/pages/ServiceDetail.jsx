@@ -151,10 +151,10 @@ const serviceContent = {
     einsatzbereiche: "Familienfahrzeuge, Tierhalter, Leasingrückgaben, Occasionen, stark verschmutzte Stoffbezüge.",
   },
   "sommer-aktion": {
-    was: "Die Sommer-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
-    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Sommer"],
+    was: "Die Herbst-Aktion kombiniert unsere beliebtesten Innen- und Aussenreinigungs-Leistungen zu einem attraktiven Aktionspreis. Nutzen Sie die Saison, um Ihr Fahrzeug rundum aufbereiten zu lassen.",
+    vorteile: ["Saisonaler Spezialpreis", "Kombination aus Innen- und Aussenreinigung", "Limitiertes Angebot", "Rundum-Paket für den Herbst"],
     ablauf: ["Fahrzeugbegutachtung", "Innenreinigung nach Bedarf", "Aussenreinigung per Hand", "Pflege und Schutz", "Übergabe"],
-    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Sommersaison, für Cabrios und Wohnmobile.",
+    einsatzbereiche: "Alle Fahrzeuge, Privat- und Firmenfahrzeuge, vor der Herbstsaison, für Cabrios und Wohnmobile.",
   },
   "cabrio-dach-versiegeln": {
     was: "Die Cabrio-Dach-Versiegelung schützt Stoffdächer vor Wasser, Schmutz und UV-Strahlung. Wir reinigen das Dach gründlich, imprägnieren es und versiegeln es für langfristigen Schutz.",
@@ -187,6 +187,26 @@ const serviceContent = {
     einsatzbereiche: "Alle Fahrzeuge, nach der Politur, als eigenständiger Lackschutz, Premium-Fahrzeuge, Neufahrzeuge.",
   },
 };
+
+// Thematische Vertiefung "Welche Verschmutzungen" – nur Innenreinigung
+const innenVerschmutzungen = [
+  { title: "Tierhaare", text: "Aus Sitzen, Teppichen, Ritzen und Sitznähten – auch aus tiefen Fasern." },
+  { title: "Flecken & Verschüttetes", text: "Kaffee, Essen und Flüssigkeiten auf Stoff-, Leder- und Teppichbezügen." },
+  { title: "Gerüche", text: "Rauchen, Tiere, verschüttete Flüssigkeiten und Schimmel – beseitigt an der Quelle." },
+  { title: "Staub & Schmutz", text: "In Lüftungskanälen, Ritzen, Ablagen und schwer zugänglichen Bereichen." },
+  { title: "Abnutzung auf Bezügen", text: "Schmutz und Verschleiss auf Leder-, Stoff- und Kunststoffoberflächen." },
+  { title: "Bakterien & Allergene", text: "Mit optionaler Desinfektion (Anokath-Verfahren) hygienisch entfernt." },
+];
+
+// Thematische Vertiefung "Was wird gereinigt" – nur Handwäsche
+const handwascheBereiche = [
+  { title: "Karosserie", text: "Handwäsche mit der Zwei-Eimer-Methode – schonend, ohne Bürstenkratzer." },
+  { title: "Felgen & Reifen", text: "Bremsstaub und Ablagerungen gründlich und schonend entfernt." },
+  { title: "Scheiben", text: "Scheiben innen und aussen streifenfrei und klar gereinigt." },
+  { title: "Türrahmen & Türschweller", text: "Schmutz und Feuchtigkeit in oft übersehenen Bereichen." },
+  { title: "Motorraum (auf Wunsch)", text: "Kaltentfettung und Konservierung – MFK- und verkaufsbereit." },
+  { title: "Fahrwerk & Unterboden (auf Wunsch)", text: "Salz und Schmutz nach dem Winter zuverlässig entfernt." },
+];
 
 // Before/After images nur für Innenreinigung
 const beforeAfterImages = {
@@ -276,6 +296,46 @@ export default function ServiceDetail() {
           </div>
         </div>
       </section>
+
+      {/* Welche Verschmutzungen – nur Innenreinigung */}
+      {slug === "innenreinigung" && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Soiling" title="Welche Verschmutzungen entfernen wir bei der Innenreinigung?" text="Vom alltäglichen Staub bis zu hartnäckigen Flecken und Gerüchen – wir entfernen Schmutz materialschonend und gründlich." />
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {innenVerschmutzungen.map((item, i) => (
+                <Reveal key={item.title} delay={i * 60}>
+                  <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                    <CheckCircle2 className="mb-3 h-6 w-6 text-primary" />
+                    <h3 className="font-heading text-base font-bold">{item.title}</h3>
+                    <p className="mt-1.5 text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Reinigungsumfang – nur Handwäsche */}
+      {slug === "handwasche" && (
+        <section className="px-5 py-14 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader center eyebrow="Reinigungsumfang" title="Was wird bei der Handwäsche gereinigt?" text="Schonende Handwäsche für Karosserie, Felgen und Scheiben – auf Wunsch erweitert um Motorraum, Fahrwerk und Unterboden." />
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {handwascheBereiche.map((item, i) => (
+                <Reveal key={item.title} delay={i * 60}>
+                  <div className="h-full rounded-[1.75rem] border border-border bg-card p-6 shadow-sm">
+                    <CheckCircle2 className="mb-3 h-6 w-6 text-primary" />
+                    <h3 className="font-heading text-base font-bold">{item.title}</h3>
+                    <p className="mt-1.5 text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Ablauf */}
       <section className="px-5 py-14 lg:px-8">

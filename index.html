@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="de-CH">
   <head>
+    <script>
+      // Support direct landing-page and editor-preview URLs with the hash router.
+      var pagePath = window.location.pathname.replace(/\/$/, '').toLowerCase();
+      if ((pagePath === '/autoreinigung-buchen' || pagePath === '/bookinglanding') && (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/')) {
+        window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + '#/autoreinigung-buchen');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TPJNZ2JM');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="https://media.base44.com/images/public/6a27b1b13f389ee76e4848a5/77636c8f9_564e5face_autoreinigung.png" />
@@ -14,19 +28,26 @@
     <meta property="og:site_name" content="Autoreinigung Zürich-Nord" />
     <meta property="og:locale" content="de_CH" />
     <!-- Google Fonts werden lokal geladen – kein Tracking durch externe Server -->
-    <!-- Meta Pixel (Base64-encoded) -->
+    <!-- Meta Pixel: 1761428228349925 — global auf allen Seiten -->
     <script>
-      (function() {
-        var encoded = "IWZ1bmN0aW9uKGYsYixlLHYsbiwidCxzKXtpZihmLmZicSlyZXR1cm47bj1mLmZicT1mdW5jdGlvbigpe24uY2FsbE1ldGhvZD9uLmNhbGxNZXRob2QuYXBwbHkobixhcmd1bWVudHMpOm4ucXVldWUucHVzaChhcmd1bWVudHMpfTtpZighZi5fZmJxKWYuX2ZicT1uO24ucHVzaD1uO24ubG9hZGVkPSEwO24udmVyc2lvbj0nMi4wJztuLnF1ZXVlPVtdO3Q9Yi5jcmVhdGVFbGVtZW50KGUpO3QuYXN5bmM9ITA7dC5zcmM9djtTPWIuZ2V0RWxlbWVudHNCeVRhZ05hbWUoZSlbMF07cy5wYXJlbnROb2RlLmluc2VydEJlZm9yZSh0LHMpfSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJ2h0dHBzOi8vY29ubmVjdC5mYWNlYm9vay5uZXQvZW5fVVMvZmJldmVudHMuanMnKTtmYnEoJ2luaXQnLCAnMTc2MTQyODIyODM0OTkyNScpO2ZicSgndHJhY2snLCAnUGFnZVZpZXcnKTs=";
-        var decoded = atob(encoded);
-        var script = document.createElement('script');
-        script.text = decoded;
-        document.head.appendChild(script);
-      })();
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1761428228349925');
+      fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel -->
     <!-- Klaviyo onsite script -->
-    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XxzTRp"></script>
+    <script>
+      if (window.location.hash.split('?')[0].replace(/\/$/, '') !== '#/autoreinigung-buchen' && window.location.pathname.replace(/\/$/, '') !== '/autoreinigung-buchen') {
+        var klaviyoScript = document.createElement('script');
+        klaviyoScript.async = true;
+        klaviyoScript.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XxzTRp';
+        document.head.appendChild(klaviyoScript);
+      }
+    </script>
     <!-- End Klaviyo -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPT1418JQ4"></script>
@@ -35,9 +56,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-BPT1418JQ4');
+      gtag('config', 'AW-18450468859');
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPJNZ2JM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1761428228349925&ev=PageView&noscript=1"/>
     </noscript>

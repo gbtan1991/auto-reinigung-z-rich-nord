@@ -6,6 +6,8 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import GadsRouteTracker from './components/GadsRouteTracker';
+import GadsClickTracker from './components/GadsClickTracker';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
@@ -28,6 +30,8 @@ import LandingPage from '@/pages/LandingPage';
 import FAQ from '@/pages/FAQ';
 import Bewertungen from '@/pages/Bewertungen';
 import SommerAktion from '@/pages/SommerAktion';
+import AdsLanding from '@/pages/AdsLanding';
+import BookingLanding from '@/pages/BookingLanding';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -60,6 +64,9 @@ const AuthenticatedApp = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/termin-buchen" element={<AdsLanding />} />
+      <Route path="/autoreinigung-buchen" element={<BookingLanding />} />
+      <Route path="/BookingLanding" element={<Navigate to="/autoreinigung-buchen" replace />} />
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/dienstleistungen" element={<Services />} />
@@ -91,6 +98,8 @@ function App() {
       <QueryClientProvider client={queryClientInstance}>
         <Router>
           <ScrollToTop />
+          <GadsRouteTracker />
+          <GadsClickTracker />
           <AuthenticatedApp />
         </Router>
         <Toaster />

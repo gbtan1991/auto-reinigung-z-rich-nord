@@ -217,8 +217,8 @@ export const seoServices = [
   {
     slug: "innenreinigung",
     name: "Innenreinigung Auto",
-    title: "Innenreinigung Auto Zürich | Professionelle Fahrzeugreinigung",
-    description: "Professionelle Auto-Innenreinigung in Zürich Nord – Sitze, Teppiche, Leder, Desinfektion. Termin online.",
+    title: "Innenreinigung Auto Zürich | Professionelle Auto-Innenreinigung",
+    description: "Innenreinigung Auto in Zürich Nord: Sitze, Teppiche, Leder & Desinfektion von Hand reinigen. Schonend, gründlich, materialschonend. Termin online.",
     h1: "Professionelle Auto-Innenreinigung in Zürich Nord",
     mainKeyword: "innenreinigung auto zürich",
   },
@@ -233,10 +233,11 @@ export const seoServices = [
   {
     slug: "handwasche",
     name: "Handwäsche Auto",
-    title: "Handwäsche Auto Zürich | Schonende Fahrzeugwäsche",
-    description: "Schonende Handwäsche für Ihr Auto in Zürich Nord – Schutz vor Kratzern, Lackreinigung per Hand. Termin buchen.",
+    title: "Handwäsche Zürich | Schonende Auto-Handwäsche per Hand",
+    description: "Handwäsche in Zürich Nord: Karosserie, Felgen & Scheiben schonend per Hand waschen – ohne Kratzer, ohne Hologramme. Termin online buchen.",
     h1: "Schonende Auto-Handwäsche in Zürich Nord",
-    mainKeyword: "handwäsche auto zürich",
+    mainKeyword: "handwäsche zürich",
+    heroText: "Unsere Handwäsche in Zürich Nord reinigt Karosserie, Felgen und Scheiben schonend per Hand – ohne rotierende Bürsten, ohne Kratzer. Auf Wunsch erweitern wir die Handwäsche um Motorraum, Fahrwerk und Unterboden.",
   },
   {
     slug: "politur",
@@ -304,11 +305,11 @@ export const seoServices = [
   },
   {
     slug: "sommer-aktion",
-    name: "Sommer-Aktion",
-    title: "Sommer-Aktion Autoreinigung Zürich | Saisonal sparen",
-    description: "Limitierte Sommer-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen.",
-    h1: "Sommer-Aktion bei Autoreinigung Zürich-Nord",
-    mainKeyword: "sommer aktion autoreinigung zürich",
+    name: "Herbst-Aktion",
+    title: "Herbst-Aktion Autoreinigung Zürich | Saisonal sparen",
+    description: "Limitierte Herbst-Aktion bei Autoreinigung Zürich-Nord: Kombination aus Innen- und Aussenreinigung zum Aktionspreis. Online buchen.",
+    h1: "Herbst-Aktion bei Autoreinigung Zürich-Nord",
+    mainKeyword: "herbst aktion autoreinigung zürich",
   },
   {
     slug: "cabrio-dach-versiegeln",
