@@ -31,11 +31,9 @@ jobs:
         username: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_USERNAME }}
         password: ${{ secrets.AUTOREINIGUNG_INFOMANIAK_PASSWORD }}
         port: 22
-        source: 'dist/*'
+        source: 'dist/*,dist/.htaccess'
         target: 'sites/autoreinigung-zuerich-nord.ch/'
         strip_components: 1
 
-        #Done with some changes in the prices, services and promos
-        #Change the targer path to the correct one for your production server. The current path is just an example and may not match your actual deployment directory.
-        #Update the source path in the hosting.
-        #Change the branch name in workflow to main so we can have CI/CD for the production server. The current branch name is just an example and may not match your actual deployment branch.
+        
+        #changed the source to include .htaccess file as well, so that the rewrite rules are also deployed to the server
