@@ -15,6 +15,7 @@ import { standorte, seoServices } from "@/data/seoData";
 import { services, addonSlugs } from "@/data/siteContent";
 
 export default function Home() {
+  console.log("CI/CD integration completed");
   return (
     <>
       <SEO
