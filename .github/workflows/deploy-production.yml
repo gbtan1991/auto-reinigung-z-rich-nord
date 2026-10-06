@@ -37,3 +37,4 @@ jobs:
 
         
         #changed the source to include .htaccess file as well, so that the rewrite rules are also deployed to the server
+        #merging
