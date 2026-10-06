@@ -5,9 +5,28 @@ import SEO from "@/components/site/SEO";
 import Breadcrumb from "@/components/site/Breadcrumb";
 import { contact, images, whatsappUrl } from "@/data/siteContent";
 import GoogleReviewBadge from "@/components/site/GoogleReviewBadge";
+import { base44 } from "@/api/base44Client";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "", website: "" });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setError(false);
+    try {
+      await base44.functions.invoke("submitEnquiry", form);
+      setSent(true);
+      setForm({ name: "", email: "", subject: "", message: "", website: "" });
+    } catch (err) {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
+  };
   return (
     <>
       <SEO
@@ -56,17 +75,17 @@ export default function Contact() {
           </div>
 
           <form
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={handleSubmit}
             className="rounded-[2rem] border border-border bg-card p-6 shadow-xl md:p-8"
           >
             <div className="grid gap-4">
-              <input required placeholder="Ihr Name" className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
-              <input required type="email" placeholder="Ihre E-Mail-Adresse" className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
-              <input required placeholder="Betreff" className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
-              <textarea placeholder="Ihre Nachricht (optional)" rows="6" className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
-              <label className="hidden">Bitte lasse dieses Feld leer.<input name="website" tabIndex="-1" autoComplete="off" /></label>
-              <button className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-bold text-primary-foreground">
-                <Send className="h-4 w-4" /> Senden
+              <input required placeholder="Ihr Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
+              <input required type="email" placeholder="Ihre E-Mail-Adresse" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
+              <input required placeholder="Betreff" value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })} className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
+              <textarea placeholder="Ihre Nachricht (optional)" rows="6" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="rounded-2xl border border-input bg-background px-4 py-4 outline-none focus:ring-2 focus:ring-ring" />
+              <label className="hidden">Bitte lasse dieses Feld leer.<input name="website" tabIndex="-1" autoComplete="off" value={form.website} onChange={(e) => setForm({ ...form, website: e.target.value })} /></label>
+              <button disabled={sending} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 font-bold text-primary-foreground disabled:opacity-60">
+                <Send className="h-4 w-4" /> {sending ? "Wird gesendet…" : "Senden"}
               </button>
             </div>
             <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
@@ -76,6 +95,11 @@ export default function Contact() {
             {sent && (
               <p className="mt-4 flex items-center gap-2 font-bold text-primary">
                 <CheckCircle2 className="h-5 w-5" /> Vielen Dank – wir melden uns so bald wie möglich bei Ihnen.
+              </p>
+            )}
+            {error && (
+              <p className="mt-4 font-bold text-destructive">
+                Da ist etwas schiefgelaufen. Bitte versuchen Sie es erneut oder rufen Sie uns an.
               </p>
             )}
           </form>
